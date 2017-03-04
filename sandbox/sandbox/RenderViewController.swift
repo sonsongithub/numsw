@@ -11,18 +11,21 @@ import UIKit
 class RenderViewController: UIViewController {
 
 
-    var renderers:[Renderer] = []
+    var renderers: [Renderer] = []
 
     @IBOutlet weak var scrollView: UIScrollView!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        renderers.append(LineGraphRenderer())
-        renderers.append(LineGraphRenderer())
-        renderers.append(LineGraphRenderer())
-        renderers.append(LineGraphRenderer())
+        func makeRenderer() -> LineGraphRenderer {
+            return LineGraphRenderer(points: DummyData.points1())
+        }
+        
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
 
     }
 

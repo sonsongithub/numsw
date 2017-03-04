@@ -19,7 +19,9 @@ class RendererDebugViewController : UIViewController {
     }
     
     override func viewDidLoad() {
-        renderer = LineGraphRenderer()
+        
+        renderer = LineGraphRenderer(points: DummyData.points1())
+        
     }
     
     var renderer: Renderer?
@@ -27,7 +29,7 @@ class RendererDebugViewController : UIViewController {
     @IBOutlet var imageView: UIImageView!
 
     @IBAction func onRenderButton(sender: UIButton) {
-        print("size = \(imageView.bounds)")
+//        print("size = \(imageView.bounds)")
         
         let image = renderer!.render(size: imageView.bounds.size)
         imageView.image = image
