@@ -26,7 +26,6 @@ class RenderViewController: UIViewController {
         renderers.append(makeRenderer())
         renderers.append(makeRenderer())
         renderers.append(makeRenderer())
-
     }
 
     func updateViews(){
@@ -56,7 +55,8 @@ class RenderViewController: UIViewController {
 
     func render(){
 
-        let size = self.view.frame.size
+        var size = self.view.frame.size
+        size.height *= 0.5
         // renderer 取り出してscrollviewに追加
         for renderer in renderers {
             let image = renderer.render(size: size)
