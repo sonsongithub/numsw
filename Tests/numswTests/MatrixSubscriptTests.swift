@@ -44,10 +44,18 @@ class MatrixSubscriptTests: XCTestCase {
         XCTAssertEqual(mat.elements, [0.0, 1, 2, 0, 0, 0, 0, 0, 0])
     }
     
+    func testAddAssign() {
+        var mat2 = Matrix.zeros(rows: 3, columns: 3)
+        mat2[[0,1], nil] += Matrix.ones(rows: 2, columns: 3)
+        mat2[nil, [1]] += Matrix.ones(rows: 3, columns: 1)
+        XCTAssertEqual(mat2.elements, [1.0, 2, 1, 1, 2, 1, 0, 1, 0])
+    }
+    
     func testMultAssign() {
         var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9).map(Double.init))
         
         mat[[0, 1], [0, 1]] *= 4
         XCTAssertEqual(mat.elements, [0.0, 4, 2, 12, 16, 5, 6, 7, 8])
+        
     }
 }
