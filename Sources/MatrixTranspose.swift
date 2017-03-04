@@ -1,6 +1,6 @@
 
 extension Matrix {
-    func transposed() -> Matrix {
+    public func transposed() -> Matrix {
         let newElements = UnsafeMutablePointer<Double>.allocate(capacity: rows*columns)
         defer { newElements.deallocate(capacity: rows*columns) }
         for r in 0..<rows {
