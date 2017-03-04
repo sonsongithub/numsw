@@ -8,15 +8,15 @@
 
 import UIKit
 
-func add(renderer: Renderer) {
+public func add(renderer: Renderer) {
     RenderViewController.shared.append(renderer: renderer)
 }
 
-func testMakeRenderer() {
+public func testMakeRenderer() {
     add(renderer: makeRenderer())
 }
 
-func makeRenderer() -> LineGraphRenderer {
+public func makeRenderer() -> LineGraphRenderer {
     return LineGraphRenderer(lines: [
         LineData(points: DummyData.points1()),
         LineData(points: DummyData.points2())
