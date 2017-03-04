@@ -45,4 +45,3 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
                   columns: n,
                   elements: Array(UnsafeBufferPointer(start: cElements, count: m*n)))
 }
-
