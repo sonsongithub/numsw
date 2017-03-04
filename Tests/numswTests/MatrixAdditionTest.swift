@@ -46,4 +46,22 @@ class MatrixAdditionTest: XCTestCase {
         let error = frobeniusNorm(ans + (-1) * m2)
         XCTAssert(error < 0.000001)
     }
+    
+    func testExample4() {
+        var m1 = Matrix(rows: 2, columns: 2, elements: [2.0, 1.0, 0.2, 0.1])
+        let m2 = Matrix(rows: 2, columns: 2, elements: [1.0, 1.0, 0.3, 1.0])
+        let ans = Matrix(rows: 2, columns: 2, elements: [3.0, 2.0, 0.5, 1.1])
+        m1 += m2
+        let error = frobeniusNorm(ans + (-1) * m1)
+        XCTAssert(error < 0.0001)
+    }
+    
+    func testExample5() {
+        var m1 = Matrix(rows: 2, columns: 2, elements: [2.0, 1.0, 0.2, 0.1])
+        let m2 = Matrix(rows: 2, columns: 2, elements: [1.0, 1.0, 0.3, 1.0])
+        let ans = Matrix(rows: 2, columns: 2, elements: [1.0, 0.0, -0.1, -0.9])
+        m1 -= m2
+        let error = frobeniusNorm(ans + (-1) * m1)
+        XCTAssert(error < 0.000001)
+    }
 }

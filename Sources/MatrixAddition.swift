@@ -49,6 +49,22 @@ public func subtract(_ lhs: Matrix, rhs: Matrix) -> Matrix {
     return Matrix(rows: lhs.rows, columns: lhs.columns, elements: Array(UnsafeBufferPointer(start: cElements, count: lhs.count)))
 }
 
+public func += (lhs: inout Matrix, rhs: Double) {
+    lhs = lhs + rhs
+}
+
+public func += (lhs: inout Matrix, rhs: Matrix) {
+    lhs = lhs + rhs
+}
+
+public func -= (lhs: inout Matrix, rhs: Double) {
+    lhs = lhs - rhs
+}
+
+public func -= (lhs: inout Matrix, rhs: Matrix) {
+    lhs = lhs - rhs
+}
+
 public func + (lhs: Matrix, rhs: Double) -> Matrix {
     return add(lhs, rhs: rhs)
 }

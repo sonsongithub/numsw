@@ -11,6 +11,8 @@
 		1453FBDD1E6A81A400633F32 /* MatrixAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBDB1E6A81A400633F32 /* MatrixAddition.swift */; };
 		1453FBE01E6A833700633F32 /* MatrixAdditionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBDE1E6A81B000633F32 /* MatrixAdditionTest.swift */; };
 		1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBE11E6A878100633F32 /* MatrixBasicTest.swift */; };
+		1453FBE51E6A8E2400633F32 /* MatrixLogarithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBE31E6A8DBD00633F32 /* MatrixLogarithm.swift */; };
+		1453FBE71E6A8ED900633F32 /* MatrixLogarithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBE61E6A8ED900633F32 /* MatrixLogarithmTest.swift */; };
 		A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96D81E6A5F340001727F /* Matrix.swift */; };
 		A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */; };
 		A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */; };
@@ -43,6 +45,8 @@
 		1453FBDB1E6A81A400633F32 /* MatrixAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAddition.swift; sourceTree = "<group>"; };
 		1453FBDE1E6A81B000633F32 /* MatrixAdditionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAdditionTest.swift; sourceTree = "<group>"; };
 		1453FBE11E6A878100633F32 /* MatrixBasicTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixBasicTest.swift; sourceTree = "<group>"; };
+		1453FBE31E6A8DBD00633F32 /* MatrixLogarithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixLogarithm.swift; sourceTree = "<group>"; };
+		1453FBE61E6A8ED900633F32 /* MatrixLogarithmTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixLogarithmTest.swift; sourceTree = "<group>"; };
 		A7EC96D81E6A5F340001727F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
 		A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTest.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		OBJ_11 /* numswTests */ = {
 			isa = PBXGroup;
 			children = (
+				1453FBE61E6A8ED900633F32 /* MatrixLogarithmTest.swift */,
 				1453FBE11E6A878100633F32 /* MatrixBasicTest.swift */,
 				1453FBDE1E6A81B000633F32 /* MatrixAdditionTest.swift */,
 				OBJ_12 /* numswTests.swift */,
@@ -149,6 +154,7 @@
 				A7EC96EC1E6A79A00001727F /* MatrixTranspose.swift */,
 				A7EC96F21E6A7CD80001727F /* MatrixDivide.swift */,
 				A7EC96F81E6A813D0001727F /* Random.swift */,
+				1453FBE31E6A8DBD00633F32 /* MatrixLogarithm.swift */,
 			);
 			name = numsw;
 			path = Sources;
@@ -248,6 +254,7 @@
 				A7EC96E91E6A72830001727F /* MatrixInvert.swift in Sources */,
 				OBJ_23 /* numsw.swift in Sources */,
 				A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */,
+				1453FBE51E6A8E2400633F32 /* MatrixLogarithm.swift in Sources */,
 				A7EC96F31E6A7CD80001727F /* MatrixDivide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +268,7 @@
 				1453FBE01E6A833700633F32 /* MatrixAdditionTest.swift in Sources */,
 				A7EC96F11E6A7C490001727F /* MatrixTransposeTests.swift in Sources */,
 				A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */,
+				1453FBE71E6A8ED900633F32 /* MatrixLogarithmTest.swift in Sources */,
 				A7EC96EB1E6A782D0001727F /* MatrixInvertTests.swift in Sources */,
 				OBJ_30 /* numswTests.swift in Sources */,
 				1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */,
