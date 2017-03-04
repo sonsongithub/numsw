@@ -10,6 +10,10 @@ public func *(lhs: Double, rhs: Matrix) -> Matrix {
     return rhs * lhs
 }
 
+public func *=(lhs: inout Matrix, rhs: Double) {
+    lhs = lhs * rhs
+}
+
 // matmul
 
 public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
@@ -40,4 +44,22 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
     return Matrix(rows: m,
                   columns: n,
                   elements: Array(UnsafeBufferPointer(start: cElements, count: m*n)))
+}
+
+// element wise multiply
+
+infix operator .*
+public func .*(lhs: Matrix, rhs: Matrix) -> Matrix{
+    let pointer = UnsafeMutablePointer<Double>.allocate(capacity: lhs.count)
+    defer { pointer.deallocate(capacity: lhs.count) }
+    vDSP_vmulD(lhs.elements, 1, rhs.elements, 1, pointer, 1, vDSP_Length(lhs.count))
+    
+    return Matrix(rows: lhs.rows,
+                  columns: lhs.columns,
+                  elements: Array(UnsafeBufferPointer(start: pointer, count: lhs.count)))
+}
+
+infix operator .*=
+public func .*=(lhs: inout Matrix, rhs: Matrix) {
+    lhs = lhs * rhs
 }

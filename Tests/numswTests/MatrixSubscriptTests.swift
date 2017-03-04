@@ -37,10 +37,25 @@ class MatrixSubscriptTests: XCTestCase {
         var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9).map(Double.init))
         
         XCTAssertEqual(mat[nil, nil].elements, [0.0, 1, 2, 3, 4, 5, 6, 7, 8])
-        XCTAssertEqual(mat[[1,2], nil].elements, [3.0, 4, 5, 6, 7, 8])
-        XCTAssertEqual(mat[nil, [1,2]].elements, [1.0, 2.0, 4, 5, 7, 8])
+        XCTAssertEqual(mat[[1, 2], nil].elements, [3.0, 4, 5, 6, 7, 8])
+        XCTAssertEqual(mat[nil, [1, 2]].elements, [1.0, 2.0, 4, 5, 7, 8])
         
-        mat[[1,2], nil] = Matrix(rows: 2, columns: 3, elements: [Double](repeating: 0, count: 6))
+        mat[[1, 2], nil] = Matrix(rows: 2, columns: 3, elements: [Double](repeating: 0, count: 6))
         XCTAssertEqual(mat.elements, [0.0, 1, 2, 0, 0, 0, 0, 0, 0])
+    }
+    
+    func testAddAssign() {
+        var mat2 = Matrix.zeros(rows: 3, columns: 3)
+        mat2[[0, 1], nil] += Matrix.ones(rows: 2, columns: 3)
+        mat2[nil, [1]] += Matrix.ones(rows: 3, columns: 1)
+        XCTAssertEqual(mat2.elements, [1.0, 2, 1, 1, 2, 1, 0, 1, 0])
+    }
+    
+    func testMultAssign() {
+        var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9).map(Double.init))
+        
+        mat[[0, 1], [0, 1]] *= 4
+        XCTAssertEqual(mat.elements, [0.0, 4, 2, 12, 16, 5, 6, 7, 8])
+        
     }
 }

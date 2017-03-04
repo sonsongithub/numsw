@@ -38,4 +38,12 @@ class MatrixBasicTest: XCTestCase {
         let ans  = Matrix(rows: 4, columns: 2, elements: [0, 0, 0, 0, 0, 0, 0, 0])
         XCTAssertEqual(ones.elements, ans.elements)
     }
+    
+    func testArrayInit() {
+        let mat = Matrix([[0, 1], [2, 3], [4, 5]])
+        
+        XCTAssertEqual(mat.rows, 3)
+        XCTAssertEqual(mat.columns, 2)
+        XCTAssertEqual(mat.elements, [0.0, 1, 2, 3, 4, 5])
+    }
 }
