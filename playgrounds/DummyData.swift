@@ -18,4 +18,12 @@ struct DummyData {
             CGPoint(x: 4, y: 16)
         ]
     }
+    
+    static func points2() -> [CGPoint] {
+        return [
+            CGPoint(x: 0, y: 6),
+            CGPoint(x: 2, y: 2),
+            CGPoint(x: 4, y: 3)
+        ]
+    }
 }

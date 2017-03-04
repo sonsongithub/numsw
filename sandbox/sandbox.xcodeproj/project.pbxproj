@@ -19,6 +19,7 @@
 		D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */; };
 		D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0061E6A77E100A50C88 /* DummyData.swift */; };
 		D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */; };
+		D653808D1E6A98120032C0B2 /* LineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808C1E6A98120032C0B2 /* LineData.swift */; };
 		E0598B0D1E6A678700EAFDC0 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphRenderer.swift; sourceTree = "<group>"; };
 		D621D0061E6A77E100A50C88 /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererUtil.swift; sourceTree = "<group>"; };
+		D653808C1E6A98120032C0B2 /* LineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineData.swift; sourceTree = "<group>"; };
 		E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */,
 				D621D0061E6A77E100A50C88 /* DummyData.swift */,
 				D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */,
+				D653808C1E6A98120032C0B2 /* LineData.swift */,
 			);
 			name = playgrounds;
 			path = ../playgrounds;
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0598B0D1E6A678700EAFDC0 /* RenderViewController.swift in Sources */,
+				D653808D1E6A98120032C0B2 /* LineData.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
 				D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */,
 				D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */,

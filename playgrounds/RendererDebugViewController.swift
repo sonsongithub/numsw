@@ -20,7 +20,10 @@ class RendererDebugViewController : UIViewController {
     
     override func viewDidLoad() {
         
-        renderer = LineGraphRenderer(points: DummyData.points1())
+        renderer = LineGraphRenderer(lines: [
+            LineData(points: DummyData.points1()),
+            LineData(points: DummyData.points2())
+            ])
         
     }
     

@@ -19,7 +19,10 @@ class RenderViewController: UIViewController {
         super.viewDidLoad()
 
         func makeRenderer() -> LineGraphRenderer {
-            return LineGraphRenderer(points: DummyData.points1())
+            return LineGraphRenderer(lines: [
+                LineData(points: DummyData.points1()),
+                LineData(points: DummyData.points2())
+                ])
         }
         
         renderers.append(makeRenderer())

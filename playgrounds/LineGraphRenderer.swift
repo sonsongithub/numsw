@@ -13,40 +13,39 @@ import CoreGraphics
 class LineGraphRenderer : Renderer {
     
     
-    init(points: [CGPoint]) {
-        self.points = points
+    init(lines: [LineData]) {
+        self.lines = lines
     }
     
-    var points: [CGPoint]
+    var lines: [LineData]
     
     func computeViewport() -> CGRect {
-        let xs = points.map { $0.x }
-        var x0 = xs.min()!
-        var x1 = xs.max()!
-        let ys = points.map { $0.y }
-        var y0 = ys.min()!
-        var y1 = ys.max()!
-        
-        var cx = (x0 + x1) / 2.0
-        var cy = (y0 + y1) / 2.0
+        var bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
+
+        if lines.count > 0 {
+            //  override
+            bounds = lines[0].computeBounds()
+            
+            //  reduce
+            for line in lines.dropFirst() {
+                bounds = bounds.union(line.computeBounds())
+            }
+        }
         
         //  min size constraint
-        var width = max(x1 - x0, 2)
-        var height = max(y1 - y0, 2)
         
-        x0 = cx - width / 2.0
-        y0 = cy - height / 2.0
+        var width = max(bounds.width, 2)
+        var height = max(bounds.height, 2)
         
-        x0 -= 1.0
-        y0 -= 1.0
-        x1 += 1.0
-        y1 += 1.0
+        //  10% margin
         
-        width = x1 - x0
-        height = y1 - y0
+        width += width * 0.1
+        height += height * 0.1
         
-        return CGRect(origin: CGPoint(x: x0, y: y0),
-                      size: CGSize(width: width, height: height))
+        return CGRect(x: bounds.midX - width / 2.0,
+                      y: bounds.midY - height / 2.0,
+                      width: width,
+                      height: height)
     }
     
     
@@ -91,7 +90,10 @@ class LineGraphRenderer : Renderer {
     
     func drawPoints(context ctx: CGContext) {
         ctx.setStrokeColor(UIColor.white.cgColor)
-        drawLine(context: ctx, points: self.points)
+        
+        for line in lines {
+            drawLine(context: ctx, points: line.points)
+        }
     }
     
     func drawDebugX(context ctx: CGContext,
@@ -120,7 +122,7 @@ class LineGraphRenderer : Renderer {
         
         ctx.setLineWidth(2.0)
         
-        if self.points.count < 2 {
+        if points.count < 2 {
             return
         }
         
