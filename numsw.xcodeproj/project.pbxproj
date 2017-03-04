@@ -10,6 +10,7 @@
 		1453FBDC1E6A81A400633F32 /* Matrix_sonson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBDA1E6A81A400633F32 /* Matrix_sonson.swift */; };
 		1453FBDD1E6A81A400633F32 /* MatrixAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBDB1E6A81A400633F32 /* MatrixAddition.swift */; };
 		1453FBE01E6A833700633F32 /* MatrixAdditionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBDE1E6A81B000633F32 /* MatrixAdditionTest.swift */; };
+		1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBE11E6A878100633F32 /* MatrixBasicTest.swift */; };
 		A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96D81E6A5F340001727F /* Matrix.swift */; };
 		A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */; };
 		A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */; };
@@ -41,6 +42,7 @@
 		1453FBDA1E6A81A400633F32 /* Matrix_sonson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix_sonson.swift; sourceTree = "<group>"; };
 		1453FBDB1E6A81A400633F32 /* MatrixAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAddition.swift; sourceTree = "<group>"; };
 		1453FBDE1E6A81B000633F32 /* MatrixAdditionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAdditionTest.swift; sourceTree = "<group>"; };
+		1453FBE11E6A878100633F32 /* MatrixBasicTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixBasicTest.swift; sourceTree = "<group>"; };
 		A7EC96D81E6A5F340001727F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
 		A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTest.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		OBJ_11 /* numswTests */ = {
 			isa = PBXGroup;
 			children = (
+				1453FBE11E6A878100633F32 /* MatrixBasicTest.swift */,
 				1453FBDE1E6A81B000633F32 /* MatrixAdditionTest.swift */,
 				OBJ_12 /* numswTests.swift */,
 				A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */,
@@ -260,6 +263,7 @@
 				A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */,
 				A7EC96EB1E6A782D0001727F /* MatrixInvertTests.swift in Sources */,
 				OBJ_30 /* numswTests.swift in Sources */,
+				1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
