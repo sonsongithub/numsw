@@ -11,6 +11,15 @@ public struct Matrix {
         self.elements = elements
     }
     
+    public init(_ elements: [[Double]]) {
+        let rows = elements.count
+        precondition(rows > 0, "Matrix must have elements.")
+        let columns = elements[0].count
+        let elements = elements.flatMap { $0 }
+        precondition(elements.count == rows*columns, "All rows must have same size.")
+        self.init(rows: rows, columns: columns, elements: elements)
+    }
+    
     public static func zeros(rows: Int, columns: Int) -> Matrix {
         let count = columns * rows
         let cElements = UnsafeMutablePointer<Double>.allocate(capacity: count)
