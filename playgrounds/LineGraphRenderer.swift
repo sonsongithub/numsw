@@ -130,10 +130,34 @@ public class LineGraphRenderer : Renderer {
     }
     
     public func drawPoints(context ctx: CGContext) {
-        ctx.setStrokeColor(UIColor.white.cgColor)
+        ctx.setStrokeColor(UIColor.green.cgColor)
+//        UIColor.green
         
-        for line in lines {
-            drawLine(context: ctx, points: line.points)
+        if lines.count >= 1 {
+            drawLine(context: ctx, points: lines[0].points)
+        }
+        if lines.count >= 2 {
+            drawSanpuzu(context: ctx, line: lines[1])
+        }
+    }
+    
+    public func drawSanpuzu(context ctx: CGContext, line : LineData) {
+        ctx.setStrokeColor(UIColor.blue.cgColor)
+        
+        let t = viewportTransform!
+
+        
+        for point in line.points {
+            let p = point.applying(t)
+            
+            drawLineRaw(context: ctx, points: [
+                CGPoint(x: p.x - 10, y: p.y - 10),
+                CGPoint(x: p.x + 10, y: p.y + 10)
+                ])
+            drawLineRaw(context: ctx, points: [
+                CGPoint(x: p.x - 10, y: p.y + 10),
+                CGPoint(x: p.x + 10, y: p.y - 10)
+                ])
         }
     }
     
@@ -161,6 +185,12 @@ public class LineGraphRenderer : Renderer {
         
         let points = points.map { $0.applying(t) }
         
+        drawLineRaw(context: ctx, points: points)
+    }
+    
+    public func drawLineRaw(context ctx: CGContext,
+                            points: [CGPoint])
+    {
         ctx.setLineWidth(2.0)
         
         if points.count < 2 {
