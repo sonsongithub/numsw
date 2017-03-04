@@ -10,16 +10,16 @@ import UIKit
 import CoreGraphics
 
 
-class LineGraphRenderer : Renderer {
+public class LineGraphRenderer : Renderer {
     
     
-    init(lines: [LineData]) {
+    public init(lines: [LineData]) {
         self.lines = lines
     }
     
-    var lines: [LineData]
+    public var lines: [LineData]
     
-    func computeViewport() -> CGRect {
+    public func computeViewport() -> CGRect {
         var bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
 
         if lines.count > 0 {
@@ -48,7 +48,7 @@ class LineGraphRenderer : Renderer {
                       height: height)
     }
     
-    func computeStepSize() -> CGSize {
+    public func computeStepSize() -> CGSize {
         let size = viewport.size
         
         let xLog = log10(size.width)
@@ -60,7 +60,7 @@ class LineGraphRenderer : Renderer {
         return CGSize(width: xStep, height: yStep)
     }
     
-    func render(size: CGSize) -> UIImage {
+    public func render(size: CGSize) -> UIImage {
         viewport = computeViewport()
         viewportTransform = computeViewportTransform(from: viewport,
                                                      to: CGRect(origin: CGPoint.zero,
@@ -87,7 +87,7 @@ class LineGraphRenderer : Renderer {
         return UIImage(cgImage: cgImage)
     }
     
-    func drawAxisX(context ctx: CGContext) {
+    public func drawAxisX(context ctx: CGContext) {
         let p0 = CGPoint(x: viewport.minX, y: 0)
         let p1 = CGPoint(x: viewport.maxX, y: 0)
         
@@ -108,7 +108,7 @@ class LineGraphRenderer : Renderer {
         }
     }
     
-    func drawAxisY(context ctx: CGContext) {
+    public func drawAxisY(context ctx: CGContext) {
         let p0 = CGPoint(x: 0, y: viewport.minY)
         let p1 = CGPoint(x: 0, y: viewport.maxY)
         
@@ -129,7 +129,7 @@ class LineGraphRenderer : Renderer {
         }
     }
     
-    func drawPoints(context ctx: CGContext) {
+    public func drawPoints(context ctx: CGContext) {
         ctx.setStrokeColor(UIColor.white.cgColor)
         
         for line in lines {
@@ -137,7 +137,7 @@ class LineGraphRenderer : Renderer {
         }
     }
     
-    func drawDebugX(context ctx: CGContext,
+    public func drawDebugX(context ctx: CGContext,
                     point0: CGPoint,
                     point1: CGPoint)
     {
@@ -154,7 +154,7 @@ class LineGraphRenderer : Renderer {
             ])
     }
     
-    func drawLine(context ctx: CGContext,
+    public func drawLine(context ctx: CGContext,
                   points: [CGPoint])
     {
         let t = viewportTransform!

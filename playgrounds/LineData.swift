@@ -8,10 +8,10 @@
 
 import CoreGraphics
 
-struct LineData {
-    var points: [CGPoint]
+public struct LineData {
+    public var points: [CGPoint]
     
-    func computeBounds() -> CGRect {
+    public func computeBounds() -> CGRect {
         let xs = points.map { $0.x }
         let ys = points.map { $0.y }
         

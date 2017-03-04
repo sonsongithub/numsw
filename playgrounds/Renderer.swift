@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Renderer {
+public protocol Renderer {
     func render(size: CGSize) -> UIImage
 }
 

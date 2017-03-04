@@ -8,15 +8,15 @@
 
 import CoreGraphics
 
-func toRadian(_ x: CGFloat) -> CGFloat {
+public func toRadian(_ x: CGFloat) -> CGFloat {
     return x * CGFloat.pi / CGFloat(180.0)
 }
 
-func toDegree(_ x: CGFloat) -> CGFloat {
+public func toDegree(_ x: CGFloat) -> CGFloat {
     return x * CGFloat(180.0) / CGFloat.pi
 }
 
-func computeViewportTransform(
+public func computeViewportTransform(
     from: CGRect,
     to: CGRect,
     flipY: Bool) -> CGAffineTransform
@@ -36,7 +36,7 @@ func computeViewportTransform(
     return trans
 }
 
-func computeTickValues(
+public func computeTickValues(
     min: CGFloat,
     max: CGFloat,
     step: CGFloat) -> [CGFloat]

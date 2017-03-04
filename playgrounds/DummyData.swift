@@ -8,8 +8,8 @@
 
 import UIKit
 
-struct DummyData {
-    static func points1() -> [CGPoint] {
+public struct DummyData {
+    public static func points1() -> [CGPoint] {
         return [
             CGPoint(x: 0, y: 0),
             CGPoint(x: 1, y: 1),
@@ -19,7 +19,7 @@ struct DummyData {
         ]
     }
     
-    static func points2() -> [CGPoint] {
+    public static func points2() -> [CGPoint] {
         return [
             CGPoint(x: 0, y: 6),
             CGPoint(x: 2, y: 2),
