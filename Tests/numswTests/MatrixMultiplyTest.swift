@@ -23,11 +23,18 @@ class MatrixMultiplyTest: XCTestCase {
     
     func testMultiply() {
         let a = Matrix(rows: 2, columns: 2, elements: [1.0, 2.0, 1.0, 2.0])
-        let b = Matrix(rows: 2, columns: 2, elements: [0.0, 0.0, 0.0, 0.0])
+        let b = Matrix(rows: 2, columns: 2, elements: [1.0, 0.0, 0.0, 1.0])
         
         let c = a * b
         
-        XCTAssertEqual(c.elements, [0.0, 0.0, 0.0, 0.0])
+        XCTAssertEqual(c.elements, [1.0, 2.0, 1.0, 2.0])
+    }
+    
+    func testScalarMultiply() {
+        let a = Matrix(rows: 2, columns: 2, elements: [1.0, 2.0, 1.0, 2.0])
+        let b = 10.0
+        
+        XCTAssertEqual((a*b).elements, [10.0, 20.0, 10.0, 20.0])
     }
     
 }
