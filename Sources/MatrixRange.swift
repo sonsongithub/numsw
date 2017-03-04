@@ -8,6 +8,13 @@ extension Matrix {
                       elements: elements)
     }
     
+    public static func range(from: Double, to: Double, stride: Double) -> Matrix {
+        let elements = Array(Swift.stride(from: from, to: to, by: stride))
+        return Matrix(rows: elements.count,
+                      columns: 1,
+                      elements: elements)
+    }
+    
     public static func linspace(from: Double, to: Double, count: Int) -> Matrix {
         precondition(count > 0, "count must be larger than 0")
         let elements = (0..<count).map { i -> Double in
