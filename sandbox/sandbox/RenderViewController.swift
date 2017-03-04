@@ -17,7 +17,10 @@ func testMakeRenderer() {
 }
 
 func makeRenderer() -> LineGraphRenderer {
-    return LineGraphRenderer(points: DummyData.points1())
+    return LineGraphRenderer(lines: [
+        LineData(points: DummyData.points1()),
+        LineData(points: DummyData.points2())
+        ])
 }
 
 private class RenderTableViewCell: UITableViewCell {
@@ -96,9 +99,9 @@ class RenderViewController: UITableViewController {
         
         // test start
         
-        //for _ in 0...20 {
+        for _ in 0...20 {
         //    testMakeRenderer()
-        //}
+        }
         
         // test end
     }
