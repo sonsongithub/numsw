@@ -46,6 +46,3 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
                   elements: Array(UnsafeBufferPointer(start: cElements, count: m*n)))
 }
 
-public func *=(lhs: inout Matrix, rhs: Matrix) {
-    lhs = lhs * rhs
-}
