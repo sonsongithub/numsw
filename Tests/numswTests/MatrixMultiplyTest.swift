@@ -37,4 +37,11 @@ class MatrixMultiplyTest: XCTestCase {
         XCTAssertEqual((a*b).elements, [10.0, 20.0, 10.0, 20.0])
     }
     
+    func testElementWiseMult() {
+        let a = Matrix(rows: 2, columns: 2, elements: [1, 2, 3, 4.0])
+        let b = Matrix(rows: 2, columns: 2, elements: [1, 3, 5, 7.0])
+        
+        XCTAssertEqual((a .* b).elements, [1.0, 6.0, 15.0, 28.0])
+    }
+    
 }
