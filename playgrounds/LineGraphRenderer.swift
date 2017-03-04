@@ -75,9 +75,9 @@ class LineGraphRenderer : Renderer {
         
         let ctx = UIGraphicsGetCurrentContext()!
         
-        drawDebugX(context: ctx,
-                   point0: CGPoint(x: viewport.minX, y: viewport.minY),
-                   point1: CGPoint(x: viewport.maxX, y: viewport.maxY))
+//        drawDebugX(context: ctx,
+//                   point0: CGPoint(x: viewport.minX, y: viewport.minY),
+//                   point1: CGPoint(x: viewport.maxX, y: viewport.maxY))
         
         drawAxisX(context: ctx)
         drawAxisY(context: ctx)
