@@ -8,12 +8,6 @@
 
 import UIKit
 
-class Hoge:Renderer{
-    func render(size: CGSize) -> UIImage {
-        return UIImage(named: "SS")!
-    }
-}
-
 class RenderViewController: UIViewController {
 
 
