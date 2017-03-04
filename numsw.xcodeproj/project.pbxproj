@@ -12,7 +12,7 @@
 		1453FBE01E6A833700633F32 /* MatrixAdditionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBDE1E6A81B000633F32 /* MatrixAdditionTest.swift */; };
 		1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBE11E6A878100633F32 /* MatrixBasicTest.swift */; };
 		1453FBE91E6A904600633F32 /* MatrixLogarithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBE81E6A904600633F32 /* MatrixLogarithm.swift */; };
-		1453FBEB1E6A904D00633F32 /* MatrixLogarithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBEA1E6A904D00633F32 /* MatrixLogarithmTest.swift */; };
+		1453FBEC1E6A926800633F32 /* MatrixLogarithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBEA1E6A904D00633F32 /* MatrixLogarithmTest.swift */; };
 		A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96D81E6A5F340001727F /* Matrix.swift */; };
 		A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */; };
 		A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */; };
@@ -252,7 +252,6 @@
 			buildActionMask = 0;
 			files = (
 				A7EC96F91E6A813D0001727F /* Random.swift in Sources */,
-				1453FBEB1E6A904D00633F32 /* MatrixLogarithmTest.swift in Sources */,
 				A7EC96E11E6A6ACB0001727F /* MatrixSubscript.swift in Sources */,
 				1453FBDD1E6A81A400633F32 /* MatrixAddition.swift in Sources */,
 				A7EC96ED1E6A79A00001727F /* MatrixTranspose.swift in Sources */,
@@ -273,6 +272,7 @@
 			files = (
 				A7EC96E51E6A6C220001727F /* MatrixSubscriptTests.swift in Sources */,
 				A7EC96F51E6A7D470001727F /* MatrixDivideTests.swift in Sources */,
+				1453FBEC1E6A926800633F32 /* MatrixLogarithmTest.swift in Sources */,
 				1453FBE01E6A833700633F32 /* MatrixAdditionTest.swift in Sources */,
 				A7EC96F11E6A7C490001727F /* MatrixTransposeTests.swift in Sources */,
 				A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */,
