@@ -15,6 +15,8 @@
 		A7EC96E71E6A70D60001727F /* Real.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96E61E6A70D60001727F /* Real.swift */; };
 		A7EC96E91E6A72830001727F /* MatrixInvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96E81E6A72830001727F /* MatrixInvert.swift */; };
 		A7EC96EB1E6A782D0001727F /* MatrixInvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96EA1E6A782D0001727F /* MatrixInvertTests.swift */; };
+		A7EC96ED1E6A79A00001727F /* MatrixTranspose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96EC1E6A79A00001727F /* MatrixTranspose.swift */; };
+		A7EC96F11E6A7C490001727F /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F01E6A7C490001727F /* MatrixTransposeTests.swift */; };
 		OBJ_23 /* numsw.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* numsw.swift */; };
 		OBJ_30 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* numswTests.swift */; };
 		OBJ_32 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* numsw.framework */; };
@@ -39,6 +41,8 @@
 		A7EC96E61E6A70D60001727F /* Real.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Real.swift; sourceTree = "<group>"; };
 		A7EC96E81E6A72830001727F /* MatrixInvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixInvert.swift; sourceTree = "<group>"; };
 		A7EC96EA1E6A782D0001727F /* MatrixInvertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixInvertTests.swift; sourceTree = "<group>"; };
+		A7EC96EC1E6A79A00001727F /* MatrixTranspose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTranspose.swift; sourceTree = "<group>"; };
+		A7EC96F01E6A7C490001727F /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransposeTests.swift; sourceTree = "<group>"; };
 		OBJ_12 /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = playgrounds; sourceTree = SOURCE_ROOT; };
 		OBJ_14 /* sandbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sandbox; sourceTree = SOURCE_ROOT; };
@@ -82,6 +86,7 @@
 				A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */,
 				A7EC96E41E6A6C220001727F /* MatrixSubscriptTests.swift */,
 				A7EC96EA1E6A782D0001727F /* MatrixInvertTests.swift */,
+				A7EC96F01E6A7C490001727F /* MatrixTransposeTests.swift */,
 			);
 			name = numswTests;
 			path = Tests/numswTests;
@@ -125,6 +130,7 @@
 				A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */,
 				A7EC96E61E6A70D60001727F /* Real.swift */,
 				A7EC96E81E6A72830001727F /* MatrixInvert.swift */,
+				A7EC96EC1E6A79A00001727F /* MatrixTranspose.swift */,
 			);
 			name = numsw;
 			path = Sources;
@@ -216,6 +222,7 @@
 			buildActionMask = 0;
 			files = (
 				A7EC96E11E6A6ACB0001727F /* MatrixSubscript.swift in Sources */,
+				A7EC96ED1E6A79A00001727F /* MatrixTranspose.swift in Sources */,
 				A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */,
 				A7EC96E91E6A72830001727F /* MatrixInvert.swift in Sources */,
 				OBJ_23 /* numsw.swift in Sources */,
@@ -229,6 +236,7 @@
 			buildActionMask = 0;
 			files = (
 				A7EC96E51E6A6C220001727F /* MatrixSubscriptTests.swift in Sources */,
+				A7EC96F11E6A7C490001727F /* MatrixTransposeTests.swift in Sources */,
 				A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */,
 				A7EC96EB1E6A782D0001727F /* MatrixInvertTests.swift in Sources */,
 				OBJ_30 /* numswTests.swift in Sources */,
