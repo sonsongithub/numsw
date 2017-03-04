@@ -12,10 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+                
+    }
+    
+    @IBAction func onRightButton(sender: UIButton) {
         let vc = RendererDebugViewController()
         present(vc, animated: true)
-                
     }
 
 }

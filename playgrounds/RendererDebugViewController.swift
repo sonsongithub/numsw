@@ -14,6 +14,10 @@ class RendererDebugViewController : UIViewController {
         super.init(nibName: "RendererDebugViewController", bundle: nil)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     
 }
