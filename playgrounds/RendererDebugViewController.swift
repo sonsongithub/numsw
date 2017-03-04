@@ -18,12 +18,24 @@ class RendererDebugViewController : UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        renderer = LineGraphRenderer()
+    }
+    
+    var renderer: Renderer?
+    
     @IBOutlet var imageView: UIImageView!
 
     @IBAction func onRenderButton(sender: UIButton) {
         print("size = \(imageView.bounds)")
+        
+        let image = renderer!.render(size: imageView.bounds.size)
+        imageView.image = image
     }
     
+    @IBAction func onClearButton() {
+        imageView.image = nil
+    }
     
 }
 

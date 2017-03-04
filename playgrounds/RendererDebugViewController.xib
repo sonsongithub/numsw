@@ -48,13 +48,26 @@
                         <constraint firstAttribute="height" constant="600" id="4tl-04-jeB"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xw6-fJ-a3q">
+                    <rect key="frame" x="209" y="45" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="6Ze-lW-aks"/>
+                        <constraint firstAttribute="height" constant="30" id="FOp-ee-lva"/>
+                    </constraints>
+                    <state key="normal" title="Clear"/>
+                    <connections>
+                        <action selector="onClearButton" destination="-1" eventType="touchUpInside" id="hHk-hU-eHZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.68594512617952641" green="0.92851360103626945" blue="0.71137366029529925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="7Fb-bY-91q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="AII-fa-FSm"/>
+                <constraint firstItem="xw6-fJ-a3q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="DYd-3V-IBP"/>
                 <constraint firstAttribute="trailing" secondItem="gzP-hT-Z59" secondAttribute="trailing" constant="20" id="Fqz-Ig-61p"/>
                 <constraint firstItem="gzP-hT-Z59" firstAttribute="top" secondItem="eVr-pf-JHI" secondAttribute="bottom" constant="8" id="MRl-XU-xdI"/>
                 <constraint firstItem="7Fb-bY-91q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="Mjy-m2-2I3"/>
+                <constraint firstItem="xw6-fJ-a3q" firstAttribute="leading" secondItem="eVr-pf-JHI" secondAttribute="trailing" constant="44" id="Ps0-sV-YGe"/>
                 <constraint firstItem="gzP-hT-Z59" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Z4l-yi-A2j"/>
                 <constraint firstItem="eVr-pf-JHI" firstAttribute="leading" secondItem="7Fb-bY-91q" secondAttribute="trailing" constant="43" id="ZId-CZ-uMx"/>
                 <constraint firstItem="eVr-pf-JHI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="oIz-yF-hsP"/>
