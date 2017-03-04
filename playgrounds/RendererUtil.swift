@@ -30,7 +30,14 @@ public func computeViewportTransform(
 
     trans = trans.translatedBy(x: to.origin.x, y: to.origin.y)
     trans = trans.translatedBy(x: (tw / 2.0), y: (th / 2.0))
-    trans = trans.scaledBy(x: tw / fw, y: -(th / fh))
+    
+    let sx = tw / fw
+    var sy = th / fh
+    if flipY {
+        sy *= -1
+    }
+    
+    trans = trans.scaledBy(x: sx, y: sy)
     trans = trans.translatedBy(x: -(fw / 2.0), y: -(fh / 2.0))
     trans = trans.translatedBy(x: -from.origin.x, y: -from.origin.y)
     return trans

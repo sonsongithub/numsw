@@ -257,7 +257,7 @@
 				TargetAttributes = {
 					1453FBB01E6A5CD300633F32 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JP866VWWSD;
+						DevelopmentTeam = 3B8C483UAP;
 						ProvisioningStyle = Automatic;
 					};
 					52E1EE3D1E6A8A2E008D19BB = {
@@ -497,7 +497,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JP866VWWSD;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
@@ -511,7 +511,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JP866VWWSD;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
