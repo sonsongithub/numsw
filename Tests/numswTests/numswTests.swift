@@ -9,7 +9,7 @@ class numswTests: XCTestCase {
     }
 
 
-    static var allTests : [(String, (numswTests) -> () throws -> Void)] {
+    static var allTests: [(String, (numswTests) -> () throws -> Void)] {
         return [
             ("testExample", testExample),
         ]
