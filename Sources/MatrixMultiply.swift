@@ -39,7 +39,7 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
         Int32(lda),                                   // lda
         rhs.elements,                                 // B
         Int32(ldb),                                   // ldb
-        1.0,                                          // beta
+        0.0,                                          // beta
         UnsafeMutablePointer(&c), // C
         Int32(n)                                      // ldc
     )
@@ -64,5 +64,5 @@ public func .*(lhs: Matrix, rhs: Matrix) -> Matrix{
 
 infix operator .*=
 public func .*=(lhs: inout Matrix, rhs: Matrix) {
-    lhs = lhs * rhs
+    lhs = lhs .* rhs
 }
