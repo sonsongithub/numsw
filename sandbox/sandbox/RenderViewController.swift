@@ -15,6 +15,13 @@ class RenderViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
 
+//<<<<<<< Updated upstream
+//=======
+////    func scrollView() -> UIScrollView{
+////        return self.view.viewWithTag(999) as! UIScrollView
+////    }
+//
+//>>>>>>> Stashed changes
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +34,20 @@ class RenderViewController: UIViewController {
         renderers.append(makeRenderer())
         renderers.append(makeRenderer())
 
+    }
+
+    func updateViews(){
+        for view in scrollView.subviews{
+            view.removeFromSuperview()
+        }
+        scrollView.contentSize.height = 0
+
+        self.render()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateViews()
     }
 
 
