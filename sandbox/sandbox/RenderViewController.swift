@@ -25,11 +25,10 @@ class RenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        renderers.append(Hoge())
-        renderers.append(Hoge())
-        renderers.append(Hoge())
-        renderers.append(Hoge())
-        renderers.append(Hoge())
+        renderers.append(LineGraphRenderer())
+        renderers.append(LineGraphRenderer())
+        renderers.append(LineGraphRenderer())
+        renderers.append(LineGraphRenderer())
 
     }
 
