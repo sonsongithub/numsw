@@ -8,6 +8,8 @@ _setupRender()
 //let line = LinePlot(yData: 0, 1, 4, 9, 16)
 //line.label = "Squares of Numbers"
 
+appendHoge()
+
 //4
 
 //#-end-editable-code

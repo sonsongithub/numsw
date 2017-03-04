@@ -17,7 +17,7 @@ class ChartViewController: UIViewController, PlaygroundLiveViewSafeAreaContainer
             chartView.safeAreaLayoutGuide = liveViewSafeAreaGuide
         }
     }
-    
+
 }
 
 
@@ -27,12 +27,8 @@ public func _setup() {
 
 public func _setupRender(){
 
-    
-//    let viewController:RenderViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"RenderVC") as! RenderViewController
-//        .instantiateViewControllerWithIdentifier("RenderVC") as! RenderViewController
     let viewController:RenderViewController = RenderViewController()
 
     PlaygroundPage.current.liveView = viewController as! UIViewController
 
 }
-

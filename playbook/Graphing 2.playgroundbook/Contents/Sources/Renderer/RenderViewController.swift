@@ -8,34 +8,45 @@
 
 import UIKit
 
+
+//public func append(renderer:Renderer){
+//    RenderViewController.shared.renderers.append(renderer)
+//    RenderViewController.shared.render()
+//}
+
+public func appendHoge(){
+    RenderViewController.shared.renderers.append(LineGraphRenderer(points: DummyData.points1()))
+    RenderViewController.shared.render()
+}
+
 class RenderViewController: UIViewController {
+
+    func makeRenderer() -> LineGraphRenderer {
+        return LineGraphRenderer(points: DummyData.points1())
+    }
+
+
+    static var shared:RenderViewController!
 
     var renderers:[Renderer] = []
 
     var scrollView: UIScrollView!
 
-//    func scrollView() -> UIScrollView{
-//        return self.scrollView
-//        return self.view.viewWithTag(999) as! UIScrollView
-//    }
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        RenderViewController.shared = self
 
         scrollView = UIScrollView()
         scrollView.frame = self.view.frame
 
         self.view.addSubview(scrollView)
 
-        func makeRenderer() -> LineGraphRenderer {
-            return LineGraphRenderer(points: DummyData.points1())
-        }
 
-        renderers.append(makeRenderer())
-        renderers.append(makeRenderer())
-        renderers.append(makeRenderer())
-        renderers.append(makeRenderer())
+//        renderers.append(makeRenderer())
+//        renderers.append(makeRenderer())
+//        renderers.append(makeRenderer())
+//        renderers.append(makeRenderer())
 
     }
 
@@ -72,7 +83,6 @@ class RenderViewController: UIViewController {
         // renderer 取り出してscrollviewに追加
         for renderer in renderers {
             let image = renderer.render(size: size)
-
             let imageView = UIImageView(image: image)
             imageView.frame.size = size
             imageView.contentMode = .scaleToFill
