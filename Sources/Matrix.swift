@@ -1,9 +1,9 @@
 public struct Matrix {
     
-    var rows: Int
-    var columns: Int
+    public var rows: Int
+    public var columns: Int
     
-    var elements: [Double]
+    public var elements: [Double]
     
     public init(rows: Int, columns: Int, elements: [Double]) {
         self.rows = rows
