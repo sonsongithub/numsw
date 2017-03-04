@@ -53,47 +53,52 @@ public func makeRenderer() -> LineGraphRenderer {
         ])
 }
 
-
 public class RenderViewController: UIViewController {
-    static var shared: RenderViewController!
-    
-    var renderers:[Renderer] = []
-    
-    var scrollView: UIScrollView!
-    
-    func append(renderer: Renderer) {
-        renderers.append(renderer)
+
+    func makeRenderer() -> LineGraphRenderer {
+        return LineGraphRenderer(lines: [
+            LineData(points: DummyData.points1()),
+            LineData(points: DummyData.points2())
+            ]
+        )
     }
-    
+
+
+    static var shared:RenderViewController!
+
+    var renderers:[Renderer] = []
+
+    var scrollView: UIScrollView!
+
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         RenderViewController.shared = self
-        
+
         scrollView = UIScrollView()
         scrollView.frame = self.view.frame
-        
+
         self.view.addSubview(scrollView)
     }
-    
-    
+
+
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         self.render()
-        
+
     }
-    
-    
+
+
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateViews()
     }
-    
+
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     func updateViews(){
         for view in scrollView.subviews{
             view.removeFromSuperview()
@@ -101,10 +106,10 @@ public class RenderViewController: UIViewController {
         scrollView.contentSize.height = 0
         self.render()
     }
-    
-    
+
+
     func render(){
-        
+
         var size = self.view.frame.size
         size.height *= 0.5
         // renderer 取り出してscrollviewに追加
@@ -121,7 +126,6 @@ public class RenderViewController: UIViewController {
     
     
 }
-
 
 /*
 
@@ -248,3 +252,5 @@ class RenderViewController: UITableViewController {
 }
 
 */
+
+

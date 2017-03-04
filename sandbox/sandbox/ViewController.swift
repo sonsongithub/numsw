@@ -32,11 +32,10 @@ class ViewController: UIViewController {
         let vc = RenderViewController()
         
         present(vc, animated: true)
-        
-        
-        vc.append(renderer: makeRenderer())
-        vc.append(renderer: makeRenderer())
-        vc.append(renderer: makeRenderer())
+
+        add(renderer: makeRenderer())
+        add(renderer: makeRenderer())
+        add(renderer: makeRenderer())
         
     }
 
