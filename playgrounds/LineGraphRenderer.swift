@@ -75,9 +75,9 @@ class LineGraphRenderer : Renderer {
         
         let ctx = UIGraphicsGetCurrentContext()!
         
-        drawDebugX(context: ctx,
-                   point0: CGPoint(x: viewport.minX, y: viewport.minY),
-                   point1: CGPoint(x: viewport.maxX, y: viewport.maxY))
+//        drawDebugX(context: ctx,
+//                   point0: CGPoint(x: viewport.minX, y: viewport.minY),
+//                   point1: CGPoint(x: viewport.maxX, y: viewport.maxY))
         
         drawAxisX(context: ctx)
         drawAxisY(context: ctx)
@@ -98,7 +98,7 @@ class LineGraphRenderer : Renderer {
         
         let tickXs = computeTickValues(min: p0.x, max: p1.x,
                                        step: stepSize.width)
-        let tickHeight = viewport.height * 0.1
+        let tickHeight = viewport.height * 0.04
 
         for x in tickXs {
             drawLine(context: ctx, points: [
@@ -119,7 +119,7 @@ class LineGraphRenderer : Renderer {
         
         let tickYs = computeTickValues(min: p0.y, max: p1.y,
                                        step: stepSize.height)
-        let tickWidth = viewport.width * 0.1
+        let tickWidth = viewport.width * 0.04
         
         for y in tickYs {
             drawLine(context: ctx, points: [
