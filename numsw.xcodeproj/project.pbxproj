@@ -23,6 +23,8 @@
 		A7EC96F31E6A7CD80001727F /* MatrixDivide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F21E6A7CD80001727F /* MatrixDivide.swift */; };
 		A7EC96F51E6A7D470001727F /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F41E6A7D470001727F /* MatrixDivideTests.swift */; };
 		A7EC96F91E6A813D0001727F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F81E6A813D0001727F /* Random.swift */; };
+		A7EC96FB1E6A8C6C0001727F /* MatrixRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96FA1E6A8C6C0001727F /* MatrixRange.swift */; };
+		A7EC96FD1E6A8DF50001727F /* MatrixRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96FC1E6A8DF50001727F /* MatrixRangeTests.swift */; };
 		OBJ_23 /* numsw.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* numsw.swift */; };
 		OBJ_30 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* numswTests.swift */; };
 		OBJ_32 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* numsw.framework */; };
@@ -55,6 +57,8 @@
 		A7EC96F21E6A7CD80001727F /* MatrixDivide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixDivide.swift; sourceTree = "<group>"; };
 		A7EC96F41E6A7D470001727F /* MatrixDivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixDivideTests.swift; sourceTree = "<group>"; };
 		A7EC96F81E6A813D0001727F /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		A7EC96FA1E6A8C6C0001727F /* MatrixRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixRange.swift; sourceTree = "<group>"; };
+		A7EC96FC1E6A8DF50001727F /* MatrixRangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixRangeTests.swift; sourceTree = "<group>"; };
 		OBJ_12 /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = playgrounds; sourceTree = SOURCE_ROOT; };
 		OBJ_14 /* sandbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sandbox; sourceTree = SOURCE_ROOT; };
@@ -102,6 +106,7 @@
 				A7EC96EA1E6A782D0001727F /* MatrixInvertTests.swift */,
 				A7EC96F01E6A7C490001727F /* MatrixTransposeTests.swift */,
 				A7EC96F41E6A7D470001727F /* MatrixDivideTests.swift */,
+				A7EC96FC1E6A8DF50001727F /* MatrixRangeTests.swift */,
 			);
 			name = numswTests;
 			path = Tests/numswTests;
@@ -149,6 +154,7 @@
 				A7EC96EC1E6A79A00001727F /* MatrixTranspose.swift */,
 				A7EC96F21E6A7CD80001727F /* MatrixDivide.swift */,
 				A7EC96F81E6A813D0001727F /* Random.swift */,
+				A7EC96FA1E6A8C6C0001727F /* MatrixRange.swift */,
 			);
 			name = numsw;
 			path = Sources;
@@ -245,6 +251,7 @@
 				A7EC96ED1E6A79A00001727F /* MatrixTranspose.swift in Sources */,
 				1453FBDC1E6A81A400633F32 /* Matrix_sonson.swift in Sources */,
 				A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */,
+				A7EC96FB1E6A8C6C0001727F /* MatrixRange.swift in Sources */,
 				A7EC96E91E6A72830001727F /* MatrixInvert.swift in Sources */,
 				OBJ_23 /* numsw.swift in Sources */,
 				A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */,
@@ -262,6 +269,7 @@
 				A7EC96F11E6A7C490001727F /* MatrixTransposeTests.swift in Sources */,
 				A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */,
 				A7EC96EB1E6A782D0001727F /* MatrixInvertTests.swift in Sources */,
+				A7EC96FD1E6A8DF50001727F /* MatrixRangeTests.swift in Sources */,
 				OBJ_30 /* numswTests.swift in Sources */,
 				1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */,
 			);
