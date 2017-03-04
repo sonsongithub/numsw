@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0hN-dS-gUi">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0hN-dS-gUi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,7 +28,7 @@
                                 </constraints>
                                 <state key="normal" title="left"/>
                                 <connections>
-                                    <segue destination="tO8-Po-bMB" kind="show" id="OQp-vA-k68"/>
+                                    <action selector="onLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWE-uz-Sv0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmg-hs-K7I">
@@ -55,38 +55,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="668" y="381"/>
-        </scene>
-        <!--Render View Controller-->
-        <scene sceneID="itL-lF-DgX">
-            <objects>
-                <viewController storyboardIdentifier="RenderVC" id="tO8-Po-bMB" customClass="RenderViewController" customModule="sandbox" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gKd-55-c4O"/>
-                        <viewControllerLayoutGuide type="bottom" id="ebA-Qa-1RJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eU7-Zs-eMN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QV-Qi-GPD">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6QV-Qi-GPD" firstAttribute="leading" secondItem="eU7-Zs-eMN" secondAttribute="leading" id="9lF-Bi-RJy"/>
-                            <constraint firstAttribute="trailing" secondItem="6QV-Qi-GPD" secondAttribute="trailing" id="MZy-eB-yqB"/>
-                            <constraint firstItem="ebA-Qa-1RJ" firstAttribute="top" secondItem="6QV-Qi-GPD" secondAttribute="bottom" id="eXi-eH-eqK"/>
-                            <constraint firstItem="6QV-Qi-GPD" firstAttribute="top" secondItem="gKd-55-c4O" secondAttribute="bottom" id="rzO-8I-jlD"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="scrollView" destination="6QV-Qi-GPD" id="V3h-S6-oY1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuP-NC-85B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="82" y="1189"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FbK-WS-qCH">
