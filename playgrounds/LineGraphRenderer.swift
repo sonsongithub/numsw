@@ -16,17 +16,19 @@ class LineGraphRenderer : Renderer {
         let ctx = UIGraphicsGetCurrentContext()!
 
         ctx.setLineWidth(2.0)
-        let color = UIColor.red.cgColor
         
-        ctx.setStrokeColor(color)
-        
-        //3.パスを作成
-        ctx.move(to: CGPoint(x: 50, y: 50))
-        ctx.addLine(to: CGPoint(x: 250, y: 250))
-
+        ctx.setStrokeColor(UIColor.red.cgColor)
+        ctx.move(to: CGPoint(x: 0, y: 0))
+        ctx.addLine(to: CGPoint(x: size.width, y: size.height))
         ctx.closePath()
         ctx.strokePath()
         
+        ctx.setStrokeColor(UIColor.green.cgColor)
+        ctx.move(to: CGPoint(x: size.width, y: 0))
+        ctx.addLine(to: CGPoint(x: 0, y: size.height))
+        ctx.closePath()
+        ctx.strokePath()
+
         let cgImage = ctx.makeImage()!
         return UIImage(cgImage: cgImage)
     }
