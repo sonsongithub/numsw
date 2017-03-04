@@ -12,13 +12,13 @@ func _normal(mu: Double = 0, sigma: Double = 1) -> Double {
 }
 
 extension Matrix {
-    static func uniform(rows: Int, columns: Int, low: Double = 0, high: Double = 1) -> Matrix {
+    public static func uniform(rows: Int, columns: Int, low: Double = 0, high: Double = 1) -> Matrix {
         return Matrix(rows: rows,
                       columns: columns,
                       elements: (0..<rows*columns).map { _ in _uniform(low: low, high: high) })
     }
     
-    static func normal(rows: Int, columns: Int, mu: Double = 0, sigma: Double = 1) -> Matrix {
+    public static func normal(rows: Int, columns: Int, mu: Double = 0, sigma: Double = 1) -> Matrix {
         return Matrix(rows: rows,
                       columns: columns,
                       elements: (0..<rows*columns).map { _ in _normal(mu: mu, sigma: sigma) })

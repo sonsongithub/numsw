@@ -60,7 +60,6 @@ public func .*(lhs: Matrix, rhs: Matrix) -> Matrix{
 }
 
 infix operator .*=
-
 public func .*=(lhs: inout Matrix, rhs: Matrix) {
     lhs = lhs * rhs
 }

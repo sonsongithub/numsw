@@ -1,6 +1,6 @@
 
 extension Matrix {
-    static func range(from: Int, to: Int, stride: Int) -> Matrix {
+    public static func range(from: Int, to: Int, stride: Int) -> Matrix {
         
         let elements = Swift.stride(from: from, to: to, by: stride).map(Double.init)
         return Matrix(rows: elements.count,
@@ -8,7 +8,7 @@ extension Matrix {
                       elements: elements)
     }
     
-    static func linspace(from: Double, to: Double, count: Int) -> Matrix {
+    public static func linspace(from: Double, to: Double, count: Int) -> Matrix {
         precondition(count > 0, "count must be larger than 0")
         let elements = (0..<count).map { i -> Double in
             from + Double(i)*(to-from)/Double(count-1)
