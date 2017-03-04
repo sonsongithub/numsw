@@ -66,14 +66,16 @@ class LineGraphRenderer : Renderer {
         
         let ctx = UIGraphicsGetCurrentContext()!
         
+        drawDebugX(context: ctx,
+                   point0: CGPoint(x: viewport.minX, y: viewport.minY),
+                   point1: CGPoint(x: viewport.maxX, y: viewport.maxY))
+        
         drawAxisX(context: ctx)
         drawAxisY(context: ctx)
         
         drawPoints(context: ctx)
 
-//        drawDebugX(context: ctx,
-//                   point0: CGPoint(x: -1, y: -1),
-//                   point1: CGPoint(x: 5, y: 7))
+
 
         
         let cgImage = ctx.makeImage()!
