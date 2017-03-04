@@ -1,5 +1,16 @@
 import Accelerate
 
+// scalar
+
+public func *<T: Real>(lhs: Matrix<T>, rhs: T) -> Matrix<T> {
+    return Matrix(rows: lhs.rows, columns: lhs.columns, elements: lhs.elements.map { $0*rhs })
+}
+
+public func *<T: Real>(lhs: T, rhs: Matrix<T>) -> Matrix<T> {
+    return rhs * lhs
+}
+
+// matmul
 public func *(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
     precondition(lhs.columns == rhs.rows, "Matrices can't multiply.")
     let m = lhs.rows
