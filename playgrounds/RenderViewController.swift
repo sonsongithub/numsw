@@ -8,21 +8,6 @@
 
 import UIKit
 
-public func add(renderer: Renderer) {
-    RenderViewController.shared.append(renderer: renderer)
-}
-
-public func testMakeRenderer() {
-    add(renderer: makeRenderer())
-}
-
-public func makeRenderer() -> LineGraphRenderer {
-    return LineGraphRenderer(lines: [
-        LineData(points: DummyData.points1()),
-        LineData(points: DummyData.points2())
-        ])
-}
-
 public func addLine(x: [Double], y: [Double]) {
     let cgPoints = zip(x, y).map {
         CGPoint(x: $0.0, y:$0.1)
@@ -53,9 +38,23 @@ public func addLine2(x: [Double], y: [Double],
     add(renderer: renderer)
 }
 
-class RenderViewController: UIViewController {
-    
-    
+public func add(renderer: Renderer) {
+    RenderViewController.shared.renderers.append(renderer)
+}
+
+public func testMakeRenderer() {
+    add(renderer: makeRenderer())
+}
+
+public func makeRenderer() -> LineGraphRenderer {
+    return LineGraphRenderer(lines: [
+        LineData(points: DummyData.points1()),
+        LineData(points: DummyData.points2())
+        ])
+}
+
+
+public class RenderViewController: UIViewController {
     static var shared: RenderViewController!
     
     var renderers:[Renderer] = []
@@ -66,7 +65,7 @@ class RenderViewController: UIViewController {
         renderers.append(renderer)
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         RenderViewController.shared = self
@@ -75,13 +74,10 @@ class RenderViewController: UIViewController {
         scrollView.frame = self.view.frame
         
         self.view.addSubview(scrollView)
-        
-
-        
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.render()
@@ -89,12 +85,12 @@ class RenderViewController: UIViewController {
     }
     
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateViews()
     }
     
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     

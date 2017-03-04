@@ -130,8 +130,7 @@ public class LineGraphRenderer : Renderer {
     }
     
     public func drawPoints(context ctx: CGContext) {
-        ctx.setStrokeColor(UIColor.green.cgColor)
-//        UIColor.green
+        ctx.setStrokeColor(UIColor.white.cgColor)
         
         if lines.count >= 1 {
             drawLine(context: ctx, points: lines[0].points)
@@ -142,7 +141,7 @@ public class LineGraphRenderer : Renderer {
     }
     
     public func drawSanpuzu(context ctx: CGContext, line : LineData) {
-        ctx.setStrokeColor(UIColor.blue.cgColor)
+        ctx.setStrokeColor(UIColor.green.cgColor)
         
         let t = viewportTransform!
 
