@@ -51,16 +51,11 @@ class LineGraphRenderer : Renderer {
     
     
     func render(size: CGSize) -> UIImage {
-        
         viewport = computeViewport()
-//        print("viewport=\(viewport)")
         viewportTransform = computeViewportTransform(from: viewport,
                                                      to: CGRect(origin: CGPoint.zero,
                                                                 size: size),
                                                      flipY: true)
-//        print(CGPoint(x: 2, y: 3).applying(viewportTransform))
-//        print(CGPoint(x: -1, y: -1).applying(viewportTransform))
-//        print(CGPoint(x: 5, y: 7).applying(viewportTransform))
         
         UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)
         
@@ -72,89 +67,68 @@ class LineGraphRenderer : Renderer {
         
         drawAxisX(context: ctx)
         drawAxisY(context: ctx)
-        
         drawPoints(context: ctx)
-
-
-
         
         let cgImage = ctx.makeImage()!
         return UIImage(cgImage: cgImage)
     }
     
     func drawAxisX(context ctx: CGContext) {
-        let t = viewportTransform!
-        let p0 = CGPoint(x: viewport.minX, y: 0).applying(t)
-        let p1 = CGPoint(x: viewport.maxX, y: 0).applying(t)
-        
-        ctx.setLineWidth(2.0)
+        let p0 = CGPoint(x: viewport.minX, y: 0)
+        let p1 = CGPoint(x: viewport.maxX, y: 0)
         
         ctx.setStrokeColor(UIColor.gray.cgColor)
-        ctx.move(to: p0)
-        ctx.addLine(to: p1)
-        ctx.closePath()
-        ctx.strokePath()
+        drawLine(context: ctx, points: [p0, p1])
     }
     
     func drawAxisY(context ctx: CGContext) {
-        let t = viewportTransform!
-        let p0 = CGPoint(x: 0, y: viewport.minY).applying(t)
-        let p1 = CGPoint(x: 0, y: viewport.maxY).applying(t)
-        
-        ctx.setLineWidth(2.0)
+        let p0 = CGPoint(x: 0, y: viewport.minY)
+        let p1 = CGPoint(x: 0, y: viewport.maxY)
         
         ctx.setStrokeColor(UIColor.gray.cgColor)
-        ctx.move(to: p0)
-        ctx.addLine(to: p1)
-        ctx.closePath()
-        ctx.strokePath()
+        drawLine(context: ctx, points: [p0, p1])
     }
     
     func drawPoints(context ctx: CGContext) {
-        let t = viewportTransform!
-        
-        ctx.setLineWidth(2.0)
-        
         ctx.setStrokeColor(UIColor.white.cgColor)
-        
-        if self.points.count < 2 {
-            return
-        }
-        
-        
-        ctx.move(to: self.points[0].applying(t))
-        
-        for i in 1..<self.points.count {
-            ctx.addLine(to: self.points[i].applying(t))
-        }
-        
-//        ctx.closePath()
-        
-        ctx.strokePath()
-        
+        drawLine(context: ctx, points: self.points)
     }
-    
     
     func drawDebugX(context ctx: CGContext,
                     point0: CGPoint,
                     point1: CGPoint)
     {
+        ctx.setStrokeColor(UIColor.red.cgColor)
+        drawLine(context: ctx, points: [
+            CGPoint(x: point0.x, y: point0.y),
+            CGPoint(x: point1.x, y: point1.y)
+            ])
+        
+        ctx.setStrokeColor(UIColor.green.cgColor)
+        drawLine(context: ctx, points: [
+            CGPoint(x: point1.x, y: point0.y),
+            CGPoint(x: point0.x, y: point1.y)
+            ])
+    }
+    
+    func drawLine(context ctx: CGContext,
+                  points: [CGPoint])
+    {
         let t = viewportTransform!
-        let point0 = point0.applying(t)
-        let point1 = point1.applying(t)
+        
+        let points = points.map { $0.applying(t) }
         
         ctx.setLineWidth(2.0)
         
-        ctx.setStrokeColor(UIColor.red.cgColor)
-        ctx.move(to: CGPoint(x: point0.x, y: point0.y))
-        ctx.addLine(to: CGPoint(x: point1.x, y: point1.y))
-        ctx.closePath()
-        ctx.strokePath()
+        if self.points.count < 2 {
+            return
+        }
         
-        ctx.setStrokeColor(UIColor.green.cgColor)
-        ctx.move(to: CGPoint(x: point1.x, y: point0.y))
-        ctx.addLine(to: CGPoint(x: point0.x, y: point1.y))
-        ctx.closePath()
+        ctx.move(to: points[0])
+        for i in 1..<points.count {
+            ctx.addLine(to: points[i])
+        }
+        
         ctx.strokePath()
     }
     
