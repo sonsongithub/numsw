@@ -17,6 +17,7 @@
 		D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */; };
 		D621D0031E6A652F00A50C88 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */; };
 		D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */; };
+		E0598B0D1E6A678700EAFDC0 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererDebugViewController.swift; sourceTree = "<group>"; };
 		D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RendererDebugViewController.xib; sourceTree = "<group>"; };
 		D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphRenderer.swift; sourceTree = "<group>"; };
+		E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			children = (
 				1453FBB41E6A5CD300633F32 /* AppDelegate.swift */,
 				1453FBB61E6A5CD300633F32 /* ViewController.swift */,
+				E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */,
 				1453FBB81E6A5CD300633F32 /* Main.storyboard */,
 				1453FBBB1E6A5CD300633F32 /* Assets.xcassets */,
 				1453FBBD1E6A5CD300633F32 /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0598B0D1E6A678700EAFDC0 /* RenderViewController.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
 				D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */,
 				1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */,
