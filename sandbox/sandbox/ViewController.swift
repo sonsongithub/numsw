@@ -12,14 +12,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+                
     }
-
+    
+    @IBAction func onRightButton(sender: UIButton) {
+        let vc = RendererDebugViewController()
+        present(vc, animated: true)
+    }
+    @IBAction func onLeftButton(_ sender: Any) {
+        
+        let vc = RenderViewController()
+        present(vc, animated: true)
+        
+    }
 
 }
-
