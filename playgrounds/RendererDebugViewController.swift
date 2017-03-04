@@ -9,7 +9,7 @@
 import UIKit
 
 class RendererDebugViewController : UIViewController {
-
+    
     required init() {
         super.init(nibName: "RendererDebugViewController", bundle: nil)
     }
@@ -18,6 +18,11 @@ class RendererDebugViewController : UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBOutlet var imageView: UIImageView!
+
+    @IBAction func onRenderButton(sender: UIButton) {
+        print("size = \(imageView.bounds)")
+    }
     
     
 }
