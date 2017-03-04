@@ -34,9 +34,10 @@ class MatrixLogarithmTest: XCTestCase {
     func testExp2() {
         let m1 = Matrix(rows: 2, columns: 2, elements: [2.0, 1.0, 0.2, 0.1])
         let m2 = exp2(m1)
-        let ans = Matrix(rows: 2, columns: 2, elements: [7.3891, 2.7183, 1.2214, 1.1052])
+        let ans = Matrix(rows: 2, columns: 2, elements: [4.0000, 2.0000, 1.1487, 1.0718])
         m2.show()
         let error = frobeniusNorm(ans - m2)
+        XCTAssert(error < 0.000001)
     }
     
     func testLog() {

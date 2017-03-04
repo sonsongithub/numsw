@@ -46,7 +46,7 @@ class MatrixSubscriptTests: XCTestCase {
     
     func testAddAssign() {
         var mat2 = Matrix.zeros(rows: 3, columns: 3)
-        mat2[[0,1], nil] += Matrix.ones(rows: 2, columns: 3)
+        mat2[[0, 1], nil] += Matrix.ones(rows: 2, columns: 3)
         mat2[nil, [1]] += Matrix.ones(rows: 3, columns: 1)
         XCTAssertEqual(mat2.elements, [1.0, 2, 1, 1, 2, 1, 0, 1, 0])
     }
