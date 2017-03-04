@@ -21,6 +21,7 @@
 		A7EC96F11E6A7C490001727F /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F01E6A7C490001727F /* MatrixTransposeTests.swift */; };
 		A7EC96F31E6A7CD80001727F /* MatrixDivide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F21E6A7CD80001727F /* MatrixDivide.swift */; };
 		A7EC96F51E6A7D470001727F /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F41E6A7D470001727F /* MatrixDivideTests.swift */; };
+		A7EC96F91E6A813D0001727F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96F81E6A813D0001727F /* Random.swift */; };
 		OBJ_23 /* numsw.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* numsw.swift */; };
 		OBJ_30 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* numswTests.swift */; };
 		OBJ_32 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* numsw.framework */; };
@@ -51,6 +52,7 @@
 		A7EC96F01E6A7C490001727F /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransposeTests.swift; sourceTree = "<group>"; };
 		A7EC96F21E6A7CD80001727F /* MatrixDivide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixDivide.swift; sourceTree = "<group>"; };
 		A7EC96F41E6A7D470001727F /* MatrixDivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixDivideTests.swift; sourceTree = "<group>"; };
+		A7EC96F81E6A813D0001727F /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		OBJ_12 /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = playgrounds; sourceTree = SOURCE_ROOT; };
 		OBJ_14 /* sandbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sandbox; sourceTree = SOURCE_ROOT; };
@@ -143,6 +145,7 @@
 				A7EC96E81E6A72830001727F /* MatrixInvert.swift */,
 				A7EC96EC1E6A79A00001727F /* MatrixTranspose.swift */,
 				A7EC96F21E6A7CD80001727F /* MatrixDivide.swift */,
+				A7EC96F81E6A813D0001727F /* Random.swift */,
 			);
 			name = numsw;
 			path = Sources;
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				A7EC96F91E6A813D0001727F /* Random.swift in Sources */,
 				A7EC96E11E6A6ACB0001727F /* MatrixSubscript.swift in Sources */,
 				1453FBDD1E6A81A400633F32 /* MatrixAddition.swift in Sources */,
 				A7EC96ED1E6A79A00001727F /* MatrixTranspose.swift in Sources */,
