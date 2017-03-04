@@ -9,7 +9,15 @@
 import UIKit
 
 func add(renderer: Renderer) {
-    
+    RenderViewController.shared.append(renderer: renderer)
+}
+
+func testMakeRenderer() {
+    add(renderer: makeRenderer())
+}
+
+func makeRenderer() -> LineGraphRenderer {
+    return LineGraphRenderer(points: DummyData.points1())
 }
 
 private class RenderTableViewCell: UITableViewCell {
@@ -27,7 +35,7 @@ private class RenderTableViewCell: UITableViewCell {
         print("RenderTableViewCell init")
         self.separatorInset = .zero
         renderImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        renderImageView.contentMode = .scaleToFill
+        renderImageView.contentMode = .scaleAspectFit
         self.addSubview(renderImageView)
         renderImageView.frame = self.bounds
     }
@@ -55,6 +63,8 @@ private class RenderTableViewCell: UITableViewCell {
 class RenderViewController: UITableViewController {
 
 
+    static var shared: RenderViewController!
+    
     private let CellIdentifier = "Cell"
     private var renderers: [Renderer] = []
     
@@ -68,6 +78,8 @@ class RenderViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        RenderViewController.shared = self
 
         func makeRenderer() -> LineGraphRenderer {
             return LineGraphRenderer(lines: [
@@ -76,15 +88,24 @@ class RenderViewController: UITableViewController {
                 ])
         }
         
-        for _ in 0...20 {
-            renderers.append(makeRenderer())
-        }
-        
-        
         tableView.contentInset = .zero
         tableView.separatorStyle = .none
         
         tableView.register(RenderTableViewCell.self, forCellReuseIdentifier: CellIdentifier)
+        
+        
+        // test start
+        
+        //for _ in 0...20 {
+        //    testMakeRenderer()
+        //}
+        
+        // test end
+    }
+    
+    func append(renderer: Renderer) {
+        self.renderers.append(renderer)
+        self.tableView.insertRows(at: [IndexPath(row: renderers.count, section: 0)], with: .automatic)
     }
 
     override func viewDidLayoutSubviews() {
