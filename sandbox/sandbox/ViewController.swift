@@ -20,5 +20,11 @@ class ViewController: UIViewController {
         let vc = RendererDebugViewController()
         present(vc, animated: true)
     }
+    @IBAction func onLeftButton(_ sender: Any) {
+        
+        let vc = RenderViewController()
+        present(vc, animated: true)
+        
+    }
 
 }
