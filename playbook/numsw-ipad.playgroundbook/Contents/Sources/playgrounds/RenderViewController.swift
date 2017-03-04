@@ -39,7 +39,7 @@ public func addLine2(x: [Double], y: [Double],
 }
 
 public func add(renderer: Renderer) {
-    RenderViewController.shared.renderers.append(renderer)
+    RenderViewController.shared.append(renderer: renderer)
 }
 
 public func testMakeRenderer() {
@@ -53,6 +53,7 @@ public func makeRenderer() -> LineGraphRenderer {
         ])
 }
 
+/*
 public class RenderViewController: UIViewController {
 
     func makeRenderer() -> LineGraphRenderer {
@@ -127,7 +128,7 @@ public class RenderViewController: UIViewController {
     
 }
 
-/*
+ */
 
 private class RenderTableViewCell: UITableViewCell {
     
@@ -169,7 +170,7 @@ private class RenderTableViewCell: UITableViewCell {
     }
 }
 
-class RenderViewController: UITableViewController {
+public class RenderViewController: UITableViewController {
 
 
     static var shared: RenderViewController!
@@ -177,15 +178,15 @@ class RenderViewController: UITableViewController {
     private let CellIdentifier = "Cell"
     private var renderers: [Renderer] = []
     
-    init() {
+    public init() {
         super.init(style: .plain)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         RenderViewController.shared = self
@@ -201,56 +202,46 @@ class RenderViewController: UITableViewController {
         tableView.separatorStyle = .none
         
         tableView.register(RenderTableViewCell.self, forCellReuseIdentifier: CellIdentifier)
-        
-        
-        // test start
-        
-        for _ in 0...20 {
-        //    testMakeRenderer()
-        }
-
-        testMakeRenderer()
-        // test end
     }
     
-    func append(renderer: Renderer) {
+    public func append(renderer: Renderer) {
         self.renderers.append(renderer)
-        self.tableView.insertRows(at: [IndexPath(row: renderers.count, section: 0)], with: .automatic)
+        self.tableView.reloadData()
+//        self.tableView.insertRows(at: [IndexPath(row: renderers.count, section: 0)], with: .automatic)
     }
 
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         // will ??
         //self.tableView.reloadData()
     }
 
 
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return renderers.count
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! RenderTableViewCell
         //cell.textLabel!.text = "Hello \(indexPath)"
         cell.renderer = renderers[indexPath.row]
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.bounds.height
+    public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.bounds.height * 0.5
     }
 
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = cell as! RenderTableViewCell
         cell.updateImageView()
     }
 }
 
-*/
 
 
