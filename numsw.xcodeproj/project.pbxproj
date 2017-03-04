@@ -116,6 +116,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_19 /* Build configuration list for PBXNativeTarget "numsw" */;
 			buildPhases = (
+				1453FBC71E6A632300633F32 /* Swiftlint */,
 				OBJ_22 /* Sources */,
 				OBJ_24 /* Frameworks */,
 			);
@@ -170,6 +171,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1453FBC71E6A632300633F32 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\necho \"SwiftLint\"\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_22 /* Sources */ = {
