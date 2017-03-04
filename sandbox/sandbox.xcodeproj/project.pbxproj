@@ -23,7 +23,6 @@
 		52E1EE781E6A8CE0008D19BB /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE701E6A8CE0008D19BB /* MatrixDivideTests.swift */; };
 		52E1EE7F1E6A8D70008D19BB /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E1EE661E6A8CD1008D19BB /* numsw.framework */; };
 		52E1EE801E6A8D70008D19BB /* numsw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E1EE661E6A8CD1008D19BB /* numsw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D621CFFD1E6A631900A50C88 /* hoge in Resources */ = {isa = PBXBuildFile; fileRef = D621CFFC1E6A631900A50C88 /* hoge */; };
 		D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CFFE1E6A632D00A50C88 /* Renderer.swift */; };
 		D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */; };
 		D621D0031E6A652F00A50C88 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */; };
@@ -99,7 +98,6 @@
 		52E1EE6E1E6A8CE0008D19BB /* MatrixInvertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixInvertTests.swift; path = ../../Tests/numswTests/MatrixInvertTests.swift; sourceTree = "<group>"; };
 		52E1EE6F1E6A8CE0008D19BB /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTransposeTests.swift; path = ../../Tests/numswTests/MatrixTransposeTests.swift; sourceTree = "<group>"; };
 		52E1EE701E6A8CE0008D19BB /* MatrixDivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixDivideTests.swift; path = ../../Tests/numswTests/MatrixDivideTests.swift; sourceTree = "<group>"; };
-		D621CFFC1E6A631900A50C88 /* hoge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hoge; sourceTree = "<group>"; };
 		D621CFFE1E6A632D00A50C88 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererDebugViewController.swift; sourceTree = "<group>"; };
 		D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RendererDebugViewController.xib; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				D65380911E6B28380032C0B2 /* RenderViewController.swift */,
-				D621CFFC1E6A631900A50C88 /* hoge */,
 				D621CFFE1E6A632D00A50C88 /* Renderer.swift */,
 				D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */,
 				D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */,
@@ -318,7 +315,6 @@
 				1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */,
 				1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */,
 				1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */,
-				D621CFFD1E6A631900A50C88 /* hoge in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

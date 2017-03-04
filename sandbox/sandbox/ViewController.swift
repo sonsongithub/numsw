@@ -21,9 +21,22 @@ class ViewController: UIViewController {
         present(vc, animated: true)
     }
     @IBAction func onLeftButton(_ sender: Any) {
+        func makeRenderer() -> LineGraphRenderer {
+            return LineGraphRenderer(lines: [
+                LineData(points: DummyData.points1()),
+                LineData(points: DummyData.points2())
+                ]
+            )
+        }
         
         let vc = RenderViewController()
+        
         present(vc, animated: true)
+        
+        
+        vc.append(renderer: makeRenderer())
+        vc.append(renderer: makeRenderer())
+        vc.append(renderer: makeRenderer())
         
     }
 

@@ -53,6 +53,82 @@ public func addLine2(x: [Double], y: [Double],
     add(renderer: renderer)
 }
 
+class RenderViewController: UIViewController {
+    
+    
+    static var shared: RenderViewController!
+    
+    var renderers:[Renderer] = []
+    
+    var scrollView: UIScrollView!
+    
+    func append(renderer: Renderer) {
+        renderers.append(renderer)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        RenderViewController.shared = self
+        
+        scrollView = UIScrollView()
+        scrollView.frame = self.view.frame
+        
+        self.view.addSubview(scrollView)
+        
+
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.render()
+        
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateViews()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func updateViews(){
+        for view in scrollView.subviews{
+            view.removeFromSuperview()
+        }
+        scrollView.contentSize.height = 0
+        self.render()
+    }
+    
+    
+    func render(){
+        
+        var size = self.view.frame.size
+        size.height *= 0.5
+        // renderer 取り出してscrollviewに追加
+        for renderer in renderers {
+            let image = renderer.render(size: size)
+            let imageView = UIImageView(image: image)
+            imageView.frame.size = size
+            imageView.contentMode = .scaleToFill
+            imageView.frame.origin = CGPoint(x: 0, y: scrollView.contentSize.height)
+            scrollView.addSubview(imageView)
+            scrollView.contentSize.height += size.height
+        }
+    }
+    
+    
+}
+
+
+/*
+
 private class RenderTableViewCell: UITableViewCell {
     
     var renderer: Renderer? {
@@ -174,3 +250,5 @@ class RenderViewController: UITableViewController {
         cell.updateImageView()
     }
 }
+
+*/
