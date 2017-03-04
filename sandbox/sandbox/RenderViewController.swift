@@ -15,13 +15,6 @@ class RenderViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
 
-//<<<<<<< Updated upstream
-//=======
-////    func scrollView() -> UIScrollView{
-////        return self.view.viewWithTag(999) as! UIScrollView
-////    }
-//
-//>>>>>>> Stashed changes
     override func viewDidLoad() {
         super.viewDidLoad()
 

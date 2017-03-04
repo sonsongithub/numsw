@@ -28,10 +28,14 @@ class RenderViewController: UIViewController {
 
         self.view.addSubview(scrollView)
 
-        renderers.append(LineGraphRenderer())
-        renderers.append(LineGraphRenderer())
-        renderers.append(LineGraphRenderer())
-        renderers.append(LineGraphRenderer())
+        func makeRenderer() -> LineGraphRenderer {
+            return LineGraphRenderer(points: DummyData.points1())
+        }
+
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
 
     }
 
