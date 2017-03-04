@@ -1,6 +1,6 @@
 import Accelerate
 
-func *(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
+public func *(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
     precondition(lhs.columns == rhs.rows, "Matrices can't multiply.")
     let m = lhs.rows
     let n = rhs.columns
@@ -30,7 +30,7 @@ func *(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
                   elements: Array(UnsafeBufferPointer(start: cElements, count: m*n)))
 }
 
-func *(lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+public func *(lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
     precondition(lhs.columns == rhs.rows, "Matrices can't multiply.")
     let m = lhs.rows
     let n = rhs.columns
