@@ -22,4 +22,37 @@ extension Matrix {
             }
         }
     }
+    
+    public subscript(rs: [Int]?, cs: [Int]?) -> Matrix {
+        get {
+            let rs = rs ?? Array(0..<rows)
+            let cs = cs ?? Array(0..<columns)
+            
+            let newElements = UnsafeMutablePointer<Double>.allocate(capacity: rs.count * cs.count)
+            defer { newElements.deallocate(capacity: rs.count * cs.count) }
+            var pointer = newElements
+            for r in rs {
+                for c in cs {
+                    pointer.pointee = self[r, c]
+                    pointer += 1
+                }
+            }
+            return Matrix(rows: rs.count,
+                          columns: cs.count,
+                          elements: Array(UnsafeBufferPointer(start: newElements, count: rs.count * cs.count)))
+        }
+        set {
+            let rs = rs ?? Array(0..<rows)
+            let cs = cs ?? Array(0..<columns)
+
+            precondition(newValue.rows == rs.count, "Martix shape must be corresponded")
+            precondition(newValue.columns == cs.count, "Martix shape must be corresponded")
+            
+            for (ri, r) in rs.enumerated() {
+                for (ci, c) in cs.enumerated() {
+                    self[r, c] = newValue[ri, ci]
+                }
+            }
+        }
+    }
 }

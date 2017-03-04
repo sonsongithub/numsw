@@ -32,4 +32,15 @@ class MatrixSubscriptTests: XCTestCase {
         
         XCTAssertEqual(mat[0].elements, [10, 11, 12])
     }
+    
+    func testSubmatrixSubscript() {
+        var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9).map(Double.init))
+        
+        XCTAssertEqual(mat[nil, nil].elements, [0.0, 1, 2, 3, 4, 5, 6, 7, 8])
+        XCTAssertEqual(mat[[1,2], nil].elements, [3.0, 4, 5, 6, 7, 8])
+        XCTAssertEqual(mat[nil, [1,2]].elements, [1.0, 2.0, 4, 5, 7, 8])
+        
+        mat[[1,2], nil] = Matrix(rows: 2, columns: 3, elements: [Double](repeating: 0, count: 6))
+        XCTAssertEqual(mat.elements, [0.0, 1, 2, 0, 0, 0, 0, 0, 0])
+    }
 }
