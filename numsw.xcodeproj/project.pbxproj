@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96D81E6A5F340001727F /* Matrix.swift */; };
+		A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */; };
+		A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */; };
 		OBJ_23 /* numsw.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* numsw.swift */; };
 		OBJ_30 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* numswTests.swift */; };
 		OBJ_32 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* numsw.framework */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		A7EC96D81E6A5F340001727F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
+		A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTest.swift; sourceTree = "<group>"; };
 		OBJ_12 /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = playgrounds; sourceTree = SOURCE_ROOT; };
 		OBJ_14 /* sandbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sandbox; sourceTree = SOURCE_ROOT; };
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* numswTests.swift */,
+				A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */,
 			);
 			name = numswTests;
 			path = Tests/numswTests;
@@ -104,6 +109,7 @@
 			children = (
 				A7EC96D81E6A5F340001727F /* Matrix.swift */,
 				OBJ_9 /* numsw.swift */,
+				A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */,
 			);
 			name = numsw;
 			path = Sources;
@@ -196,6 +202,7 @@
 			files = (
 				A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */,
 				OBJ_23 /* numsw.swift in Sources */,
+				A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */,
 				OBJ_30 /* numswTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
