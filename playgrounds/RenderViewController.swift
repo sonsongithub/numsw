@@ -102,7 +102,8 @@ class RenderViewController: UITableViewController {
         for _ in 0...20 {
         //    testMakeRenderer()
         }
-        
+
+        testMakeRenderer()
         // test end
     }
     
