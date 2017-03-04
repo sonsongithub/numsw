@@ -23,6 +23,36 @@ public func makeRenderer() -> LineGraphRenderer {
         ])
 }
 
+public func addLine(x: [Double], y: [Double]) {
+    let cgPoints = zip(x, y).map {
+        CGPoint(x: $0.0, y:$0.1)
+    }
+    
+    let renderer = LineGraphRenderer(lines: [
+        LineData(points: cgPoints)
+        ])
+    
+    add(renderer: renderer)
+}
+
+public func addLine2(x: [Double], y: [Double],
+                     x2: [Double], y2: [Double]) {
+    let cgPoints = zip(x, y).map {
+        CGPoint(x: $0.0, y: $0.1)
+    }
+    
+    let cgPoints2 = zip(x2, y2).map {
+        CGPoint(x: $0.0, y: $0.1)
+    }
+    
+    let renderer = LineGraphRenderer(lines: [
+        LineData(points: cgPoints),
+        LineData(points: cgPoints2)
+        ])
+    
+    add(renderer: renderer)
+}
+
 private class RenderTableViewCell: UITableViewCell {
     
     var renderer: Renderer? {
