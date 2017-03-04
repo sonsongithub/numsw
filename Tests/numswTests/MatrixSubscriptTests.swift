@@ -15,7 +15,7 @@ class MatrixSubscriptTests: XCTestCase {
     }
     
     func testElementSubscript() {
-        var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9))
+        var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9).map(Double.init))
         
         XCTAssertEqual(mat[0, 0], 0)
         XCTAssertEqual(mat[0, 1], 1)
@@ -24,11 +24,11 @@ class MatrixSubscriptTests: XCTestCase {
     }
     
     func testRowSubscript() {
-        var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9))
+        var mat = Matrix(rows: 3, columns: 3, elements: Array(0..<9).map(Double.init))
         
         XCTAssertEqual(mat[0].elements, [0, 1, 2])
         
-        mat[0] = Matrix(rows: 1, columns: 3, elements: Array(10..<13))
+        mat[0] = Matrix(rows: 1, columns: 3, elements: Array(10..<13).map(Double.init))
         
         XCTAssertEqual(mat[0].elements, [10, 11, 12])
     }

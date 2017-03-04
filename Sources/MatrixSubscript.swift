@@ -1,6 +1,6 @@
 
 extension Matrix {
-    public subscript(row: Int, column: Int) -> T {
+    public subscript(row: Int, column: Int) -> Double {
         get {
             return elements[row * columns + column]
         }
@@ -9,7 +9,7 @@ extension Matrix {
         }
     }
     
-    public subscript(row: Int) -> Matrix<T> {
+    public subscript(row: Int) -> Matrix {
         get {
             return Matrix(rows: 1, columns: columns, elements: Array(elements[row * columns..<row * columns + columns]))
         }

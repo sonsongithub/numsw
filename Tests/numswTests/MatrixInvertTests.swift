@@ -20,9 +20,4 @@ class MatrixInvertTests: XCTestCase {
         XCTAssertEqual(inv.elements, [-1.5, 0.5, 1, 0])
     }
     
-    func testFloatInvert() {
-        let mat = Matrix<Float>(rows: 2, columns: 2, elements: [0.0, 1.0, 2.0, 3.0])
-        let inv = mat.inverted()
-        XCTAssertEqual(inv.elements, [-1.5, 0.5, 1, 0])
-    }
 }
