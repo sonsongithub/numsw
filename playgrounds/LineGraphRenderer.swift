@@ -48,6 +48,17 @@ class LineGraphRenderer : Renderer {
                       height: height)
     }
     
+    func computeStepSize() -> CGSize {
+        let size = viewport.size
+        
+        let xLog = log10(size.width)
+        let xStep = pow(10.0, round(xLog) - 1)
+        
+        let yLog = log10(size.height)
+        let yStep = pow(10.0, round(yLog) - 1)
+                
+        return CGSize(width: xStep, height: yStep)
+    }
     
     func render(size: CGSize) -> UIImage {
         viewport = computeViewport()
@@ -55,6 +66,10 @@ class LineGraphRenderer : Renderer {
                                                      to: CGRect(origin: CGPoint.zero,
                                                                 size: size),
                                                      flipY: true)
+        
+        stepSize = computeStepSize()
+        
+        print("stpe=\(computeStepSize())")
         
         UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)
         
@@ -78,6 +93,19 @@ class LineGraphRenderer : Renderer {
         
         ctx.setStrokeColor(UIColor.gray.cgColor)
         drawLine(context: ctx, points: [p0, p1])
+        
+        //  ticks
+        
+        let tickXs = computeTickValues(min: p0.x, max: p1.x,
+                                       step: stepSize.width)
+        let tickHeight = viewport.height * 0.1
+
+        for x in tickXs {
+            drawLine(context: ctx, points: [
+                CGPoint(x: x, y: (tickHeight / 2.0)),
+                CGPoint(x: x, y: -(tickHeight / 2.0)),
+                ])
+        }
     }
     
     func drawAxisY(context ctx: CGContext) {
@@ -86,6 +114,19 @@ class LineGraphRenderer : Renderer {
         
         ctx.setStrokeColor(UIColor.gray.cgColor)
         drawLine(context: ctx, points: [p0, p1])
+        
+        //  ticks
+        
+        let tickYs = computeTickValues(min: p0.y, max: p1.y,
+                                       step: stepSize.height)
+        let tickWidth = viewport.width * 0.1
+        
+        for y in tickYs {
+            drawLine(context: ctx, points: [
+                CGPoint(x: -(tickWidth / 2.0), y: y),
+                CGPoint(x: (tickWidth / 2.0), y: y),
+                ])
+        }
     }
     
     func drawPoints(context ctx: CGContext) {
@@ -136,4 +177,5 @@ class LineGraphRenderer : Renderer {
     
     private var viewport: CGRect!
     private var viewportTransform: CGAffineTransform!
+    private var stepSize: CGSize!
 }

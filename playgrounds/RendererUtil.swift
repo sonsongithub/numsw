@@ -35,3 +35,20 @@ func computeViewportTransform(
     trans = trans.translatedBy(x: -from.origin.x, y: -from.origin.y)
     return trans
 }
+
+func computeTickValues(
+    min: CGFloat,
+    max: CGFloat,
+    step: CGFloat) -> [CGFloat]
+{
+    let x0 = Int(floor(min / step))
+    let x1 = Int(ceil(max / step))
+    
+    var ret: [CGFloat] = []
+    for xi in x0...x1 {
+        let x = CGFloat(xi) * step
+        ret.append(x)
+    }
+    
+    return ret
+}
