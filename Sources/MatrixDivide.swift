@@ -8,3 +8,7 @@ public func /(lhs: Matrix, rhs: Double) -> Matrix {
 public func /(lhs: Double, rhs: Matrix) -> Matrix {
     return Matrix(rows: rhs.rows, columns: rhs.columns, elements: rhs.elements.map { lhs/$0 })
 }
+
+public func /=(lhs: inout Matrix, rhs: Double) {
+    lhs = lhs / rhs
+}

@@ -10,6 +10,10 @@ public func *(lhs: Double, rhs: Matrix) -> Matrix {
     return rhs * lhs
 }
 
+public func *=(lhs: inout Matrix, rhs: Double) {
+    lhs = lhs * rhs
+}
+
 // matmul
 
 public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
@@ -40,4 +44,8 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
     return Matrix(rows: m,
                   columns: n,
                   elements: Array(UnsafeBufferPointer(start: cElements, count: m*n)))
+}
+
+public func *=(lhs: inout Matrix, rhs: Matrix) {
+    lhs = lhs * rhs
 }
