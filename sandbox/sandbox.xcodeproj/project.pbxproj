@@ -14,6 +14,8 @@
 		1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBBD1E6A5CD300633F32 /* LaunchScreen.storyboard */; };
 		D621CFFD1E6A631900A50C88 /* hoge in Resources */ = {isa = PBXBuildFile; fileRef = D621CFFC1E6A631900A50C88 /* hoge */; };
 		D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CFFE1E6A632D00A50C88 /* Renderer.swift */; };
+		D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */; };
+		D621D0031E6A652F00A50C88 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1453FBC01E6A5CD300633F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D621CFFC1E6A631900A50C88 /* hoge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hoge; sourceTree = "<group>"; };
 		D621CFFE1E6A632D00A50C88 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererDebugViewController.swift; sourceTree = "<group>"; };
+		D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RendererDebugViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			children = (
 				D621CFFC1E6A631900A50C88 /* hoge */,
 				D621CFFE1E6A632D00A50C88 /* Renderer.swift */,
+				D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */,
+				D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */,
 			);
 			name = playgrounds;
 			path = ../playgrounds;
@@ -139,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D621D0031E6A652F00A50C88 /* RendererDebugViewController.xib in Resources */,
 				1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */,
 				1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */,
 				1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */,
@@ -156,6 +163,7 @@
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
 				D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */,
 				1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */,
+				D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
