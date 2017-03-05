@@ -1,4 +1,4 @@
-//  First implementation with UIScrollView
+//  Final customized first implementation with UIScrollView
 
 import UIKit
 
@@ -12,21 +12,17 @@ public class RenderViewController2: UIViewController {
         )
     }
     
-    static var shared:RenderViewController2!
-    
     var renderers: [Renderer] = []
     
-    var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        RenderViewController2.shared = self
-        
-        scrollView = UIScrollView()
-        scrollView.frame = self.view.frame
-        
-        self.view.addSubview(scrollView)
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
+        renderers.append(makeRenderer())
     }
     
     func updateViews(){
@@ -34,6 +30,7 @@ public class RenderViewController2: UIViewController {
             view.removeFromSuperview()
         }
         scrollView.contentSize.height = 0
+        
         self.render()
     }
     
@@ -58,6 +55,7 @@ public class RenderViewController2: UIViewController {
         // renderer 取り出してscrollviewに追加
         for renderer in renderers {
             let image = renderer.render(size: size)
+            
             let imageView = UIImageView(image: image)
             imageView.frame.size = size
             imageView.contentMode = .scaleToFill
