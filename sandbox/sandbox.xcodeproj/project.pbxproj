@@ -40,6 +40,7 @@
 		D6D74F6D1E6C769400E57BBB /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6C1E6C769400E57BBB /* ChartElement.swift */; };
 		D6D74F6F1E6C7BE900E57BBB /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */; };
 		D6D74F711E6C7C9700E57BBB /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */; };
+		D6D74F731E6C7F5600E57BBB /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		D6D74F6C1E6C769400E57BBB /* ChartElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartElement.swift; sourceTree = "<group>"; };
 		D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterGraph.swift; sourceTree = "<group>"; };
 		D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterGraphRenderer.swift; sourceTree = "<group>"; };
+		D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				D621D0061E6A77E100A50C88 /* DummyData.swift */,
 				D6D74F661E6C6D1900E57BBB /* Chart.swift */,
 				D6D74F6C1E6C769400E57BBB /* ChartElement.swift */,
+				D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */,
 				D653808C1E6A98120032C0B2 /* LineGraph.swift */,
 				D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */,
 				D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */,
@@ -369,6 +372,7 @@
 				D6D74F6F1E6C7BE900E57BBB /* ScatterGraph.swift in Sources */,
 				D6D74F491E6BDE7300E57BBB /* NumswPlayground.swift in Sources */,
 				D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */,
+				D6D74F731E6C7F5600E57BBB /* ChartBuilder.swift in Sources */,
 				D6D74F711E6C7C9700E57BBB /* ScatterGraphRenderer.swift in Sources */,
 				D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */,
 				D6D74F691E6C6DB500E57BBB /* AxisRenderer.swift in Sources */,
