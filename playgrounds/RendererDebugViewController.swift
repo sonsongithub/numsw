@@ -19,11 +19,21 @@ class RendererDebugViewController : UIViewController {
     }
     
     override func viewDidLoad() {
+        func makeRenderer() -> ChartRenderer {
+            let points1 = DummyData.points1()
+            let points2 = DummyData.points2()
+            
+            var chart = Chart()
+            chart.elements = [
+                .line(LineGraph(points: points1)),
+                .line(LineGraph(points: points2))
+            ]
+            chart.computeViewport()
+            
+            return ChartRenderer(chart: chart)
+        }
         
-        renderer = LineGraphRenderer(lines: [
-            LineData(points: DummyData.points1()),
-            LineData(points: DummyData.points2())
-            ])
+        renderer = makeRenderer()
         
     }
     

@@ -10,34 +10,34 @@ import CoreGraphics
 
 public class ChartRenderer : Renderer {
     
-    public init() {
-        compositer = CompositeRenderer()
+    public init(chart: Chart) {
+        self.chart = chart
+        
+        update()
     }
     
-    public var chart: Chart? {
-        didSet {
-            update()
-        }
-    }
+    public let chart: Chart
     
     public func render(context: CGContext, windowSize: CGSize) {
-        compositer.render(context: context, windowSize: windowSize)
+        compositer?.render(context: context, windowSize: windowSize)
     }
     
     private func update() {
-        compositer.renderers = []
+        var renderers: [Renderer] = []
         
-        guard let chart = chart else {
-            return
+        renderers.append(AxisRenderer(chart: chart))
+        
+        for element in chart.elements {
+            switch element {
+            case .line(let line):
+                renderers.append(LineGraphRenderer(viewport: chart.viewport, line: line))
+            }
         }
         
-        let axis = AxisRenderer(chart: chart)
-        self.axis = axis
-        
-        compositer.renderers = [axis]
+        let r = CompositeRenderer()
+        self.compositer = r
+        r.renderers = renderers
     }
     
-    private var compositer: CompositeRenderer
-    
-    private var axis: AxisRenderer?
+    private var compositer: CompositeRenderer?
 }

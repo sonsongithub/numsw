@@ -22,14 +22,15 @@ public class NumswPlayground {
     public func addLine(
         x: [Double], y: [Double])
     {
-        let cgPoints = zip(x, y).map {
+        let points = zip(x, y).map {
             CGPoint(x: $0.0, y:$0.1)
         }
         
-        let viewport = RendererUtil.computeViewport(points: cgPoints)
-        let chart = Chart(viewport: viewport)
-        let renderer = ChartRenderer()
-        renderer.chart = chart
+        var chart = Chart()
+        chart.elements.append(.line(LineGraph(points: points)))
+        chart.computeViewport()
+        
+        let renderer = ChartRenderer(chart: chart)
         add(renderer: renderer)
     }
     
@@ -37,18 +38,19 @@ public class NumswPlayground {
             x: [Double], y: [Double],
             x2: [Double], y2: [Double])
     {
-        let cgPoints = zip(x, y).map {
+        let points1 = zip(x, y).map {
             CGPoint(x: $0.0, y: $0.1)
         }
         
-        let cgPoints2 = zip(x2, y2).map {
+        let points2 = zip(x2, y2).map {
             CGPoint(x: $0.0, y: $0.1)
         }
         
-        let viewport = RendererUtil.computeViewport(points: cgPoints)
-        let chart = Chart(viewport: viewport)
-        let renderer = ChartRenderer()
-        renderer.chart = chart
+        var chart = Chart()
+        chart.elements.append(.line(LineGraph(points: points1)))
+        chart.computeViewport()
+        
+        let renderer = ChartRenderer(chart: chart)
         add(renderer: renderer)
     }
     
