@@ -2,7 +2,7 @@
 //#-code-completion(identifier, hide, _setup())
 //#-code-completion(identifier, hide, AbstractPointChartable)
 //#-hidden-code
-_setupRender()
+NumswPlayground.initialize()
 //#-end-hidden-code
 //#-editable-code Tap to enter code.
 

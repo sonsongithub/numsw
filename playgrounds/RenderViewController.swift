@@ -8,51 +8,6 @@
 
 import UIKit
 
-public func addLine(x: [Double], y: [Double]) {
-    let cgPoints = zip(x, y).map {
-        CGPoint(x: $0.0, y:$0.1)
-    }
-    
-    let renderer = LineGraphRenderer(lines: [
-        LineData(points: cgPoints)
-        ])
-    
-    add(renderer: renderer)
-}
-
-public func addLine2(x: [Double], y: [Double],
-                     x2: [Double], y2: [Double]) {
-    let cgPoints = zip(x, y).map {
-        CGPoint(x: $0.0, y: $0.1)
-    }
-    
-    let cgPoints2 = zip(x2, y2).map {
-        CGPoint(x: $0.0, y: $0.1)
-    }
-    
-    let renderer = LineGraphRenderer(lines: [
-        LineData(points: cgPoints),
-        LineData(points: cgPoints2)
-        ])
-    
-    add(renderer: renderer)
-}
-
-public func add(renderer: Renderer) {
-    RenderViewController.shared.append(renderer: renderer)
-}
-
-public func testMakeRenderer() {
-    add(renderer: makeRenderer())
-}
-
-public func makeRenderer() -> LineGraphRenderer {
-    return LineGraphRenderer(lines: [
-        LineData(points: DummyData.points1()),
-        LineData(points: DummyData.points2())
-        ])
-}
-
 /*
 public class RenderViewController: UIViewController {
 
@@ -171,10 +126,6 @@ private class RenderTableViewCell: UITableViewCell {
 }
 
 public class RenderViewController: UITableViewController {
-
-
-    static var shared: RenderViewController!
-    
     private let CellIdentifier = "Cell"
     private var renderers: [Renderer] = []
     
@@ -188,16 +139,7 @@ public class RenderViewController: UITableViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        RenderViewController.shared = self
-
-        func makeRenderer() -> LineGraphRenderer {
-            return LineGraphRenderer(lines: [
-                LineData(points: DummyData.points1()),
-                LineData(points: DummyData.points2())
-                ])
-        }
-        
+                
         tableView.contentInset = .zero
         tableView.separatorStyle = .none
         
