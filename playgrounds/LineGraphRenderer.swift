@@ -11,8 +11,6 @@ import CoreGraphics
 
 
 public class LineGraphRenderer : Renderer {
-    
-    
     public init(lines: [LineData]) {
         self.lines = lines
     }
@@ -20,32 +18,11 @@ public class LineGraphRenderer : Renderer {
     public var lines: [LineData]
     
     public func computeViewport() -> CGRect {
-        var bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
-
-        if lines.count > 0 {
-            //  override
-            bounds = lines[0].computeBounds()
-            
-            //  reduce
-            for line in lines.dropFirst() {
-                bounds = bounds.union(line.computeBounds())
-            }
+        let points: [CGPoint] = lines.reduce([]) {
+            $0 + $1.points
         }
-        
-        //  min size constraint
-        
-        var width = max(bounds.width, 2)
-        var height = max(bounds.height, 2)
-        
-        //  10% margin
-        
-        width += width * 0.1
-        height += height * 0.1
-        
-        return CGRect(x: bounds.midX - width / 2.0,
-                      y: bounds.midY - height / 2.0,
-                      width: width,
-                      height: height)
+
+        return RendererUtil.computeViewport(points: points)
     }
     
     public func computeStepSize() -> CGSize {
@@ -62,10 +39,10 @@ public class LineGraphRenderer : Renderer {
     
     public func render(context: CGContext, windowSize: CGSize) {
         viewport = computeViewport()
-        viewportTransform = computeViewportTransform(from: viewport,
-                                                     to: CGRect(origin: CGPoint.zero,
-                                                                size: windowSize),
-                                                     flipY: true)
+        viewportTransform = RendererUtil.computeViewportTransform(from: viewport,
+                                                                  to: CGRect(origin: CGPoint.zero,
+                                                                             size: windowSize),
+                                                                  flipY: true)
         
         stepSize = computeStepSize()
         
@@ -89,8 +66,8 @@ public class LineGraphRenderer : Renderer {
         
         //  ticks
         
-        let tickXs = computeTickValues(min: p0.x, max: p1.x,
-                                       step: stepSize.width)
+        let tickXs = RendererUtil.computeTickValues(min: p0.x, max: p1.x,
+                                                    step: stepSize.width)
         let tickHeight = viewport.height * 0.04
 
         for x in tickXs {
@@ -110,8 +87,8 @@ public class LineGraphRenderer : Renderer {
         
         //  ticks
         
-        let tickYs = computeTickValues(min: p0.y, max: p1.y,
-                                       step: stepSize.height)
+        let tickYs = RendererUtil.computeTickValues(min: p0.y, max: p1.y,
+                                                    step: stepSize.height)
         let tickWidth = viewport.width * 0.04
         
         for y in tickYs {
@@ -142,11 +119,11 @@ public class LineGraphRenderer : Renderer {
         for point in line.points {
             let p = point.applying(t)
             
-            drawLineRaw(context: ctx, points: [
+            RendererUtil.drawLine(context: ctx, points: [
                 CGPoint(x: p.x - 10, y: p.y - 10),
                 CGPoint(x: p.x + 10, y: p.y + 10)
                 ])
-            drawLineRaw(context: ctx, points: [
+            RendererUtil.drawLine(context: ctx, points: [
                 CGPoint(x: p.x - 10, y: p.y + 10),
                 CGPoint(x: p.x + 10, y: p.y - 10)
                 ])
@@ -170,31 +147,14 @@ public class LineGraphRenderer : Renderer {
             ])
     }
     
-    public func drawLine(context ctx: CGContext,
-                  points: [CGPoint])
+    public func drawLine(context: CGContext,
+                         points: [CGPoint])
     {
         let t = viewportTransform!
         
         let points = points.map { $0.applying(t) }
         
-        drawLineRaw(context: ctx, points: points)
-    }
-    
-    public func drawLineRaw(context ctx: CGContext,
-                            points: [CGPoint])
-    {
-        ctx.setLineWidth(2.0)
-        
-        if points.count < 2 {
-            return
-        }
-        
-        ctx.move(to: points[0])
-        for i in 1..<points.count {
-            ctx.addLine(to: points[i])
-        }
-        
-        ctx.strokePath()
+        RendererUtil.drawLine(context: context, points: points)
     }
     
     private var viewport: CGRect!
