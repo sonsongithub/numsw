@@ -1,11 +1,3 @@
-//
-//  RenderViewControllerScrollViewImpl.swift
-//  sandbox
-//
-//  Created by omochimetaru on 2017/03/05.
-//  Copyright © 2017年 sonson. All rights reserved.
-//
-
 //  First implementation with UIScrollView
 
 import UIKit
@@ -20,10 +12,9 @@ public class RenderViewController2: UIViewController {
         )
     }
     
-    
     static var shared:RenderViewController2!
     
-    var renderers:[Renderer] = []
+    var renderers: [Renderer] = []
     
     var scrollView: UIScrollView!
     
@@ -38,24 +29,6 @@ public class RenderViewController2: UIViewController {
         self.view.addSubview(scrollView)
     }
     
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.render()
-        
-    }
-    
-    
-    public override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        updateViews()
-    }
-    
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     func updateViews(){
         for view in scrollView.subviews{
             view.removeFromSuperview()
@@ -64,6 +37,19 @@ public class RenderViewController2: UIViewController {
         self.render()
     }
     
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateViews()
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.render()
+    }
+    
+    public override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     func render(){
         

@@ -1,29 +1,24 @@
-//
-//  RenderViewController.swift
-//  sandbox
-//
-//  Created by color_box on 2017/03/04.
-//  Copyright © 2017年 sonson. All rights reserved.
-//
+//  Final customized first implementation with UIScrollView
 
 import UIKit
 
-class RenderViewController3: UIViewController {
+public class RenderViewController3: UIViewController {
 
+    func makeRenderer() -> LineGraphRenderer {
+        return LineGraphRenderer(lines: [
+            LineData(points: DummyData.points1()),
+            LineData(points: DummyData.points2())
+            ]
+        )
+    }
 
     var renderers: [Renderer] = []
 
     @IBOutlet weak var scrollView: UIScrollView!
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
-        func makeRenderer() -> LineGraphRenderer {
-            return LineGraphRenderer(lines: [
-                LineData(points: DummyData.points1())
-            ])
-        }
-        
         renderers.append(makeRenderer())
         renderers.append(makeRenderer())
         renderers.append(makeRenderer())
@@ -39,21 +34,19 @@ class RenderViewController3: UIViewController {
         self.render()
     }
 
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateViews()
     }
 
-
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.render()
     }
 
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 
     func render(){
 
