@@ -19,10 +19,10 @@ public class NumswPlayground {
         renderers.append(renderer)
     }
     
-    public func plot(x: [Double], y: [Double]) {
+    public func plot(_ x: [Double], _ y: [Double]) {
         guard let b = chartBuilder else {
             hold {
-                plot(x: x, y: y)
+                plot(x, y)
             }
             return
         }
@@ -33,10 +33,10 @@ public class NumswPlayground {
         b.addLine(line: LineGraph(points: points))
     }
     
-    public func scatter(x: [Double], y: [Double]) {
+    public func scatter(_ x: [Double], _ y: [Double]) {
         guard let b = chartBuilder else {
             hold {
-                scatter(x: x, y: y)
+                scatter(x, y)
             }
             return
         }
@@ -83,7 +83,7 @@ public func addLine(
     x: [Double], y: [Double])
 {
     hold {
-        plot(x: x, y: y)
+        plot(x, y)
     }
 }
 
@@ -92,21 +92,21 @@ public func addLine2(
     x2: [Double], y2: [Double])
 {
     hold {
-        plot(x: x, y: y)
-        scatter(x: x2, y: y2)
+        plot(x, y)
+        scatter(x2, y2)
     }
 }
 
 public func plot(
-    x: [Double], y: [Double])
+    _ x: [Double], _ y: [Double])
 {
-    NumswPlayground.shared.plot(x: x, y: y)
+    NumswPlayground.shared.plot(x, y)
 }
 
 public func scatter(
-    x: [Double], y: [Double])
+    _ x: [Double], _ y: [Double])
 {
-    NumswPlayground.shared.scatter(x: x, y: y)
+    NumswPlayground.shared.scatter(x, y)
 }
 
 public func hold(f: () throws -> Void) rethrows {
