@@ -9,8 +9,8 @@ import PlaygroundSupport
 
 public func _setupRender(){
 
-    let viewController:RenderViewController = RenderViewController()
+    let viewController = RenderViewController()
 
-    PlaygroundPage.current.liveView = viewController as! UIViewController
+    PlaygroundPage.current.liveView = viewController
 
 }

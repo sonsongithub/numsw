@@ -42,6 +42,7 @@ public func addLine2(x: [Double], y: [Double],
 
 public func add(renderer: Renderer) {
     RenderViewController.shared.append(renderer: renderer)
+//    RenderViewController2.shared.renderers.append(renderer)
 }
 
 public func testMakeRenderer() {
