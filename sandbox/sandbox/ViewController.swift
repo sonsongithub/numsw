@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             )
         }
         
-        let vc = RenderViewController()
+        let vc = RenderViewController2()
         
         present(vc, animated: true)
 

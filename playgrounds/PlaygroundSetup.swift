@@ -9,7 +9,7 @@ import PlaygroundSupport
 
 public func _setupRender(){
 
-    let viewController = RenderViewController()
+    let viewController = RenderViewController2()
 
     PlaygroundPage.current.liveView = viewController
 
