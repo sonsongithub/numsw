@@ -23,7 +23,6 @@
 		52E1EE781E6A8CE0008D19BB /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE701E6A8CE0008D19BB /* MatrixDivideTests.swift */; };
 		52E1EE7F1E6A8D70008D19BB /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E1EE661E6A8CD1008D19BB /* numsw.framework */; };
 		52E1EE801E6A8D70008D19BB /* numsw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E1EE661E6A8CD1008D19BB /* numsw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D621CFFD1E6A631900A50C88 /* hoge in Resources */ = {isa = PBXBuildFile; fileRef = D621CFFC1E6A631900A50C88 /* hoge */; };
 		D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CFFE1E6A632D00A50C88 /* Renderer.swift */; };
 		D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */; };
 		D621D0031E6A652F00A50C88 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */; };
@@ -31,7 +30,7 @@
 		D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0061E6A77E100A50C88 /* DummyData.swift */; };
 		D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */; };
 		D653808D1E6A98120032C0B2 /* LineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808C1E6A98120032C0B2 /* LineData.swift */; };
-		E0598B0D1E6A678700EAFDC0 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */; };
+		D65380921E6B28380032C0B2 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65380911E6B28380032C0B2 /* RenderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +98,6 @@
 		52E1EE6E1E6A8CE0008D19BB /* MatrixInvertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixInvertTests.swift; path = ../../Tests/numswTests/MatrixInvertTests.swift; sourceTree = "<group>"; };
 		52E1EE6F1E6A8CE0008D19BB /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTransposeTests.swift; path = ../../Tests/numswTests/MatrixTransposeTests.swift; sourceTree = "<group>"; };
 		52E1EE701E6A8CE0008D19BB /* MatrixDivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixDivideTests.swift; path = ../../Tests/numswTests/MatrixDivideTests.swift; sourceTree = "<group>"; };
-		D621CFFC1E6A631900A50C88 /* hoge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hoge; sourceTree = "<group>"; };
 		D621CFFE1E6A632D00A50C88 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererDebugViewController.swift; sourceTree = "<group>"; };
 		D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RendererDebugViewController.xib; sourceTree = "<group>"; };
@@ -107,7 +105,7 @@
 		D621D0061E6A77E100A50C88 /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererUtil.swift; sourceTree = "<group>"; };
 		D653808C1E6A98120032C0B2 /* LineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineData.swift; sourceTree = "<group>"; };
-		E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
+		D65380911E6B28380032C0B2 /* RenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +152,6 @@
 			children = (
 				1453FBB41E6A5CD300633F32 /* AppDelegate.swift */,
 				1453FBB61E6A5CD300633F32 /* ViewController.swift */,
-				E0598B0C1E6A678700EAFDC0 /* RenderViewController.swift */,
 				1453FBB81E6A5CD300633F32 /* Main.storyboard */,
 				1453FBBB1E6A5CD300633F32 /* Assets.xcassets */,
 				1453FBBD1E6A5CD300633F32 /* LaunchScreen.storyboard */,
@@ -192,7 +189,7 @@
 		D621CFFB1E6A631900A50C88 /* playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				D621CFFC1E6A631900A50C88 /* hoge */,
+				D65380911E6B28380032C0B2 /* RenderViewController.swift */,
 				D621CFFE1E6A632D00A50C88 /* Renderer.swift */,
 				D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */,
 				D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */,
@@ -257,7 +254,7 @@
 				TargetAttributes = {
 					1453FBB01E6A5CD300633F32 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JP866VWWSD;
+						DevelopmentTeam = 3B8C483UAP;
 						ProvisioningStyle = Automatic;
 					};
 					52E1EE3D1E6A8A2E008D19BB = {
@@ -318,7 +315,6 @@
 				1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */,
 				1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */,
 				1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */,
-				D621CFFD1E6A631900A50C88 /* hoge in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +332,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0598B0D1E6A678700EAFDC0 /* RenderViewController.swift in Sources */,
 				D653808D1E6A98120032C0B2 /* LineData.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
 				D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */,
@@ -345,6 +340,7 @@
 				D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */,
 				D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */,
 				D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */,
+				D65380921E6B28380032C0B2 /* RenderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +493,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JP866VWWSD;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
@@ -511,7 +507,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JP866VWWSD;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
