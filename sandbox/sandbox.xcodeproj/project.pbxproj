@@ -33,6 +33,10 @@
 		D65380921E6B28380032C0B2 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65380911E6B28380032C0B2 /* RenderViewController.swift */; };
 		D6D74F491E6BDE7300E57BBB /* NumswPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F451E6BDB2E00E57BBB /* NumswPlayground.swift */; };
 		D6D74F5C1E6C611200E57BBB /* RenderViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F5B1E6C611200E57BBB /* RenderViewController2.swift */; };
+		D6D74F641E6C6B3B00E57BBB /* CompositeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */; };
+		D6D74F671E6C6D1900E57BBB /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F661E6C6D1900E57BBB /* Chart.swift */; };
+		D6D74F691E6C6DB500E57BBB /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */; };
+		D6D74F6B1E6C742500E57BBB /* ChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,10 @@
 		D6D74F451E6BDB2E00E57BBB /* NumswPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumswPlayground.swift; sourceTree = "<group>"; };
 		D6D74F4A1E6BDE7E00E57BBB /* NumswPlayground_Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumswPlayground_Playground.swift; sourceTree = "<group>"; };
 		D6D74F5B1E6C611200E57BBB /* RenderViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController2.swift; sourceTree = "<group>"; };
+		D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeRenderer.swift; sourceTree = "<group>"; };
+		D6D74F661E6C6D1900E57BBB /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxisRenderer.swift; sourceTree = "<group>"; };
+		D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +210,12 @@
 				D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */,
 				D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */,
 				D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */,
-				D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */,
 				D621D0061E6A77E100A50C88 /* DummyData.swift */,
+				D6D74F661E6C6D1900E57BBB /* Chart.swift */,
+				D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */,
+				D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */,
+				D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */,
+				D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */,
 				D653808C1E6A98120032C0B2 /* LineData.swift */,
 			);
 			name = playgrounds;
@@ -340,13 +352,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D74F3D1E6BC80800E57BBB /* RenderViewController2.swift in Sources */,
 				D653808D1E6A98120032C0B2 /* LineData.swift in Sources */,
+				D6D74F6B1E6C742500E57BBB /* ChartRenderer.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
+				D6D74F641E6C6B3B00E57BBB /* CompositeRenderer.swift in Sources */,
 				D6D74F5C1E6C611200E57BBB /* RenderViewController2.swift in Sources */,
 				D6D74F491E6BDE7300E57BBB /* NumswPlayground.swift in Sources */,
 				D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */,
 				D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */,
+				D6D74F691E6C6DB500E57BBB /* AxisRenderer.swift in Sources */,
+				D6D74F671E6C6D1900E57BBB /* Chart.swift in Sources */,
 				1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */,
 				D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */,
 				D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */,

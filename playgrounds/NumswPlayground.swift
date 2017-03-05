@@ -26,10 +26,10 @@ public class NumswPlayground {
             CGPoint(x: $0.0, y:$0.1)
         }
         
-        let renderer = LineGraphRenderer(lines: [
-            LineData(points: cgPoints)
-            ])
-        
+        let viewport = RendererUtil.computeViewport(points: cgPoints)
+        let chart = Chart(viewport: viewport)
+        let renderer = ChartRenderer()
+        renderer.chart = chart
         add(renderer: renderer)
     }
     
@@ -45,11 +45,10 @@ public class NumswPlayground {
             CGPoint(x: $0.0, y: $0.1)
         }
         
-        let renderer = LineGraphRenderer(lines: [
-            LineData(points: cgPoints),
-            LineData(points: cgPoints2)
-            ])
-        
+        let viewport = RendererUtil.computeViewport(points: cgPoints)
+        let chart = Chart(viewport: viewport)
+        let renderer = ChartRenderer()
+        renderer.chart = chart
         add(renderer: renderer)
     }
     
@@ -61,6 +60,8 @@ public class NumswPlayground {
             return _shared!
         }
     }
+    
+    private var renderers: [ChartRenderer] = []
     
     private static var _shared: NumswPlayground?
 }
