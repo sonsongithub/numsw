@@ -120,7 +120,7 @@ private class RenderTableViewCell: UITableViewCell {
             return
         }
         
-        let image = renderer.render(size: self.bounds.size)
+        let image = renderer.renderToImage(size: self.bounds.size)
         self.renderImageView.image = image
     }
 }

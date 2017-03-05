@@ -60,31 +60,24 @@ public class LineGraphRenderer : Renderer {
         return CGSize(width: xStep, height: yStep)
     }
     
-    public func render(size: CGSize) -> UIImage {
+    public func render(context: CGContext, windowSize: CGSize) {
         viewport = computeViewport()
         viewportTransform = computeViewportTransform(from: viewport,
                                                      to: CGRect(origin: CGPoint.zero,
-                                                                size: size),
+                                                                size: windowSize),
                                                      flipY: true)
         
         stepSize = computeStepSize()
         
         print("stpe=\(computeStepSize())")
         
-        UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)
-        
-        let ctx = UIGraphicsGetCurrentContext()!
-        
 //        drawDebugX(context: ctx,
 //                   point0: CGPoint(x: viewport.minX, y: viewport.minY),
 //                   point1: CGPoint(x: viewport.maxX, y: viewport.maxY))
         
-        drawAxisX(context: ctx)
-        drawAxisY(context: ctx)
-        drawPoints(context: ctx)
-        
-        let cgImage = ctx.makeImage()!
-        return UIImage(cgImage: cgImage)
+        drawAxisX(context: context)
+        drawAxisY(context: context)
+        drawPoints(context: context)
     }
     
     public func drawAxisX(context ctx: CGContext) {

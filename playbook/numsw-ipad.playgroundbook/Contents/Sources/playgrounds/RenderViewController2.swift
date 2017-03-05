@@ -54,7 +54,7 @@ public class RenderViewController2: UIViewController {
         size.height *= 0.5
         // renderer 取り出してscrollviewに追加
         for renderer in renderers {
-            let image = renderer.render(size: size)
+            let image = renderer.renderToImage(size: size)
             
             let imageView = UIImageView(image: image)
             imageView.frame.size = size
