@@ -6,6 +6,8 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
+//  Second Implementation with UITableView
+
 import UIKit
 
 private class RenderTableViewCell: UITableViewCell {

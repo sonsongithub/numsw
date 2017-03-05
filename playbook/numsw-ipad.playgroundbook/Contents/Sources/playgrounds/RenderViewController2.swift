@@ -12,17 +12,17 @@ public class RenderViewController2: UIViewController {
         )
     }
     
-    static var shared:RenderViewController2!
-    
     var renderers: [Renderer] = []
     
     var scrollView: UIScrollView!
     
+    public func append(renderer: Renderer) {
+        self.renderers.append(renderer)
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        RenderViewController2.shared = self
-        
+                
         scrollView = UIScrollView()
         scrollView.frame = self.view.frame
         
