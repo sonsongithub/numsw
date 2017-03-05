@@ -15,8 +15,8 @@ public class NumswPlayground {
     
     public let viewController: RenderViewController2
     
-    public func add(renderer: Renderer) {
-        viewController.renderers.append(renderer)
+    public func append(renderer: ChartRenderer) {
+        renderers.append(renderer)
     }
     
     public func addLine(
@@ -31,7 +31,7 @@ public class NumswPlayground {
         chart.computeViewport()
         
         let renderer = ChartRenderer(chart: chart)
-        add(renderer: renderer)
+        append(renderer: renderer)
     }
     
     public func addLine2(
@@ -48,10 +48,11 @@ public class NumswPlayground {
         
         var chart = Chart()
         chart.elements.append(.line(LineGraph(points: points1)))
+        chart.elements.append(.scatter(ScatterGraph(points: points2)))
         chart.computeViewport()
         
         let renderer = ChartRenderer(chart: chart)
-        add(renderer: renderer)
+        append(renderer: renderer)
     }
     
     public static var shared: NumswPlayground {
@@ -63,7 +64,11 @@ public class NumswPlayground {
         }
     }
     
-    private var renderers: [ChartRenderer] = []
+    private var renderers: [ChartRenderer] = [] {
+        didSet {
+            viewController.renderers = renderers.map { $0 as Renderer }
+        }
+    }
     
     private static var _shared: NumswPlayground?
 }

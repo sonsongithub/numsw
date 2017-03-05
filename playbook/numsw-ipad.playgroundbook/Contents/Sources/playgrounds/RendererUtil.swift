@@ -85,6 +85,15 @@ public struct RendererUtil {
         trans = trans.translatedBy(x: -from.origin.x, y: -from.origin.y)
         return trans
     }
+    
+    public static func computeViewportTransform(
+        viewport: CGRect, windowSize: CGSize) -> CGAffineTransform
+    {
+        return computeViewportTransform(from: viewport,
+                                        to: CGRect(origin: CGPoint.zero,
+                                                   size: windowSize),
+                                        flipY: true)
+    }
 
     public static func computeTickValues(
         min: CGFloat,

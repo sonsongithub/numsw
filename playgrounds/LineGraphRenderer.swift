@@ -20,10 +20,7 @@ public class LineGraphRenderer : Renderer {
     public let line: LineGraph
     
     public func render(context: CGContext, windowSize: CGSize) {
-        viewportTransform = RendererUtil.computeViewportTransform(from: viewport,
-                                                                  to: CGRect(origin: CGPoint.zero,
-                                                                             size: windowSize),
-                                                                  flipY: true)
+        viewportTransform = RendererUtil.computeViewportTransform(viewport: viewport, windowSize: windowSize)
         drawLine(context: context, points: line.points)
     }
     

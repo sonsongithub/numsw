@@ -18,10 +18,7 @@ public class AxisRenderer : Renderer {
     public let chart: Chart
 
     public func render(context: CGContext, windowSize: CGSize) {
-        viewportTransform = RendererUtil.computeViewportTransform(from: chart.viewport,
-                                                                  to: CGRect(origin: CGPoint.zero,
-                                                                             size: windowSize),
-                                                                  flipY: true)
+        viewportTransform = RendererUtil.computeViewportTransform(viewport: chart.viewport, windowSize: windowSize)
         stepSize = computeStepSize()
         
         drawAxisX(context: context)

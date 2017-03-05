@@ -31,6 +31,8 @@ public class ChartRenderer : Renderer {
             switch element {
             case .line(let line):
                 renderers.append(LineGraphRenderer(viewport: chart.viewport, line: line))
+            case .scatter(let scatter):
+                renderers.append(ScatterGraphRenderer(viewport: chart.viewport, scatter: scatter))
             }
         }
         

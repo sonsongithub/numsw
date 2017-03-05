@@ -10,11 +10,14 @@ import CoreGraphics
 
 public enum ChartElement {
     case line(LineGraph)
+    case scatter(ScatterGraph)
     
     func computeViewport() -> CGRect {
         switch self {
         case .line(let line):
             return line.computeViewport()
+        case .scatter(let scatter):
+            return scatter.computeViewport()
         }
     }
 }
