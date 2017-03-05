@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RenderViewController: UIViewController {
+class RenderViewController3: UIViewController {
 
 
     var renderers: [Renderer] = []
@@ -19,7 +19,9 @@ class RenderViewController: UIViewController {
         super.viewDidLoad()
 
         func makeRenderer() -> LineGraphRenderer {
-            return LineGraphRenderer(points: DummyData.points1())
+            return LineGraphRenderer(lines: [
+                LineData(points: DummyData.points1())
+            ])
         }
         
         renderers.append(makeRenderer())
