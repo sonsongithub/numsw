@@ -8,10 +8,14 @@
 
 import CoreGraphics
 
-public struct LineData {
+public struct LineGraph {
     public init(points: [CGPoint]) {
         self.points = points
     }
     
     public var points: [CGPoint]
+    
+    public func computeViewport() -> CGRect {
+        return RendererUtil.computeViewport(points: points)
+    }
 }
