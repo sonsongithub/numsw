@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             )
         }
         
-        let vc = RenderViewController2()
+        let vc = RenderViewController()
         
         vc.append(renderer: makeRenderer())
         vc.append(renderer: makeRenderer())
