@@ -1,6 +1,6 @@
 //: Playground - noun: a place where people can play
 
-_setupRender()
+NumswPlayground.initialize()
 
 do {
     let t = Matrix.range(from: 0, to: 10, stride: 0.01)

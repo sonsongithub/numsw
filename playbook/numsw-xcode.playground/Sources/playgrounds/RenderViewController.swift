@@ -6,129 +6,9 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
+//  Second Implementation with UITableView
+
 import UIKit
-
-public func addLine(x: [Double], y: [Double]) {
-    let cgPoints = zip(x, y).map {
-        CGPoint(x: $0.0, y:$0.1)
-    }
-    
-    let renderer = LineGraphRenderer(lines: [
-        LineData(points: cgPoints)
-        ])
-    
-    add(renderer: renderer)
-}
-
-public func addLine2(x: [Double], y: [Double],
-                     x2: [Double], y2: [Double]) {
-    let cgPoints = zip(x, y).map {
-        CGPoint(x: $0.0, y: $0.1)
-    }
-    
-    let cgPoints2 = zip(x2, y2).map {
-        CGPoint(x: $0.0, y: $0.1)
-    }
-    
-    let renderer = LineGraphRenderer(lines: [
-        LineData(points: cgPoints),
-        LineData(points: cgPoints2)
-        ])
-    
-    add(renderer: renderer)
-}
-
-public func add(renderer: Renderer) {
-    RenderViewController.shared.append(renderer: renderer)
-}
-
-public func testMakeRenderer() {
-    add(renderer: makeRenderer())
-}
-
-public func makeRenderer() -> LineGraphRenderer {
-    return LineGraphRenderer(lines: [
-        LineData(points: DummyData.points1()),
-        LineData(points: DummyData.points2())
-        ])
-}
-
-/*
-public class RenderViewController: UIViewController {
-
-    func makeRenderer() -> LineGraphRenderer {
-        return LineGraphRenderer(lines: [
-            LineData(points: DummyData.points1()),
-            LineData(points: DummyData.points2())
-            ]
-        )
-    }
-
-
-    static var shared:RenderViewController!
-
-    var renderers:[Renderer] = []
-
-    var scrollView: UIScrollView!
-
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-
-        RenderViewController.shared = self
-
-        scrollView = UIScrollView()
-        scrollView.frame = self.view.frame
-
-        self.view.addSubview(scrollView)
-    }
-
-
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        self.render()
-
-    }
-
-
-    public override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        updateViews()
-    }
-
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    func updateViews(){
-        for view in scrollView.subviews{
-            view.removeFromSuperview()
-        }
-        scrollView.contentSize.height = 0
-        self.render()
-    }
-
-
-    func render(){
-
-        var size = self.view.frame.size
-        size.height *= 0.5
-        // renderer 取り出してscrollviewに追加
-        for renderer in renderers {
-            let image = renderer.render(size: size)
-            let imageView = UIImageView(image: image)
-            imageView.frame.size = size
-            imageView.contentMode = .scaleToFill
-            imageView.frame.origin = CGPoint(x: 0, y: scrollView.contentSize.height)
-            scrollView.addSubview(imageView)
-            scrollView.contentSize.height += size.height
-        }
-    }
-    
-    
-}
-
- */
 
 private class RenderTableViewCell: UITableViewCell {
     
@@ -165,16 +45,12 @@ private class RenderTableViewCell: UITableViewCell {
             return
         }
         
-        let image = renderer.render(size: self.bounds.size)
+        let image = renderer.renderToImage(size: self.bounds.size)
         self.renderImageView.image = image
     }
 }
 
 public class RenderViewController: UITableViewController {
-
-
-    static var shared: RenderViewController!
-    
     private let CellIdentifier = "Cell"
     private var renderers: [Renderer] = []
     
@@ -188,16 +64,7 @@ public class RenderViewController: UITableViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        RenderViewController.shared = self
-
-        func makeRenderer() -> LineGraphRenderer {
-            return LineGraphRenderer(lines: [
-                LineData(points: DummyData.points1()),
-                LineData(points: DummyData.points2())
-                ])
-        }
-        
+                
         tableView.contentInset = .zero
         tableView.separatorStyle = .none
         
@@ -207,7 +74,6 @@ public class RenderViewController: UITableViewController {
     public func append(renderer: Renderer) {
         self.renderers.append(renderer)
         self.tableView.reloadData()
-//        self.tableView.insertRows(at: [IndexPath(row: renderers.count, section: 0)], with: .automatic)
     }
 
     public override func viewDidLayoutSubviews() {

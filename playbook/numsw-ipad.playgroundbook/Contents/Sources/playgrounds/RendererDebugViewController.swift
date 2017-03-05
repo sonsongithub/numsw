@@ -31,10 +31,8 @@ class RendererDebugViewController : UIViewController {
     
     @IBOutlet var imageView: UIImageView!
 
-    @IBAction func onRenderButton(sender: UIButton) {
-//        print("size = \(imageView.bounds)")
-        
-        let image = renderer!.render(size: imageView.bounds.size)
+    @IBAction func onRenderButton(sender: UIButton) {        
+        let image = renderer!.renderToImage(size: imageView.bounds.size)
         imageView.image = image
     }
     

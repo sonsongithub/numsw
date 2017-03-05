@@ -10,13 +10,13 @@ import UIKit
 
 public class NumswPlayground {
     internal init() {
-        viewController = RenderViewController()
+        viewController = RenderViewController2()
     }
     
-    public let viewController: RenderViewController
+    public let viewController: RenderViewController2
     
     public func add(renderer: Renderer) {
-        viewController.append(renderer: renderer)
+        viewController.renderers.append(renderer)
     }
     
     public func addLine(
