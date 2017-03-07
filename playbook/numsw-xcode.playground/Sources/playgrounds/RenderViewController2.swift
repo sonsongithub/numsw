@@ -4,12 +4,18 @@ import UIKit
 
 public class RenderViewController2: UIViewController {
     
-    func makeRenderer() -> LineGraphRenderer {
-        return LineGraphRenderer(lines: [
-            LineData(points: DummyData.points1()),
-            LineData(points: DummyData.points2())
-            ]
-        )
+    func makeRenderer() -> ChartRenderer {
+        let points1 = DummyData.points1()
+        let points2 = DummyData.points2()
+        
+        var chart = Chart()
+        chart.elements = [
+            .line(LineGraph(points: points1)),
+            .line(LineGraph(points: points2))
+        ]
+        chart.computeViewport()
+    
+        return ChartRenderer(chart: chart)
     }
     
     var renderers: [Renderer] = []
@@ -39,6 +45,7 @@ public class RenderViewController2: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        scrollView.frame = self.view.frame
         updateViews()
     }
     
@@ -57,7 +64,7 @@ public class RenderViewController2: UIViewController {
         size.height *= 0.5
         // renderer 取り出してscrollviewに追加
         for renderer in renderers {
-            let image = renderer.render(size: size)
+            let image = renderer.renderToImage(size: size)
             let imageView = UIImageView(image: image)
             imageView.frame.size = size
             imageView.contentMode = .scaleToFill

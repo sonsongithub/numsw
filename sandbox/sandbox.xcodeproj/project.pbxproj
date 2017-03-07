@@ -29,10 +29,31 @@
 		D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */; };
 		D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0061E6A77E100A50C88 /* DummyData.swift */; };
 		D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */; };
-		D653808D1E6A98120032C0B2 /* LineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808C1E6A98120032C0B2 /* LineData.swift */; };
+		D653808D1E6A98120032C0B2 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808C1E6A98120032C0B2 /* LineGraph.swift */; };
 		D65380921E6B28380032C0B2 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65380911E6B28380032C0B2 /* RenderViewController.swift */; };
 		D6D74F491E6BDE7300E57BBB /* NumswPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F451E6BDB2E00E57BBB /* NumswPlayground.swift */; };
 		D6D74F5C1E6C611200E57BBB /* RenderViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F5B1E6C611200E57BBB /* RenderViewController2.swift */; };
+		D6D74F641E6C6B3B00E57BBB /* CompositeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */; };
+		D6D74F671E6C6D1900E57BBB /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F661E6C6D1900E57BBB /* Chart.swift */; };
+		D6D74F691E6C6DB500E57BBB /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */; };
+		D6D74F6B1E6C742500E57BBB /* ChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */; };
+		D6D74F6D1E6C769400E57BBB /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6C1E6C769400E57BBB /* ChartElement.swift */; };
+		D6D74F6F1E6C7BE900E57BBB /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */; };
+		D6D74F711E6C7C9700E57BBB /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */; };
+		D6D74F731E6C7F5600E57BBB /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */; };
+		D6D74F9C1E6C839A00E57BBB /* Matrix_sonson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F8F1E6C839A00E57BBB /* Matrix_sonson.swift */; };
+		D6D74F9D1E6C839A00E57BBB /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F901E6C839A00E57BBB /* Matrix.swift */; };
+		D6D74F9E1E6C839A00E57BBB /* MatrixAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F911E6C839A00E57BBB /* MatrixAddition.swift */; };
+		D6D74F9F1E6C839A00E57BBB /* MatrixDivide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F921E6C839A00E57BBB /* MatrixDivide.swift */; };
+		D6D74FA01E6C839A00E57BBB /* MatrixInvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F931E6C839A00E57BBB /* MatrixInvert.swift */; };
+		D6D74FA11E6C839A00E57BBB /* MatrixLogarithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F941E6C839A00E57BBB /* MatrixLogarithm.swift */; };
+		D6D74FA21E6C839A00E57BBB /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F951E6C839A00E57BBB /* MatrixMultiply.swift */; };
+		D6D74FA31E6C839A00E57BBB /* MatrixRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F961E6C839A00E57BBB /* MatrixRange.swift */; };
+		D6D74FA41E6C839A00E57BBB /* MatrixSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F971E6C839A00E57BBB /* MatrixSubscript.swift */; };
+		D6D74FA51E6C839A00E57BBB /* MatrixTranspose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F981E6C839A00E57BBB /* MatrixTranspose.swift */; };
+		D6D74FA61E6C839A00E57BBB /* MatrixTrigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F991E6C839A00E57BBB /* MatrixTrigonometric.swift */; };
+		D6D74FA71E6C839A00E57BBB /* numsw.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F9A1E6C839A00E57BBB /* numsw.swift */; };
+		D6D74FA81E6C839A00E57BBB /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F9B1E6C839A00E57BBB /* Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,11 +127,32 @@
 		D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphRenderer.swift; sourceTree = "<group>"; };
 		D621D0061E6A77E100A50C88 /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererUtil.swift; sourceTree = "<group>"; };
-		D653808C1E6A98120032C0B2 /* LineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineData.swift; sourceTree = "<group>"; };
+		D653808C1E6A98120032C0B2 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 		D65380911E6B28380032C0B2 /* RenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
 		D6D74F451E6BDB2E00E57BBB /* NumswPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumswPlayground.swift; sourceTree = "<group>"; };
 		D6D74F4A1E6BDE7E00E57BBB /* NumswPlayground_Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumswPlayground_Playground.swift; sourceTree = "<group>"; };
 		D6D74F5B1E6C611200E57BBB /* RenderViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController2.swift; sourceTree = "<group>"; };
+		D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeRenderer.swift; sourceTree = "<group>"; };
+		D6D74F661E6C6D1900E57BBB /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxisRenderer.swift; sourceTree = "<group>"; };
+		D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartRenderer.swift; sourceTree = "<group>"; };
+		D6D74F6C1E6C769400E57BBB /* ChartElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartElement.swift; sourceTree = "<group>"; };
+		D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterGraph.swift; sourceTree = "<group>"; };
+		D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterGraphRenderer.swift; sourceTree = "<group>"; };
+		D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartBuilder.swift; sourceTree = "<group>"; };
+		D6D74F8F1E6C839A00E57BBB /* Matrix_sonson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix_sonson.swift; path = ../Sources/Matrix_sonson.swift; sourceTree = "<group>"; };
+		D6D74F901E6C839A00E57BBB /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = ../Sources/Matrix.swift; sourceTree = "<group>"; };
+		D6D74F911E6C839A00E57BBB /* MatrixAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAddition.swift; path = ../Sources/MatrixAddition.swift; sourceTree = "<group>"; };
+		D6D74F921E6C839A00E57BBB /* MatrixDivide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixDivide.swift; path = ../Sources/MatrixDivide.swift; sourceTree = "<group>"; };
+		D6D74F931E6C839A00E57BBB /* MatrixInvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixInvert.swift; path = ../Sources/MatrixInvert.swift; sourceTree = "<group>"; };
+		D6D74F941E6C839A00E57BBB /* MatrixLogarithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixLogarithm.swift; path = ../Sources/MatrixLogarithm.swift; sourceTree = "<group>"; };
+		D6D74F951E6C839A00E57BBB /* MatrixMultiply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixMultiply.swift; path = ../Sources/MatrixMultiply.swift; sourceTree = "<group>"; };
+		D6D74F961E6C839A00E57BBB /* MatrixRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixRange.swift; path = ../Sources/MatrixRange.swift; sourceTree = "<group>"; };
+		D6D74F971E6C839A00E57BBB /* MatrixSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixSubscript.swift; path = ../Sources/MatrixSubscript.swift; sourceTree = "<group>"; };
+		D6D74F981E6C839A00E57BBB /* MatrixTranspose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTranspose.swift; path = ../Sources/MatrixTranspose.swift; sourceTree = "<group>"; };
+		D6D74F991E6C839A00E57BBB /* MatrixTrigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTrigonometric.swift; path = ../Sources/MatrixTrigonometric.swift; sourceTree = "<group>"; };
+		D6D74F9A1E6C839A00E57BBB /* numsw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = numsw.swift; path = ../Sources/numsw.swift; sourceTree = "<group>"; };
+		D6D74F9B1E6C839A00E57BBB /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = ../Sources/Random.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				52E1EE601E6A8CD1008D19BB /* numsw.xcodeproj */,
+				D6D74F741E6C82B100E57BBB /* numsw */,
 				D621CFFB1E6A631900A50C88 /* playgrounds */,
 				1453FBB31E6A5CD300633F32 /* sandbox */,
 				52E1EE3F1E6A8A2E008D19BB /* sandboxTests */,
@@ -201,13 +244,41 @@
 				D621CFFE1E6A632D00A50C88 /* Renderer.swift */,
 				D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */,
 				D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */,
-				D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */,
-				D621D0061E6A77E100A50C88 /* DummyData.swift */,
 				D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */,
-				D653808C1E6A98120032C0B2 /* LineData.swift */,
+				D621D0061E6A77E100A50C88 /* DummyData.swift */,
+				D6D74F661E6C6D1900E57BBB /* Chart.swift */,
+				D6D74F6C1E6C769400E57BBB /* ChartElement.swift */,
+				D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */,
+				D653808C1E6A98120032C0B2 /* LineGraph.swift */,
+				D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */,
+				D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */,
+				D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */,
+				D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */,
+				D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */,
+				D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */,
 			);
 			name = playgrounds;
 			path = ../playgrounds;
+			sourceTree = "<group>";
+		};
+		D6D74F741E6C82B100E57BBB /* numsw */ = {
+			isa = PBXGroup;
+			children = (
+				D6D74F8F1E6C839A00E57BBB /* Matrix_sonson.swift */,
+				D6D74F901E6C839A00E57BBB /* Matrix.swift */,
+				D6D74F911E6C839A00E57BBB /* MatrixAddition.swift */,
+				D6D74F921E6C839A00E57BBB /* MatrixDivide.swift */,
+				D6D74F931E6C839A00E57BBB /* MatrixInvert.swift */,
+				D6D74F941E6C839A00E57BBB /* MatrixLogarithm.swift */,
+				D6D74F951E6C839A00E57BBB /* MatrixMultiply.swift */,
+				D6D74F961E6C839A00E57BBB /* MatrixRange.swift */,
+				D6D74F971E6C839A00E57BBB /* MatrixSubscript.swift */,
+				D6D74F981E6C839A00E57BBB /* MatrixTranspose.swift */,
+				D6D74F991E6C839A00E57BBB /* MatrixTrigonometric.swift */,
+				D6D74F9A1E6C839A00E57BBB /* numsw.swift */,
+				D6D74F9B1E6C839A00E57BBB /* Random.swift */,
+			);
+			name = numsw;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,13 +411,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D74F3D1E6BC80800E57BBB /* RenderViewController2.swift in Sources */,
-				D653808D1E6A98120032C0B2 /* LineData.swift in Sources */,
+				D653808D1E6A98120032C0B2 /* LineGraph.swift in Sources */,
+				D6D74FA71E6C839A00E57BBB /* numsw.swift in Sources */,
+				D6D74F6B1E6C742500E57BBB /* ChartRenderer.swift in Sources */,
+				D6D74FA01E6C839A00E57BBB /* MatrixInvert.swift in Sources */,
+				D6D74F9F1E6C839A00E57BBB /* MatrixDivide.swift in Sources */,
+				D6D74F9E1E6C839A00E57BBB /* MatrixAddition.swift in Sources */,
+				D6D74F9C1E6C839A00E57BBB /* Matrix_sonson.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
+				D6D74FA81E6C839A00E57BBB /* Random.swift in Sources */,
+				D6D74F641E6C6B3B00E57BBB /* CompositeRenderer.swift in Sources */,
 				D6D74F5C1E6C611200E57BBB /* RenderViewController2.swift in Sources */,
+				D6D74FA11E6C839A00E57BBB /* MatrixLogarithm.swift in Sources */,
+				D6D74F6F1E6C7BE900E57BBB /* ScatterGraph.swift in Sources */,
 				D6D74F491E6BDE7300E57BBB /* NumswPlayground.swift in Sources */,
+				D6D74FA51E6C839A00E57BBB /* MatrixTranspose.swift in Sources */,
 				D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */,
+				D6D74F731E6C7F5600E57BBB /* ChartBuilder.swift in Sources */,
+				D6D74FA61E6C839A00E57BBB /* MatrixTrigonometric.swift in Sources */,
+				D6D74FA21E6C839A00E57BBB /* MatrixMultiply.swift in Sources */,
+				D6D74F711E6C7C9700E57BBB /* ScatterGraphRenderer.swift in Sources */,
+				D6D74FA41E6C839A00E57BBB /* MatrixSubscript.swift in Sources */,
 				D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */,
+				D6D74FA31E6C839A00E57BBB /* MatrixRange.swift in Sources */,
+				D6D74F691E6C6DB500E57BBB /* AxisRenderer.swift in Sources */,
+				D6D74F6D1E6C769400E57BBB /* ChartElement.swift in Sources */,
+				D6D74F9D1E6C839A00E57BBB /* Matrix.swift in Sources */,
+				D6D74F671E6C6D1900E57BBB /* Chart.swift in Sources */,
 				1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */,
 				D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */,
 				D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */,

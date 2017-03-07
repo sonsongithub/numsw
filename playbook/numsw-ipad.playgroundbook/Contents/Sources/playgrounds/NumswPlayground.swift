@@ -15,42 +15,47 @@ public class NumswPlayground {
     
     public let viewController: RenderViewController2
     
-    public func add(renderer: Renderer) {
-        viewController.renderers.append(renderer)
+    public func append(renderer: ChartRenderer) {
+        renderers.append(renderer)
     }
     
-    public func addLine(
-        x: [Double], y: [Double])
-    {
-        let cgPoints = zip(x, y).map {
-            CGPoint(x: $0.0, y:$0.1)
+    public func plot(_ x: [Double], _ y: [Double]) {
+        guard let b = chartBuilder else {
+            hold {
+                plot(x, y)
+            }
+            return
         }
         
-        let renderer = LineGraphRenderer(lines: [
-            LineData(points: cgPoints)
-            ])
-        
-        add(renderer: renderer)
+        let points = zip(x, y).map {
+            CGPoint(x: $0.0, y: $0.1)
+        }
+        b.addLine(line: LineGraph(points: points))
     }
     
-    public func addLine2(
-            x: [Double], y: [Double],
-            x2: [Double], y2: [Double])
-    {
-        let cgPoints = zip(x, y).map {
+    public func scatter(_ x: [Double], _ y: [Double]) {
+        guard let b = chartBuilder else {
+            hold {
+                scatter(x, y)
+            }
+            return
+        }
+        let points = zip(x, y).map {
             CGPoint(x: $0.0, y: $0.1)
         }
+        b.addScatter(scatter: ScatterGraph(points: points))
+    }
+    
+    public func hold(_ f: () throws -> Void) rethrows {
+        let b = ChartBuilder()
+        chartBuilder = b
+
+        try f()
         
-        let cgPoints2 = zip(x2, y2).map {
-            CGPoint(x: $0.0, y: $0.1)
-        }
+        chartBuilder = nil
         
-        let renderer = LineGraphRenderer(lines: [
-            LineData(points: cgPoints),
-            LineData(points: cgPoints2)
-            ])
-        
-        add(renderer: renderer)
+        let renderer = ChartRenderer(chart: b.chart)
+        append(renderer: renderer)
     }
     
     public static var shared: NumswPlayground {
@@ -62,20 +67,48 @@ public class NumswPlayground {
         }
     }
     
+    private var renderers: [ChartRenderer] = [] {
+        didSet {
+            viewController.renderers = renderers.map { $0 as Renderer }
+        }
+    }
+    
+    private var chartBuilder: ChartBuilder?
+    
     private static var _shared: NumswPlayground?
+    
 }
 
 public func addLine(
     x: [Double], y: [Double])
 {
-    NumswPlayground.shared.addLine(x: x, y: y)
+    hold {
+        plot(x, y)
+    }
 }
 
 public func addLine2(
     x: [Double], y: [Double],
     x2: [Double], y2: [Double])
 {
-    NumswPlayground.shared.addLine2(x: x, y: y,
-                                    x2: x2, y2: y2)
+    hold {
+        plot(x, y)
+        scatter(x2, y2)
+    }
 }
 
+public func plot(
+    _ x: [Double], _ y: [Double])
+{
+    NumswPlayground.shared.plot(x, y)
+}
+
+public func scatter(
+    _ x: [Double], _ y: [Double])
+{
+    NumswPlayground.shared.scatter(x, y)
+}
+
+public func hold(f: () throws -> Void) rethrows {
+    try NumswPlayground.shared.hold(f)
+}

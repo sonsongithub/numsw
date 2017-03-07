@@ -21,13 +21,20 @@ class ViewController: UIViewController {
         present(vc, animated: true)
     }
     @IBAction func onLeftButton(_ sender: Any) {
-        func makeRenderer() -> LineGraphRenderer {
-            return LineGraphRenderer(lines: [
-                LineData(points: DummyData.points1()),
-                LineData(points: DummyData.points2())
-                ]
-            )
+        func makeRenderer() -> ChartRenderer {
+            let points1 = DummyData.points1()
+            let points2 = DummyData.points2()
+            
+            var chart = Chart()
+            chart.elements = [
+                .line(LineGraph(points: points1)),
+                .line(LineGraph(points: points2))
+            ]
+            chart.computeViewport()
+            
+            return ChartRenderer(chart: chart)
         }
+        
         
         let vc = RenderViewController2()
         
@@ -36,6 +43,11 @@ class ViewController: UIViewController {
         vc.append(renderer: makeRenderer())
         
         present(vc, animated: true)
+    }
+    
+    @IBAction func onTestButton(sender: UIButton) {
+        DummyData.runTestScenario()
+        present(NumswPlayground.shared.viewController, animated: true)
     }
 
 }

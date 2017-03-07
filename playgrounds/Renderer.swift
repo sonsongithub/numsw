@@ -9,7 +9,20 @@
 import UIKit
 
 public protocol Renderer {
-    func render(size: CGSize) -> UIImage
+    func render(context: CGContext, windowSize: CGSize)
 }
 
+public extension Renderer {
+    func renderToImage(size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)
+        
+        let context = UIGraphicsGetCurrentContext()!
+        
+        render(context: context, windowSize: size)
+        
+        let cgImage = context.makeImage()!
+        
+        return UIImage(cgImage: cgImage)
+    }
+}
 
