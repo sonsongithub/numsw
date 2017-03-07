@@ -33,32 +33,23 @@ public struct RendererUtil {
         return CGRect(x: x0, y: y0, width: x1 - x0, height: y1 - y0)
     }
     
-    public static func computeViewport(points: [CGPoint]
-        ) -> CGRect
-    {
-        var bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
-        
-        if points.count > 0 {
-            //  override
-            bounds = computeBounds(points: points)
-        }
-        
+    public static func adjustViewport(viewport: CGRect) -> CGRect {
         //  min size constraint
         
-        var width = max(bounds.width, 2)
-        var height = max(bounds.height, 2)
+        var width = max(viewport.width, 2)
+        var height = max(viewport.height, 2)
         
         //  10% margin
         
         width += width * 0.1
         height += height * 0.1
         
-        return CGRect(x: bounds.midX - width / 2.0,
-                      y: bounds.midY - height / 2.0,
+        return CGRect(x: viewport.midX - width / 2.0,
+                      y: viewport.midY - height / 2.0,
                       width: width,
                       height: height)
     }
-
+    
     public static func computeViewportTransform(
         from: CGRect,
         to: CGRect,

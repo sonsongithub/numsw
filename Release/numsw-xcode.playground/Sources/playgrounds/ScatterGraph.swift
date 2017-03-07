@@ -15,7 +15,7 @@ public struct ScatterGraph {
     
     public var points: [CGPoint]
     
-    public func computeViewport() -> CGRect {
-        return RendererUtil.computeViewport(points: points)
+    public func computeBounds() -> CGRect {
+        return RendererUtil.computeBounds(points: points)
     }
 }

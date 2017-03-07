@@ -91,4 +91,18 @@ public struct DummyData {
         }
 
     }
+    
+    public static func runHoldExample() {
+        
+        let t1 = Matrix.range(from: 0, to: 10, stride: 0.01)
+        let siny1 = sin(t1 * 2)
+        
+        let t2 = Matrix.range(from: 0, to: 10, stride: 0.4)
+        let siny2 = sin(t2 * 2)
+        
+        hold {
+            plot(t1.elements, siny1.elements)
+            scatter(t2.elements, siny2.elements)
+        }
+    }
 }
