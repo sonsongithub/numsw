@@ -48,7 +48,7 @@ class BuildIpadPlaygroundApp
     # FileUtils.cp_r(src, dest)
 
     src = temp_package_dir
-    dest = repo_dir + "#{package_name}.playgroundbook"
+    dest = repo_dir + "Release" + "#{package_name}.playgroundbook"
     puts "move output: #{dest}"
     FileUtils.mv(src, dest, {:force => true})
 
