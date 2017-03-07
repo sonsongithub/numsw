@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         }
         
         
-        let vc = RenderViewController2()
+        let vc = RenderScrollViewController()
         
         vc.append(renderer: makeRenderer())
         vc.append(renderer: makeRenderer())
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTestButton(sender: UIButton) {
-        DummyData.runTestScenario()
+        DummyData.runHoldExample()
         present(NumswPlayground.shared.viewController, animated: true)
     }
 
