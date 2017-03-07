@@ -52,7 +52,12 @@ private class RenderTableViewCell: UITableViewCell {
 
 public class RenderViewController: UITableViewController {
     private let CellIdentifier = "Cell"
-    private var renderers: [Renderer] = []
+    
+    var renderers: [Renderer] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     public init() {
         super.init(style: .plain)
