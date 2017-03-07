@@ -10,10 +10,10 @@ import UIKit
 
 public class NumswPlayground {
     internal init() {
-        viewController = RenderViewController2()
+        viewController = RenderViewController()
     }
     
-    public let viewController: RenderViewController2
+    public let viewController: RenderViewController
     
     public func append(renderer: ChartRenderer) {
         renderers.append(renderer)

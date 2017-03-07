@@ -45,6 +45,7 @@ public class RenderViewController2: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        scrollView.frame = self.view.frame
         updateViews()
     }
     
