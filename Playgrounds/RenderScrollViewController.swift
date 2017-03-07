@@ -2,7 +2,7 @@
 
 import UIKit
 
-public class RenderViewController2: UIViewController {
+public class RenderScrollViewController: UIViewController {
     
     func makeRenderer() -> ChartRenderer {
         let points1 = DummyData.points1()

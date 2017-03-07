@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         }
         
         
-        let vc = RenderViewController2()
+        let vc = RenderScrollViewController()
         
         vc.append(renderer: makeRenderer())
         vc.append(renderer: makeRenderer())
