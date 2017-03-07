@@ -1,5 +1,5 @@
 //
-//  RenderViewController.swift
+//  RenderTableViewController.swift
 //  sandbox
 //
 //  Created by color_box on 2017/03/04.
@@ -50,7 +50,7 @@ private class RenderTableViewCell: UITableViewCell {
     }
 }
 
-public class RenderViewController: UITableViewController {
+public class RenderTableViewController: UITableViewController {
     private let CellIdentifier = "Cell"
     
     var renderers: [Renderer] = [] {
