@@ -28,11 +28,23 @@ public class AxisRenderer : Renderer {
     private func computeStepSize() -> CGSize {
         let size = chart.viewport.size
         
-        let xLog = log10(size.width)
-        let xStep = pow(10.0, round(xLog) - 1)
+        let xStep: CGFloat
         
-        let yLog = log10(size.height)
-        let yStep = pow(10.0, round(yLog) - 1)
+        if size.width <= 0.0 {
+            xStep = 0.0
+        } else {
+            let xLog = log10(size.width)
+            xStep = pow(10.0, round(xLog) - 1)
+        }
+        
+        let yStep: CGFloat
+        
+        if size.height <= 0.0 {
+            yStep = 0.0
+        } else {
+            let yLog = log10(size.height)
+            yStep = pow(10.0, round(yLog) - 1)
+        }
         
         return CGSize(width: xStep, height: yStep)
     }
