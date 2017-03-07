@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTestButton(sender: UIButton) {
-        DummyData.runTestScenario()
+        DummyData.runHoldExample()
         present(NumswPlayground.shared.viewController, animated: true)
     }
 

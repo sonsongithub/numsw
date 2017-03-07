@@ -12,12 +12,12 @@ public enum ChartElement {
     case line(LineGraph)
     case scatter(ScatterGraph)
     
-    func computeViewport() -> CGRect {
+    func computeBounds() -> CGRect {
         switch self {
         case .line(let line):
-            return line.computeViewport()
+            return line.computeBounds()
         case .scatter(let scatter):
-            return scatter.computeViewport()
+            return scatter.computeBounds()
         }
     }
 }

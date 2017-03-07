@@ -10,22 +10,22 @@ import CoreGraphics
 
 public struct Chart {
     public init() {
-        viewport = CGRect.zero
+        computeViewport()
     }
     
-    public var viewport: CGRect
-    
+    public var viewport: CGRect = .zero    
     public var elements: [ChartElement] = []
     
     public mutating func computeViewport() {
         guard elements.count != 0 else {
-            viewport = RendererUtil.computeViewport(points: [])
+            viewport = RendererUtil.adjustViewport(viewport: CGRect.zero)
             return
         }
         
-        viewport = elements.first!.computeViewport()
+        var b = elements.first!.computeBounds()
         for e in elements.dropFirst() {
-            viewport = viewport.union(e.computeViewport())
+            b = b.union(e.computeBounds())
         }
+        viewport = RendererUtil.adjustViewport(viewport: b)
     }
 }
