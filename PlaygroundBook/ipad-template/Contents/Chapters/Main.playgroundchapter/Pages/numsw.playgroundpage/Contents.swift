@@ -6,6 +6,6 @@ NumswPlayground.initialize()
 //#-end-hidden-code
 //#-editable-code Tap to enter code.
 
-/// <-- Here defulat swift code -->
+/*${func runTestScenario}*/
 
 //#-end-editable-code

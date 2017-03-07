@@ -7,7 +7,7 @@ class SourceDirBuilder
     @dest_dir = dest_dir
 
     target = dest_dir
-    puts "make root Sources directory:　#{target.to_s}"
+    puts "make root Sources directory: #{target.to_s}"
     FileUtils.mkdir_p(target)
 
     target = dest_dir + "numsw"

@@ -2,4 +2,4 @@
 
 NumswPlayground.initialize()
 
-/// <-- Here defulat swift code -->
+/*${func runTestScenario}*/

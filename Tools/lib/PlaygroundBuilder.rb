@@ -3,6 +3,7 @@ require "fileutils"
 require "tmpdir"
 
 require_relative "SourceDirBuilder"
+require_relative "SwiftTemplateRenderer"
 
 class PlaygroundBuilder
   attr_reader :repo_dir
@@ -38,6 +39,19 @@ class PlaygroundBuilder
     puts "copy template: #{src.to_s}"
     FileUtils.cp_r(src, dest)
 
+
+    template_search_paths = [
+      repo_dir + "Playgrounds"
+    ]
+    Dir.chdir(temp_playground_path)
+    for path in Pathname.glob("**/*.swift")
+      path = path.expand_path
+
+      renderer = SwiftTemplateRenderer.new
+      out = renderer.render(path, template_search_paths)
+      path.binwrite(out)
+    end
+   
     SourceDirBuilder.new.tap {|b|
       b.build(repo_dir, temp_playground_path + sources_path)
     }
