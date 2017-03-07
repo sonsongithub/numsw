@@ -31,6 +31,7 @@
 		D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */; };
 		D653808D1E6A98120032C0B2 /* LineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808C1E6A98120032C0B2 /* LineData.swift */; };
 		D65380921E6B28380032C0B2 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65380911E6B28380032C0B2 /* RenderViewController.swift */; };
+		D6D74F3D1E6BC80800E57BBB /* RenderViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F3C1E6BC80800E57BBB /* RenderViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererUtil.swift; sourceTree = "<group>"; };
 		D653808C1E6A98120032C0B2 /* LineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineData.swift; sourceTree = "<group>"; };
 		D65380911E6B28380032C0B2 /* RenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
+		D6D74F3C1E6BC80800E57BBB /* RenderViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				D65380911E6B28380032C0B2 /* RenderViewController.swift */,
+				D6D74F3C1E6BC80800E57BBB /* RenderViewController2.swift */,
 				D621CFFE1E6A632D00A50C88 /* Renderer.swift */,
 				D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */,
 				D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */,
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D74F3D1E6BC80800E57BBB /* RenderViewController2.swift in Sources */,
 				D653808D1E6A98120032C0B2 /* LineData.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
 				D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */,
