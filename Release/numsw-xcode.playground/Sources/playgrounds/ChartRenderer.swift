@@ -8,7 +8,7 @@
 
 import CoreGraphics
 
-public class ChartRenderer : Renderer {
+public class ChartRenderer: Renderer {
     
     public init(chart: Chart) {
         self.chart = chart

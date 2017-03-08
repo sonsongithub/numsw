@@ -12,7 +12,6 @@ class numswTests: XCTestCase {
         let x = Matrix(rows: 2, columns: 6, elements: [1, 2, 5, 9, 13, 15, 1, 1, 1, 1, 1, 1])
         let y = Matrix(rows: 1, columns: 6, elements: [1, 2, 3, 5, 10, 50])
 
-
         let xx = x * x.transposed()
         x.transposed().show()
 

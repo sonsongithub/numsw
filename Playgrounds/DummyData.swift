@@ -8,6 +8,10 @@
 
 import UIKit
 
+#if SANDBOX_APP
+    import numsw
+#endif
+
 public struct DummyData {
     public static func points1() -> [CGPoint] {
         return [
@@ -32,8 +36,6 @@ public struct DummyData {
             let t = Matrix.range(from: 0, to: 10, stride: 0.01)
             let siny = sin(t*64)
             
-            
-            
             addLine(x: t.elements, y: siny.elements)
         }
         do {
@@ -46,7 +48,6 @@ public struct DummyData {
             let siny = tan(t*0.2)
             addLine(x: t.elements, y: siny.elements)
         }
-        
         
         do {
             // create dummy data

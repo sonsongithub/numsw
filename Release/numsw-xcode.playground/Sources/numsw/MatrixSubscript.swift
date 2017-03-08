@@ -1,4 +1,3 @@
-
 extension Matrix {
     public subscript(row: Int, column: Int) -> Double {
         get {

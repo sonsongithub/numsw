@@ -1,4 +1,3 @@
-
 extension Matrix {
     public func transposed() -> Matrix {
         let newElements = UnsafeMutablePointer<Double>.allocate(capacity: rows*columns)
