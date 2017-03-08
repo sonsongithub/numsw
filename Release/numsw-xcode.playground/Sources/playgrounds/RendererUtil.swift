@@ -53,8 +53,7 @@ public struct RendererUtil {
     public static func computeViewportTransform(
         from: CGRect,
         to: CGRect,
-        flipY: Bool) -> CGAffineTransform
-    {
+        flipY: Bool) -> CGAffineTransform {
         let fw = from.width
         let fh = from.height
         let tw = to.width
@@ -78,8 +77,7 @@ public struct RendererUtil {
     }
     
     public static func computeViewportTransform(
-        viewport: CGRect, windowSize: CGSize) -> CGAffineTransform
-    {
+        viewport: CGRect, windowSize: CGSize) -> CGAffineTransform {
         return computeViewportTransform(from: viewport,
                                         to: CGRect(origin: CGPoint.zero,
                                                    size: windowSize),
@@ -89,8 +87,7 @@ public struct RendererUtil {
     public static func computeTickValues(
         min: CGFloat,
         max: CGFloat,
-        step: CGFloat) -> [CGFloat]
-    {
+        step: CGFloat) -> [CGFloat] {
         let x0 = Int(floor(min / step))
         let x1 = Int(ceil(max / step))
         
@@ -104,8 +101,7 @@ public struct RendererUtil {
     }
 
     public static func drawLine(context: CGContext,
-                         points: [CGPoint])
-    {
+                         points: [CGPoint]) {
         context.setLineWidth(2.0)
         
         if points.count < 2 {

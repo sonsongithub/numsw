@@ -10,8 +10,6 @@ do {
     let t = Matrix.range(from: 0, to: 10, stride: 0.01)
     let siny = sin(t*64)
             
-            
-            
     addLine(x: t.elements, y: siny.elements)
 }
 do {
@@ -24,7 +22,6 @@ do {
     let siny = tan(t*0.2)
     addLine(x: t.elements, y: siny.elements)
 }
-        
         
 do {
     // create dummy data
@@ -43,7 +40,7 @@ do {
             
     // data for presentation
     let x_p = Matrix.range(from: 0, to: 6, stride: 0.1)
-    let y_p = A[0,0] * x_p + A[0,1]
+    let y_p = A[0, 0] * x_p + A[0, 1]
             
     // rendering
     addLine2(x: x_p.elements, y: y_p.elements, x2: x.elements, y2: yn.elements)
@@ -63,7 +60,7 @@ do {
     let A = logy * b
             
     let x_p = Matrix.range(from: 0, to: 45, stride: 0.1)
-    let y_p = exp(A[0,0] * x_p + A[0,1])
+    let y_p = exp(A[0, 0] * x_p + A[0, 1])
             
     addLine2(x: x_p.elements, y: y_p.elements, x2: x.elements, y2: y.elements)
 }

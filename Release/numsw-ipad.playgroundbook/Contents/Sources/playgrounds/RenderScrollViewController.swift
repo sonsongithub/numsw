@@ -35,8 +35,8 @@ public class RenderScrollViewController: UIViewController {
         self.view.addSubview(scrollView)
     }
     
-    func updateViews(){
-        for view in scrollView.subviews{
+    func updateViews() {
+        for view in scrollView.subviews {
             view.removeFromSuperview()
         }
         scrollView.contentSize.height = 0
@@ -58,7 +58,7 @@ public class RenderScrollViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func render(){
+    func render() {
         
         var size = self.view.frame.size
         size.height *= 0.5
@@ -73,6 +73,5 @@ public class RenderScrollViewController: UIViewController {
             scrollView.contentSize.height += size.height
         }
     }
-    
     
 }

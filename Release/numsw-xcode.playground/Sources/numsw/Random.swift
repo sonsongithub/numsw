@@ -1,4 +1,3 @@
-
 import Foundation
 
 func _uniform(low: Double = 0, high: Double = 1) -> Double {

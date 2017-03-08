@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RendererDebugViewController : UIViewController {
+class RendererDebugViewController: UIViewController {
     
     required init() {
         super.init(nibName: "RendererDebugViewController", bundle: nil)
@@ -51,4 +51,3 @@ class RendererDebugViewController : UIViewController {
     }
     
 }
-

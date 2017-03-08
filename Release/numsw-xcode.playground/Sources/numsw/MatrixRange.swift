@@ -1,4 +1,3 @@
-
 extension Matrix {
     public static func range(from: Int, to: Int, stride: Int) -> Matrix {
         
