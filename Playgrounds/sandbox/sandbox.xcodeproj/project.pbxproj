@@ -7,53 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14467C551E6EF28C00BF8A96 /* RenderScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14467C531E6EF28C00BF8A96 /* RenderScrollViewController.swift */; };
-		14467C561E6EF28C00BF8A96 /* RenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14467C541E6EF28C00BF8A96 /* RenderTableViewController.swift */; };
 		1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBB41E6A5CD300633F32 /* AppDelegate.swift */; };
 		1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBB61E6A5CD300633F32 /* ViewController.swift */; };
 		1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBB81E6A5CD300633F32 /* Main.storyboard */; };
 		1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBBB1E6A5CD300633F32 /* Assets.xcassets */; };
 		1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBBD1E6A5CD300633F32 /* LaunchScreen.storyboard */; };
-		52E1EE411E6A8A2E008D19BB /* sandboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE401E6A8A2E008D19BB /* sandboxTests.swift */; };
-		52E1EE711E6A8CE0008D19BB /* MatrixBasicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE691E6A8CE0008D19BB /* MatrixBasicTest.swift */; };
-		52E1EE721E6A8CE0008D19BB /* MatrixAdditionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE6A1E6A8CE0008D19BB /* MatrixAdditionTest.swift */; };
-		52E1EE731E6A8CE0008D19BB /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE6B1E6A8CE0008D19BB /* numswTests.swift */; };
-		52E1EE741E6A8CE0008D19BB /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE6C1E6A8CE0008D19BB /* MatrixMultiplyTest.swift */; };
-		52E1EE751E6A8CE0008D19BB /* MatrixSubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE6D1E6A8CE0008D19BB /* MatrixSubscriptTests.swift */; };
-		52E1EE761E6A8CE0008D19BB /* MatrixInvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE6E1E6A8CE0008D19BB /* MatrixInvertTests.swift */; };
-		52E1EE771E6A8CE0008D19BB /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE6F1E6A8CE0008D19BB /* MatrixTransposeTests.swift */; };
-		52E1EE781E6A8CE0008D19BB /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EE701E6A8CE0008D19BB /* MatrixDivideTests.swift */; };
-		52E1EE7F1E6A8D70008D19BB /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E1EE661E6A8CD1008D19BB /* numsw.framework */; };
-		52E1EE801E6A8D70008D19BB /* numsw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E1EE661E6A8CD1008D19BB /* numsw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CFFE1E6A632D00A50C88 /* Renderer.swift */; };
-		D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */; };
-		D621D0031E6A652F00A50C88 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */; };
-		D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */; };
-		D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621D0061E6A77E100A50C88 /* DummyData.swift */; };
-		D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */; };
-		D653808D1E6A98120032C0B2 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653808C1E6A98120032C0B2 /* LineGraph.swift */; };
-		D6D74F491E6BDE7300E57BBB /* NumswPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F451E6BDB2E00E57BBB /* NumswPlayground.swift */; };
-		D6D74F641E6C6B3B00E57BBB /* CompositeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */; };
-		D6D74F671E6C6D1900E57BBB /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F661E6C6D1900E57BBB /* Chart.swift */; };
-		D6D74F691E6C6DB500E57BBB /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */; };
-		D6D74F6B1E6C742500E57BBB /* ChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */; };
-		D6D74F6D1E6C769400E57BBB /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6C1E6C769400E57BBB /* ChartElement.swift */; };
-		D6D74F6F1E6C7BE900E57BBB /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */; };
-		D6D74F711E6C7C9700E57BBB /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */; };
-		D6D74F731E6C7F5600E57BBB /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */; };
-		D6D74F9C1E6C839A00E57BBB /* Matrix_sonson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F8F1E6C839A00E57BBB /* Matrix_sonson.swift */; };
-		D6D74F9D1E6C839A00E57BBB /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F901E6C839A00E57BBB /* Matrix.swift */; };
-		D6D74F9E1E6C839A00E57BBB /* MatrixAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F911E6C839A00E57BBB /* MatrixAddition.swift */; };
-		D6D74F9F1E6C839A00E57BBB /* MatrixDivide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F921E6C839A00E57BBB /* MatrixDivide.swift */; };
-		D6D74FA01E6C839A00E57BBB /* MatrixInvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F931E6C839A00E57BBB /* MatrixInvert.swift */; };
-		D6D74FA11E6C839A00E57BBB /* MatrixLogarithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F941E6C839A00E57BBB /* MatrixLogarithm.swift */; };
-		D6D74FA21E6C839A00E57BBB /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F951E6C839A00E57BBB /* MatrixMultiply.swift */; };
-		D6D74FA31E6C839A00E57BBB /* MatrixRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F961E6C839A00E57BBB /* MatrixRange.swift */; };
-		D6D74FA41E6C839A00E57BBB /* MatrixSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F971E6C839A00E57BBB /* MatrixSubscript.swift */; };
-		D6D74FA51E6C839A00E57BBB /* MatrixTranspose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F981E6C839A00E57BBB /* MatrixTranspose.swift */; };
-		D6D74FA61E6C839A00E57BBB /* MatrixTrigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F991E6C839A00E57BBB /* MatrixTrigonometric.swift */; };
-		D6D74FA71E6C839A00E57BBB /* numsw.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F9A1E6C839A00E57BBB /* numsw.swift */; };
-		D6D74FA81E6C839A00E57BBB /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D74F9B1E6C839A00E57BBB /* Random.swift */; };
+		D6A0B5CE1E6FE801004AE3B4 /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */; };
+		D6A0B5CF1E6FE801004AE3B4 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */; };
+		D6A0B5D01E6FE801004AE3B4 /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */; };
+		D6A0B5D11E6FE801004AE3B4 /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BE1E6FE801004AE3B4 /* ChartElement.swift */; };
+		D6A0B5D21E6FE801004AE3B4 /* ChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BF1E6FE801004AE3B4 /* ChartRenderer.swift */; };
+		D6A0B5D31E6FE801004AE3B4 /* CompositeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C01E6FE801004AE3B4 /* CompositeRenderer.swift */; };
+		D6A0B5D41E6FE801004AE3B4 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */; };
+		D6A0B5D51E6FE801004AE3B4 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */; };
+		D6A0B5D61E6FE801004AE3B4 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */; };
+		D6A0B5D81E6FE802004AE3B4 /* NumswPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */; };
+		D6A0B5D91E6FE802004AE3B4 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */; };
+		D6A0B5DA1E6FE802004AE3B4 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */; };
+		D6A0B5DB1E6FE802004AE3B4 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */; };
+		D6A0B5DC1E6FE802004AE3B4 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */; };
+		D6A0B5DD1E6FE802004AE3B4 /* RenderScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */; };
+		D6A0B5DE1E6FE802004AE3B4 /* RenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */; };
+		D6A0B5DF1E6FE802004AE3B4 /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */; };
+		D6A0B5E01E6FE802004AE3B4 /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */; };
+		D6A0B5ED1E6FE866004AE3B4 /* MatrixAdditionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E21E6FE866004AE3B4 /* MatrixAdditionTest.swift */; };
+		D6A0B5EE1E6FE866004AE3B4 /* MatrixBasicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E31E6FE866004AE3B4 /* MatrixBasicTest.swift */; };
+		D6A0B5EF1E6FE866004AE3B4 /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E41E6FE866004AE3B4 /* MatrixDivideTests.swift */; };
+		D6A0B5F01E6FE866004AE3B4 /* MatrixInvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E51E6FE866004AE3B4 /* MatrixInvertTests.swift */; };
+		D6A0B5F11E6FE866004AE3B4 /* MatrixLogarithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E61E6FE866004AE3B4 /* MatrixLogarithmTest.swift */; };
+		D6A0B5F21E6FE866004AE3B4 /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E71E6FE866004AE3B4 /* MatrixMultiplyTest.swift */; };
+		D6A0B5F31E6FE866004AE3B4 /* MatrixRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E81E6FE866004AE3B4 /* MatrixRangeTests.swift */; };
+		D6A0B5F41E6FE866004AE3B4 /* MatrixSubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E91E6FE866004AE3B4 /* MatrixSubscriptTests.swift */; };
+		D6A0B5F51E6FE866004AE3B4 /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5EA1E6FE866004AE3B4 /* MatrixTransposeTests.swift */; };
+		D6A0B5F61E6FE866004AE3B4 /* MatrixTrigonometricTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5EB1E6FE866004AE3B4 /* MatrixTrigonometricTest.swift */; };
+		D6A0B5F71E6FE866004AE3B4 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */; };
+		D6A0B6021E6FF00F004AE3B4 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A0B6011E6FF00F004AE3B4 /* numsw.framework */; };
+		D6A0B6031E6FF00F004AE3B4 /* numsw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6A0B6011E6FF00F004AE3B4 /* numsw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,27 +53,6 @@
 			remoteGlobalIDString = 1453FBB01E6A5CD300633F32;
 			remoteInfo = sandbox;
 		};
-		52E1EE651E6A8CD1008D19BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52E1EE601E6A8CD1008D19BB /* numsw.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_16;
-			remoteInfo = numsw;
-		};
-		52E1EE671E6A8CD1008D19BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52E1EE601E6A8CD1008D19BB /* numsw.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_17;
-			remoteInfo = numswTests;
-		};
-		52E1EE811E6A8D70008D19BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52E1EE601E6A8CD1008D19BB /* numsw.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_18;
-			remoteInfo = numsw;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,7 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				52E1EE801E6A8D70008D19BB /* numsw.framework in Embed Frameworks */,
+				D6A0B6031E6FF00F004AE3B4 /* numsw.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,8 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		14467C531E6EF28C00BF8A96 /* RenderScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderScrollViewController.swift; path = ../Playgrounds/RenderScrollViewController.swift; sourceTree = "<group>"; };
-		14467C541E6EF28C00BF8A96 /* RenderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderTableViewController.swift; path = ../Playgrounds/RenderTableViewController.swift; sourceTree = "<group>"; };
 		1453FBB11E6A5CD300633F32 /* sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1453FBB41E6A5CD300633F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1453FBB61E6A5CD300633F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,47 +78,38 @@
 		1453FBBE1E6A5CD300633F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1453FBC01E6A5CD300633F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E1EE3E1E6A8A2E008D19BB /* sandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52E1EE401E6A8A2E008D19BB /* sandboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandboxTests.swift; sourceTree = "<group>"; };
 		52E1EE421E6A8A2E008D19BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52E1EE601E6A8CD1008D19BB /* numsw.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = numsw.xcodeproj; path = ../numsw.xcodeproj; sourceTree = "<group>"; };
-		52E1EE691E6A8CE0008D19BB /* MatrixBasicTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixBasicTest.swift; path = ../../Tests/numswTests/MatrixBasicTest.swift; sourceTree = "<group>"; };
-		52E1EE6A1E6A8CE0008D19BB /* MatrixAdditionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAdditionTest.swift; path = ../../Tests/numswTests/MatrixAdditionTest.swift; sourceTree = "<group>"; };
-		52E1EE6B1E6A8CE0008D19BB /* numswTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = numswTests.swift; path = ../../Tests/numswTests/numswTests.swift; sourceTree = "<group>"; };
-		52E1EE6C1E6A8CE0008D19BB /* MatrixMultiplyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixMultiplyTest.swift; path = ../../Tests/numswTests/MatrixMultiplyTest.swift; sourceTree = "<group>"; };
-		52E1EE6D1E6A8CE0008D19BB /* MatrixSubscriptTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixSubscriptTests.swift; path = ../../Tests/numswTests/MatrixSubscriptTests.swift; sourceTree = "<group>"; };
-		52E1EE6E1E6A8CE0008D19BB /* MatrixInvertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixInvertTests.swift; path = ../../Tests/numswTests/MatrixInvertTests.swift; sourceTree = "<group>"; };
-		52E1EE6F1E6A8CE0008D19BB /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTransposeTests.swift; path = ../../Tests/numswTests/MatrixTransposeTests.swift; sourceTree = "<group>"; };
-		52E1EE701E6A8CE0008D19BB /* MatrixDivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixDivideTests.swift; path = ../../Tests/numswTests/MatrixDivideTests.swift; sourceTree = "<group>"; };
-		D621CFFE1E6A632D00A50C88 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererDebugViewController.swift; sourceTree = "<group>"; };
-		D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RendererDebugViewController.xib; sourceTree = "<group>"; };
-		D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraphRenderer.swift; sourceTree = "<group>"; };
-		D621D0061E6A77E100A50C88 /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
-		D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererUtil.swift; sourceTree = "<group>"; };
-		D653808C1E6A98120032C0B2 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
-		D6D74F451E6BDB2E00E57BBB /* NumswPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumswPlayground.swift; sourceTree = "<group>"; };
-		D6D74F4A1E6BDE7E00E57BBB /* NumswPlayground_Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumswPlayground_Playground.swift; sourceTree = "<group>"; };
-		D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeRenderer.swift; sourceTree = "<group>"; };
-		D6D74F661E6C6D1900E57BBB /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
-		D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxisRenderer.swift; sourceTree = "<group>"; };
-		D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartRenderer.swift; sourceTree = "<group>"; };
-		D6D74F6C1E6C769400E57BBB /* ChartElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartElement.swift; sourceTree = "<group>"; };
-		D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterGraph.swift; sourceTree = "<group>"; };
-		D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterGraphRenderer.swift; sourceTree = "<group>"; };
-		D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartBuilder.swift; sourceTree = "<group>"; };
-		D6D74F8F1E6C839A00E57BBB /* Matrix_sonson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix_sonson.swift; path = ../Sources/Matrix_sonson.swift; sourceTree = "<group>"; };
-		D6D74F901E6C839A00E57BBB /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = ../Sources/Matrix.swift; sourceTree = "<group>"; };
-		D6D74F911E6C839A00E57BBB /* MatrixAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAddition.swift; path = ../Sources/MatrixAddition.swift; sourceTree = "<group>"; };
-		D6D74F921E6C839A00E57BBB /* MatrixDivide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixDivide.swift; path = ../Sources/MatrixDivide.swift; sourceTree = "<group>"; };
-		D6D74F931E6C839A00E57BBB /* MatrixInvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixInvert.swift; path = ../Sources/MatrixInvert.swift; sourceTree = "<group>"; };
-		D6D74F941E6C839A00E57BBB /* MatrixLogarithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixLogarithm.swift; path = ../Sources/MatrixLogarithm.swift; sourceTree = "<group>"; };
-		D6D74F951E6C839A00E57BBB /* MatrixMultiply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixMultiply.swift; path = ../Sources/MatrixMultiply.swift; sourceTree = "<group>"; };
-		D6D74F961E6C839A00E57BBB /* MatrixRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixRange.swift; path = ../Sources/MatrixRange.swift; sourceTree = "<group>"; };
-		D6D74F971E6C839A00E57BBB /* MatrixSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixSubscript.swift; path = ../Sources/MatrixSubscript.swift; sourceTree = "<group>"; };
-		D6D74F981E6C839A00E57BBB /* MatrixTranspose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTranspose.swift; path = ../Sources/MatrixTranspose.swift; sourceTree = "<group>"; };
-		D6D74F991E6C839A00E57BBB /* MatrixTrigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTrigonometric.swift; path = ../Sources/MatrixTrigonometric.swift; sourceTree = "<group>"; };
-		D6D74F9A1E6C839A00E57BBB /* numsw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = numsw.swift; path = ../Sources/numsw.swift; sourceTree = "<group>"; };
-		D6D74F9B1E6C839A00E57BBB /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = ../Sources/Random.swift; sourceTree = "<group>"; };
+		D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AxisRenderer.swift; path = ../AxisRenderer.swift; sourceTree = "<group>"; };
+		D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chart.swift; path = ../Chart.swift; sourceTree = "<group>"; };
+		D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartBuilder.swift; path = ../ChartBuilder.swift; sourceTree = "<group>"; };
+		D6A0B5BE1E6FE801004AE3B4 /* ChartElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartElement.swift; path = ../ChartElement.swift; sourceTree = "<group>"; };
+		D6A0B5BF1E6FE801004AE3B4 /* ChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartRenderer.swift; path = ../ChartRenderer.swift; sourceTree = "<group>"; };
+		D6A0B5C01E6FE801004AE3B4 /* CompositeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompositeRenderer.swift; path = ../CompositeRenderer.swift; sourceTree = "<group>"; };
+		D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DummyData.swift; path = ../DummyData.swift; sourceTree = "<group>"; };
+		D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineGraph.swift; path = ../LineGraph.swift; sourceTree = "<group>"; };
+		D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineGraphRenderer.swift; path = ../LineGraphRenderer.swift; sourceTree = "<group>"; };
+		D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumswPlayground_Playground.swift; path = ../NumswPlayground_Playground.swift; sourceTree = "<group>"; };
+		D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumswPlayground.swift; path = ../NumswPlayground.swift; sourceTree = "<group>"; };
+		D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = ../Renderer.swift; sourceTree = "<group>"; };
+		D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RendererDebugViewController.swift; path = ../RendererDebugViewController.swift; sourceTree = "<group>"; };
+		D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RendererDebugViewController.xib; path = ../RendererDebugViewController.xib; sourceTree = "<group>"; };
+		D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RendererUtil.swift; path = ../RendererUtil.swift; sourceTree = "<group>"; };
+		D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderScrollViewController.swift; path = ../RenderScrollViewController.swift; sourceTree = "<group>"; };
+		D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderTableViewController.swift; path = ../RenderTableViewController.swift; sourceTree = "<group>"; };
+		D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScatterGraph.swift; path = ../ScatterGraph.swift; sourceTree = "<group>"; };
+		D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScatterGraphRenderer.swift; path = ../ScatterGraphRenderer.swift; sourceTree = "<group>"; };
+		D6A0B5E21E6FE866004AE3B4 /* MatrixAdditionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAdditionTest.swift; path = ../../../Tests/numswTests/MatrixAdditionTest.swift; sourceTree = "<group>"; };
+		D6A0B5E31E6FE866004AE3B4 /* MatrixBasicTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixBasicTest.swift; path = ../../../Tests/numswTests/MatrixBasicTest.swift; sourceTree = "<group>"; };
+		D6A0B5E41E6FE866004AE3B4 /* MatrixDivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixDivideTests.swift; path = ../../../Tests/numswTests/MatrixDivideTests.swift; sourceTree = "<group>"; };
+		D6A0B5E51E6FE866004AE3B4 /* MatrixInvertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixInvertTests.swift; path = ../../../Tests/numswTests/MatrixInvertTests.swift; sourceTree = "<group>"; };
+		D6A0B5E61E6FE866004AE3B4 /* MatrixLogarithmTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixLogarithmTest.swift; path = ../../../Tests/numswTests/MatrixLogarithmTest.swift; sourceTree = "<group>"; };
+		D6A0B5E71E6FE866004AE3B4 /* MatrixMultiplyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixMultiplyTest.swift; path = ../../../Tests/numswTests/MatrixMultiplyTest.swift; sourceTree = "<group>"; };
+		D6A0B5E81E6FE866004AE3B4 /* MatrixRangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixRangeTests.swift; path = ../../../Tests/numswTests/MatrixRangeTests.swift; sourceTree = "<group>"; };
+		D6A0B5E91E6FE866004AE3B4 /* MatrixSubscriptTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixSubscriptTests.swift; path = ../../../Tests/numswTests/MatrixSubscriptTests.swift; sourceTree = "<group>"; };
+		D6A0B5EA1E6FE866004AE3B4 /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTransposeTests.swift; path = ../../../Tests/numswTests/MatrixTransposeTests.swift; sourceTree = "<group>"; };
+		D6A0B5EB1E6FE866004AE3B4 /* MatrixTrigonometricTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTrigonometricTest.swift; path = ../../../Tests/numswTests/MatrixTrigonometricTest.swift; sourceTree = "<group>"; };
+		D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = numswTests.swift; path = ../../../Tests/numswTests/numswTests.swift; sourceTree = "<group>"; };
+		D6A0B6011E6FF00F004AE3B4 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E1EE7F1E6A8D70008D19BB /* numsw.framework in Frameworks */,
+				D6A0B6021E6FF00F004AE3B4 /* numsw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +134,7 @@
 		1453FBA81E6A5CD300633F32 = {
 			isa = PBXGroup;
 			children = (
-				52E1EE601E6A8CD1008D19BB /* numsw.xcodeproj */,
-				D6D74F741E6C82B100E57BBB /* numsw */,
+				D6A0B6041E6FF025004AE3B4 /* frameworks */,
 				D621CFFB1E6A631900A50C88 /* playgrounds */,
 				1453FBB31E6A5CD300633F32 /* sandbox */,
 				52E1EE3F1E6A8A2E008D19BB /* sandboxTests */,
@@ -211,74 +167,55 @@
 		52E1EE3F1E6A8A2E008D19BB /* sandboxTests */ = {
 			isa = PBXGroup;
 			children = (
-				52E1EE691E6A8CE0008D19BB /* MatrixBasicTest.swift */,
-				52E1EE6A1E6A8CE0008D19BB /* MatrixAdditionTest.swift */,
-				52E1EE6B1E6A8CE0008D19BB /* numswTests.swift */,
-				52E1EE6C1E6A8CE0008D19BB /* MatrixMultiplyTest.swift */,
-				52E1EE6D1E6A8CE0008D19BB /* MatrixSubscriptTests.swift */,
-				52E1EE6E1E6A8CE0008D19BB /* MatrixInvertTests.swift */,
-				52E1EE6F1E6A8CE0008D19BB /* MatrixTransposeTests.swift */,
-				52E1EE701E6A8CE0008D19BB /* MatrixDivideTests.swift */,
-				52E1EE401E6A8A2E008D19BB /* sandboxTests.swift */,
+				D6A0B5E21E6FE866004AE3B4 /* MatrixAdditionTest.swift */,
+				D6A0B5E31E6FE866004AE3B4 /* MatrixBasicTest.swift */,
+				D6A0B5E41E6FE866004AE3B4 /* MatrixDivideTests.swift */,
+				D6A0B5E51E6FE866004AE3B4 /* MatrixInvertTests.swift */,
+				D6A0B5E61E6FE866004AE3B4 /* MatrixLogarithmTest.swift */,
+				D6A0B5E71E6FE866004AE3B4 /* MatrixMultiplyTest.swift */,
+				D6A0B5E81E6FE866004AE3B4 /* MatrixRangeTests.swift */,
+				D6A0B5E91E6FE866004AE3B4 /* MatrixSubscriptTests.swift */,
+				D6A0B5EA1E6FE866004AE3B4 /* MatrixTransposeTests.swift */,
+				D6A0B5EB1E6FE866004AE3B4 /* MatrixTrigonometricTest.swift */,
+				D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */,
 				52E1EE421E6A8A2E008D19BB /* Info.plist */,
 			);
 			path = sandboxTests;
 			sourceTree = "<group>";
 		};
-		52E1EE611E6A8CD1008D19BB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				52E1EE661E6A8CD1008D19BB /* numsw.framework */,
-				52E1EE681E6A8CD1008D19BB /* numswTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D621CFFB1E6A631900A50C88 /* playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				14467C531E6EF28C00BF8A96 /* RenderScrollViewController.swift */,
-				14467C541E6EF28C00BF8A96 /* RenderTableViewController.swift */,
-				D6D74F451E6BDB2E00E57BBB /* NumswPlayground.swift */,
-				D6D74F4A1E6BDE7E00E57BBB /* NumswPlayground_Playground.swift */,
-				D621CFFE1E6A632D00A50C88 /* Renderer.swift */,
-				D621D0001E6A648200A50C88 /* RendererDebugViewController.swift */,
-				D621D0021E6A652F00A50C88 /* RendererDebugViewController.xib */,
-				D653808A1E6A7EAF0032C0B2 /* RendererUtil.swift */,
-				D621D0061E6A77E100A50C88 /* DummyData.swift */,
-				D6D74F661E6C6D1900E57BBB /* Chart.swift */,
-				D6D74F6C1E6C769400E57BBB /* ChartElement.swift */,
-				D6D74F721E6C7F5600E57BBB /* ChartBuilder.swift */,
-				D653808C1E6A98120032C0B2 /* LineGraph.swift */,
-				D6D74F6E1E6C7BE900E57BBB /* ScatterGraph.swift */,
-				D6D74F6A1E6C742500E57BBB /* ChartRenderer.swift */,
-				D6D74F631E6C6B3B00E57BBB /* CompositeRenderer.swift */,
-				D6D74F681E6C6DB500E57BBB /* AxisRenderer.swift */,
-				D621D0041E6A6B4400A50C88 /* LineGraphRenderer.swift */,
-				D6D74F701E6C7C9700E57BBB /* ScatterGraphRenderer.swift */,
+				D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */,
+				D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */,
+				D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */,
+				D6A0B5BE1E6FE801004AE3B4 /* ChartElement.swift */,
+				D6A0B5BF1E6FE801004AE3B4 /* ChartRenderer.swift */,
+				D6A0B5C01E6FE801004AE3B4 /* CompositeRenderer.swift */,
+				D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */,
+				D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */,
+				D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */,
+				D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */,
+				D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */,
+				D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */,
+				D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */,
+				D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */,
+				D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */,
+				D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */,
+				D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */,
+				D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */,
+				D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */,
 			);
 			name = playgrounds;
 			path = ../playgrounds;
 			sourceTree = "<group>";
 		};
-		D6D74F741E6C82B100E57BBB /* numsw */ = {
+		D6A0B6041E6FF025004AE3B4 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D6D74F8F1E6C839A00E57BBB /* Matrix_sonson.swift */,
-				D6D74F901E6C839A00E57BBB /* Matrix.swift */,
-				D6D74F911E6C839A00E57BBB /* MatrixAddition.swift */,
-				D6D74F921E6C839A00E57BBB /* MatrixDivide.swift */,
-				D6D74F931E6C839A00E57BBB /* MatrixInvert.swift */,
-				D6D74F941E6C839A00E57BBB /* MatrixLogarithm.swift */,
-				D6D74F951E6C839A00E57BBB /* MatrixMultiply.swift */,
-				D6D74F961E6C839A00E57BBB /* MatrixRange.swift */,
-				D6D74F971E6C839A00E57BBB /* MatrixSubscript.swift */,
-				D6D74F981E6C839A00E57BBB /* MatrixTranspose.swift */,
-				D6D74F991E6C839A00E57BBB /* MatrixTrigonometric.swift */,
-				D6D74F9A1E6C839A00E57BBB /* numsw.swift */,
-				D6D74F9B1E6C839A00E57BBB /* Random.swift */,
+				D6A0B6011E6FF00F004AE3B4 /* numsw.framework */,
 			);
-			name = numsw;
+			name = frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +233,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				52E1EE821E6A8D70008D19BB /* PBXTargetDependency */,
 			);
 			name = sandbox;
 			productName = sandbox;
@@ -338,6 +274,7 @@
 					};
 					52E1EE3D1E6A8A2E008D19BB = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1453FBB01E6A5CD300633F32;
 					};
@@ -354,12 +291,6 @@
 			mainGroup = 1453FBA81E6A5CD300633F32;
 			productRefGroup = 1453FBB21E6A5CD300633F32 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 52E1EE611E6A8CD1008D19BB /* Products */;
-					ProjectRef = 52E1EE601E6A8CD1008D19BB /* numsw.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1453FBB01E6A5CD300633F32 /* sandbox */,
@@ -368,30 +299,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		52E1EE661E6A8CD1008D19BB /* numsw.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = numsw.framework;
-			remoteRef = 52E1EE651E6A8CD1008D19BB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		52E1EE681E6A8CD1008D19BB /* numswTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = file;
-			path = numswTests.xctest;
-			remoteRef = 52E1EE671E6A8CD1008D19BB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		1453FBAF1E6A5CD300633F32 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D621D0031E6A652F00A50C88 /* RendererDebugViewController.xib in Resources */,
 				1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */,
+				D6A0B5DB1E6FE802004AE3B4 /* RendererDebugViewController.xib in Resources */,
 				1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */,
 				1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */,
 			);
@@ -411,38 +325,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D653808D1E6A98120032C0B2 /* LineGraph.swift in Sources */,
-				14467C561E6EF28C00BF8A96 /* RenderTableViewController.swift in Sources */,
-				D6D74FA71E6C839A00E57BBB /* numsw.swift in Sources */,
-				D6D74F6B1E6C742500E57BBB /* ChartRenderer.swift in Sources */,
-				D6D74FA01E6C839A00E57BBB /* MatrixInvert.swift in Sources */,
-				D6D74F9F1E6C839A00E57BBB /* MatrixDivide.swift in Sources */,
-				D6D74F9E1E6C839A00E57BBB /* MatrixAddition.swift in Sources */,
-				D6D74F9C1E6C839A00E57BBB /* Matrix_sonson.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
-				D6D74FA81E6C839A00E57BBB /* Random.swift in Sources */,
-				D6D74F641E6C6B3B00E57BBB /* CompositeRenderer.swift in Sources */,
-				D6D74FA11E6C839A00E57BBB /* MatrixLogarithm.swift in Sources */,
-				D6D74F6F1E6C7BE900E57BBB /* ScatterGraph.swift in Sources */,
-				D6D74F491E6BDE7300E57BBB /* NumswPlayground.swift in Sources */,
-				D6D74FA51E6C839A00E57BBB /* MatrixTranspose.swift in Sources */,
-				D653808B1E6A7EAF0032C0B2 /* RendererUtil.swift in Sources */,
-				D6D74F731E6C7F5600E57BBB /* ChartBuilder.swift in Sources */,
-				D6D74FA61E6C839A00E57BBB /* MatrixTrigonometric.swift in Sources */,
-				D6D74FA21E6C839A00E57BBB /* MatrixMultiply.swift in Sources */,
-				D6D74F711E6C7C9700E57BBB /* ScatterGraphRenderer.swift in Sources */,
-				D6D74FA41E6C839A00E57BBB /* MatrixSubscript.swift in Sources */,
-				D621CFFF1E6A632D00A50C88 /* Renderer.swift in Sources */,
-				14467C551E6EF28C00BF8A96 /* RenderScrollViewController.swift in Sources */,
-				D6D74FA31E6C839A00E57BBB /* MatrixRange.swift in Sources */,
-				D6D74F691E6C6DB500E57BBB /* AxisRenderer.swift in Sources */,
-				D6D74F6D1E6C769400E57BBB /* ChartElement.swift in Sources */,
-				D6D74F9D1E6C839A00E57BBB /* Matrix.swift in Sources */,
-				D6D74F671E6C6D1900E57BBB /* Chart.swift in Sources */,
+				D6A0B5DD1E6FE802004AE3B4 /* RenderScrollViewController.swift in Sources */,
+				D6A0B5D41E6FE801004AE3B4 /* DummyData.swift in Sources */,
+				D6A0B5D31E6FE801004AE3B4 /* CompositeRenderer.swift in Sources */,
+				D6A0B5DF1E6FE802004AE3B4 /* ScatterGraph.swift in Sources */,
+				D6A0B5D11E6FE801004AE3B4 /* ChartElement.swift in Sources */,
+				D6A0B5CE1E6FE801004AE3B4 /* AxisRenderer.swift in Sources */,
+				D6A0B5CF1E6FE801004AE3B4 /* Chart.swift in Sources */,
+				D6A0B5DE1E6FE802004AE3B4 /* RenderTableViewController.swift in Sources */,
+				D6A0B5D51E6FE801004AE3B4 /* LineGraph.swift in Sources */,
 				1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */,
-				D621D0071E6A77E100A50C88 /* DummyData.swift in Sources */,
-				D621D0051E6A6B4400A50C88 /* LineGraphRenderer.swift in Sources */,
-				D621D0011E6A648200A50C88 /* RendererDebugViewController.swift in Sources */,
+				D6A0B5E01E6FE802004AE3B4 /* ScatterGraphRenderer.swift in Sources */,
+				D6A0B5D61E6FE801004AE3B4 /* LineGraphRenderer.swift in Sources */,
+				D6A0B5DA1E6FE802004AE3B4 /* RendererDebugViewController.swift in Sources */,
+				D6A0B5D91E6FE802004AE3B4 /* Renderer.swift in Sources */,
+				D6A0B5D01E6FE801004AE3B4 /* ChartBuilder.swift in Sources */,
+				D6A0B5DC1E6FE802004AE3B4 /* RendererUtil.swift in Sources */,
+				D6A0B5D81E6FE802004AE3B4 /* NumswPlayground.swift in Sources */,
+				D6A0B5D21E6FE801004AE3B4 /* ChartRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,15 +351,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E1EE751E6A8CE0008D19BB /* MatrixSubscriptTests.swift in Sources */,
-				52E1EE781E6A8CE0008D19BB /* MatrixDivideTests.swift in Sources */,
-				52E1EE731E6A8CE0008D19BB /* numswTests.swift in Sources */,
-				52E1EE761E6A8CE0008D19BB /* MatrixInvertTests.swift in Sources */,
-				52E1EE411E6A8A2E008D19BB /* sandboxTests.swift in Sources */,
-				52E1EE771E6A8CE0008D19BB /* MatrixTransposeTests.swift in Sources */,
-				52E1EE711E6A8CE0008D19BB /* MatrixBasicTest.swift in Sources */,
-				52E1EE741E6A8CE0008D19BB /* MatrixMultiplyTest.swift in Sources */,
-				52E1EE721E6A8CE0008D19BB /* MatrixAdditionTest.swift in Sources */,
+				D6A0B5ED1E6FE866004AE3B4 /* MatrixAdditionTest.swift in Sources */,
+				D6A0B5F61E6FE866004AE3B4 /* MatrixTrigonometricTest.swift in Sources */,
+				D6A0B5F31E6FE866004AE3B4 /* MatrixRangeTests.swift in Sources */,
+				D6A0B5EF1E6FE866004AE3B4 /* MatrixDivideTests.swift in Sources */,
+				D6A0B5F21E6FE866004AE3B4 /* MatrixMultiplyTest.swift in Sources */,
+				D6A0B5F41E6FE866004AE3B4 /* MatrixSubscriptTests.swift in Sources */,
+				D6A0B5F11E6FE866004AE3B4 /* MatrixLogarithmTest.swift in Sources */,
+				D6A0B5F51E6FE866004AE3B4 /* MatrixTransposeTests.swift in Sources */,
+				D6A0B5F71E6FE866004AE3B4 /* numswTests.swift in Sources */,
+				D6A0B5F01E6FE866004AE3B4 /* MatrixInvertTests.swift in Sources */,
+				D6A0B5EE1E6FE866004AE3B4 /* MatrixBasicTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,11 +372,6 @@
 			isa = PBXTargetDependency;
 			target = 1453FBB01E6A5CD300633F32 /* sandbox */;
 			targetProxy = 52E1EE431E6A8A2E008D19BB /* PBXContainerItemProxy */;
-		};
-		52E1EE821E6A8D70008D19BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = numsw;
-			targetProxy = 52E1EE811E6A8D70008D19BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -596,8 +494,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3B8C483UAP;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -610,8 +510,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3B8C483UAP;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -622,10 +524,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = sandboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.sandboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sandbox.app/sandbox";
 			};
@@ -635,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = sandboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.sandboxTests;

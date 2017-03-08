@@ -8,6 +8,10 @@
 
 import UIKit
 
+#if SANDBOX_APP
+    import numsw
+#endif
+
 public struct DummyData {
     public static func points1() -> [CGPoint] {
         return [
