@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode8.2
+rvm:
+  - 2.2
+script:
+  - Tools/ci-travis.rb
