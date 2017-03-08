@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -57,7 +56,7 @@ class MatrixSubscriptTests: XCTestCase {
         mat[[0, 1], [0, 1]] *= 4
         XCTAssertEqual(mat.elements, [0.0, 4, 2, 12, 16, 5, 6, 7, 8])
         
-        mat[[2], nil] .*= Matrix([[1, 2,3]])
+        mat[[2], nil] .*= Matrix([[1, 2, 3]])
         XCTAssertEqual(mat.elements, [0.0, 4, 2, 12, 16, 5, 6, 14, 24])
     }
 }

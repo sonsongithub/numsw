@@ -80,8 +80,7 @@ public class NumswPlayground {
 }
 
 public func addLine(
-    x: [Double], y: [Double])
-{
+    x: [Double], y: [Double]) {
     hold {
         plot(x, y)
     }
@@ -89,8 +88,7 @@ public func addLine(
 
 public func addLine2(
     x: [Double], y: [Double],
-    x2: [Double], y2: [Double])
-{
+    x2: [Double], y2: [Double]) {
     hold {
         plot(x, y)
         scatter(x2, y2)
@@ -98,14 +96,12 @@ public func addLine2(
 }
 
 public func plot(
-    _ x: [Double], _ y: [Double])
-{
+    _ x: [Double], _ y: [Double]) {
     NumswPlayground.shared.plot(x, y)
 }
 
 public func scatter(
-    _ x: [Double], _ y: [Double])
-{
+    _ x: [Double], _ y: [Double]) {
     NumswPlayground.shared.scatter(x, y)
 }
 

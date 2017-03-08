@@ -90,7 +90,6 @@ public class AxisRenderer: Renderer {
                 ])
         }
     }
-
     
     private func drawLine(context: CGContext,
                          points: [CGPoint]) {

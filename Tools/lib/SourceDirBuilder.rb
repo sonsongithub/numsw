@@ -15,24 +15,22 @@ class SourceDirBuilder
     FileUtils.mkdir_p(target)
 
     dest = dest_dir + "numsw"
-    src_dir = repo_dir + "Sources"
-    Dir.chdir(src_dir.to_s)
-    for x in Pathname.glob("*")
-      src = src_dir + x
-      puts "copy entry: #{x.to_s}"
+    Dir.chdir(repo_dir + "Sources")
+    for src in Pathname.glob("*.swift")
+      src = src.expand_path
+      puts "copy entry: #{src.to_s}"
       FileUtils.cp_r(src, dest)
     end
 
-    target = dest_dir + "playgrounds"
+    target = dest_dir + "Playgrounds"
     puts "make playgrounds directory: #{target.to_s}"
     FileUtils.mkdir_p(target)
 
-    dest = dest_dir + "playgrounds"
-    src_dir = repo_dir + "playgrounds"
-    Dir.chdir(src_dir.to_s)
-    for x in Pathname.glob("*")
-      src = src_dir + x
-      puts "copy entry: #{x.to_s}"
+    dest = dest_dir + "Playgrounds"
+    Dir.chdir(repo_dir + "playgrounds")
+    for src in Pathname.glob("*.swift")
+      src = src.expand_path
+      puts "copy entry: #{src.to_s}"
       FileUtils.cp_r(src, dest)
     end
 

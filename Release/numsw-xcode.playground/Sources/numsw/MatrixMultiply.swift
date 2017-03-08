@@ -48,11 +48,10 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
                   elements: c)
 }
 
-
 // element wise multiply
 
 infix operator .*
-public func .*(lhs: Matrix, rhs: Matrix) -> Matrix{
+public func .*(lhs: Matrix, rhs: Matrix) -> Matrix {
     let pointer = UnsafeMutablePointer<Double>.allocate(capacity: lhs.count)
     defer { pointer.deallocate(capacity: lhs.count) }
     vDSP_vmulD(lhs.elements, 1, rhs.elements, 1, pointer, 1, vDSP_Length(lhs.count))

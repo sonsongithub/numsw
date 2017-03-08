@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
                 
     }
     
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
             
             return ChartRenderer(chart: chart)
         }
-        
         
         let vc = RenderScrollViewController()
         

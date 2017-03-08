@@ -10,7 +10,7 @@
 
 import UIKit
 
-public class AxisRenderer : Renderer {
+public class AxisRenderer: Renderer {
     public init(chart: Chart) {
         self.chart = chart
     }
@@ -90,11 +90,9 @@ public class AxisRenderer : Renderer {
                 ])
         }
     }
-
     
     private func drawLine(context: CGContext,
-                         points: [CGPoint])
-    {
+                         points: [CGPoint]) {
         let t = viewportTransform!
         
         let points = points.map { $0.applying(t) }

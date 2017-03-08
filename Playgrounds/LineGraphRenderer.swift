@@ -9,7 +9,6 @@
 import UIKit
 import CoreGraphics
 
-
 public class LineGraphRenderer: Renderer {
     public init(viewport: CGRect, line: LineGraph) {
         self.viewport = viewport
@@ -39,7 +38,6 @@ public class LineGraphRenderer: Renderer {
         ctx.setStrokeColor(UIColor.green.cgColor)
         
         let t = viewportTransform!
-
         
         for point in line.points {
             let p = point.applying(t)

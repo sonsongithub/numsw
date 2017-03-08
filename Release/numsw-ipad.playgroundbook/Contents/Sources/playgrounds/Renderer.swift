@@ -25,4 +25,3 @@ public extension Renderer {
         return UIImage(cgImage: cgImage)
     }
 }
-

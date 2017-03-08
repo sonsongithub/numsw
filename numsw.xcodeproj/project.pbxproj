@@ -68,7 +68,6 @@
 		A7EC96FC1E6A8DF50001727F /* MatrixRangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixRangeTests.swift; sourceTree = "<group>"; };
 		OBJ_12 /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = playgrounds; sourceTree = SOURCE_ROOT; };
-		OBJ_14 /* sandbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sandbox; sourceTree = SOURCE_ROOT; };
 		OBJ_16 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_17 /* numswTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = numswTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -136,7 +135,6 @@
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
 				OBJ_13 /* playgrounds */,
-				OBJ_14 /* sandbox */,
 				OBJ_15 /* Products */,
 			);
 			sourceTree = "<group>";

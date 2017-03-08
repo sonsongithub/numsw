@@ -36,7 +36,6 @@ private class RenderTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     deinit {
         print("RenderTableViewCell deinit")
     }
@@ -108,7 +107,6 @@ public class RenderTableViewController: UITableViewController {
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return renderers.count
     }
-    
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! RenderTableViewCell

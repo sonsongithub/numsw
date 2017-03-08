@@ -9,7 +9,7 @@
 import UIKit
 import CoreGraphics
 
-public class ScatterGraphRenderer : Renderer {
+public class ScatterGraphRenderer: Renderer {
     public init(viewport: CGRect, scatter: ScatterGraph) {
         self.viewport = viewport
         self.scatter = scatter
