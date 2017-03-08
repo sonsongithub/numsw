@@ -35,9 +35,6 @@ class numswTests: XCTestCase {
         let A = logy * b
         A.show()
         
-        A.elements[0]
-        A.elements[1]
-        
         let x_p = Matrix.range(from: 0, to: 10, stride: 0.1)
         let y_p = exp(A.elements[0] * x_p + A.elements[1])
 
