@@ -2,6 +2,9 @@ public struct Matrix {
     
     public var rows: Int
     public var columns: Int
+    public var count: Int {
+        return columns * rows
+    }
     
     public var elements: [Double]
     
@@ -46,6 +49,19 @@ public struct Matrix {
             matrix.elements[i + i * matrix.columns] = 1
         }
         return matrix
+    }
+    
+    public func show() {
+        var string = ""
+        for i in 0..<rows {
+            for j in 0..<columns {
+                string.append("\(elements[j + i * columns]) ")
+            }
+            if i < rows - 1 {
+                string.append("\n")
+            }
+        }
+        print(string)
     }
 }
 
