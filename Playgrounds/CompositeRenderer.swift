@@ -10,7 +10,7 @@
 
 import CoreGraphics
 
-public class CompositeRenderer : Renderer {
+public class CompositeRenderer: Renderer {
     public init() {
         
     }

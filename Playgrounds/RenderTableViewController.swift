@@ -113,6 +113,3 @@ public class RenderTableViewController: UITableViewController {
         cell.updateImageView()
     }
 }
-
-
-

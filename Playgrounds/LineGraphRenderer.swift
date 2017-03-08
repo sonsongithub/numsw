@@ -10,7 +10,7 @@ import UIKit
 import CoreGraphics
 
 
-public class LineGraphRenderer : Renderer {
+public class LineGraphRenderer: Renderer {
     public init(viewport: CGRect, line: LineGraph) {
         self.viewport = viewport
         self.line = line
@@ -35,7 +35,7 @@ public class LineGraphRenderer : Renderer {
 //        }
 //    }
     
-    public func drawSanpuzu(context ctx: CGContext, line : LineGraph) {
+    public func drawSanpuzu(context ctx: CGContext, line: LineGraph) {
         ctx.setStrokeColor(UIColor.green.cgColor)
         
         let t = viewportTransform!
@@ -57,8 +57,7 @@ public class LineGraphRenderer : Renderer {
     
     public func drawDebugX(context ctx: CGContext,
                     point0: CGPoint,
-                    point1: CGPoint)
-    {
+                    point1: CGPoint) {
         ctx.setStrokeColor(UIColor.red.cgColor)
         drawLine(context: ctx, points: [
             CGPoint(x: point0.x, y: point0.y),
@@ -73,8 +72,7 @@ public class LineGraphRenderer : Renderer {
     }
     
     public func drawLine(context: CGContext,
-                         points: [CGPoint])
-    {
+                         points: [CGPoint]) {
         context.setStrokeColor(UIColor.white.cgColor)
         
         let t = viewportTransform!
