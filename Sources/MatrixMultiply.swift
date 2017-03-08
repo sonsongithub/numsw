@@ -48,7 +48,6 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
                   elements: c)
 }
 
-
 // element wise multiply
 
 infix operator .*

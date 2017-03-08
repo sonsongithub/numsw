@@ -13,3 +13,11 @@ public func frobeniusNorm(_ hs: Matrix) -> Double {
         return result + value * value
     }
 }
+
+extension Matrix {
+    public var frobeniusNorm: Double {
+        return self.elements.reduce(0) { (result, value) -> Double in
+            return result + value * value
+        }
+    }
+}
