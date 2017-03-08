@@ -11,8 +11,7 @@ You have to install Swift playgrounds application via [AppStore](https://itunes.
 
 ```
 cd Tools
-./build-ipad-playground.rb    # build playground for iPad
-./build-xcode-playground.rb   # build playground for Xcode
+./build-book.rb     # build playground for iPad and Xcode
 ```
 
 ## How to send Swift.playgrounds
