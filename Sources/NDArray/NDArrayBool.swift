@@ -58,7 +58,7 @@ public func >=<T: Comparable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<Bool>
 }
 
 
-// NDArray<Bool>
+// unary
 private func not(_ arg: NDArray<Bool>) -> NDArray<Bool> {
     return NDArray(shape: arg.shape, elements: arg.elements.map(!))
 }

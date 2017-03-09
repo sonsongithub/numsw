@@ -11,6 +11,46 @@
         return unary_minus(arg)
     }
     
+    public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+        return add(lhs, rhs)
+    }
+    
+    public func -<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+        return subtract(lhs, rhs)
+    }
+    
+    public func *<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+        return multiply(lhs, rhs)
+    }
+    
+    public func /<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+        return divide(lhs, rhs)
+    }
+    
+    public func %<T: Moduloable>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+        return modulo(lhs, rhs)
+    }
+    
+    public func +<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+        return add(lhs, rhs)
+    }
+    
+    public func -<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+        return subtract(lhs, rhs)
+    }
+    
+    public func *<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+        return multiply(lhs, rhs)
+    }
+    
+    public func /<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+        return divide(lhs, rhs)
+    }
+    
+    public func %<T: Moduloable>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+        return modulo(lhs, rhs)
+    }
+    
     public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
         return add(lhs, rhs)
     }
@@ -54,6 +94,8 @@ extension UInt: Arithmetic, Moduloable {}
 extension Float: Arithmetic {}
 extension Double: Arithmetic {}
 
+
+// unary
 private func unary_plus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
     return NDArray(shape: arg.shape, elements: arg.elements.map{ +$0 })
 }
@@ -62,6 +104,60 @@ private func unary_minus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
     return NDArray(shape: arg.shape, elements: arg.elements.map{ -$0 })
 }
 
+
+// NDArray and scalar
+private func add<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<T> {
+    let elements = lhs.elements.map { $0 + rhs }
+    return NDArray(shape: lhs.shape, elements: elements)
+}
+
+private func add<T: Arithmetic>(_ lhs: T, _ rhs: NDArray<T>) -> NDArray<T> {
+    let elements = rhs.elements.map { lhs + $0 }
+    return NDArray(shape: rhs.shape, elements: elements)
+}
+
+private func subtract<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<T> {
+    let elements = lhs.elements.map { $0 - rhs }
+    return NDArray(shape: lhs.shape, elements: elements)
+}
+
+private func subtract<T: Arithmetic>(_ lhs: T, _ rhs: NDArray<T>) -> NDArray<T> {
+    let elements = rhs.elements.map { lhs - $0 }
+    return NDArray(shape: rhs.shape, elements: elements)
+}
+
+private func multiply<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<T> {
+    let elements = lhs.elements.map { $0 * rhs }
+    return NDArray(shape: lhs.shape, elements: elements)
+}
+
+private func multiply<T: Arithmetic>(_ lhs: T, _ rhs: NDArray<T>) -> NDArray<T> {
+    let elements = rhs.elements.map { lhs * $0 }
+    return NDArray(shape: rhs.shape, elements: elements)
+}
+
+private func divide<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<T> {
+    let elements = lhs.elements.map { $0 / rhs }
+    return NDArray(shape: lhs.shape, elements: elements)
+}
+
+private func divide<T: Arithmetic>(_ lhs: T, _ rhs: NDArray<T>) -> NDArray<T> {
+    let elements = rhs.elements.map { lhs / $0 }
+    return NDArray(shape: rhs.shape, elements: elements)
+}
+
+private func modulo<T: Moduloable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<T> {
+    let elements = lhs.elements.map { $0 % rhs }
+    return NDArray(shape: lhs.shape, elements: elements)
+}
+
+private func modulo<T: Moduloable>(_ lhs: T, _ rhs: NDArray<T>) -> NDArray<T> {
+    let elements = rhs.elements.map { lhs % $0 }
+    return NDArray(shape: rhs.shape, elements: elements)
+}
+
+
+// NDArray and NDArray
 private func add<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<T> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
