@@ -72,7 +72,9 @@ extension NDArray where T: Strideable {
 
 extension NDArray where T: FloatingPoint {
     public static func linspace(low: T, high: T, count: Int) -> NDArray<T> {
-        let elements = (0..<count).map { low + T($0)*(high - low)/T(count-1) }
+        let d = high - low
+        let steps = T(count-1)
+        let elements = (0..<count).map { low + T($0)*d/steps }
         return NDArray(shape: [count], elements: elements)
     }
 }
