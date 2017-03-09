@@ -4,7 +4,7 @@ import numsw
 
 func XCTAssertEqual<T: Equatable>(_ expression1: NDArray<T>, _ expression2: NDArray<T>) {
     XCTAssertEqual(expression1.shape, expression2.shape)
-    XCTAssertEqual(expression1.shape, expression2.shape)
+    XCTAssertEqual(expression1.elements, expression2.elements)
 }
 
 func XCTAssertEqualWithAccuracy<T: FloatingPoint>(_ expression1: NDArray<T>, _ expression2: NDArray<T>, accuracy: T) {
