@@ -100,7 +100,7 @@ class NDArrayArithmeticTests: XCTestCase {
         }
         do {
             let a = NDArray<Double>(shape: [2, 2], elements: [1, 2, 3, 4])
-            let b = NDArray<Double>(shape: [2, 2], elements: [-1, 0, 1, 0])
+            let b = NDArray<Double>(shape: [2, 2], elements: [-1, 0, 2, 1])
             XCTAssertEqual(a * b, NDArray(shape: [2, 2], elements: [-1, 0, 6, 4]))
         }
     }
@@ -115,7 +115,8 @@ class NDArrayArithmeticTests: XCTestCase {
         do {
             let a = NDArray<Double>(shape: [2, 2], elements: [1, 2, 3, 4])
             XCTAssertEqual(a / 2, NDArray(shape: [2, 2], elements: [0.5, 1.0, 1.5, 2.0]))
-            XCTAssertEqual(2 / a, NDArray(shape: [2, 2], elements: [2.0, 1.0, 0.6666, 0.5]))
+            XCTAssertEqualWithAccuracy(2 / a, NDArray(shape: [2, 2], elements: [2.0, 1.0, 2.0/3.0, 0.5]),
+                                       accuracy: 1e-10)
         }
         
         // NDArray and NDArray
@@ -126,7 +127,7 @@ class NDArrayArithmeticTests: XCTestCase {
         }
         do {
             let a = NDArray<Double>(shape: [2, 2], elements: [1, 2, 3, 4])
-            let b = NDArray<Double>(shape: [2, 2], elements: [-1, 0, 1, 0])
+            let b = NDArray<Double>(shape: [2, 2], elements: [-1, 2, 6, 1])
             XCTAssertEqual(a / b, NDArray(shape: [2, 2], elements: [-1, 1, 0.5, 4]))
         }
     }
