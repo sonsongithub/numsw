@@ -7,7 +7,7 @@ public func &&(lhs: NDArray<Bool>, rhs: NDArray<Bool>) -> NDArray<Bool> {
     return and(lhs, rhs)
 }
 public func ||(lhs: NDArray<Bool>, rhs: NDArray<Bool>) -> NDArray<Bool> {
-    return and(lhs, rhs)
+    return or(lhs, rhs)
 }
 
 public func ==<T: Equatable>(lhs: NDArray<T>, rhs: T) -> NDArray<Bool> {
