@@ -24,4 +24,11 @@ class NDArrayTests: XCTestCase {
         XCTAssertEqual(b, NDArray(shape: [12], elements: elements))
     }
     
+    func testRavel() {
+        let elements = [Int](0..<12)
+        let a = NDArray(shape: [3, 4], elements: elements)
+        
+        XCTAssertEqual(a.raveled(), NDArray(shape: [12], elements: elements))
+    }
+    
 }

@@ -33,4 +33,8 @@ extension NDArray {
         
         return NDArray(shape: newShape, elements: self.elements)
     }
+    
+    public func raveled() -> NDArray<T> {
+        return reshaped([-1])
+    }
 }
