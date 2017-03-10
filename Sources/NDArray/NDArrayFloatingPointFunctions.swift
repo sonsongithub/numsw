@@ -98,98 +98,25 @@ extension Double: FloatingPointFunctions {
 }
 
 func _sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    var inPointer = UnsafePointer(arg.elements)
-    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-    defer { outPointer.deallocate(capacity: arg.elements.count) }
-    
-    var p = outPointer
-    for _ in 0..<arg.elements.count {
-        p.pointee = T.sqrt(inPointer.pointee)
-        p += 1
-        inPointer += 1
-    }
-    
-    return NDArray(shape: arg.shape,
-                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+    return apply(arg, T.sqrt)
 }
 
-
 func _exp<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    var inPointer = UnsafePointer(arg.elements)
-    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-    defer { outPointer.deallocate(capacity: arg.elements.count) }
-    
-    var p = outPointer
-    for _ in 0..<arg.elements.count {
-        p.pointee = T.exp(inPointer.pointee)
-        p += 1
-        inPointer += 1
-    }
-    
-    return NDArray(shape: arg.shape,
-                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+    return apply(arg, T.exp)
 }
 
 func _log<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    var inPointer = UnsafePointer(arg.elements)
-    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-    defer { outPointer.deallocate(capacity: arg.elements.count) }
-    
-    var p = outPointer
-    for _ in 0..<arg.elements.count {
-        p.pointee = T.log(inPointer.pointee)
-        p += 1
-        inPointer += 1
-    }
-    
-    return NDArray(shape: arg.shape,
-                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+    return apply(arg, T.log)
 }
 
 func _sin<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    var inPointer = UnsafePointer(arg.elements)
-    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-    defer { outPointer.deallocate(capacity: arg.elements.count) }
-    
-    var p = outPointer
-    for _ in 0..<arg.elements.count {
-        p.pointee = T.sin(inPointer.pointee)
-        p += 1
-        inPointer += 1
-    }
-    
-    return NDArray(shape: arg.shape,
-                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+    return apply(arg, T.sin)
 }
 
 func _cos<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    var inPointer = UnsafePointer(arg.elements)
-    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-    defer { outPointer.deallocate(capacity: arg.elements.count) }
-    
-    var p = outPointer
-    for _ in 0..<arg.elements.count {
-        p.pointee = T.cos(inPointer.pointee)
-        p += 1
-        inPointer += 1
-    }
-    
-    return NDArray(shape: arg.shape,
-                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+    return apply(arg, T.cos)
 }
 
 func _tan<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    var inPointer = UnsafePointer(arg.elements)
-    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-    defer { outPointer.deallocate(capacity: arg.elements.count) }
-    
-    var p = outPointer
-    for _ in 0..<arg.elements.count {
-        p.pointee = T.tan(inPointer.pointee)
-        p += 1
-        inPointer += 1
-    }
-    
-    return NDArray(shape: arg.shape,
-                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+    return apply(arg, T.tan)
 }
