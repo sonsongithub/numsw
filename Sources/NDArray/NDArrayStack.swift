@@ -3,7 +3,15 @@ import Foundation
 
 extension NDArray {
     public static func stack(_ arrays: [NDArray<T>], axis: Int = 0) -> NDArray<T> {
+        
         let shape = arrays.first!.shape
+        
+        var axis = axis
+        if axis < 0 {
+            axis += arrays.first!.shape.count + 1
+        }
+        
+        precondition(0 <= axis && axis <= shape.count, "Invalid axis.")
         precondition(!arrays.contains { $0.shape != shape }, "All NDArrays must have same shape.")
         
         var newShape = shape
@@ -13,7 +21,13 @@ extension NDArray {
     }
     
     public static func concatenate(_ arrays: [NDArray<T>], axis: Int = 0) -> NDArray<T> {
+        var axis = axis
+        if axis < 0 {
+            axis += arrays.first!.shape.count
+        }
+        
         let shapeWithoutConcatAxis = arrays.first!.shape.removed(at: axis)
+        precondition(0 <= axis && axis < arrays.first!.shape.count, "Invalid axis.")
         precondition(!arrays.contains { $0.shape.removed(at: axis) != shapeWithoutConcatAxis },
                      "All NDArrays must have same shape.")
         

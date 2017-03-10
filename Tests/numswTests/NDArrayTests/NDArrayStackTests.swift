@@ -12,6 +12,8 @@ class NDArrayStackTests: XCTestCase {
             
             XCTAssertEqual(NDArray.concatenate([a, b], axis: 0),
                            NDArray(shape: [5, 2], elements: [1, 2, 3, 4, 1, 2, 3, 4, 5, 6]))
+            XCTAssertEqual(NDArray.concatenate([a, b], axis: -2),
+                           NDArray(shape: [5, 2], elements: [1, 2, 3, 4, 1, 2, 3, 4, 5, 6]))
         }
         do {
             // axis 1
@@ -19,6 +21,8 @@ class NDArrayStackTests: XCTestCase {
             let b = NDArray(shape: [2, 3], elements: [1, 2, 3, 4, 5, 6])
             
             XCTAssertEqual(NDArray.concatenate([a, b], axis: 1),
+                           NDArray(shape: [2, 5], elements: [1, 2, 1, 2, 3, 3, 4, 4, 5, 6]))
+            XCTAssertEqual(NDArray.concatenate([a, b], axis: -1),
                            NDArray(shape: [2, 5], elements: [1, 2, 1, 2, 3, 3, 4, 4, 5, 6]))
         }
         
@@ -61,14 +65,27 @@ class NDArrayStackTests: XCTestCase {
                            NDArray(shape: [2, 3, 4],
                                    elements: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
                                               0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]))
+            XCTAssertEqual(NDArray.stack([a, a], axis: -3),
+                           NDArray(shape: [2, 3, 4],
+                                   elements: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                                              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]))
             
             XCTAssertEqual(NDArray.stack([a, a], axis: 1),
                            NDArray(shape: [3, 2, 4],
                                    elements: [0,  1,  2,  3,  0,  1,  2,  3,
                                               4,  5,  6,  7,  4,  5,  6,  7,
                                               8, 9, 10, 11,  8,  9, 10, 11]))
+            XCTAssertEqual(NDArray.stack([a, a], axis: -2),
+                           NDArray(shape: [3, 2, 4],
+                                   elements: [0,  1,  2,  3,  0,  1,  2,  3,
+                                              4,  5,  6,  7,  4,  5,  6,  7,
+                                              8, 9, 10, 11,  8,  9, 10, 11]))
             
             XCTAssertEqual(NDArray.stack([a, a], axis: 2),
+                           NDArray(shape: [3, 4, 2],
+                                   elements: [0,  0,  1,  1,  2,  2,  3,  3,  4,  4,  5,  5,
+                                              6,  6, 7,  7,  8, 8,  9,  9, 10, 10, 11, 11]))
+            XCTAssertEqual(NDArray.stack([a, a], axis: -1),
                            NDArray(shape: [3, 4, 2],
                                    elements: [0,  0,  1,  1,  2,  2,  3,  3,  4,  4,  5,  5,
                                               6,  6, 7,  7,  8, 8,  9,  9, 10, 10, 11, 11]))
