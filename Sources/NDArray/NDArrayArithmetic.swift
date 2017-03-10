@@ -97,11 +97,35 @@ extension Double: Arithmetic {}
 
 // unary
 func unary_plus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
-    return NDArray(shape: arg.shape, elements: arg.elements.map{ +$0 })
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = +inPointer.pointee
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
 func unary_minus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
-    return NDArray(shape: arg.shape, elements: arg.elements.map{ -$0 })
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = -inPointer.pointee
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
 
