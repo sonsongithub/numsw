@@ -30,6 +30,7 @@
 		A7BD13ED1E715BEC007D78FA /* NDArrayFloatingPointFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD13EC1E715BEC007D78FA /* NDArrayFloatingPointFunctionsTests.swift */; };
 		A7BD13EF1E715D7D007D78FA /* NDArrayCompoundAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD13EE1E715D7D007D78FA /* NDArrayCompoundAssignment.swift */; };
 		A7BD13F11E715E64007D78FA /* NDArrayConpoundAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD13F01E715E64007D78FA /* NDArrayConpoundAssignmentTests.swift */; };
+		A7BD13F31E723F4F007D78FA /* NDArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD13F21E723F4F007D78FA /* NDArrayTests.swift */; };
 		A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96D81E6A5F340001727F /* Matrix.swift */; };
 		A7EC96DD1E6A679F0001727F /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */; };
 		A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */; };
@@ -82,6 +83,7 @@
 		A7BD13EC1E715BEC007D78FA /* NDArrayFloatingPointFunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayFloatingPointFunctionsTests.swift; sourceTree = "<group>"; };
 		A7BD13EE1E715D7D007D78FA /* NDArrayCompoundAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayCompoundAssignment.swift; sourceTree = "<group>"; };
 		A7BD13F01E715E64007D78FA /* NDArrayConpoundAssignmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayConpoundAssignmentTests.swift; sourceTree = "<group>"; };
+		A7BD13F21E723F4F007D78FA /* NDArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayTests.swift; sourceTree = "<group>"; };
 		A7EC96D81E6A5F340001727F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		A7EC96DC1E6A679F0001727F /* MatrixMultiply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
 		A7EC96DE1E6A67F90001727F /* MatrixMultiplyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTest.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				A7BD13DE1E710A11007D78FA /* NDArrayXCTest.swift */,
+				A7BD13F21E723F4F007D78FA /* NDArrayTests.swift */,
 				A7BD13E01E710E2C007D78FA /* NDArrayCreationTests.swift */,
 				A7BD13D51E70F197007D78FA /* NDArraySubscriptTests.swift */,
 				A7BD13E21E713A30007D78FA /* NDArrayBoolTests.swift */,
@@ -355,6 +358,7 @@
 				A7EC96DF1E6A67F90001727F /* MatrixMultiplyTest.swift in Sources */,
 				A7EC96EB1E6A782D0001727F /* MatrixInvertTests.swift in Sources */,
 				A7BD13F11E715E64007D78FA /* NDArrayConpoundAssignmentTests.swift in Sources */,
+				A7BD13F31E723F4F007D78FA /* NDArrayTests.swift in Sources */,
 				A7EC96FD1E6A8DF50001727F /* MatrixRangeTests.swift in Sources */,
 				OBJ_30 /* numswTests.swift in Sources */,
 				1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */,
