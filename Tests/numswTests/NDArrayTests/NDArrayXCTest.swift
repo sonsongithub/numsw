@@ -7,10 +7,16 @@ func XCTAssertEqual<T: Equatable>(_ expression1: NDArray<T>, _ expression2: NDAr
     XCTAssertEqual(expression1.elements, expression2.elements)
 }
 
-func XCTAssertEqualWithAccuracy<T: FloatingPoint>(_ expression1: NDArray<T>, _ expression2: NDArray<T>, accuracy: T) {
+func XCTAssertEqualWithAccuracy<T: FloatingPoint>(_ expression1: NDArray<T>,
+                                _ expression2: NDArray<T>,
+                                accuracy: T = T(1).divided(by: T(10000))) {
     XCTAssertEqual(expression1.shape, expression2.shape)
     
     for (a, b) in zip(expression1.elements, expression2.elements) {
         XCTAssertEqualWithAccuracy(a, b, accuracy: accuracy)
     }
+}
+
+func hoge<T: FloatingPoint>(arg: T = T(1).divided(by: T(10000))) {
+    
 }

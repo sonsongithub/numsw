@@ -1,81 +1,75 @@
 
-#if os(iOS) || os(OSX) || true // TODO: remove true
-    
-    // TODO: rewrite with Accelerate
-    
-    public prefix func +<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
-        return unaryPlus(arg)
-    }
-    
-    public prefix func -<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
-        return unaryMinus(arg)
-    }
-    
-    public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
-        return add(lhs, rhs)
-    }
-    
-    public func -<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
-        return subtract(lhs, rhs)
-    }
-    
-    public func *<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
-        return multiply(lhs, rhs)
-    }
-    
-    public func /<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
-        return divide(lhs, rhs)
-    }
-    
-    public func %<T: Moduloable>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
-        return modulo(lhs, rhs)
-    }
-    
-    public func +<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
-        return add(lhs, rhs)
-    }
-    
-    public func -<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
-        return subtract(lhs, rhs)
-    }
-    
-    public func *<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
-        return multiply(lhs, rhs)
-    }
-    
-    public func /<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
-        return divide(lhs, rhs)
-    }
-    
-    public func %<T: Moduloable>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
-        return modulo(lhs, rhs)
-    }
-    
-    public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
-        return add(lhs, rhs)
-    }
-    
-    public func -<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
-        return subtract(lhs, rhs)
-    }
-    
-    public func *<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
-        return multiply(lhs, rhs)
-    }
-    
-    public func /<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
-        return divide(lhs, rhs)
-    }
-    
-    public func %<T: Moduloable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
-        return modulo(lhs, rhs)
-    }
+// unary
+public prefix func +<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
+    return unaryPlus(arg)
+}
 
-#else
-    
-    // TODO: copy and paste naive implementation
-    
-#endif
+public prefix func -<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
+    return unaryMinus(arg)
+}
+
+public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+    return add(lhs, rhs)
+}
+
+public func -<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+    return subtract(lhs, rhs)
+}
+
+// NDArray and scalar
+public func *<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+    return multiply(lhs, rhs)
+}
+
+public func /<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+    return divide(lhs, rhs)
+}
+
+public func %<T: Moduloable>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
+    return modulo(lhs, rhs)
+}
+
+public func +<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+    return add(lhs, rhs)
+}
+
+public func -<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+    return subtract(lhs, rhs)
+}
+
+public func *<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+    return multiply(lhs, rhs)
+}
+
+public func /<T: Arithmetic>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+    return divide(lhs, rhs)
+}
+
+public func %<T: Moduloable>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
+    return modulo(lhs, rhs)
+}
+
+// NDArray and NDArray
+public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
+    return add(lhs, rhs)
+}
+
+public func -<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
+    return subtract(lhs, rhs)
+}
+
+public func *<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
+    return multiply(lhs, rhs)
+}
+
+public func /<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
+    return divide(lhs, rhs)
+}
+
+public func %<T: Moduloable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
+    return modulo(lhs, rhs)
+}
+
 
 public protocol Arithmetic {
     static func +(lhs: Self, rhs: Self) -> Self
