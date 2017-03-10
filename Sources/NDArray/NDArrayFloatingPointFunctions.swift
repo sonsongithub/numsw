@@ -98,32 +98,98 @@ extension Double: FloatingPointFunctions {
 }
 
 func _sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    let elements = arg.elements.map { T.sqrt($0) }
-    return NDArray(shape: arg.shape, elements: elements)
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = T.sqrt(inPointer.pointee)
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
 
 func _exp<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    let elements = arg.elements.map { T.exp($0) }
-    return NDArray(shape: arg.shape, elements: elements)
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = T.exp(inPointer.pointee)
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
 func _log<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    let elements = arg.elements.map { T.log($0) }
-    return NDArray(shape: arg.shape, elements: elements)
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = T.log(inPointer.pointee)
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
 func _sin<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    let elements = arg.elements.map { T.sin($0) }
-    return NDArray(shape: arg.shape, elements: elements)
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = T.sin(inPointer.pointee)
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
 func _cos<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    let elements = arg.elements.map { T.cos($0) }
-    return NDArray(shape: arg.shape, elements: elements)
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = T.cos(inPointer.pointee)
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
 func _tan<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
-    let elements = arg.elements.map { T.tan($0) }
-    return NDArray(shape: arg.shape, elements: elements)
+    var inPointer = UnsafePointer(arg.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
+    defer { outPointer.deallocate(capacity: arg.elements.count) }
+    
+    var p = outPointer
+    for _ in 0..<arg.elements.count {
+        p.pointee = T.tan(inPointer.pointee)
+        p += 1
+        inPointer += 1
+    }
+    
+    return NDArray(shape: arg.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
