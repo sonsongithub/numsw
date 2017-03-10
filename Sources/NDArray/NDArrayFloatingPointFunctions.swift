@@ -3,6 +3,10 @@ import Foundation
 
 #if os(iOS) || os(OSX) || true // TODO: remove true
     
+    public func sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+        return _sqrt(arg)
+    }
+    
     public func exp<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
         return _exp(arg)
     }
@@ -30,16 +34,22 @@ import Foundation
 #endif
 
 public protocol FloatingPointFunctions {
+    
+    static func sqrt(_ arg: Self) -> Self
+    
     static func exp(_ arg: Self) -> Self
     static func log(_ arg: Self) -> Self
     
     static func sin(_ arg: Self) -> Self
     static func cos(_ arg: Self) -> Self
     static func tan(_ arg: Self) -> Self
-    
 }
 
 extension Float: FloatingPointFunctions {
+    public static func sqrt(_ arg: Float) -> Float {
+        return Foundation.sqrt(arg)
+    }
+    
     public static func exp(_ arg: Float) -> Float {
         return Foundation.exp(arg)
     }
@@ -62,6 +72,10 @@ extension Float: FloatingPointFunctions {
 }
 
 extension Double: FloatingPointFunctions {
+    public static func sqrt(_ arg: Double) -> Double {
+        return Foundation.sqrt(arg)
+    }
+    
     public static func exp(_ arg: Double) -> Double {
         return Foundation.exp(arg)
     }
@@ -82,6 +96,12 @@ extension Double: FloatingPointFunctions {
         return Foundation.tan(arg)
     }
 }
+
+private func _sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+    let elements = arg.elements.map { T.sqrt($0) }
+    return NDArray(shape: arg.shape, elements: elements)
+}
+
 
 private func _exp<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     let elements = arg.elements.map { T.exp($0) }
