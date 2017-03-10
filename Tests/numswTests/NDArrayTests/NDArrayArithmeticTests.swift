@@ -27,7 +27,7 @@ class NDArrayArithmeticTests: XCTestCase {
         }
     }
     
-    func testPlus() {
+    func testAdd() {
         // NDArray and scalar
         do {
             let a = NDArray<Int>(shape: [2, 2], elements: [1, 2, 3, 4])
