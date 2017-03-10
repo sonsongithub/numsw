@@ -59,11 +59,11 @@ public func >=<T: Comparable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<Bool>
 
 
 // unary
-private func not(_ arg: NDArray<Bool>) -> NDArray<Bool> {
+func not(_ arg: NDArray<Bool>) -> NDArray<Bool> {
     return NDArray(shape: arg.shape, elements: arg.elements.map(!))
 }
 
-private func and(_ lhs: NDArray<Bool>, _ rhs: NDArray<Bool>) -> NDArray<Bool> {
+func and(_ lhs: NDArray<Bool>, _ rhs: NDArray<Bool>) -> NDArray<Bool> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
     let elements = zip(lhs.elements, rhs.elements).map { $0 && $1 }
@@ -71,7 +71,7 @@ private func and(_ lhs: NDArray<Bool>, _ rhs: NDArray<Bool>) -> NDArray<Bool> {
     return NDArray(shape: lhs.shape, elements: elements)
 }
 
-private func or(_ lhs: NDArray<Bool>, _ rhs: NDArray<Bool>) -> NDArray<Bool> {
+func or(_ lhs: NDArray<Bool>, _ rhs: NDArray<Bool>) -> NDArray<Bool> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
     let elements = zip(lhs.elements, rhs.elements).map { $0 || $1 }
@@ -81,49 +81,49 @@ private func or(_ lhs: NDArray<Bool>, _ rhs: NDArray<Bool>) -> NDArray<Bool> {
 
 
 // NDArray and scalar
-private func equal<T: Equatable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
+func equal<T: Equatable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
     return NDArray(shape: lhs.shape, elements: lhs.elements.map { $0 == rhs })
 }
 
-private func lessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
+func lessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
     return NDArray(shape: lhs.shape, elements: lhs.elements.map { $0 < rhs })
 }
 
-private func greaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
+func greaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
     return NDArray(shape: lhs.shape, elements: lhs.elements.map { $0 > rhs })
 }
 
-private func notGreaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
+func notGreaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
     return NDArray(shape: lhs.shape, elements: lhs.elements.map { $0 <= rhs })
 }
 
-private func notLessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
+func notLessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
     return NDArray(shape: lhs.shape, elements: lhs.elements.map { $0 >= rhs })
 }
 
 
 // NDArray and NDArray
-private func equal<T: Equatable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
+func equal<T: Equatable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
     precondition(lhs.shape == rhs.shape, "")
     return NDArray(shape: lhs.shape, elements: zip(lhs.elements, rhs.elements).map { $0 == $1 })
 }
 
-private func lessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
+func lessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
     precondition(lhs.shape == rhs.shape, "")
     return NDArray(shape: lhs.shape, elements: zip(lhs.elements, rhs.elements).map { $0 < $1 })
 }
 
-private func greaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
+func greaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
     precondition(lhs.shape == rhs.shape, "")
     return NDArray(shape: lhs.shape, elements: zip(lhs.elements, rhs.elements).map { $0 > $1 })
 }
 
-private func notGreaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
+func notGreaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
     precondition(lhs.shape == rhs.shape, "")
     return NDArray(shape: lhs.shape, elements: zip(lhs.elements, rhs.elements).map { $0 <= $1 })
 }
 
-private func notLessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
+func notLessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {
     precondition(lhs.shape == rhs.shape, "")
     return NDArray(shape: lhs.shape, elements: zip(lhs.elements, rhs.elements).map { $0 >= $1 })
 }

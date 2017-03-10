@@ -49,7 +49,7 @@ extension Array {
     }
 }
 
-private func _concatenate<T>(_ arrays: [NDArray<T>], axis: Int) -> NDArray<T> {
+func _concatenate<T>(_ arrays: [NDArray<T>], axis: Int) -> NDArray<T> {
     let shapeBeforeConcatAxis = [Int](arrays.first!.shape.prefix(upTo: axis))
     let shapeAfterConcatAxis = [Int](arrays.first!.shape.dropFirst(axis+1))
     

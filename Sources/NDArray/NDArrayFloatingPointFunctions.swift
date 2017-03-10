@@ -97,33 +97,33 @@ extension Double: FloatingPointFunctions {
     }
 }
 
-private func _sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+func _sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     let elements = arg.elements.map { T.sqrt($0) }
     return NDArray(shape: arg.shape, elements: elements)
 }
 
 
-private func _exp<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+func _exp<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     let elements = arg.elements.map { T.exp($0) }
     return NDArray(shape: arg.shape, elements: elements)
 }
 
-private func _log<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+func _log<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     let elements = arg.elements.map { T.log($0) }
     return NDArray(shape: arg.shape, elements: elements)
 }
 
-private func _sin<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+func _sin<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     let elements = arg.elements.map { T.sin($0) }
     return NDArray(shape: arg.shape, elements: elements)
 }
 
-private func _cos<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+func _cos<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     let elements = arg.elements.map { T.cos($0) }
     return NDArray(shape: arg.shape, elements: elements)
 }
 
-private func _tan<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
+func _tan<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     let elements = arg.elements.map { T.tan($0) }
     return NDArray(shape: arg.shape, elements: elements)
 }

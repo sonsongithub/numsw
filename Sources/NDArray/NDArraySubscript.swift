@@ -37,7 +37,7 @@ extension NDArray {
     }
 }
 
-private func calculateIndex<T>(_ array: NDArray<T>, _ index: [Int]) -> Int {
+func calculateIndex<T>(_ array: NDArray<T>, _ index: [Int]) -> Int {
     precondition(index.count == array.shape.count, "Invalid index.")
     
     // minus index
@@ -58,18 +58,18 @@ private func calculateIndex<T>(_ array: NDArray<T>, _ index: [Int]) -> Int {
 }
 
 
-private func getElement<T>(_ array: NDArray<T>, _ index: [Int]) -> T {
+func getElement<T>(_ array: NDArray<T>, _ index: [Int]) -> T {
     let elementIndex = calculateIndex(array, index)
     return array.elements[elementIndex]
 }
 
-private func setElement<T>(_ array: inout NDArray<T>, _ index: [Int], newValue: T) {
+func setElement<T>(_ array: inout NDArray<T>, _ index: [Int], newValue: T) {
     let elementIndex = calculateIndex(array, index)
     array.elements[elementIndex] = newValue
 }
 
 
-private func calculateElementIndices(indices: [[Int]]) -> [[Int]] {
+func calculateElementIndices(indices: [[Int]]) -> [[Int]] {
     guard indices.count > 0 else {
         return [[]]
     }
@@ -82,7 +82,7 @@ private func calculateElementIndices(indices: [[Int]]) -> [[Int]] {
 }
 
 
-private func formatIndices<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> [[Int]] {
+func formatIndices<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> [[Int]] {
     var padIndices = indices
     if padIndices.count < array.shape.count {
         padIndices = indices + [[Int]?](repeating: nil, count: array.shape.count - padIndices.count)
@@ -95,7 +95,7 @@ private func formatIndices<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> [[Int
 }
 
 
-private func getSubarray<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> NDArray<T> {
+func getSubarray<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> NDArray<T> {
     
     let indices = formatIndices(array, indices)
     
@@ -105,7 +105,7 @@ private func getSubarray<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> NDArray
     return NDArray(shape: shape, elements: elements)
 }
 
-private func setSubarray<T>(_ array: inout NDArray<T>, _ indices: [[Int]?], _ newValue: NDArray<T>) {
+func setSubarray<T>(_ array: inout NDArray<T>, _ indices: [[Int]?], _ newValue: NDArray<T>) {
     let indices = formatIndices(array, indices)
     
     let shape = indices.map { $0.count }
