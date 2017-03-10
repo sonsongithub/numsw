@@ -294,39 +294,99 @@ func modulo<T: Moduloable>(_ lhs: T, _ rhs: NDArray<T>) -> NDArray<T> {
 func add<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<T> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
-    let elements = zip(lhs.elements, rhs.elements).map { $0 + $1 }
+    var lhsPointer = UnsafePointer(lhs.elements)
+    var rhsPointer = UnsafePointer(rhs.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
+    defer { outPointer.deallocate(capacity: lhs.elements.count) }
     
-    return NDArray(shape: lhs.shape, elements: elements)
+    var p = outPointer
+    for _ in 0..<rhs.elements.count {
+        p.pointee = lhsPointer.pointee + rhsPointer.pointee
+        p += 1
+        lhsPointer += 1
+        rhsPointer += 1
+    }
+
+    return NDArray(shape: lhs.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: lhs.elements.count)))
 }
 
 func subtract<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<T> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
-    let elements = zip(lhs.elements, rhs.elements).map { $0 - $1 }
+    var lhsPointer = UnsafePointer(lhs.elements)
+    var rhsPointer = UnsafePointer(rhs.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
+    defer { outPointer.deallocate(capacity: lhs.elements.count) }
     
-    return NDArray(shape: lhs.shape, elements: elements)
+    var p = outPointer
+    for _ in 0..<rhs.elements.count {
+        p.pointee = lhsPointer.pointee - rhsPointer.pointee
+        p += 1
+        lhsPointer += 1
+        rhsPointer += 1
+    }
+    
+    return NDArray(shape: lhs.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: lhs.elements.count)))
 }
 
 func multiply<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<T> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
-    let elements = zip(lhs.elements, rhs.elements).map { $0 * $1 }
+    var lhsPointer = UnsafePointer(lhs.elements)
+    var rhsPointer = UnsafePointer(rhs.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
+    defer { outPointer.deallocate(capacity: lhs.elements.count) }
     
-    return NDArray(shape: lhs.shape, elements: elements)
+    var p = outPointer
+    for _ in 0..<rhs.elements.count {
+        p.pointee = lhsPointer.pointee * rhsPointer.pointee
+        p += 1
+        lhsPointer += 1
+        rhsPointer += 1
+    }
+    
+    return NDArray(shape: lhs.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: lhs.elements.count)))
 }
 
 func divide<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<T> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
-    let elements = zip(lhs.elements, rhs.elements).map { $0 / $1 }
+    var lhsPointer = UnsafePointer(lhs.elements)
+    var rhsPointer = UnsafePointer(rhs.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
+    defer { outPointer.deallocate(capacity: lhs.elements.count) }
     
-    return NDArray(shape: lhs.shape, elements: elements)
+    var p = outPointer
+    for _ in 0..<rhs.elements.count {
+        p.pointee = lhsPointer.pointee / rhsPointer.pointee
+        p += 1
+        lhsPointer += 1
+        rhsPointer += 1
+    }
+    
+    return NDArray(shape: lhs.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: lhs.elements.count)))
 }
 
 func modulo<T: Moduloable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<T> {
     precondition(lhs.shape==rhs.shape, "Two NDArrays have incompatible shape.")
     
-    let elements = zip(lhs.elements, rhs.elements).map { $0 % $1 }
+    var lhsPointer = UnsafePointer(lhs.elements)
+    var rhsPointer = UnsafePointer(rhs.elements)
+    let outPointer = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
+    defer { outPointer.deallocate(capacity: lhs.elements.count) }
     
-    return NDArray(shape: lhs.shape, elements: elements)
+    var p = outPointer
+    for _ in 0..<rhs.elements.count {
+        p.pointee = lhsPointer.pointee % rhsPointer.pointee
+        p += 1
+        lhsPointer += 1
+        rhsPointer += 1
+    }
+    
+    return NDArray(shape: lhs.shape,
+                   elements: Array(UnsafeBufferPointer(start: outPointer, count: lhs.elements.count)))
 }
