@@ -109,7 +109,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
         }
     }
     
-    #if os(macOS)
+    #if os(iOS) || os(OSX)
     
     func testSqrtAccelerate() {
         do {
