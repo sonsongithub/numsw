@@ -89,7 +89,8 @@ func greaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
 }
 
 func notGreaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
-    return apply(lhs) { $0 <= rhs}}
+    return apply(lhs) { $0 <= rhs}
+}
 
 func notLessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
      return apply(lhs) { $0 >= rhs}
