@@ -2,7 +2,7 @@
 import XCTest
 @testable import numsw
 
-class NDArrayConpoundAssignmentTests: XCTestCase {
+class NDArrayCompoundAssignmentTests: XCTestCase {
     
     func testAddAssign() {
         // scalar
