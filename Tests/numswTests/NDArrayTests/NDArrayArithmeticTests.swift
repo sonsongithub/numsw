@@ -8,22 +8,22 @@ class NDArrayArithmeticTests: XCTestCase {
     func testUnaryPlus() {
         do {
             let a = NDArray<Int>(shape: [2, 2], elements: [1, 2, 3, 4])
-            XCTAssertEqual(unary_plus(a), a)
+            XCTAssertEqual(unaryPlus(a), a)
         }
         do {
             let a = NDArray<Double>(shape: [2, 2], elements: [1, 2, 3, 4])
-            XCTAssertEqual(unary_plus(a), a)
+            XCTAssertEqual(unaryPlus(a), a)
         }
     }
     
     func testUnaryMinus() {
         do {
             let a = NDArray<Int>(shape: [2, 2], elements: [1, 2, 3, 4])
-            XCTAssertEqual(unary_minus(a), NDArray(shape: [2, 2], elements: [-1, -2, -3, -4]))
+            XCTAssertEqual(unaryMinus(a), NDArray(shape: [2, 2], elements: [-1, -2, -3, -4]))
         }
         do {
             let a = NDArray<Double>(shape: [2, 2], elements: [1, 2, 3, 4])
-            XCTAssertEqual(unary_minus(a), NDArray(shape: [2, 2], elements: [-1, -2, -3, -4]))
+            XCTAssertEqual(unaryMinus(a), NDArray(shape: [2, 2], elements: [-1, -2, -3, -4]))
         }
     }
     

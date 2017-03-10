@@ -4,11 +4,11 @@
     // TODO: rewrite with Accelerate
     
     public prefix func +<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
-        return unary_plus(arg)
+        return unaryPlus(arg)
     }
     
     public prefix func -<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
-        return unary_minus(arg)
+        return unaryMinus(arg)
     }
     
     public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
@@ -96,11 +96,11 @@ extension Double: Arithmetic {}
 
 
 // unary
-func unary_plus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
+func unaryPlus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, +)
 }
 
-func unary_minus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
+func unaryMinus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, -)
 }
 
