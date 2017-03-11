@@ -10,10 +10,4 @@ class NDArrayRandomTests: XCTestCase {
             XCTAssert(-1 <= e && e < 1)
         }
     }
-    
-    func testPerformance() {
-        measure {
-            NDArray<Double>.normal(mu: 0, sigma: 1, shape: [100, 100])
-        }
-    }
 }
