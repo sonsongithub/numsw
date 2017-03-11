@@ -35,20 +35,6 @@ extension NDArray {
     }
 }
 
-extension Array {
-    fileprivate func removed(at index: Int) -> Array {
-        var array = self
-        array.remove(at: index)
-        return array
-    }
-    
-    fileprivate func replaced(with newElement: Element, at index: Int) -> Array {
-        var array = self
-        array[index] = newElement
-        return array
-    }
-}
-
 func _concatenate<T>(_ arrays: [NDArray<T>], axis: Int) -> NDArray<T> {
     let shapeBeforeConcatAxis = [Int](arrays.first!.shape.prefix(upTo: axis))
     let shapeAfterConcatAxis = [Int](arrays.first!.shape.dropFirst(axis+1))

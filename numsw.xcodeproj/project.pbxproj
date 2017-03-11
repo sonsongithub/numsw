@@ -17,6 +17,8 @@
 		1453FBF01E6A965700633F32 /* MatrixTrigonometricTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBEF1E6A965700633F32 /* MatrixTrigonometricTest.swift */; };
 		A77F0B2E1E738F0A008CE10B /* NDArrayTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F0B2D1E738F0A008CE10B /* NDArrayTransformation.swift */; };
 		A77F0B301E738F30008CE10B /* NDArrayTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F0B2F1E738F30008CE10B /* NDArrayTransformationTests.swift */; };
+		A77F0B321E73ACB7008CE10B /* NDArrayReduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F0B311E73ACB7008CE10B /* NDArrayReduce.swift */; };
+		A77F0B341E73B815008CE10B /* NDArrayReduceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F0B331E73B815008CE10B /* NDArrayReduceTests.swift */; };
 		A7BD13CD1E7022CA007D78FA /* NDArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD13CC1E7022CA007D78FA /* NDArray.swift */; };
 		A7BD13CF1E7025B4007D78FA /* NDArrayArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD13CE1E7025B4007D78FA /* NDArrayArithmetic.swift */; };
 		A7BD13D11E702933007D78FA /* NDArrayBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD13D01E702933007D78FA /* NDArrayBool.swift */; };
@@ -78,6 +80,8 @@
 		1453FBEF1E6A965700633F32 /* MatrixTrigonometricTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTrigonometricTest.swift; sourceTree = "<group>"; };
 		A77F0B2D1E738F0A008CE10B /* NDArrayTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayTransformation.swift; sourceTree = "<group>"; };
 		A77F0B2F1E738F30008CE10B /* NDArrayTransformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayTransformationTests.swift; sourceTree = "<group>"; };
+		A77F0B311E73ACB7008CE10B /* NDArrayReduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayReduce.swift; sourceTree = "<group>"; };
+		A77F0B331E73B815008CE10B /* NDArrayReduceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayReduceTests.swift; sourceTree = "<group>"; };
 		A7BD13CC1E7022CA007D78FA /* NDArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArray.swift; sourceTree = "<group>"; };
 		A7BD13CE1E7025B4007D78FA /* NDArrayArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayArithmetic.swift; sourceTree = "<group>"; };
 		A7BD13D01E702933007D78FA /* NDArrayBool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayBool.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				A7BD13EE1E715D7D007D78FA /* NDArrayCompoundAssignment.swift */,
 				A7BD13D01E702933007D78FA /* NDArrayBool.swift */,
 				A7BD13EA1E714B78007D78FA /* NDArrayFloatingPointFunctions.swift */,
+				A77F0B311E73ACB7008CE10B /* NDArrayReduce.swift */,
 				A7BD13E61E713E58007D78FA /* NDArrayRandom.swift */,
 				A7BD13FC1E72AA36007D78FA /* NDArrayUtils.swift */,
 			);
@@ -171,6 +176,7 @@
 				A7BD13E21E713A30007D78FA /* NDArrayBoolTests.swift */,
 				A7BD13E81E714446007D78FA /* NDArrayArithmeticTests.swift */,
 				A7BD13EC1E715BEC007D78FA /* NDArrayFloatingPointFunctionsTests.swift */,
+				A77F0B331E73B815008CE10B /* NDArrayReduceTests.swift */,
 				A7BD13F01E715E64007D78FA /* NDArrayCompoundAssignmentTests.swift */,
 				A7BD13F81E7294A7007D78FA /* NDArrayRandomTests.swift */,
 				A7BD13FE1E72C172007D78FA /* NDArrayPerformanceTests.swift */,
@@ -355,6 +361,7 @@
 				1453FBDC1E6A81A400633F32 /* MatrixNorm.swift in Sources */,
 				A7EC96D91E6A5F340001727F /* Matrix.swift in Sources */,
 				A77F0B2E1E738F0A008CE10B /* NDArrayTransformation.swift in Sources */,
+				A77F0B321E73ACB7008CE10B /* NDArrayReduce.swift in Sources */,
 				A7EC96FB1E6A8C6C0001727F /* MatrixRange.swift in Sources */,
 				A7BD13EB1E714B78007D78FA /* NDArrayFloatingPointFunctions.swift in Sources */,
 				A7BD13CF1E7025B4007D78FA /* NDArrayArithmetic.swift in Sources */,
@@ -394,6 +401,7 @@
 				A7EC96FD1E6A8DF50001727F /* MatrixRangeTests.swift in Sources */,
 				OBJ_30 /* numswTests.swift in Sources */,
 				1453FBE21E6A878100633F32 /* MatrixBasicTest.swift in Sources */,
+				A77F0B341E73B815008CE10B /* NDArrayReduceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -110,3 +110,18 @@ func formatIndicesInAxes(_ shape: [Int], _ indicesInAxes: [[Int]?]) -> [[Int]] {
     }
     return indices
 }
+
+
+extension Array {
+    func removed(at index: Int) -> Array {
+        var array = self
+        array.remove(at: index)
+        return array
+    }
+    
+    func replaced(with newElement: Element, at index: Int) -> Array {
+        var array = self
+        array[index] = newElement
+        return array
+    }
+}
