@@ -7,7 +7,7 @@ func XCTAssertEqual<T: Equatable>(_ expression1: NDArray<T>, _ expression2: NDAr
     XCTAssertEqual(expression1.elements, expression2.elements)
 }
 
-func XCTAssertEqualWithAccuracy<T: FloatingPoint & ExpressibleByFloatLiteral>(_ expression1: NDArray<T>,
+func XCTAssertEqualWithAccuracy<T: BinaryFloatingPoint>(_ expression1: NDArray<T>,
                                 _ expression2: NDArray<T>,
                                 accuracy: T = 1e-5) {
     
