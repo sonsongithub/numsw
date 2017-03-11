@@ -9,7 +9,7 @@
 import XCTest
 @testable import numsw
 
-class MatrixTrigonometricTest: XCTestCase {
+class MatrixTrigonometricTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -48,7 +48,7 @@ class MatrixTrigonometricTest: XCTestCase {
         XCTAssert(error < 0.000001)
     }
     
-    static var allTests: [(String, (MatrixTrigonometricTest) -> () throws -> Void)] {
+    static var allTests: [(String, (MatrixTrigonometricTests) -> () throws -> Void)] {
         return [
             ("testSin", testSin),
             ("testCos", testCos),

@@ -9,7 +9,7 @@
 import XCTest
 @testable import numsw
 
-class MatrixAdditionTest: XCTestCase {
+class MatrixAdditionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -65,7 +65,7 @@ class MatrixAdditionTest: XCTestCase {
         XCTAssert(error < 0.000001)
     }
     
-    static var allTests: [(String, (MatrixAdditionTest) -> () throws -> Void)] {
+    static var allTests: [(String, (MatrixAdditionTests) -> () throws -> Void)] {
         return [
             ("testExample", testExample),
             ("testExample2", testExample2),
