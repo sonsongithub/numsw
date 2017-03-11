@@ -4,23 +4,18 @@ import XCTest
 
 class NDArrayFloatingPointFunctionsTests: XCTestCase {
     
-    let accuracyf: Float = 1e-5
-    let accuracy: Double = 1e-5
-    
     func testSqrt() {
         do {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sqrt(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sqrt(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)))
         }
     }
     
@@ -29,15 +24,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_exp(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(exp)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(exp)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_exp(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(exp)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(exp)))
         }
     }
     
@@ -46,15 +39,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0.1, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_log(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(log)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(log)))
         }
         do {
             let elements: [Double] = [0.1, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_log(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(log)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(log)))
         }
     }
     
@@ -63,15 +54,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sin(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sin)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(sin)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sin(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sin)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(sin)))
         }
     }
     
@@ -80,15 +69,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_cos(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(cos)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(cos)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_cos(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(cos)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(cos)))
         }
     }
     
@@ -97,15 +84,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_tan(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(tan)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(tan)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_tan(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(tan)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(tan)))
         }
     }
     
@@ -116,15 +101,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sqrtAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sqrtAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)))
         }
     }
     
@@ -133,15 +116,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_expAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(exp)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(exp)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_expAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(exp)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(exp)))
         }
     }
     
@@ -150,15 +131,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0.1, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_logAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(log)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(log)))
         }
         do {
             let elements: [Double] = [0.1, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_logAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(log)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(log)))
         }
     }
     
@@ -167,15 +146,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sinAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sin)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(sin)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_sinAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(sin)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(sin)))
         }
     }
     
@@ -184,15 +161,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_cosAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(cos)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(cos)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_cosAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(cos)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(cos)))
         }
     }
     
@@ -201,15 +176,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_tanAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(tan)),
-                                       accuracy: accuracyf)
+                                       NDArray(shape: [2, 2], elements: elements.map(tan)))
         }
         do {
             let elements: [Double] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_tanAccelerate(a),
-                                       NDArray(shape: [2, 2], elements: elements.map(tan)),
-                                       accuracy: accuracy)
+                                       NDArray(shape: [2, 2], elements: elements.map(tan)))
         }
     }
 
