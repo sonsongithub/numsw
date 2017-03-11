@@ -17,10 +17,10 @@ extension NDArray {
         var newShape = shape
         newShape.insert(1, at: axis)
         
-        return _concatenate(arrays.map{ $0.reshaped(newShape) }, axis: axis)
+        return _concatenate(arrays.map{ $0.reshaped(newShape) }, along: axis)
     }
     
-    public static func concatenate(_ arrays: [NDArray<T>], axis: Int = 0) -> NDArray<T> {
+    public static func concatenate(_ arrays: [NDArray<T>], along axis: Int = 0) -> NDArray<T> {
         var axis = axis
         if axis < 0 {
             axis += arrays.first!.shape.count
@@ -31,11 +31,11 @@ extension NDArray {
         precondition(!arrays.contains { $0.shape.removed(at: axis) != shapeWithoutConcatAxis },
                      "All NDArrays must have same shape.")
         
-        return _concatenate(arrays, axis: axis)
+        return _concatenate(arrays, along: axis)
     }
 }
 
-func _concatenate<T>(_ arrays: [NDArray<T>], axis: Int) -> NDArray<T> {
+func _concatenate<T>(_ arrays: [NDArray<T>], along axis: Int) -> NDArray<T> {
     let shapeBeforeConcatAxis = [Int](arrays.first!.shape.prefix(upTo: axis))
     let shapeAfterConcatAxis = [Int](arrays.first!.shape.dropFirst(axis+1))
     

@@ -21,14 +21,14 @@ class NDArrayPerformanceTests: XCTestCase {
     func testStackPerformance0() {
         let a = NDArray<Int>.zeros([1000, 1000])
         measure {
-            NDArray.concatenate([a, a, a], axis: 0)
+            NDArray.concatenate([a, a, a], along: 0)
         }
     }
     
     func testStackPerformance1() {
         let a = NDArray<Int>.zeros([1000, 1000])
         measure {
-            NDArray.concatenate([a, a, a], axis: 1)
+            NDArray.concatenate([a, a, a], along: 1)
         }
     }
     
