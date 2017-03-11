@@ -14,6 +14,6 @@ extension NDArray {
     }
     
     public func raveled() -> NDArray<T> {
-        return reshaped([-1])
+        return NDArray(shape: [elements.count], elements: elements)
     }
 }
