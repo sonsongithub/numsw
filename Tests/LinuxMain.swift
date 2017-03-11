@@ -13,4 +13,17 @@ XCTMain([
      testCase(MatrixDivideTests.allTests),
      testCase(MatrixRangeTests.allTests),
      testCase(MatrixTrigonometricTests.allTests),
+     testCase(NDArrayArithmeticTests.allTests),
+     testCase(NDArrayBoolTests.allTests),
+     testCase(NDArrayCompoundAssignmentTests.allTests),
+     testCase(NDArrayCreationTests.allTests),
+     testCase(NDArrayFloatingPointFunctionsTests.allTests),
+     testCase(NDArrayPerformanceTests.allTests),
+     testCase(NDArrayRandomTests.allTests),
+     testCase(NDArrayReduceTests.allTests),
+     testCase(NDArrayStackTests.allTests),
+     testCase(NDArraySubscriptTests.allTests),
+     testCase(NDArrayTests.allTests),
+     testCase(NDArrayTransformationTests.allTests),
 ])
+
