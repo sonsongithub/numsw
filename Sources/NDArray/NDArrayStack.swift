@@ -76,3 +76,4 @@ func _concatenate<T>(_ arrays: [NDArray<T>], axis: Int) -> NDArray<T> {
     return NDArray(shape: shapeBeforeConcatAxis + [concatAxisSize] + shapeAfterConcatAxis,
                    elements: elements)
 }
+
