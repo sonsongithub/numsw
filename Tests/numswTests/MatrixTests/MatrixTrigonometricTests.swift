@@ -48,7 +48,7 @@ class MatrixTrigonometricTests: XCTestCase {
         XCTAssert(error < 0.000001)
     }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (MatrixTrigonometricTests) -> () throws -> Void)] {
         return [
             ("testSin", testSin),
             ("testCos", testCos),

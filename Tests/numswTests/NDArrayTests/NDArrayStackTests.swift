@@ -93,7 +93,7 @@ class NDArrayStackTests: XCTestCase {
         }
     }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (NDArrayStackTests) -> () throws -> Void)] {
         return [
             ("testConcatenate", testConcatenate),
             ("testStack", testStack),

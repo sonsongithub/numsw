@@ -56,7 +56,7 @@ class NDArrayCreationTests: XCTestCase {
                                    accuracy: 1e-10)
     }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (NDArrayCreationTests) -> () throws -> Void)] {
         return [
             ("testZeros", testZeros),
             ("testOnes", testOnes),

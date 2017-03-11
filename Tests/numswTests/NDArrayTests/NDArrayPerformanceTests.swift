@@ -7,28 +7,28 @@ class NDArrayPerformanceTests: XCTestCase {
     func testTransposePerformance() {
         let a = NDArray<Int>.zeros([10, 10, 10, 10])
         measure {
-            a.transposed()
+            _ = a.transposed()
         }
     }
     
     func testSubscriptSubarrayPerformance() {
         let a = NDArray<Int>.zeros([1000, 1000])
         measure {
-            a[0..<300, 100..<200]
+            _ = a[0..<300, 100..<200]
         }
     }
     
     func testStackPerformance0() {
         let a = NDArray<Int>.zeros([1000, 1000])
         measure {
-            NDArray.concatenate([a, a, a], along: 0)
+            _ = NDArray.concatenate([a, a, a], along: 0)
         }
     }
     
     func testStackPerformance1() {
         let a = NDArray<Int>.zeros([1000, 1000])
         measure {
-            NDArray.concatenate([a, a, a], along: 1)
+            _ = NDArray.concatenate([a, a, a], along: 1)
         }
     }
     
@@ -36,7 +36,7 @@ class NDArrayPerformanceTests: XCTestCase {
         let a = NDArray<Double>.linspace(low: 1, high: 1e7, count: 100000)
         let b = NDArray<Double>.linspace(low: 10, high: 1e7, count: 100000)
         measure {
-            divide(a, b)
+            _ = divide(a, b)
         }
     }
     
@@ -45,7 +45,7 @@ class NDArrayPerformanceTests: XCTestCase {
         let a = NDArray<Double>.linspace(low: 1, high: 1e7, count: 100000)
         let b = NDArray<Double>.linspace(low: 10, high: 1e7, count: 100000)
         measure {
-            divideAccelerate(a, b)
+            _ = divideAccelerate(a, b)
         }
     }
     #endif
@@ -53,7 +53,7 @@ class NDArrayPerformanceTests: XCTestCase {
     func testSqrtPerformance() {
         let a = NDArray<Double>.linspace(low: -10*M_PI, high: 10*M_PI, count: 1000000)
         measure {
-            _sqrt(a)
+            _ = _sqrt(a)
         }
     }
     
@@ -61,7 +61,7 @@ class NDArrayPerformanceTests: XCTestCase {
     func testSqrtAcceleratePerformance() {
         let a = NDArray<Double>.linspace(low: -10*M_PI, high: 10*M_PI, count: 1000000)
         measure {
-            _sqrtAccelerate(a)
+            _ = _sqrtAccelerate(a)
         }
     }
     #endif
@@ -69,14 +69,14 @@ class NDArrayPerformanceTests: XCTestCase {
     func testSumPerformance0() {
         let a = NDArray<Double>.linspace(low: 0, high: 1e4, count: 100000)
         measure {
-            _sum(a)
+            _ = _sum(a)
         }
     }
     
     func testSumPerformance1() {
         let a = NDArray<Double>.linspace(low: 0, high: 1e4, count: 100000).reshaped([10, 10, 10, 10, 10])
         measure {
-            _sum(a, along: 2)
+            _ = _sum(a, along: 2)
         }
     }
     
@@ -84,25 +84,25 @@ class NDArrayPerformanceTests: XCTestCase {
     func testSumAcceleratePerformance() {
         let a = NDArray<Double>.linspace(low: 0, high: 1e4, count: 100000)
         measure {
-            _sumAccelerate(a)
+            _ = _sumAccelerate(a)
         }
     }
     
     func testSumAcceleratePerformance2() {
         let a = NDArray<Double>.linspace(low: 0, high: 1e4, count: 100000).reshaped([10, 10, 10, 10, 10])
         measure {
-            _sumAccelerate(a, along: 2)
+            _ = _sumAccelerate(a, along: 2)
         }
     }
     #endif
     
     func testNormalPerformance() {
         measure {
-            NDArray<Double>.normal(mu: 0, sigma: 1, shape: [100, 100])
+            _ = NDArray<Double>.normal(mu: 0, sigma: 1, shape: [100, 100])
         }
     }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (NDArrayPerformanceTests) -> () throws -> Void)] {
         return [
             ("testTransposePerformance", testTransposePerformance),
             ("testSubscriptSubarrayPerformance", testSubscriptSubarrayPerformance),

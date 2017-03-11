@@ -188,7 +188,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
 
     #endif
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (NDArrayFloatingPointFunctionsTests) -> () throws -> Void)] {
         return [
             ("testSqrt", testSqrt),
             ("testExp", testExp),

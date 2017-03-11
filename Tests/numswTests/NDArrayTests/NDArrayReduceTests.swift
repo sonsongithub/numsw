@@ -223,7 +223,7 @@ class NDArrayReduceTests: XCTestCase {
     
     #endif
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (NDArrayReduceTests) -> () throws -> Void)] {
         return [
             ("testMin", testMin),
             ("testMax", testMax),

@@ -19,7 +19,7 @@ class MatrixInvertTests: XCTestCase {
         XCTAssertEqual(inv.elements, [-1.5, 0.5, 1, 0])
     }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (MatrixInvertTests) -> () throws -> Void)] {
         return [
             ("testDoubleInvert", testDoubleInvert),
         ]

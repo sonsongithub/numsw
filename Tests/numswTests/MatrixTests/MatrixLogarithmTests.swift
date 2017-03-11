@@ -67,7 +67,7 @@ class MatrixLogarithmTests: XCTestCase {
 //        XCTAssert(error < 0.000001)
 //    }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (MatrixLogarithmTests) -> () throws -> Void)] {
         return [
             ("testExp", testExp),
             ("testExp2", testExp2),

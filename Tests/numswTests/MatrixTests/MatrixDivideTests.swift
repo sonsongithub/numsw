@@ -28,7 +28,7 @@ class MatrixDivideTests: XCTestCase {
         
     }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (MatrixDivideTests) -> () throws -> Void)] {
         return [
             ("testDivide", testDivide),
             ("testDivide2", testDivide2),

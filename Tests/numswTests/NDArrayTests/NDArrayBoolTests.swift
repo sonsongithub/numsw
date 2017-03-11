@@ -30,7 +30,7 @@ class NDArrayBoolTests: XCTestCase {
         XCTAssertEqual(notLessThan(a, b), NDArray(shape: [2, 2], elements: [true, false, true, true]))
     }
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (NDArrayBoolTests) -> () throws -> Void)] {
         return [
             ("testBool", testBool),
             ("testCompare", testCompare),

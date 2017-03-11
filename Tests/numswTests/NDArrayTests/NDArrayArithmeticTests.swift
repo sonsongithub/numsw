@@ -256,7 +256,7 @@ class NDArrayArithmeticTests: XCTestCase {
 
     #endif
     
-    static var allTests: [(String, (Self) -> () throws -> Void)] {
+    static var allTests: [(String, (NDArrayArithmeticTests) -> () throws -> Void)] {
         return [
             ("testUnaryPlus", testUnaryPlus),
             ("testUnaryMinus", testUnaryMinus),
