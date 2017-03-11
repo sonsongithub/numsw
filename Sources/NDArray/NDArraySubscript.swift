@@ -69,9 +69,3 @@ func setSubarray<T>(_ array: inout NDArray<T>, _ indices: [[Int]?], _ newValue: 
         setElement(&array, index, newValue: newValue.elements[i])
     }
 }
-
-//private func getWithMaskArray<T>(_ array: NDArray<T>, _ mask: NDArray<Bool>) -> NDArray<T> {
-//    precondition(array.shape.count >= mask.shape.count, "Mask array shape must be fewer.")
-//    precondition(zip(array.shape, mask.shape).reduce(true){ $0 && $1.0 == $1.1 }, "Incompatible shape.")
-//    
-//}
