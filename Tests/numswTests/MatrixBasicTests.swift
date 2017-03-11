@@ -9,7 +9,7 @@
 import XCTest
 @testable import numsw
 
-class MatrixBasicTest: XCTestCase {
+class MatrixBasicTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -45,5 +45,14 @@ class MatrixBasicTest: XCTestCase {
         XCTAssertEqual(mat.rows, 3)
         XCTAssertEqual(mat.columns, 2)
         XCTAssertEqual(mat.elements, [0.0, 1, 2, 3, 4, 5])
+    }
+    
+    static var allTests: [(String, (MatrixBasicTests) -> () throws -> Void)] {
+        return [
+            ("testEyeMatrix", testEyeMatrix),
+            ("testOnesMatrix", testOnesMatrix),
+            ("testZerosMatrix", testZerosMatrix),
+            ("testArrayInit", testArrayInit),
+        ]
     }
 }

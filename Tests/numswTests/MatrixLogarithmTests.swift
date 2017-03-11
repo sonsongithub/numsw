@@ -9,7 +9,7 @@
 import XCTest
 @testable import numsw
 
-class MatrixLogarithmTest: XCTestCase {
+class MatrixLogarithmTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -66,4 +66,13 @@ class MatrixLogarithmTest: XCTestCase {
 //        let error = frobeniusNorm(ans - m2)
 //        XCTAssert(error < 0.000001)
 //    }
+    
+    static var allTests: [(String, (MatrixLogarithmTests) -> () throws -> Void)] {
+        return [
+            ("testExp", testExp),
+            ("testExp2", testExp2),
+            ("testLog", testLog),
+            ("testLog10", testLog10),
+        ]
+    }
 }
