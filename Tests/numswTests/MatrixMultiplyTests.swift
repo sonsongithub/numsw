@@ -9,7 +9,7 @@
 import XCTest
 @testable import numsw
 
-class MatrixMultiplyTest: XCTestCase {
+class MatrixMultiplyTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -44,4 +44,11 @@ class MatrixMultiplyTest: XCTestCase {
         XCTAssertEqual((a .* b).elements, [1.0, 6.0, 15.0, 28.0])
     }
     
+    static var allTests: [(String, (MatrixMultiplyTests) -> () throws -> Void)] {
+        return [
+            ("testMultiply", testMultiply),
+            ("testScalarMultiply", testScalarMultiply),
+            ("testElementWiseMult", testElementWiseMult),
+        ]
+    }
 }

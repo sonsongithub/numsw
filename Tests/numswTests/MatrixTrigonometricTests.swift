@@ -9,7 +9,7 @@
 import XCTest
 @testable import numsw
 
-class MatrixTrigonometricTest: XCTestCase {
+class MatrixTrigonometricTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -46,5 +46,13 @@ class MatrixTrigonometricTest: XCTestCase {
         m2.show()
         let error = frobeniusNorm(ans - m2)
         XCTAssert(error < 0.000001)
+    }
+    
+    static var allTests: [(String, (MatrixTrigonometricTests) -> () throws -> Void)] {
+        return [
+            ("testSin", testSin),
+            ("testCos", testCos),
+            ("testTan", testTan),
+        ]
     }
 }
