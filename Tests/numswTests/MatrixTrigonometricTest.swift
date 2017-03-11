@@ -47,4 +47,12 @@ class MatrixTrigonometricTest: XCTestCase {
         let error = frobeniusNorm(ans - m2)
         XCTAssert(error < 0.000001)
     }
+    
+    static var allTests: [(String, (MatrixTrigonometricTest) -> () throws -> Void)] {
+        return [
+            ("testSin", testSin),
+            ("testCos", testCos),
+            ("testTan", testTan),
+        ]
+    }
 }

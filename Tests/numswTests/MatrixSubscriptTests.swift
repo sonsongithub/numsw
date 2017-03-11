@@ -59,4 +59,14 @@ class MatrixSubscriptTests: XCTestCase {
         mat[[2], nil] .*= Matrix([[1, 2, 3]])
         XCTAssertEqual(mat.elements, [0.0, 4, 2, 12, 16, 5, 6, 14, 24])
     }
+    
+    static var allTests: [(String, (MatrixSubscriptTests) -> () throws -> Void)] {
+        return [
+            ("testElementSubscript", testElementSubscript),
+            ("testRowSubscript", testRowSubscript),
+            ("testSubmatrixSubscript", testSubmatrixSubscript),
+            ("testAddAssign", testAddAssign),
+            ("testMultAssign", testMultAssign),
+        ]
+    }
 }

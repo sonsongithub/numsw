@@ -46,4 +46,13 @@ class MatrixBasicTest: XCTestCase {
         XCTAssertEqual(mat.columns, 2)
         XCTAssertEqual(mat.elements, [0.0, 1, 2, 3, 4, 5])
     }
+    
+    static var allTests: [(String, (MatrixBasicTest) -> () throws -> Void)] {
+        return [
+            ("testEyeMatrix", testEyeMatrix),
+            ("testOnesMatrix", testOnesMatrix),
+            ("testZerosMatrix", testZerosMatrix),
+            ("testArrayInit", testArrayInit),
+        ]
+    }
 }

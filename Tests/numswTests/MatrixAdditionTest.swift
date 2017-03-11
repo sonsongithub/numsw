@@ -64,4 +64,14 @@ class MatrixAdditionTest: XCTestCase {
         let error = frobeniusNorm(ans + (-1) * m1)
         XCTAssert(error < 0.000001)
     }
+    
+    static var allTests: [(String, (MatrixAdditionTest) -> () throws -> Void)] {
+        return [
+            ("testExample", testExample),
+            ("testExample2", testExample2),
+            ("testExample3", testExample3),
+            ("testExample4", testExample4),
+            ("testExample5", testExample5),
+        ]
+    }
 }
