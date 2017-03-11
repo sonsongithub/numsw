@@ -46,6 +46,18 @@
         return out
     }
     
+    func _meanAccelerate(_ arg: NDArray<Float>) -> Float {
+        var out: Float = 0
+        vDSP_meanv(arg.elements, 1, &out, vDSP_Length(arg.elements.count))
+        return out
+    }
+    
+    func _meanAccelerate(_ arg: NDArray<Double>) -> Double {
+        var out: Double = 0
+        vDSP_meanvD(arg.elements, 1, &out, vDSP_Length(arg.elements.count))
+        return out
+    }
+    
     private func reduce<T>(_ arg: NDArray<T>,
                         along axis: Int,
                         handler: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Length)->Void) -> NDArray<T> {
@@ -103,6 +115,13 @@
         return reduce(arg, along: axis, handler: vDSP_sveD)
     }
     
+    func _meanAccelerate(_ arg: NDArray<Float>, along axis: Int) -> NDArray<Float> {
+        return _sumAccelerate(arg, along: axis) / Float(arg.shape[axis])
+    }
+    
+    func _meanAccelerate(_ arg: NDArray<Double>, along axis: Int) -> NDArray<Double> {
+        return _sumAccelerate(arg, along: axis) / Double(arg.shape[axis])
+    }
     
 #endif
 
@@ -128,7 +147,7 @@ extension NDArray where T: Comparable {
     
 }
 
-extension NDArray where T: Arithmetic & ZeroOne {
+extension NDArray where T: Arithmetic {
     
     public func sum() -> T {
         return _sum(self)
@@ -136,6 +155,17 @@ extension NDArray where T: Arithmetic & ZeroOne {
     
     public func sum(along axis: Int) -> NDArray<T> {
         return _sum(self, along: axis)
+    }
+}
+
+extension NDArray where T: Arithmetic & FloatingPoint {
+    
+    public func mean() -> T {
+        return _mean(self)
+    }
+    
+    public func mean(along axis: Int) -> NDArray<T> {
+        return _mean(self, along: axis)
     }
 }
 
@@ -147,8 +177,13 @@ func _max<T: Comparable>(_ arg: NDArray<T>) -> T {
     return arg.elements.max()!
 }
 
-func _sum<T: Arithmetic & ZeroOne>(_ arg: NDArray<T>) -> T {
-    return arg.elements.reduce(T.zero, +)
+func _sum<T: Arithmetic>(_ arg: NDArray<T>) -> T {
+    let initial = arg.elements.first!
+    return arg.elements.dropFirst().reduce(initial, +)
+}
+
+func _mean<T: Arithmetic & FloatingPoint>(_ arg: NDArray<T>) -> T {
+    return _sum(arg) / T(arg.elements.count)
 }
 
 private func reduce<T>(_ arg: NDArray<T>, along axis: Int, handler: (T, T)->T) -> NDArray<T> {
@@ -199,4 +234,8 @@ func _max<T: Comparable>(_ arg: NDArray<T>, along axis: Int) -> NDArray<T> {
 
 func _sum<T: Arithmetic>(_ arg: NDArray<T>, along axis: Int) -> NDArray<T> {
     return reduce(arg, along: axis, handler: +)
+}
+
+func _mean<T: Arithmetic & FloatingPoint>(_ arg: NDArray<T>, along axis: Int) -> NDArray<T> {
+    return _sum(arg, along: axis) / T(arg.shape[axis])
 }

@@ -61,6 +61,25 @@ class NDArrayReduceTests: XCTestCase {
                                           54, 70, 86]))
     }
     
+    func testMean() {
+        let a = NDArray(shape: [2, 3, 4], elements: (0..<2*3*4).map(Double.init))
+        XCTAssertEqualWithAccuracy(_mean(a), 11.5, accuracy: 1e-5)
+        XCTAssertEqualWithAccuracy(_mean(a, along: 0),
+                                   NDArray(shape: [3, 4],
+                                           elements: [6, 7, 8, 9,
+                                                      10, 11, 12, 13,
+                                                      14, 15,  16, 17]))
+        XCTAssertEqualWithAccuracy(_mean(a, along: 1),
+                                   NDArray(shape: [2, 4],
+                                           elements: [4, 5, 6, 7,
+                                                      16, 17, 18, 19]))
+        
+        XCTAssertEqualWithAccuracy(_mean(a, along: 2),
+                                   NDArray(shape: [2, 3],
+                                           elements: [1.5, 5.5, 9.5,
+                                                      13.5, 17.5, 21.5]))
+    }
+    
     #if os(iOS) || os(OSX)
     
     func testMinAccelerate() {
@@ -180,6 +199,25 @@ class NDArrayReduceTests: XCTestCase {
                                    elements: [6, 22, 38,
                                               54, 70, 86]))
         }
+    }
+    
+    func testMeanAccelerate() {
+        let a = NDArray(shape: [2, 3, 4], elements: (0..<2*3*4).map(Double.init))
+        XCTAssertEqualWithAccuracy(_meanAccelerate(a), 11.5, accuracy: 1e-5)
+        XCTAssertEqualWithAccuracy(_meanAccelerate(a, along: 0),
+                                   NDArray(shape: [3, 4],
+                                           elements: [6, 7, 8, 9,
+                                                      10, 11, 12, 13,
+                                                      14, 15,  16, 17]))
+        XCTAssertEqualWithAccuracy(_meanAccelerate(a, along: 1),
+                                   NDArray(shape: [2, 4],
+                                           elements: [4, 5, 6, 7,
+                                                      16, 17, 18, 19]))
+        
+        XCTAssertEqualWithAccuracy(_meanAccelerate(a, along: 2),
+                                   NDArray(shape: [2, 3],
+                                           elements: [1.5, 5.5, 9.5,
+                                                      13.5, 17.5, 21.5]))
     }
     
     
