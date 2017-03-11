@@ -66,4 +66,10 @@ class NDArrayTransformationTests: XCTestCase {
                                           3,  7, 11, 15, 19, 23]))
     }
     
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testReshape", testReshape),
+            ("testTranspose", testTranspose),
+        ]
+    }
 }

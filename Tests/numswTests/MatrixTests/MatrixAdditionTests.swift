@@ -65,7 +65,7 @@ class MatrixAdditionTests: XCTestCase {
         XCTAssert(error < 0.000001)
     }
     
-    static var allTests: [(String, (MatrixAdditionTests) -> () throws -> Void)] {
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
         return [
             ("testExample", testExample),
             ("testExample2", testExample2),

@@ -222,4 +222,13 @@ class NDArrayReduceTests: XCTestCase {
     
     
     #endif
+    
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testMin", testMin),
+            ("testMax", testMax),
+            ("testSum", testSum),
+            ("testMean", testMean),
+        ]
+    }
 }

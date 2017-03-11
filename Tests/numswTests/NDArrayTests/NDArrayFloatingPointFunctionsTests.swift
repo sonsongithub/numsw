@@ -188,4 +188,15 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
 
     #endif
     
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testSqrt", testSqrt),
+            ("testExp", testExp),
+            ("testLog", testLog),
+            ("testSin", testSin),
+            ("testCos", testCos),
+            ("testTan", testTan),
+        ]
+    }
+    
 }

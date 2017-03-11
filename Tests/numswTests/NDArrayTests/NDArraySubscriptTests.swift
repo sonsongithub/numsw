@@ -58,4 +58,13 @@ class NDArraySubscriptTests: XCTestCase {
         x[nil, [0]] = NDArray(shape: [3, 1], elements: [0, 0, 0])
         XCTAssertEqual(x, NDArray(shape: [3, 2], elements: [0, 0, 0, 4, 0, 6]))
     }
+    
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testSubscriptGetElement", testSubscriptGetElement),
+            ("testSubscriptSetElement", testSubscriptSetElement),
+            ("testSubscriptGetSubarray", testSubscriptGetSubarray),
+            ("testSubscriptSetSubarray", testSubscriptSetSubarray),
+        ]
+    }
 }

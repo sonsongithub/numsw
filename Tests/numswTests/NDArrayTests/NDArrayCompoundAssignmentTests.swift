@@ -85,4 +85,12 @@ class NDArrayCompoundAssignmentTests: XCTestCase {
         }
     }
     
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testAddAsign", testAddAsign),
+            ("testSubtractAsign", testSubtractAsign),
+            ("testMultiplyAsign", testMultiplyAssign),
+        ]
+    }
+    
 }

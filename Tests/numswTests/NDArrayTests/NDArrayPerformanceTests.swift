@@ -66,14 +66,14 @@ class NDArrayPerformanceTests: XCTestCase {
     }
     #endif
     
-    func testSumPerformance() {
+    func testSumPerformance0() {
         let a = NDArray<Double>.linspace(low: 0, high: 1e4, count: 100000)
         measure {
             _sum(a)
         }
     }
     
-    func testSumPerformance2() {
+    func testSumPerformance1() {
         let a = NDArray<Double>.linspace(low: 0, high: 1e4, count: 100000).reshaped([10, 10, 10, 10, 10])
         measure {
             _sum(a, along: 2)
@@ -100,5 +100,19 @@ class NDArrayPerformanceTests: XCTestCase {
         measure {
             NDArray<Double>.normal(mu: 0, sigma: 1, shape: [100, 100])
         }
+    }
+    
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testTransposePerformance", testTransposePerformance),
+            ("testSubscriptSubarrayPerformance", testSubscriptSubarrayPerformance),
+            ("testStackPerformance0", testStackPerformance0),
+            ("testStackPerformance1", testStackPerformance1),
+            ("testDividePerformance", testDividePerformance),
+            ("testSqrtPerformance", testSqrtPerformance),
+            ("testSumPerformance0", testSumPerformance0),
+            ("testSumPerformance1", testSumPerformance1),
+            ("testNormalPerformance", testNormalPerformance),
+        ]
     }
 }

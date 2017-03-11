@@ -10,4 +10,10 @@ class NDArrayRandomTests: XCTestCase {
             XCTAssert(-1 <= e && e < 1)
         }
     }
+    
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testUniform", testUniform),
+        ]
+    }
 }

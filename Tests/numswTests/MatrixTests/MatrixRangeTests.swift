@@ -23,7 +23,7 @@ class MatrixRangeTests: XCTestCase {
         XCTAssertEqual(mat.elements, [0.0, 2, 4, 6, 8])
     }
     
-    static var allTests: [(String, (MatrixRangeTests) -> () throws -> Void)] {
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
         return [
             ("testRange", testRange),
             ("testLinspace", testLinspace),

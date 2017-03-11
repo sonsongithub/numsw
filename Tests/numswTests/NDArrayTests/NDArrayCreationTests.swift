@@ -55,4 +55,14 @@ class NDArrayCreationTests: XCTestCase {
                                                    elements: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]),
                                    accuracy: 1e-10)
     }
+    
+    static var allTests: [(String, (Self) -> () throws -> Void)] {
+        return [
+            ("testZeros", testZeros),
+            ("testOnes", testOnes),
+            ("testEye", testEye),
+            ("testRange", testRange),
+            ("testLinspace", testLinspace),
+        ]
+    }
 }

@@ -17,7 +17,3 @@ func XCTAssertEqualWithAccuracy<T: BinaryFloatingPoint>(_ expression1: NDArray<T
         XCTAssertEqualWithAccuracy(a, b, accuracy: accuracy)
     }
 }
-
-func hoge<T: FloatingPoint>(arg: T = T(1).divided(by: T(10000))) {
-    
-}
