@@ -65,14 +65,31 @@ func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     let cElements = UnsafeMutablePointer<T>.allocate(capacity: count)
     defer { cElements.deallocate(capacity: count) }
     
+    // init
     var ptr = cElements
+    var lp = UnsafePointer(lhs.elements)
+    var rp = UnsafePointer(rhs.elements)
     for i in 0..<m {
         for j in 0..<n {
-            ptr.pointee = lhs[i, 0] * rhs[0, j]
-            for k in 1..<p {
-                ptr.pointee += lhs[i, k] * rhs[k, j]
-            }
+            ptr.pointee = lp[i*p] * rp[j]
             ptr += 1
+        }
+    }
+    
+    // iterate
+    
+    
+    for i in 0..<m {
+        lp = UnsafePointer(lhs.elements) + i*p + 1
+        for k in 1..<p {
+            rp = UnsafePointer(rhs.elements) + k*n
+            ptr = cElements + i*n
+            for _ in 0..<n {
+                ptr.pointee += lp.pointee * rp.pointee
+                rp += 1
+                ptr += 1
+            }
+            lp += 1
         }
     }
     
