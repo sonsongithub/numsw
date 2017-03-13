@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_18"
+               BlueprintIdentifier = "OBJ_73"
                BuildableName = "numsw.framework"
                BlueprintName = "numsw"
                ReferencedContainer = "container:numsw.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_25"
+               BlueprintIdentifier = "OBJ_104"
                BuildableName = "numswTests.xctest"
                BlueprintName = "numswTests"
                ReferencedContainer = "container:numsw.xcodeproj">
@@ -55,7 +55,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_18"
+            BlueprintIdentifier = "OBJ_73"
             BuildableName = "numsw.framework"
             BlueprintName = "numsw"
             ReferencedContainer = "container:numsw.xcodeproj">
