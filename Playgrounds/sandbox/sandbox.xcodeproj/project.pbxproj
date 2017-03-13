@@ -30,16 +30,6 @@
 		D6A0B5DE1E6FE802004AE3B4 /* RenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */; };
 		D6A0B5DF1E6FE802004AE3B4 /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */; };
 		D6A0B5E01E6FE802004AE3B4 /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */; };
-		D6A0B5ED1E6FE866004AE3B4 /* MatrixAdditionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E21E6FE866004AE3B4 /* MatrixAdditionTest.swift */; };
-		D6A0B5EE1E6FE866004AE3B4 /* MatrixBasicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E31E6FE866004AE3B4 /* MatrixBasicTest.swift */; };
-		D6A0B5EF1E6FE866004AE3B4 /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E41E6FE866004AE3B4 /* MatrixDivideTests.swift */; };
-		D6A0B5F01E6FE866004AE3B4 /* MatrixInvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E51E6FE866004AE3B4 /* MatrixInvertTests.swift */; };
-		D6A0B5F11E6FE866004AE3B4 /* MatrixLogarithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E61E6FE866004AE3B4 /* MatrixLogarithmTest.swift */; };
-		D6A0B5F21E6FE866004AE3B4 /* MatrixMultiplyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E71E6FE866004AE3B4 /* MatrixMultiplyTest.swift */; };
-		D6A0B5F31E6FE866004AE3B4 /* MatrixRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E81E6FE866004AE3B4 /* MatrixRangeTests.swift */; };
-		D6A0B5F41E6FE866004AE3B4 /* MatrixSubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5E91E6FE866004AE3B4 /* MatrixSubscriptTests.swift */; };
-		D6A0B5F51E6FE866004AE3B4 /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5EA1E6FE866004AE3B4 /* MatrixTransposeTests.swift */; };
-		D6A0B5F61E6FE866004AE3B4 /* MatrixTrigonometricTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5EB1E6FE866004AE3B4 /* MatrixTrigonometricTest.swift */; };
 		D6A0B5F71E6FE866004AE3B4 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */; };
 		D6A0B6021E6FF00F004AE3B4 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A0B6011E6FF00F004AE3B4 /* numsw.framework */; };
 		D6A0B6031E6FF00F004AE3B4 /* numsw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6A0B6011E6FF00F004AE3B4 /* numsw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -98,16 +88,6 @@
 		D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderTableViewController.swift; path = ../RenderTableViewController.swift; sourceTree = "<group>"; };
 		D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScatterGraph.swift; path = ../ScatterGraph.swift; sourceTree = "<group>"; };
 		D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScatterGraphRenderer.swift; path = ../ScatterGraphRenderer.swift; sourceTree = "<group>"; };
-		D6A0B5E21E6FE866004AE3B4 /* MatrixAdditionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAdditionTest.swift; path = ../../../Tests/numswTests/MatrixAdditionTest.swift; sourceTree = "<group>"; };
-		D6A0B5E31E6FE866004AE3B4 /* MatrixBasicTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixBasicTest.swift; path = ../../../Tests/numswTests/MatrixBasicTest.swift; sourceTree = "<group>"; };
-		D6A0B5E41E6FE866004AE3B4 /* MatrixDivideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixDivideTests.swift; path = ../../../Tests/numswTests/MatrixDivideTests.swift; sourceTree = "<group>"; };
-		D6A0B5E51E6FE866004AE3B4 /* MatrixInvertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixInvertTests.swift; path = ../../../Tests/numswTests/MatrixInvertTests.swift; sourceTree = "<group>"; };
-		D6A0B5E61E6FE866004AE3B4 /* MatrixLogarithmTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixLogarithmTest.swift; path = ../../../Tests/numswTests/MatrixLogarithmTest.swift; sourceTree = "<group>"; };
-		D6A0B5E71E6FE866004AE3B4 /* MatrixMultiplyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixMultiplyTest.swift; path = ../../../Tests/numswTests/MatrixMultiplyTest.swift; sourceTree = "<group>"; };
-		D6A0B5E81E6FE866004AE3B4 /* MatrixRangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixRangeTests.swift; path = ../../../Tests/numswTests/MatrixRangeTests.swift; sourceTree = "<group>"; };
-		D6A0B5E91E6FE866004AE3B4 /* MatrixSubscriptTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixSubscriptTests.swift; path = ../../../Tests/numswTests/MatrixSubscriptTests.swift; sourceTree = "<group>"; };
-		D6A0B5EA1E6FE866004AE3B4 /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTransposeTests.swift; path = ../../../Tests/numswTests/MatrixTransposeTests.swift; sourceTree = "<group>"; };
-		D6A0B5EB1E6FE866004AE3B4 /* MatrixTrigonometricTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTrigonometricTest.swift; path = ../../../Tests/numswTests/MatrixTrigonometricTest.swift; sourceTree = "<group>"; };
 		D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = numswTests.swift; path = ../../../Tests/numswTests/numswTests.swift; sourceTree = "<group>"; };
 		D6A0B6011E6FF00F004AE3B4 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,16 +147,6 @@
 		52E1EE3F1E6A8A2E008D19BB /* sandboxTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6A0B5E21E6FE866004AE3B4 /* MatrixAdditionTest.swift */,
-				D6A0B5E31E6FE866004AE3B4 /* MatrixBasicTest.swift */,
-				D6A0B5E41E6FE866004AE3B4 /* MatrixDivideTests.swift */,
-				D6A0B5E51E6FE866004AE3B4 /* MatrixInvertTests.swift */,
-				D6A0B5E61E6FE866004AE3B4 /* MatrixLogarithmTest.swift */,
-				D6A0B5E71E6FE866004AE3B4 /* MatrixMultiplyTest.swift */,
-				D6A0B5E81E6FE866004AE3B4 /* MatrixRangeTests.swift */,
-				D6A0B5E91E6FE866004AE3B4 /* MatrixSubscriptTests.swift */,
-				D6A0B5EA1E6FE866004AE3B4 /* MatrixTransposeTests.swift */,
-				D6A0B5EB1E6FE866004AE3B4 /* MatrixTrigonometricTest.swift */,
 				D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */,
 				52E1EE421E6A8A2E008D19BB /* Info.plist */,
 			);
@@ -351,17 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A0B5ED1E6FE866004AE3B4 /* MatrixAdditionTest.swift in Sources */,
-				D6A0B5F61E6FE866004AE3B4 /* MatrixTrigonometricTest.swift in Sources */,
-				D6A0B5F31E6FE866004AE3B4 /* MatrixRangeTests.swift in Sources */,
-				D6A0B5EF1E6FE866004AE3B4 /* MatrixDivideTests.swift in Sources */,
-				D6A0B5F21E6FE866004AE3B4 /* MatrixMultiplyTest.swift in Sources */,
-				D6A0B5F41E6FE866004AE3B4 /* MatrixSubscriptTests.swift in Sources */,
-				D6A0B5F11E6FE866004AE3B4 /* MatrixLogarithmTest.swift in Sources */,
-				D6A0B5F51E6FE866004AE3B4 /* MatrixTransposeTests.swift in Sources */,
 				D6A0B5F71E6FE866004AE3B4 /* numswTests.swift in Sources */,
-				D6A0B5F01E6FE866004AE3B4 /* MatrixInvertTests.swift in Sources */,
-				D6A0B5EE1E6FE866004AE3B4 /* MatrixBasicTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
