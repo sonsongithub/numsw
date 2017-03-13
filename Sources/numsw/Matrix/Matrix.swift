@@ -1,4 +1,4 @@
-public struct Matrix {
+public struct Matrix<T> {
     
     public var rows: Int
     public var columns: Int
@@ -6,15 +6,15 @@ public struct Matrix {
         return columns * rows
     }
     
-    public var elements: [Double]
+    public var elements: [T]
     
-    public init(rows: Int, columns: Int, elements: [Double]) {
+    public init(rows: Int, columns: Int, elements: [T]) {
         self.rows = rows
         self.columns = columns
         self.elements = elements
     }
     
-    public init(_ elements: [[Double]]) {
+    public init(_ elements: [[T]]) {
         let rows = elements.count
         precondition(rows > 0, "Matrix must have elements.")
         let columns = elements[0].count
