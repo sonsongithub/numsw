@@ -134,11 +134,9 @@
 		OBJ_61 /* NDArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTests.swift; sourceTree = "<group>"; };
 		OBJ_62 /* NDArrayTransformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTransformationTests.swift; sourceTree = "<group>"; };
 		OBJ_63 /* NDArrayXCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayXCTest.swift; sourceTree = "<group>"; };
-		OBJ_64 /* playbook */ = {isa = PBXFileReference; lastKnownFileType = folder; path = playbook; sourceTree = SOURCE_ROOT; };
 		OBJ_65 /* PlaygroundBook */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PlaygroundBook; sourceTree = SOURCE_ROOT; };
 		OBJ_66 /* Playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playgrounds; sourceTree = SOURCE_ROOT; };
 		OBJ_67 /* Release */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Release; sourceTree = SOURCE_ROOT; };
-		OBJ_68 /* sandbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sandbox; sourceTree = SOURCE_ROOT; };
 		OBJ_69 /* Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tools; sourceTree = SOURCE_ROOT; };
 		OBJ_71 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_72 /* numswTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = numswTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,11 +235,9 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_36 /* Tests */,
-				OBJ_64 /* playbook */,
 				OBJ_65 /* PlaygroundBook */,
 				OBJ_66 /* Playgrounds */,
 				OBJ_67 /* Release */,
-				OBJ_68 /* sandbox */,
 				OBJ_69 /* Tools */,
 				OBJ_70 /* Products */,
 			);
