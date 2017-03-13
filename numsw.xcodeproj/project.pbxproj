@@ -46,7 +46,6 @@
 		OBJ_83 /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* MatrixMultiply.swift */; };
 		OBJ_84 /* MatrixNorm.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* MatrixNorm.swift */; };
 		OBJ_85 /* MatrixRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* MatrixRandom.swift */; };
-		OBJ_86 /* MatrixRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* MatrixRange.swift */; };
 		OBJ_87 /* MatrixSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* MatrixSubscript.swift */; };
 		OBJ_88 /* MatrixTranspose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* MatrixTranspose.swift */; };
 		OBJ_89 /* MatrixTrigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* MatrixTrigonometric.swift */; };
@@ -84,7 +83,6 @@
 		OBJ_15 /* MatrixMultiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
 		OBJ_16 /* MatrixNorm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixNorm.swift; sourceTree = "<group>"; };
 		OBJ_17 /* MatrixRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRandom.swift; sourceTree = "<group>"; };
-		OBJ_18 /* MatrixRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRange.swift; sourceTree = "<group>"; };
 		OBJ_19 /* MatrixSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixSubscript.swift; sourceTree = "<group>"; };
 		OBJ_20 /* MatrixTranspose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTranspose.swift; sourceTree = "<group>"; };
 		OBJ_21 /* MatrixTrigonometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTrigonometric.swift; sourceTree = "<group>"; };
@@ -219,7 +217,7 @@
 			path = MatrixTests;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -233,7 +231,6 @@
 				OBJ_69 /* Tools */,
 				OBJ_70 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* NDArrayTests */ = {
@@ -297,7 +294,6 @@
 				OBJ_15 /* MatrixMultiply.swift */,
 				OBJ_16 /* MatrixNorm.swift */,
 				OBJ_17 /* MatrixRandom.swift */,
-				OBJ_18 /* MatrixRange.swift */,
 				OBJ_19 /* MatrixSubscript.swift */,
 				OBJ_20 /* MatrixTranspose.swift */,
 				OBJ_21 /* MatrixTrigonometric.swift */,
@@ -356,7 +352,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,7 +409,6 @@
 				OBJ_83 /* MatrixMultiply.swift in Sources */,
 				OBJ_84 /* MatrixNorm.swift in Sources */,
 				OBJ_85 /* MatrixRandom.swift in Sources */,
-				OBJ_86 /* MatrixRange.swift in Sources */,
 				A79636B21E763A8100E1022B /* MatrixTransformation.swift in Sources */,
 				OBJ_87 /* MatrixSubscript.swift in Sources */,
 				OBJ_88 /* MatrixTranspose.swift in Sources */,
