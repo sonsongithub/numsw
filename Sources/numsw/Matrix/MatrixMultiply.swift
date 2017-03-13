@@ -50,6 +50,10 @@
     
 #endif
 
+public func *<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
+    return multiply(lhs, rhs)
+}
+
 func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     precondition(lhs.columns == rhs.rows, "Matrices can't multiply.")
     
