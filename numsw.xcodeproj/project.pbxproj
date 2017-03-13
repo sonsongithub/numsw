@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A79636B01E763A5B00E1022B /* MatrixCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636AF1E763A5B00E1022B /* MatrixCreation.swift */; };
+		A79636B21E763A8100E1022B /* MatrixTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636B11E763A8100E1022B /* MatrixTransformation.swift */; };
 		OBJ_100 /* NDArraySubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NDArraySubscript.swift */; };
 		OBJ_101 /* NDArrayTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* NDArrayTransformation.swift */; };
 		OBJ_102 /* NDArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* NDArrayUtils.swift */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A79636AF1E763A5B00E1022B /* MatrixCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCreation.swift; sourceTree = "<group>"; };
+		A79636B11E763A8100E1022B /* MatrixTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransformation.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		OBJ_11 /* MatrixAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAddition.swift; sourceTree = "<group>"; };
 		OBJ_12 /* MatrixDivide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixDivide.swift; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_10 /* Matrix.swift */,
+				A79636AF1E763A5B00E1022B /* MatrixCreation.swift */,
+				A79636B11E763A8100E1022B /* MatrixTransformation.swift */,
 				OBJ_11 /* MatrixAddition.swift */,
 				OBJ_12 /* MatrixDivide.swift */,
 				OBJ_13 /* MatrixInvert.swift */,
@@ -389,12 +395,14 @@
 				OBJ_78 /* Matrix.swift in Sources */,
 				OBJ_79 /* MatrixAddition.swift in Sources */,
 				OBJ_80 /* MatrixDivide.swift in Sources */,
+				A79636B01E763A5B00E1022B /* MatrixCreation.swift in Sources */,
 				OBJ_81 /* MatrixInvert.swift in Sources */,
 				OBJ_82 /* MatrixLogarithm.swift in Sources */,
 				OBJ_83 /* MatrixMultiply.swift in Sources */,
 				OBJ_84 /* MatrixNorm.swift in Sources */,
 				OBJ_85 /* MatrixRandom.swift in Sources */,
 				OBJ_86 /* MatrixRange.swift in Sources */,
+				A79636B21E763A8100E1022B /* MatrixTransformation.swift in Sources */,
 				OBJ_87 /* MatrixSubscript.swift in Sources */,
 				OBJ_88 /* MatrixTranspose.swift in Sources */,
 				OBJ_89 /* MatrixTrigonometric.swift in Sources */,
