@@ -15,6 +15,7 @@
 		A79636BB1E7666BD00E1022B /* MatrixUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636BA1E7666BD00E1022B /* MatrixUtils.swift */; };
 		A79636BD1E766BC400E1022B /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636BC1E766BC400E1022B /* Arithmetic.swift */; };
 		A79636C31E767BC200E1022B /* MatrixArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C21E767BC200E1022B /* MatrixArithmetic.swift */; };
+		A79636C51E767CFD00E1022B /* MatrixArithmeticAccelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */; };
 		OBJ_100 /* NDArraySubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NDArraySubscript.swift */; };
 		OBJ_101 /* NDArrayTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* NDArrayTransformation.swift */; };
 		OBJ_102 /* NDArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* NDArrayUtils.swift */; };
@@ -81,6 +82,7 @@
 		A79636BA1E7666BD00E1022B /* MatrixUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixUtils.swift; sourceTree = "<group>"; };
 		A79636BC1E766BC400E1022B /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
 		A79636C21E767BC200E1022B /* MatrixArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmetic.swift; sourceTree = "<group>"; };
+		A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmeticAccelerate.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		OBJ_13 /* MatrixInvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInvert.swift; sourceTree = "<group>"; };
 		OBJ_15 /* MatrixMultiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				A79636B81E76666400E1022B /* MatrixFloatingPointFunctions.swift */,
 				A79636BA1E7666BD00E1022B /* MatrixUtils.swift */,
 				A79636C21E767BC200E1022B /* MatrixArithmetic.swift */,
+				A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */,
 			);
 			path = Matrix;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				OBJ_99 /* NDArrayStack.swift in Sources */,
 				OBJ_100 /* NDArraySubscript.swift in Sources */,
 				OBJ_101 /* NDArrayTransformation.swift in Sources */,
+				A79636C51E767CFD00E1022B /* MatrixArithmeticAccelerate.swift in Sources */,
 				OBJ_102 /* NDArrayUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
