@@ -1,25 +1,26 @@
-//import Foundation
-//
-//func _uniform(low: Double = 0, high: Double = 1) -> Double {
-//    return (high-low)*(Double(arc4random_uniform(UInt32.max)) / Double(UInt32.max))+low
-//}
-//
-//func _normal(mu: Double = 0, sigma: Double = 1) -> Double {
-//    let u = (_uniform(), _uniform())
-//    let x = sqrt(-2*log(u.0)) * cos(2*M_PI*u.1)
-//    return sigma*x + mu
-//}
-//
-//extension Matrix {
-//    public static func uniform(rows: Int, columns: Int, low: Double = 0, high: Double = 1) -> Matrix {
-//        return Matrix(rows: rows,
-//                      columns: columns,
-//                      elements: (0..<rows*columns).map { _ in _uniform(low: low, high: high) })
-//    }
-//    
-//    public static func normal(rows: Int, columns: Int, mu: Double = 0, sigma: Double = 1) -> Matrix {
-//        return Matrix(rows: rows,
-//                      columns: columns,
-//                      elements: (0..<rows*columns).map { _ in _normal(mu: mu, sigma: sigma) })
-//    }
-//}
+
+import Foundation
+
+extension Matrix where T: FloatingPointFunctions & FloatingPoint {
+    
+    public static func uniform(low: T = 0, high: T = 1, rows: Int, columns: Int) -> Matrix<T> {
+        let count = rows * columns
+        let elements = (0..<count).map { _ in _uniform(low: low, high: high) }
+        
+        return Matrix<T>(rows: rows,
+                         columns: columns,
+                         elements: elements)
+    }
+}
+
+extension Matrix where T: FloatingPoint & FloatingPointFunctions & Arithmetic {
+    
+    public static func normal(mu: T = 0, sigma: T = 0, rows: Int, columns: Int) -> Matrix<T> {
+        let u1 = uniform(low: T(0), high: T(1), rows: rows, columns: columns)
+        let u2 = uniform(low: T(0), high: T(1), rows: rows, columns: columns)
+        
+        let stdNormal =  sqrt(-2*log(u1)) .* cos(2*T.pi*u2)
+        
+        return stdNormal*sigma + mu
+    }
+}
