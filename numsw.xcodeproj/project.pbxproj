@@ -7,235 +7,337 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_32 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* numsw.framework */; };
+		A79636B01E763A5B00E1022B /* MatrixCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636AF1E763A5B00E1022B /* MatrixCreation.swift */; };
+		A79636B21E763A8100E1022B /* MatrixTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636B11E763A8100E1022B /* MatrixTransformation.swift */; };
+		A79636B51E763CEF00E1022B /* ZeroOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636B41E763CEF00E1022B /* ZeroOne.swift */; };
+		A79636B71E7665F700E1022B /* FloatingPointFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636B61E7665F700E1022B /* FloatingPointFunctions.swift */; };
+		A79636B91E76666400E1022B /* MatrixFloatingPointFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636B81E76666400E1022B /* MatrixFloatingPointFunctions.swift */; };
+		A79636BB1E7666BD00E1022B /* MatrixUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636BA1E7666BD00E1022B /* MatrixUtils.swift */; };
+		A79636BD1E766BC400E1022B /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636BC1E766BC400E1022B /* Arithmetic.swift */; };
+		A79636C31E767BC200E1022B /* MatrixArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C21E767BC200E1022B /* MatrixArithmetic.swift */; };
+		A79636C51E767CFD00E1022B /* MatrixArithmeticAccelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */; };
+		A79636C71E76843500E1022B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C61E76843500E1022B /* Utils.swift */; };
+		A79636C91E768AE900E1022B /* FloatDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C81E768AE900E1022B /* FloatDouble.swift */; };
+		A79636CB1E768E6000E1022B /* MatrixCompoundAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636CA1E768E6000E1022B /* MatrixCompoundAssignment.swift */; };
+		A79636CF1E768F6A00E1022B /* MatrixXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */; };
+		A79636D31E7694BC00E1022B /* MatrixCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */; };
+		A79636D51E76992800E1022B /* MatrixTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D41E76992800E1022B /* MatrixTransformationTests.swift */; };
+		A79636D71E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D61E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift */; };
+		A79636D91E769BC900E1022B /* MatrixArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D81E769BC900E1022B /* MatrixArithmeticTests.swift */; };
+		OBJ_100 /* NDArraySubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NDArraySubscript.swift */; };
+		OBJ_101 /* NDArrayTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* NDArrayTransformation.swift */; };
+		OBJ_102 /* NDArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* NDArrayUtils.swift */; };
+		OBJ_109 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* numswTests.swift */; };
+		OBJ_113 /* MatrixInvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* MatrixInvertTests.swift */; };
+		OBJ_115 /* MatrixMultiplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* MatrixMultiplyTests.swift */; };
+		OBJ_116 /* MatrixRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* MatrixRangeTests.swift */; };
+		OBJ_117 /* MatrixSubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* MatrixSubscriptTests.swift */; };
+		OBJ_118 /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* MatrixTransposeTests.swift */; };
+		OBJ_120 /* NDArrayArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* NDArrayArithmeticTests.swift */; };
+		OBJ_121 /* NDArrayBoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* NDArrayBoolTests.swift */; };
+		OBJ_122 /* NDArrayCompoundAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* NDArrayCompoundAssignmentTests.swift */; };
+		OBJ_123 /* NDArrayCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* NDArrayCreationTests.swift */; };
+		OBJ_124 /* NDArrayFloatingPointFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* NDArrayFloatingPointFunctionsTests.swift */; };
+		OBJ_125 /* NDArrayPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* NDArrayPerformanceTests.swift */; };
+		OBJ_126 /* NDArrayRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* NDArrayRandomTests.swift */; };
+		OBJ_127 /* NDArrayReduceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* NDArrayReduceTests.swift */; };
+		OBJ_128 /* NDArrayStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* NDArrayStackTests.swift */; };
+		OBJ_129 /* NDArraySubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* NDArraySubscriptTests.swift */; };
+		OBJ_130 /* NDArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* NDArrayTests.swift */; };
+		OBJ_131 /* NDArrayTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* NDArrayTransformationTests.swift */; };
+		OBJ_132 /* NDArrayXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* NDArrayXCTest.swift */; };
+		OBJ_134 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* numsw.framework */; };
+		OBJ_78 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Matrix.swift */; };
+		OBJ_81 /* MatrixInvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* MatrixInvert.swift */; };
+		OBJ_83 /* MatrixMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* MatrixMultiply.swift */; };
+		OBJ_84 /* MatrixNorm.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* MatrixNorm.swift */; };
+		OBJ_85 /* MatrixRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* MatrixRandom.swift */; };
+		OBJ_87 /* MatrixSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* MatrixSubscript.swift */; };
+		OBJ_88 /* MatrixTranspose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* MatrixTranspose.swift */; };
+		OBJ_90 /* NDArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* NDArray.swift */; };
+		OBJ_91 /* NDArrayArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* NDArrayArithmetic.swift */; };
+		OBJ_92 /* NDArrayArithmeticAccelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* NDArrayArithmeticAccelerate.swift */; };
+		OBJ_93 /* NDArrayBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* NDArrayBool.swift */; };
+		OBJ_94 /* NDArrayCompoundAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* NDArrayCompoundAssignment.swift */; };
+		OBJ_95 /* NDArrayCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* NDArrayCreation.swift */; };
+		OBJ_96 /* NDArrayFloatingPointFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* NDArrayFloatingPointFunctions.swift */; };
+		OBJ_97 /* NDArrayRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* NDArrayRandom.swift */; };
+		OBJ_98 /* NDArrayReduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* NDArrayReduce.swift */; };
+		OBJ_99 /* NDArrayStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* NDArrayStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1453FBC61E6A5D4800633F32 /* PBXContainerItemProxy */ = {
+		A79636AE1E7639C900E1022B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_18;
+			remoteGlobalIDString = OBJ_73;
 			remoteInfo = numsw;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A79636771E740DE500E1022B /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
-		A79636781E740DE500E1022B /* MatrixAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAddition.swift; sourceTree = "<group>"; };
-		A79636791E740DE500E1022B /* MatrixDivide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixDivide.swift; sourceTree = "<group>"; };
-		A796367A1E740DE500E1022B /* MatrixInvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInvert.swift; sourceTree = "<group>"; };
-		A796367B1E740DE500E1022B /* MatrixLogarithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixLogarithm.swift; sourceTree = "<group>"; };
-		A796367C1E740DE500E1022B /* MatrixMultiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
-		A796367D1E740DE500E1022B /* MatrixNorm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixNorm.swift; sourceTree = "<group>"; };
-		A796367E1E740DE500E1022B /* MatrixRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRandom.swift; sourceTree = "<group>"; };
-		A796367F1E740DE500E1022B /* MatrixRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRange.swift; sourceTree = "<group>"; };
-		A79636801E740DE500E1022B /* MatrixSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixSubscript.swift; sourceTree = "<group>"; };
-		A79636811E740DE500E1022B /* MatrixTranspose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTranspose.swift; sourceTree = "<group>"; };
-		A79636821E740DE500E1022B /* MatrixTrigonometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTrigonometric.swift; sourceTree = "<group>"; };
-		A79636841E740DE500E1022B /* NDArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArray.swift; sourceTree = "<group>"; };
-		A79636851E740DE500E1022B /* NDArrayArithmetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayArithmetic.swift; sourceTree = "<group>"; };
-		A79636861E740DE500E1022B /* NDArrayArithmeticAccelerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayArithmeticAccelerate.swift; sourceTree = "<group>"; };
-		A79636871E740DE500E1022B /* NDArrayBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayBool.swift; sourceTree = "<group>"; };
-		A79636881E740DE500E1022B /* NDArrayCompoundAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCompoundAssignment.swift; sourceTree = "<group>"; };
-		A79636891E740DE500E1022B /* NDArrayCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCreation.swift; sourceTree = "<group>"; };
-		A796368A1E740DE500E1022B /* NDArrayFloatingPointFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayFloatingPointFunctions.swift; sourceTree = "<group>"; };
-		A796368B1E740DE500E1022B /* NDArrayRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayRandom.swift; sourceTree = "<group>"; };
-		A796368C1E740DE500E1022B /* NDArrayReduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayReduce.swift; sourceTree = "<group>"; };
-		A796368D1E740DE500E1022B /* NDArrayStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayStack.swift; sourceTree = "<group>"; };
-		A796368E1E740DE500E1022B /* NDArraySubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArraySubscript.swift; sourceTree = "<group>"; };
-		A796368F1E740DE500E1022B /* NDArrayTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTransformation.swift; sourceTree = "<group>"; };
-		A79636901E740DE500E1022B /* NDArrayUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayUtils.swift; sourceTree = "<group>"; };
-		A79636931E740DF400E1022B /* MatrixAdditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAdditionTests.swift; sourceTree = "<group>"; };
-		A79636941E740DF400E1022B /* MatrixBasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixBasicTests.swift; sourceTree = "<group>"; };
-		A79636951E740DF400E1022B /* MatrixDivideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixDivideTests.swift; sourceTree = "<group>"; };
-		A79636961E740DF400E1022B /* MatrixInvertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInvertTests.swift; sourceTree = "<group>"; };
-		A79636971E740DF400E1022B /* MatrixLogarithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixLogarithmTests.swift; sourceTree = "<group>"; };
-		A79636981E740DF400E1022B /* MatrixMultiplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTests.swift; sourceTree = "<group>"; };
-		A79636991E740DF400E1022B /* MatrixRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRangeTests.swift; sourceTree = "<group>"; };
-		A796369A1E740DF400E1022B /* MatrixSubscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixSubscriptTests.swift; sourceTree = "<group>"; };
-		A796369B1E740DF400E1022B /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTransposeTests.swift; sourceTree = "<group>"; };
-		A796369C1E740DF400E1022B /* MatrixTrigonometricTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTrigonometricTests.swift; sourceTree = "<group>"; };
-		A796369E1E740DF400E1022B /* NDArrayArithmeticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayArithmeticTests.swift; sourceTree = "<group>"; };
-		A796369F1E740DF400E1022B /* NDArrayBoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayBoolTests.swift; sourceTree = "<group>"; };
-		A79636A01E740DF400E1022B /* NDArrayCompoundAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCompoundAssignmentTests.swift; sourceTree = "<group>"; };
-		A79636A11E740DF400E1022B /* NDArrayCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCreationTests.swift; sourceTree = "<group>"; };
-		A79636A21E740DF400E1022B /* NDArrayFloatingPointFunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayFloatingPointFunctionsTests.swift; sourceTree = "<group>"; };
-		A79636A31E740DF400E1022B /* NDArrayPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayPerformanceTests.swift; sourceTree = "<group>"; };
-		A79636A41E740DF400E1022B /* NDArrayRandomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayRandomTests.swift; sourceTree = "<group>"; };
-		A79636A51E740DF400E1022B /* NDArrayReduceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayReduceTests.swift; sourceTree = "<group>"; };
-		A79636A61E740DF400E1022B /* NDArrayStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayStackTests.swift; sourceTree = "<group>"; };
-		A79636A71E740DF400E1022B /* NDArraySubscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArraySubscriptTests.swift; sourceTree = "<group>"; };
-		A79636A81E740DF400E1022B /* NDArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTests.swift; sourceTree = "<group>"; };
-		A79636A91E740DF400E1022B /* NDArrayTransformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTransformationTests.swift; sourceTree = "<group>"; };
-		A79636AA1E740DF400E1022B /* NDArrayXCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayXCTest.swift; sourceTree = "<group>"; };
-		A79636AB1E740DF400E1022B /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
-		OBJ_13 /* playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = playgrounds; sourceTree = SOURCE_ROOT; };
-		OBJ_16 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_17 /* numswTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = numswTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79636AF1E763A5B00E1022B /* MatrixCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCreation.swift; sourceTree = "<group>"; };
+		A79636B11E763A8100E1022B /* MatrixTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransformation.swift; sourceTree = "<group>"; };
+		A79636B41E763CEF00E1022B /* ZeroOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroOne.swift; sourceTree = "<group>"; };
+		A79636B61E7665F700E1022B /* FloatingPointFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingPointFunctions.swift; sourceTree = "<group>"; };
+		A79636B81E76666400E1022B /* MatrixFloatingPointFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixFloatingPointFunctions.swift; sourceTree = "<group>"; };
+		A79636BA1E7666BD00E1022B /* MatrixUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixUtils.swift; sourceTree = "<group>"; };
+		A79636BC1E766BC400E1022B /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
+		A79636C21E767BC200E1022B /* MatrixArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmetic.swift; sourceTree = "<group>"; };
+		A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmeticAccelerate.swift; sourceTree = "<group>"; };
+		A79636C61E76843500E1022B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A79636C81E768AE900E1022B /* FloatDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatDouble.swift; sourceTree = "<group>"; };
+		A79636CA1E768E6000E1022B /* MatrixCompoundAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCompoundAssignment.swift; sourceTree = "<group>"; };
+		A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixXCTest.swift; sourceTree = "<group>"; };
+		A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCreationTests.swift; sourceTree = "<group>"; };
+		A79636D41E76992800E1022B /* MatrixTransformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransformationTests.swift; sourceTree = "<group>"; };
+		A79636D61E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixFloatingPointFunctionsTests.swift; sourceTree = "<group>"; };
+		A79636D81E769BC900E1022B /* MatrixArithmeticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmeticTests.swift; sourceTree = "<group>"; };
+		OBJ_10 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		OBJ_13 /* MatrixInvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInvert.swift; sourceTree = "<group>"; };
+		OBJ_15 /* MatrixMultiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
+		OBJ_16 /* MatrixNorm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixNorm.swift; sourceTree = "<group>"; };
+		OBJ_17 /* MatrixRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRandom.swift; sourceTree = "<group>"; };
+		OBJ_19 /* MatrixSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixSubscript.swift; sourceTree = "<group>"; };
+		OBJ_20 /* MatrixTranspose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTranspose.swift; sourceTree = "<group>"; };
+		OBJ_23 /* NDArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArray.swift; sourceTree = "<group>"; };
+		OBJ_24 /* NDArrayArithmetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayArithmetic.swift; sourceTree = "<group>"; };
+		OBJ_25 /* NDArrayArithmeticAccelerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayArithmeticAccelerate.swift; sourceTree = "<group>"; };
+		OBJ_26 /* NDArrayBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayBool.swift; sourceTree = "<group>"; };
+		OBJ_27 /* NDArrayCompoundAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCompoundAssignment.swift; sourceTree = "<group>"; };
+		OBJ_28 /* NDArrayCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCreation.swift; sourceTree = "<group>"; };
+		OBJ_29 /* NDArrayFloatingPointFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayFloatingPointFunctions.swift; sourceTree = "<group>"; };
+		OBJ_30 /* NDArrayRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayRandom.swift; sourceTree = "<group>"; };
+		OBJ_31 /* NDArrayReduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayReduce.swift; sourceTree = "<group>"; };
+		OBJ_32 /* NDArrayStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayStack.swift; sourceTree = "<group>"; };
+		OBJ_33 /* NDArraySubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArraySubscript.swift; sourceTree = "<group>"; };
+		OBJ_34 /* NDArrayTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTransformation.swift; sourceTree = "<group>"; };
+		OBJ_35 /* NDArrayUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayUtils.swift; sourceTree = "<group>"; };
+		OBJ_38 /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
+		OBJ_43 /* MatrixInvertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInvertTests.swift; sourceTree = "<group>"; };
+		OBJ_45 /* MatrixMultiplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTests.swift; sourceTree = "<group>"; };
+		OBJ_46 /* MatrixRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRangeTests.swift; sourceTree = "<group>"; };
+		OBJ_47 /* MatrixSubscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixSubscriptTests.swift; sourceTree = "<group>"; };
+		OBJ_48 /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTransposeTests.swift; sourceTree = "<group>"; };
+		OBJ_51 /* NDArrayArithmeticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayArithmeticTests.swift; sourceTree = "<group>"; };
+		OBJ_52 /* NDArrayBoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayBoolTests.swift; sourceTree = "<group>"; };
+		OBJ_53 /* NDArrayCompoundAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCompoundAssignmentTests.swift; sourceTree = "<group>"; };
+		OBJ_54 /* NDArrayCreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCreationTests.swift; sourceTree = "<group>"; };
+		OBJ_55 /* NDArrayFloatingPointFunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayFloatingPointFunctionsTests.swift; sourceTree = "<group>"; };
+		OBJ_56 /* NDArrayPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayPerformanceTests.swift; sourceTree = "<group>"; };
+		OBJ_57 /* NDArrayRandomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayRandomTests.swift; sourceTree = "<group>"; };
+		OBJ_58 /* NDArrayReduceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayReduceTests.swift; sourceTree = "<group>"; };
+		OBJ_59 /* NDArrayStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayStackTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* NDArraySubscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArraySubscriptTests.swift; sourceTree = "<group>"; };
+		OBJ_61 /* NDArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTests.swift; sourceTree = "<group>"; };
+		OBJ_62 /* NDArrayTransformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTransformationTests.swift; sourceTree = "<group>"; };
+		OBJ_63 /* NDArrayXCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayXCTest.swift; sourceTree = "<group>"; };
+		OBJ_65 /* PlaygroundBook */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PlaygroundBook; sourceTree = SOURCE_ROOT; };
+		OBJ_66 /* Playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playgrounds; sourceTree = SOURCE_ROOT; };
+		OBJ_67 /* Release */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Release; sourceTree = SOURCE_ROOT; };
+		OBJ_69 /* Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tools; sourceTree = SOURCE_ROOT; };
+		OBJ_71 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_72 /* numswTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = numswTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_24 /* Frameworks */ = {
+		OBJ_103 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_31 /* Frameworks */ = {
+		OBJ_133 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_32 /* numsw.framework in Frameworks */,
+				OBJ_134 /* numsw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A79636751E740DE500E1022B /* numsw */ = {
+		A79636B31E763CDD00E1022B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A79636761E740DE500E1022B /* Matrix */,
-				A79636831E740DE500E1022B /* NDArray */,
+				A79636B41E763CEF00E1022B /* ZeroOne.swift */,
+				A79636B61E7665F700E1022B /* FloatingPointFunctions.swift */,
+				A79636BC1E766BC400E1022B /* Arithmetic.swift */,
+				A79636C61E76843500E1022B /* Utils.swift */,
+				A79636C81E768AE900E1022B /* FloatDouble.swift */,
 			);
-			path = numsw;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		A79636761E740DE500E1022B /* Matrix */ = {
+		OBJ_22 /* NDArray */ = {
 			isa = PBXGroup;
 			children = (
-				A79636771E740DE500E1022B /* Matrix.swift */,
-				A79636781E740DE500E1022B /* MatrixAddition.swift */,
-				A79636791E740DE500E1022B /* MatrixDivide.swift */,
-				A796367A1E740DE500E1022B /* MatrixInvert.swift */,
-				A796367B1E740DE500E1022B /* MatrixLogarithm.swift */,
-				A796367C1E740DE500E1022B /* MatrixMultiply.swift */,
-				A796367D1E740DE500E1022B /* MatrixNorm.swift */,
-				A796367E1E740DE500E1022B /* MatrixRandom.swift */,
-				A796367F1E740DE500E1022B /* MatrixRange.swift */,
-				A79636801E740DE500E1022B /* MatrixSubscript.swift */,
-				A79636811E740DE500E1022B /* MatrixTranspose.swift */,
-				A79636821E740DE500E1022B /* MatrixTrigonometric.swift */,
-			);
-			path = Matrix;
-			sourceTree = "<group>";
-		};
-		A79636831E740DE500E1022B /* NDArray */ = {
-			isa = PBXGroup;
-			children = (
-				A79636841E740DE500E1022B /* NDArray.swift */,
-				A79636851E740DE500E1022B /* NDArrayArithmetic.swift */,
-				A79636861E740DE500E1022B /* NDArrayArithmeticAccelerate.swift */,
-				A79636871E740DE500E1022B /* NDArrayBool.swift */,
-				A79636881E740DE500E1022B /* NDArrayCompoundAssignment.swift */,
-				A79636891E740DE500E1022B /* NDArrayCreation.swift */,
-				A796368A1E740DE500E1022B /* NDArrayFloatingPointFunctions.swift */,
-				A796368B1E740DE500E1022B /* NDArrayRandom.swift */,
-				A796368C1E740DE500E1022B /* NDArrayReduce.swift */,
-				A796368D1E740DE500E1022B /* NDArrayStack.swift */,
-				A796368E1E740DE500E1022B /* NDArraySubscript.swift */,
-				A796368F1E740DE500E1022B /* NDArrayTransformation.swift */,
-				A79636901E740DE500E1022B /* NDArrayUtils.swift */,
+				OBJ_23 /* NDArray.swift */,
+				OBJ_24 /* NDArrayArithmetic.swift */,
+				OBJ_25 /* NDArrayArithmeticAccelerate.swift */,
+				OBJ_26 /* NDArrayBool.swift */,
+				OBJ_27 /* NDArrayCompoundAssignment.swift */,
+				OBJ_28 /* NDArrayCreation.swift */,
+				OBJ_29 /* NDArrayFloatingPointFunctions.swift */,
+				OBJ_30 /* NDArrayRandom.swift */,
+				OBJ_31 /* NDArrayReduce.swift */,
+				OBJ_32 /* NDArrayStack.swift */,
+				OBJ_33 /* NDArraySubscript.swift */,
+				OBJ_34 /* NDArrayTransformation.swift */,
+				OBJ_35 /* NDArrayUtils.swift */,
 			);
 			path = NDArray;
 			sourceTree = "<group>";
 		};
-		A79636911E740DF400E1022B /* numswTests */ = {
+		OBJ_36 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A79636921E740DF400E1022B /* MatrixTests */,
-				A796369D1E740DF400E1022B /* NDArrayTests */,
-				A79636AB1E740DF400E1022B /* numswTests.swift */,
-			);
-			path = numswTests;
-			sourceTree = "<group>";
-		};
-		A79636921E740DF400E1022B /* MatrixTests */ = {
-			isa = PBXGroup;
-			children = (
-				A79636931E740DF400E1022B /* MatrixAdditionTests.swift */,
-				A79636941E740DF400E1022B /* MatrixBasicTests.swift */,
-				A79636951E740DF400E1022B /* MatrixDivideTests.swift */,
-				A79636961E740DF400E1022B /* MatrixInvertTests.swift */,
-				A79636971E740DF400E1022B /* MatrixLogarithmTests.swift */,
-				A79636981E740DF400E1022B /* MatrixMultiplyTests.swift */,
-				A79636991E740DF400E1022B /* MatrixRangeTests.swift */,
-				A796369A1E740DF400E1022B /* MatrixSubscriptTests.swift */,
-				A796369B1E740DF400E1022B /* MatrixTransposeTests.swift */,
-				A796369C1E740DF400E1022B /* MatrixTrigonometricTests.swift */,
-			);
-			path = MatrixTests;
-			sourceTree = "<group>";
-		};
-		A796369D1E740DF400E1022B /* NDArrayTests */ = {
-			isa = PBXGroup;
-			children = (
-				A796369E1E740DF400E1022B /* NDArrayArithmeticTests.swift */,
-				A796369F1E740DF400E1022B /* NDArrayBoolTests.swift */,
-				A79636A01E740DF400E1022B /* NDArrayCompoundAssignmentTests.swift */,
-				A79636A11E740DF400E1022B /* NDArrayCreationTests.swift */,
-				A79636A21E740DF400E1022B /* NDArrayFloatingPointFunctionsTests.swift */,
-				A79636A31E740DF400E1022B /* NDArrayPerformanceTests.swift */,
-				A79636A41E740DF400E1022B /* NDArrayRandomTests.swift */,
-				A79636A51E740DF400E1022B /* NDArrayReduceTests.swift */,
-				A79636A61E740DF400E1022B /* NDArrayStackTests.swift */,
-				A79636A71E740DF400E1022B /* NDArraySubscriptTests.swift */,
-				A79636A81E740DF400E1022B /* NDArrayTests.swift */,
-				A79636A91E740DF400E1022B /* NDArrayTransformationTests.swift */,
-				A79636AA1E740DF400E1022B /* NDArrayXCTest.swift */,
-			);
-			path = NDArrayTests;
-			sourceTree = "<group>";
-		};
-		OBJ_10 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A79636911E740DF400E1022B /* numswTests */,
+				OBJ_37 /* numswTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		OBJ_15 /* Products */ = {
+		OBJ_37 /* numswTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* numsw.framework */,
-				OBJ_17 /* numswTests.xctest */,
+				OBJ_38 /* numswTests.swift */,
+				OBJ_39 /* MatrixTests */,
+				OBJ_50 /* NDArrayTests */,
 			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
+			name = numswTests;
+			path = Tests/numswTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_39 /* MatrixTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* MatrixInvertTests.swift */,
+				OBJ_45 /* MatrixMultiplyTests.swift */,
+				OBJ_46 /* MatrixRangeTests.swift */,
+				OBJ_47 /* MatrixSubscriptTests.swift */,
+				OBJ_48 /* MatrixTransposeTests.swift */,
+				A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */,
+				A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */,
+				A79636D41E76992800E1022B /* MatrixTransformationTests.swift */,
+				A79636D61E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift */,
+				A79636D81E769BC900E1022B /* MatrixArithmeticTests.swift */,
+			);
+			path = MatrixTests;
+			sourceTree = "<group>";
 		};
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_10 /* Tests */,
-				OBJ_13 /* playgrounds */,
-				OBJ_15 /* Products */,
+				OBJ_36 /* Tests */,
+				OBJ_65 /* PlaygroundBook */,
+				OBJ_66 /* Playgrounds */,
+				OBJ_67 /* Release */,
+				OBJ_69 /* Tools */,
+				OBJ_70 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		OBJ_50 /* NDArrayTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* NDArrayArithmeticTests.swift */,
+				OBJ_52 /* NDArrayBoolTests.swift */,
+				OBJ_53 /* NDArrayCompoundAssignmentTests.swift */,
+				OBJ_54 /* NDArrayCreationTests.swift */,
+				OBJ_55 /* NDArrayFloatingPointFunctionsTests.swift */,
+				OBJ_56 /* NDArrayPerformanceTests.swift */,
+				OBJ_57 /* NDArrayRandomTests.swift */,
+				OBJ_58 /* NDArrayReduceTests.swift */,
+				OBJ_59 /* NDArrayStackTests.swift */,
+				OBJ_60 /* NDArraySubscriptTests.swift */,
+				OBJ_61 /* NDArrayTests.swift */,
+				OBJ_62 /* NDArrayTransformationTests.swift */,
+				OBJ_63 /* NDArrayXCTest.swift */,
+			);
+			path = NDArrayTests;
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A79636751E740DE500E1022B /* numsw */,
+				OBJ_8 /* numsw */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		OBJ_70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_71 /* numsw.framework */,
+				OBJ_72 /* numswTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_8 /* numsw */ = {
+			isa = PBXGroup;
+			children = (
+				A79636B31E763CDD00E1022B /* Common */,
+				OBJ_9 /* Matrix */,
+				OBJ_22 /* NDArray */,
+			);
+			name = numsw;
+			path = Sources/numsw;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* Matrix.swift */,
+				A79636AF1E763A5B00E1022B /* MatrixCreation.swift */,
+				A79636B11E763A8100E1022B /* MatrixTransformation.swift */,
+				OBJ_13 /* MatrixInvert.swift */,
+				OBJ_15 /* MatrixMultiply.swift */,
+				OBJ_16 /* MatrixNorm.swift */,
+				OBJ_17 /* MatrixRandom.swift */,
+				OBJ_19 /* MatrixSubscript.swift */,
+				OBJ_20 /* MatrixTranspose.swift */,
+				A79636B81E76666400E1022B /* MatrixFloatingPointFunctions.swift */,
+				A79636BA1E7666BD00E1022B /* MatrixUtils.swift */,
+				A79636C21E767BC200E1022B /* MatrixArithmetic.swift */,
+				A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */,
+				A79636CA1E768E6000E1022B /* MatrixCompoundAssignment.swift */,
+			);
+			path = Matrix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		OBJ_18 /* numsw */ = {
+		OBJ_104 /* numswTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_19 /* Build configuration list for PBXNativeTarget "numsw" */;
+			buildConfigurationList = OBJ_105 /* Build configuration list for PBXNativeTarget "numswTests" */;
 			buildPhases = (
-				1453FBC71E6A632300633F32 /* Swiftlint */,
-				OBJ_22 /* Sources */,
-				OBJ_24 /* Frameworks */,
+				OBJ_108 /* Sources */,
+				OBJ_133 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_135 /* PBXTargetDependency */,
+			);
+			name = numswTests;
+			productName = numswTests;
+			productReference = OBJ_72 /* numswTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		OBJ_73 /* numsw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_74 /* Build configuration list for PBXNativeTarget "numsw" */;
+			buildPhases = (
+				OBJ_77 /* Sources */,
+				OBJ_103 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,25 +345,8 @@
 			);
 			name = numsw;
 			productName = numsw;
-			productReference = OBJ_16 /* numsw.framework */;
+			productReference = OBJ_71 /* numsw.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		OBJ_25 /* numswTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_26 /* Build configuration list for PBXNativeTarget "numswTests" */;
-			buildPhases = (
-				OBJ_29 /* Sources */,
-				OBJ_31 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_33 /* PBXTargetDependency */,
-			);
-			name = numswTests;
-			productName = numswTests;
-			productReference = OBJ_17 /* numswTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -279,100 +364,99 @@
 				en,
 			);
 			mainGroup = OBJ_5;
-			productRefGroup = OBJ_15 /* Products */;
+			productRefGroup = OBJ_70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_18 /* numsw */,
-				OBJ_25 /* numswTests */,
+				OBJ_73 /* numsw */,
+				OBJ_104 /* numswTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1453FBC71E6A632300633F32 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\necho \"SwiftLint\"\nswiftlint autocorrect\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_22 /* Sources */ = {
+		OBJ_108 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_109 /* numswTests.swift in Sources */,
+				OBJ_113 /* MatrixInvertTests.swift in Sources */,
+				OBJ_115 /* MatrixMultiplyTests.swift in Sources */,
+				OBJ_116 /* MatrixRangeTests.swift in Sources */,
+				OBJ_117 /* MatrixSubscriptTests.swift in Sources */,
+				OBJ_118 /* MatrixTransposeTests.swift in Sources */,
+				OBJ_120 /* NDArrayArithmeticTests.swift in Sources */,
+				OBJ_121 /* NDArrayBoolTests.swift in Sources */,
+				A79636D71E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift in Sources */,
+				OBJ_122 /* NDArrayCompoundAssignmentTests.swift in Sources */,
+				OBJ_123 /* NDArrayCreationTests.swift in Sources */,
+				OBJ_124 /* NDArrayFloatingPointFunctionsTests.swift in Sources */,
+				OBJ_125 /* NDArrayPerformanceTests.swift in Sources */,
+				A79636CF1E768F6A00E1022B /* MatrixXCTest.swift in Sources */,
+				OBJ_126 /* NDArrayRandomTests.swift in Sources */,
+				A79636D31E7694BC00E1022B /* MatrixCreationTests.swift in Sources */,
+				A79636D91E769BC900E1022B /* MatrixArithmeticTests.swift in Sources */,
+				A79636D51E76992800E1022B /* MatrixTransformationTests.swift in Sources */,
+				OBJ_127 /* NDArrayReduceTests.swift in Sources */,
+				OBJ_128 /* NDArrayStackTests.swift in Sources */,
+				OBJ_129 /* NDArraySubscriptTests.swift in Sources */,
+				OBJ_130 /* NDArrayTests.swift in Sources */,
+				OBJ_131 /* NDArrayTransformationTests.swift in Sources */,
+				OBJ_132 /* NDArrayXCTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_29 /* Sources */ = {
+		OBJ_77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_78 /* Matrix.swift in Sources */,
+				A79636B51E763CEF00E1022B /* ZeroOne.swift in Sources */,
+				A79636C91E768AE900E1022B /* FloatDouble.swift in Sources */,
+				A79636B01E763A5B00E1022B /* MatrixCreation.swift in Sources */,
+				OBJ_81 /* MatrixInvert.swift in Sources */,
+				OBJ_83 /* MatrixMultiply.swift in Sources */,
+				A79636C71E76843500E1022B /* Utils.swift in Sources */,
+				OBJ_84 /* MatrixNorm.swift in Sources */,
+				A79636B91E76666400E1022B /* MatrixFloatingPointFunctions.swift in Sources */,
+				OBJ_85 /* MatrixRandom.swift in Sources */,
+				A79636C31E767BC200E1022B /* MatrixArithmetic.swift in Sources */,
+				A79636B71E7665F700E1022B /* FloatingPointFunctions.swift in Sources */,
+				A79636CB1E768E6000E1022B /* MatrixCompoundAssignment.swift in Sources */,
+				A79636B21E763A8100E1022B /* MatrixTransformation.swift in Sources */,
+				OBJ_87 /* MatrixSubscript.swift in Sources */,
+				OBJ_88 /* MatrixTranspose.swift in Sources */,
+				OBJ_90 /* NDArray.swift in Sources */,
+				OBJ_91 /* NDArrayArithmetic.swift in Sources */,
+				OBJ_92 /* NDArrayArithmeticAccelerate.swift in Sources */,
+				A79636BD1E766BC400E1022B /* Arithmetic.swift in Sources */,
+				OBJ_93 /* NDArrayBool.swift in Sources */,
+				A79636BB1E7666BD00E1022B /* MatrixUtils.swift in Sources */,
+				OBJ_94 /* NDArrayCompoundAssignment.swift in Sources */,
+				OBJ_95 /* NDArrayCreation.swift in Sources */,
+				OBJ_96 /* NDArrayFloatingPointFunctions.swift in Sources */,
+				OBJ_97 /* NDArrayRandom.swift in Sources */,
+				OBJ_98 /* NDArrayReduce.swift in Sources */,
+				OBJ_99 /* NDArrayStack.swift in Sources */,
+				OBJ_100 /* NDArraySubscript.swift in Sources */,
+				OBJ_101 /* NDArrayTransformation.swift in Sources */,
+				A79636C51E767CFD00E1022B /* MatrixArithmeticAccelerate.swift in Sources */,
+				OBJ_102 /* NDArrayUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_33 /* PBXTargetDependency */ = {
+		OBJ_135 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_18 /* numsw */;
-			targetProxy = 1453FBC61E6A5D4800633F32 /* PBXContainerItemProxy */;
+			target = OBJ_73 /* numsw */;
+			targetProxy = A79636AE1E7639C900E1022B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = numsw.xcodeproj/numsw_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = numsw;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				TARGET_NAME = numsw;
-			};
-			name = Debug;
-		};
-		OBJ_21 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = numsw.xcodeproj/numsw_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = numsw;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				TARGET_NAME = numsw;
-			};
-			name = Release;
-		};
-		OBJ_27 /* Debug */ = {
+		OBJ_106 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -389,7 +473,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_28 /* Release */ = {
+		OBJ_107 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -448,14 +532,54 @@
 			};
 			name = Release;
 		};
+		OBJ_75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = numsw.xcodeproj/numsw_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = numsw;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = numsw;
+			};
+			name = Debug;
+		};
+		OBJ_76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = numsw.xcodeproj/numsw_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = numsw;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = numsw;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_19 /* Build configuration list for PBXNativeTarget "numsw" */ = {
+		OBJ_105 /* Build configuration list for PBXNativeTarget "numswTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_20 /* Debug */,
-				OBJ_21 /* Release */,
+				OBJ_106 /* Debug */,
+				OBJ_107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -469,11 +593,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_26 /* Build configuration list for PBXNativeTarget "numswTests" */ = {
+		OBJ_74 /* Build configuration list for PBXNativeTarget "numsw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_27 /* Debug */,
-				OBJ_28 /* Release */,
+				OBJ_75 /* Debug */,
+				OBJ_76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

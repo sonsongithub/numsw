@@ -71,24 +71,6 @@ public func %<T: Moduloable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
 }
 
 
-public protocol Arithmetic {
-    static func +(lhs: Self, rhs: Self) -> Self
-    static func -(lhs: Self, rhs: Self) -> Self
-    static func *(lhs: Self, rhs: Self) -> Self
-    static func /(lhs: Self, rhs: Self) -> Self
-}
-
-public protocol Moduloable {
-    static func %(lhs: Self, rhs: Self) -> Self
-}
-
-
-extension Int: Arithmetic, Moduloable {}
-extension UInt: Arithmetic, Moduloable {}
-extension Float: Arithmetic {}
-extension Double: Arithmetic {}
-
-
 // unary
 func unaryPlus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, +)

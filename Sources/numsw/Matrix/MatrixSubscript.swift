@@ -1,5 +1,5 @@
 extension Matrix {
-    public subscript(row: Int, column: Int) -> Double {
+    public subscript(row: Int, column: Int) -> T {
         get {
             return elements[row * columns + column]
         }
@@ -8,7 +8,7 @@ extension Matrix {
         }
     }
     
-    public subscript(row: Int) -> Matrix {
+    public subscript(row: Int) -> Matrix<T> {
         get {
             return Matrix(rows: 1, columns: columns, elements: Array(elements[row * columns..<row * columns + columns]))
         }
@@ -22,12 +22,12 @@ extension Matrix {
         }
     }
     
-    public subscript(rs: [Int]?, cs: [Int]?) -> Matrix {
+    public subscript(rs: [Int]?, cs: [Int]?) -> Matrix<T> {
         get {
             let rs = rs ?? Array(0..<rows)
             let cs = cs ?? Array(0..<columns)
             
-            let newElements = UnsafeMutablePointer<Double>.allocate(capacity: rs.count * cs.count)
+            let newElements = UnsafeMutablePointer<T>.allocate(capacity: rs.count * cs.count)
             defer { newElements.deallocate(capacity: rs.count * cs.count) }
             var pointer = newElements
             for r in rs {

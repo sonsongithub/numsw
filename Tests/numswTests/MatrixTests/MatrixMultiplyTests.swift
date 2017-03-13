@@ -1,27 +1,31 @@
-//
-//  MatrixMultiplyTest.swift
-//  numsw
-//
-//  Created by Araki Takehiro on 2017/03/04.
-//
-//
 
 import XCTest
 @testable import numsw
 
 class MatrixMultiplyTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testMultiply() {
+        do {
+            let a = Matrix(rows: 2, columns: 2, elements: [1.0, 2.0, 1.0, 2.0])
+            let b = Matrix(rows: 2, columns: 2, elements: [1.0, 0.0, 0.0, 1.0])
+            
+            let c = multiply(a, b)
+            
+            XCTAssertEqual(c.elements, [1.0, 2.0, 1.0, 2.0])
+        }
+        do {
+            let a = Matrix<Double>([[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]])
+            let b = Matrix<Double>([[10, 6, 9], [0, 2, 3], [8, 5, 7], [11, 4, 1]])
+            
+            let c = multiply(a, b)
+            
+            XCTAssertEqual(c, Matrix([[ 49,  24,  20],
+                                      [165,  92, 100],
+                                      [281, 160, 180]]))
+        }
+    }
+    
+    func testMultiplyOperator() {
         let a = Matrix(rows: 2, columns: 2, elements: [1.0, 2.0, 1.0, 2.0])
         let b = Matrix(rows: 2, columns: 2, elements: [1.0, 0.0, 0.0, 1.0])
         
@@ -30,25 +34,23 @@ class MatrixMultiplyTests: XCTestCase {
         XCTAssertEqual(c.elements, [1.0, 2.0, 1.0, 2.0])
     }
     
-    func testScalarMultiply() {
+    #if os(iOS) || os(OSX)
+    
+    func testMultiplyAccelerate() {
         let a = Matrix(rows: 2, columns: 2, elements: [1.0, 2.0, 1.0, 2.0])
-        let b = 10.0
+        let b = Matrix(rows: 2, columns: 2, elements: [1.0, 0.0, 0.0, 1.0])
         
-        XCTAssertEqual((a*b).elements, [10.0, 20.0, 10.0, 20.0])
+        let c = multiplyAccelerate(a, b)
+        
+        XCTAssertEqual(c.elements, [1.0, 2.0, 1.0, 2.0])
     }
     
-    func testElementWiseMult() {
-        let a = Matrix(rows: 2, columns: 2, elements: [1, 2, 3, 4.0])
-        let b = Matrix(rows: 2, columns: 2, elements: [1, 3, 5, 7.0])
-        
-        XCTAssertEqual((a .* b).elements, [1.0, 6.0, 15.0, 28.0])
-    }
+    #endif
     
     static var allTests: [(String, (MatrixMultiplyTests) -> () throws -> Void)] {
         return [
             ("testMultiply", testMultiply),
-            ("testScalarMultiply", testScalarMultiply),
-            ("testElementWiseMult", testElementWiseMult),
+            ("testMultiplyOperator", testMultiplyOperator),
         ]
     }
 }

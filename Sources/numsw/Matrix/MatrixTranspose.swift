@@ -1,6 +1,9 @@
+
+import Foundation
+
 extension Matrix {
-    public func transposed() -> Matrix {
-        let newElements = UnsafeMutablePointer<Double>.allocate(capacity: rows*columns)
+    public func transposed() -> Matrix<T> {
+        let newElements = UnsafeMutablePointer<T>.allocate(capacity: rows*columns)
         defer { newElements.deallocate(capacity: rows*columns) }
         for r in 0..<rows {
             for c in 0..<columns {

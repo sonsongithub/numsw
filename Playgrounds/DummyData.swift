@@ -33,27 +33,27 @@ public struct DummyData {
     
     public static func runTestScenario() {
         do {
-            let t = Matrix.range(from: 0, to: 10, stride: 0.01)
+            let t = Matrix<Double>.range(from: 0, to: 10, stride: 0.01)
             let siny = sin(t*64)
             
             addLine(x: t.elements, y: siny.elements)
         }
         do {
-            let t = Matrix.range(from: 0.1, to: 10, stride: 0.01)
+            let t = Matrix<Double>.range(from: 0.1, to: 10, stride: 0.01)
             let siny = log(t*1.5)
             addLine(x: t.elements, y: siny.elements)
         }
         do {
-            let t = Matrix.range(from: -10, to: 10, stride: 0.01)
+            let t = Matrix<Double>.range(from: -10, to: 10, stride: 0.01)
             let siny = tan(t*0.2)
             addLine(x: t.elements, y: siny.elements)
         }
         
         do {
             // create dummy data
-            let x = Matrix(rows: 2, columns: 6, elements: [1, 2, 3, 4, 5, 6, 1, 1, 1, 1, 1, 1])
-            let noise = Matrix.normal(rows: 1, columns: 6)
-            let x1 = Matrix(rows: 1, columns: 6, elements: [1, 2, 3, 4, 5, 6])
+            let x = Matrix<Double>(rows: 2, columns: 6, elements: [1, 2, 3, 4, 5, 6, 1, 1, 1, 1, 1, 1])
+            let noise = Matrix<Double>.normal(rows: 1, columns: 6)
+            let x1 = Matrix<Double>(rows: 1, columns: 6, elements: [1, 2, 3, 4, 5, 6])
             
             // data with noise
             let yn = 6 * x1 + 10 + noise
@@ -73,8 +73,8 @@ public struct DummyData {
         }
         
         do {
-            let x = Matrix(rows: 2, columns: 6, elements: [1, 2, 5, 9, 13, 15, 1, 1, 1, 1, 1, 1])
-            let y = Matrix(rows: 1, columns: 6, elements: [1, 2, 3, 5, 10, 50])
+            let x = Matrix<Double>(rows: 2, columns: 6, elements: [1, 2, 5, 9, 13, 15, 1, 1, 1, 1, 1, 1])
+            let y = Matrix<Double>(rows: 1, columns: 6, elements: [1, 2, 3, 5, 10, 50])
             
             let xx = x * x.transposed()
             x.transposed().show()
