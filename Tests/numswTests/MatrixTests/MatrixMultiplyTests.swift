@@ -13,6 +13,15 @@ class MatrixMultiplyTests: XCTestCase {
         XCTAssertEqual(c.elements, [1.0, 2.0, 1.0, 2.0])
     }
     
+    func testMultiplyOperator() {
+        let a = Matrix(rows: 2, columns: 2, elements: [1.0, 2.0, 1.0, 2.0])
+        let b = Matrix(rows: 2, columns: 2, elements: [1.0, 0.0, 0.0, 1.0])
+        
+        let c = a * b
+        
+        XCTAssertEqual(c.elements, [1.0, 2.0, 1.0, 2.0])
+    }
+    
     #if os(iOS) || os(OSX)
     
     func testMultiplyAccelerate() {
@@ -29,6 +38,7 @@ class MatrixMultiplyTests: XCTestCase {
     static var allTests: [(String, (MatrixMultiplyTests) -> () throws -> Void)] {
         return [
             ("testMultiply", testMultiply),
+            ("testMultiplyOperator", testMultiplyOperator),
         ]
     }
 }

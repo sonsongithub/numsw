@@ -9,9 +9,19 @@ class MatrixArithmeticTests: XCTestCase {
         XCTAssertEqual(unaryPlus(a), Matrix([[1, 2, 3], [6, 5, 4]]))
     }
     
+    func testUnaryPlusOperator() {
+        let a = Matrix([[1, 2, 3], [6, 5, 4]])
+        XCTAssertEqual(+a, Matrix([[1, 2, 3], [6, 5, 4]]))
+    }
+    
     func testUnaryMinus() {
         let a = Matrix([[1, 2, 3], [6, 5, 4]])
         XCTAssertEqual(unaryMinus(a), Matrix([[-1, -2, -3], [-6, -5, -4]]))
+    }
+    
+    func testUnaryMinusOperator() {
+        let a = Matrix([[1, 2, 3], [6, 5, 4]])
+        XCTAssertEqual(-a, Matrix([[-1, -2, -3], [-6, -5, -4]]))
     }
     
     func testAdd() {
@@ -25,6 +35,17 @@ class MatrixArithmeticTests: XCTestCase {
         XCTAssertEqual(add(a, b), Matrix([[1, 3, 5], [9, 9, 9]]))
     }
     
+    func testAddOperator() {
+        
+        let a = Matrix([[1, 2, 3], [6, 5, 4]])
+        
+        XCTAssertEqual(a + 1, Matrix([[2, 3, 4], [7, 6, 5]]))
+        XCTAssertEqual(1 + a, Matrix([[2, 3, 4], [7, 6, 5]]))
+        
+        let b = Matrix([[0, 1, 2], [3, 4, 5]])
+        XCTAssertEqual(a + b, Matrix([[1, 3, 5], [9, 9, 9]]))
+    }
+    
     func testSubtract() {
         
         let a = Matrix([[1, 2, 3], [6, 5, 4]])
@@ -34,6 +55,17 @@ class MatrixArithmeticTests: XCTestCase {
         
         let b = Matrix([[0, 1, 2], [3, 4, 5]])
         XCTAssertEqual(subtract(a, b), Matrix([[1, 1, 1], [3, 1, -1]]))
+    }
+    
+    func testSubtractOperator() {
+        
+        let a = Matrix([[1, 2, 3], [6, 5, 4]])
+        
+        XCTAssertEqual(a - 1, Matrix([[0, 1, 2], [5, 4, 3]]))
+        XCTAssertEqual(1 - a, Matrix([[0, -1, -2], [-5, -4, -3]]))
+        
+        let b = Matrix([[0, 1, 2], [3, 4, 5]])
+        XCTAssertEqual(a - b, Matrix([[1, 1, 1], [3, 1, -1]]))
     }
     
     func testElementWiseProduct() {
@@ -47,6 +79,17 @@ class MatrixArithmeticTests: XCTestCase {
         XCTAssertEqual(elementWiseProduct(a, b), Matrix([[0, 2, 6], [18, 20, 20]]))
     }
     
+    func testElementWiseProductOperator() {
+        
+        let a = Matrix([[1, 2, 3], [6, 5, 4]])
+        
+        XCTAssertEqual(a * 2, Matrix([[2, 4, 6], [12, 10, 8]]))
+        XCTAssertEqual(2 * a, Matrix([[2, 4, 6], [12, 10, 8]]))
+        
+        let b = Matrix([[0, 1, 2], [3, 4, 5]])
+        XCTAssertEqual(a .* b, Matrix([[0, 2, 6], [18, 20, 20]]))
+    }
+    
     func testDivide() {
         let a = Matrix([[1, 2, 3], [6, 5, 4]])
         
@@ -57,6 +100,16 @@ class MatrixArithmeticTests: XCTestCase {
         XCTAssertEqual(divide(a, b), Matrix([[1, 2, 1], [2, 1, 0]]))
     }
     
+    func testDivideOperator() {
+        let a = Matrix([[1, 2, 3], [6, 5, 4]])
+        
+        XCTAssertEqual(a / 2, Matrix([[0, 1, 1], [3, 2, 2]]))
+        XCTAssertEqual(2 / a, Matrix([[2, 1, 0], [0, 0, 0]]))
+        
+        let b = Matrix([[1, 1, 2], [3, 4, 5]])
+        XCTAssertEqual(a / b, Matrix([[1, 2, 1], [2, 1, 0]]))
+    }
+    
     func testModulo() {
         let a = Matrix([[1, 2, 3], [6, 5, 4]])
         
@@ -65,6 +118,16 @@ class MatrixArithmeticTests: XCTestCase {
         
         let b = Matrix([[1, 1, 2], [3, 4, 5]])
         XCTAssertEqual(modulo(a, b), Matrix([[0, 0, 1], [0, 1, 4]]))
+    }
+    
+    func testModuloOperator() {
+        let a = Matrix([[1, 2, 3], [6, 5, 4]])
+        
+        XCTAssertEqual(a % 2, Matrix([[1, 0, 1], [0, 1, 0]]))
+        XCTAssertEqual(3 % a, Matrix([[0, 1, 0], [3, 3, 3]]))
+        
+        let b = Matrix([[1, 1, 2], [3, 4, 5]])
+        XCTAssertEqual(a % b, Matrix([[0, 0, 1], [0, 1, 4]]))
     }
     
     #if os(iOS) || os(OSX)
@@ -116,12 +179,19 @@ class MatrixArithmeticTests: XCTestCase {
     static var allTests: [(String, (MatrixArithmeticTests) -> () throws -> Void)] {
         return [
             ("testUnaryPlus", testUnaryPlus),
+            ("testUnaryPlusOperator", testUnaryPlusOperator),
             ("testUnaryMinus", testUnaryMinus),
+            ("testUnaryMinusOperator", testUnaryMinusOperator),
             ("testAdd", testAdd),
+            ("testAddOperator", testAddOperator),
             ("testSubtract", testSubtract),
+            ("testSubtractOperator", testSubtractOperator),
             ("testElementWiseProduct", testElementWiseProduct),
+            ("testElementWiseProductOperator", testElementWiseProductOperator),
             ("testDivide", testDivide),
+            ("testDivideOperator", testDivideOperator),
             ("testModulo", testModulo),
+            ("testModuloOperator", testModuloOperator),
         ]
     }
     
