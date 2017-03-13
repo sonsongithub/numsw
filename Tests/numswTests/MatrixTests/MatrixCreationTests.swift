@@ -1,35 +1,35 @@
-//
-//  MatrixCreationTests.swift
-//  numsw
-//
-//  Created by Araki Takehiro on 2017/03/13.
-//
-//
 
 import XCTest
+@testable import numsw
 
 class MatrixCreationTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testInit() {
+        let a = Matrix<Double>([[0, 1], [1, 2], [2, 3]])
+        XCTAssertEqual(a, Matrix<Double>(rows: 3, columns: 2, elements: [0, 1, 1, 2, 2, 3]))
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testZeros() {
+        let a = Matrix<Double>.zeros(rows: 2, columns: 3)
+        XCTAssertEqual(a, Matrix([[0,0,0], [0,0,0]]))
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testOnes() {
+        let a = Matrix<Double>.ones(rows: 2, columns: 3)
+        XCTAssertEqual(a, Matrix([[1,1,1], [1,1,1]]))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testEye() {
+        let a = Matrix<Double>.eye(3)
+        XCTAssertEqual(a, Matrix([[1,0,0], [0,1,0], [0,0,1]]))
     }
     
+    static var allTests: [(String, (MatrixCreationTests) -> () throws -> Void)] {
+        return [
+            ("testInit", testInit),
+            ("testZeros", testZeros),
+            ("testOnes", testOnes),
+            ("testEye", testEye),
+        ]
+    }
 }

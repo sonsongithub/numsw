@@ -20,20 +20,19 @@
 		A79636C91E768AE900E1022B /* FloatDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C81E768AE900E1022B /* FloatDouble.swift */; };
 		A79636CB1E768E6000E1022B /* MatrixCompoundAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636CA1E768E6000E1022B /* MatrixCompoundAssignment.swift */; };
 		A79636CF1E768F6A00E1022B /* MatrixXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */; };
+		A79636D31E7694BC00E1022B /* MatrixCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */; };
+		A79636D51E76992800E1022B /* MatrixTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D41E76992800E1022B /* MatrixTransformationTests.swift */; };
+		A79636D71E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D61E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift */; };
+		A79636D91E769BC900E1022B /* MatrixArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D81E769BC900E1022B /* MatrixArithmeticTests.swift */; };
 		OBJ_100 /* NDArraySubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NDArraySubscript.swift */; };
 		OBJ_101 /* NDArrayTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* NDArrayTransformation.swift */; };
 		OBJ_102 /* NDArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* NDArrayUtils.swift */; };
 		OBJ_109 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* numswTests.swift */; };
-		OBJ_110 /* MatrixAdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* MatrixAdditionTests.swift */; };
-		OBJ_111 /* MatrixBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* MatrixBasicTests.swift */; };
-		OBJ_112 /* MatrixDivideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* MatrixDivideTests.swift */; };
 		OBJ_113 /* MatrixInvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* MatrixInvertTests.swift */; };
-		OBJ_114 /* MatrixLogarithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* MatrixLogarithmTests.swift */; };
 		OBJ_115 /* MatrixMultiplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* MatrixMultiplyTests.swift */; };
 		OBJ_116 /* MatrixRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* MatrixRangeTests.swift */; };
 		OBJ_117 /* MatrixSubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* MatrixSubscriptTests.swift */; };
 		OBJ_118 /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* MatrixTransposeTests.swift */; };
-		OBJ_119 /* MatrixTrigonometricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* MatrixTrigonometricTests.swift */; };
 		OBJ_120 /* NDArrayArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* NDArrayArithmeticTests.swift */; };
 		OBJ_121 /* NDArrayBoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* NDArrayBoolTests.swift */; };
 		OBJ_122 /* NDArrayCompoundAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* NDArrayCompoundAssignmentTests.swift */; };
@@ -91,6 +90,10 @@
 		A79636C81E768AE900E1022B /* FloatDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatDouble.swift; sourceTree = "<group>"; };
 		A79636CA1E768E6000E1022B /* MatrixCompoundAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCompoundAssignment.swift; sourceTree = "<group>"; };
 		A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixXCTest.swift; sourceTree = "<group>"; };
+		A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCreationTests.swift; sourceTree = "<group>"; };
+		A79636D41E76992800E1022B /* MatrixTransformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransformationTests.swift; sourceTree = "<group>"; };
+		A79636D61E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixFloatingPointFunctionsTests.swift; sourceTree = "<group>"; };
+		A79636D81E769BC900E1022B /* MatrixArithmeticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmeticTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		OBJ_13 /* MatrixInvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInvert.swift; sourceTree = "<group>"; };
 		OBJ_15 /* MatrixMultiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiply.swift; sourceTree = "<group>"; };
@@ -112,16 +115,11 @@
 		OBJ_34 /* NDArrayTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayTransformation.swift; sourceTree = "<group>"; };
 		OBJ_35 /* NDArrayUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayUtils.swift; sourceTree = "<group>"; };
 		OBJ_38 /* numswTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
-		OBJ_40 /* MatrixAdditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAdditionTests.swift; sourceTree = "<group>"; };
-		OBJ_41 /* MatrixBasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixBasicTests.swift; sourceTree = "<group>"; };
-		OBJ_42 /* MatrixDivideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixDivideTests.swift; sourceTree = "<group>"; };
 		OBJ_43 /* MatrixInvertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInvertTests.swift; sourceTree = "<group>"; };
-		OBJ_44 /* MatrixLogarithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixLogarithmTests.swift; sourceTree = "<group>"; };
 		OBJ_45 /* MatrixMultiplyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTests.swift; sourceTree = "<group>"; };
 		OBJ_46 /* MatrixRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRangeTests.swift; sourceTree = "<group>"; };
 		OBJ_47 /* MatrixSubscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixSubscriptTests.swift; sourceTree = "<group>"; };
 		OBJ_48 /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTransposeTests.swift; sourceTree = "<group>"; };
-		OBJ_49 /* MatrixTrigonometricTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTrigonometricTests.swift; sourceTree = "<group>"; };
 		OBJ_51 /* NDArrayArithmeticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayArithmeticTests.swift; sourceTree = "<group>"; };
 		OBJ_52 /* NDArrayBoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayBoolTests.swift; sourceTree = "<group>"; };
 		OBJ_53 /* NDArrayCompoundAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayCompoundAssignmentTests.swift; sourceTree = "<group>"; };
@@ -219,17 +217,16 @@
 		OBJ_39 /* MatrixTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_40 /* MatrixAdditionTests.swift */,
-				OBJ_41 /* MatrixBasicTests.swift */,
-				OBJ_42 /* MatrixDivideTests.swift */,
 				OBJ_43 /* MatrixInvertTests.swift */,
-				OBJ_44 /* MatrixLogarithmTests.swift */,
 				OBJ_45 /* MatrixMultiplyTests.swift */,
 				OBJ_46 /* MatrixRangeTests.swift */,
 				OBJ_47 /* MatrixSubscriptTests.swift */,
 				OBJ_48 /* MatrixTransposeTests.swift */,
-				OBJ_49 /* MatrixTrigonometricTests.swift */,
 				A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */,
+				A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */,
+				A79636D41E76992800E1022B /* MatrixTransformationTests.swift */,
+				A79636D61E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift */,
+				A79636D81E769BC900E1022B /* MatrixArithmeticTests.swift */,
 			);
 			path = MatrixTests;
 			sourceTree = "<group>";
@@ -387,24 +384,23 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_109 /* numswTests.swift in Sources */,
-				OBJ_110 /* MatrixAdditionTests.swift in Sources */,
-				OBJ_111 /* MatrixBasicTests.swift in Sources */,
-				OBJ_112 /* MatrixDivideTests.swift in Sources */,
 				OBJ_113 /* MatrixInvertTests.swift in Sources */,
-				OBJ_114 /* MatrixLogarithmTests.swift in Sources */,
 				OBJ_115 /* MatrixMultiplyTests.swift in Sources */,
 				OBJ_116 /* MatrixRangeTests.swift in Sources */,
 				OBJ_117 /* MatrixSubscriptTests.swift in Sources */,
 				OBJ_118 /* MatrixTransposeTests.swift in Sources */,
-				OBJ_119 /* MatrixTrigonometricTests.swift in Sources */,
 				OBJ_120 /* NDArrayArithmeticTests.swift in Sources */,
 				OBJ_121 /* NDArrayBoolTests.swift in Sources */,
+				A79636D71E769A6A00E1022B /* MatrixFloatingPointFunctionsTests.swift in Sources */,
 				OBJ_122 /* NDArrayCompoundAssignmentTests.swift in Sources */,
 				OBJ_123 /* NDArrayCreationTests.swift in Sources */,
 				OBJ_124 /* NDArrayFloatingPointFunctionsTests.swift in Sources */,
 				OBJ_125 /* NDArrayPerformanceTests.swift in Sources */,
 				A79636CF1E768F6A00E1022B /* MatrixXCTest.swift in Sources */,
 				OBJ_126 /* NDArrayRandomTests.swift in Sources */,
+				A79636D31E7694BC00E1022B /* MatrixCreationTests.swift in Sources */,
+				A79636D91E769BC900E1022B /* MatrixArithmeticTests.swift in Sources */,
+				A79636D51E76992800E1022B /* MatrixTransformationTests.swift in Sources */,
 				OBJ_127 /* NDArrayReduceTests.swift in Sources */,
 				OBJ_128 /* NDArrayStackTests.swift in Sources */,
 				OBJ_129 /* NDArraySubscriptTests.swift in Sources */,
