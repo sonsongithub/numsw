@@ -1,4 +1,6 @@
 
+infix operator .*
+
 func apply<T, R>(_ arg: Matrix<T>, _ handler: (T)->R) -> Matrix<R> {
     var inPointer = UnsafePointer(arg.elements)
     let outPointer = UnsafeMutablePointer<R>.allocate(capacity: arg.elements.count)
