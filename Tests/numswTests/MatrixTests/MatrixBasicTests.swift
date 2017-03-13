@@ -22,25 +22,25 @@ class MatrixBasicTests: XCTestCase {
     }
     
     func testEyeMatrix() {
-        let ones = Matrix.eye(size: 3)
+        let ones = Matrix<Int>.eye(3)
         let ans  = Matrix(rows: 3, columns: 3, elements: [1, 0, 0, 0, 1, 0, 0, 0, 1])
         XCTAssertEqual(ones.elements, ans.elements)
     }
     
     func testOnesMatrix() {
-        let ones = Matrix.ones(rows: 4, columns: 2)
+        let ones = Matrix<Int>.ones(rows: 4, columns: 2)
         let ans  = Matrix(rows: 4, columns: 2, elements: [1, 1, 1, 1, 1, 1, 1, 1])
         XCTAssertEqual(ones.elements, ans.elements)
     }
     
     func testZerosMatrix() {
-        let ones = Matrix.zeros(rows: 4, columns: 2)
+        let ones = Matrix<Int>.zeros(rows: 4, columns: 2)
         let ans  = Matrix(rows: 4, columns: 2, elements: [0, 0, 0, 0, 0, 0, 0, 0])
         XCTAssertEqual(ones.elements, ans.elements)
     }
     
     func testArrayInit() {
-        let mat = Matrix([[0, 1], [2, 3], [4, 5]])
+        let mat = Matrix<Double>([[0, 1], [2, 3], [4, 5]])
         
         XCTAssertEqual(mat.rows, 3)
         XCTAssertEqual(mat.columns, 2)

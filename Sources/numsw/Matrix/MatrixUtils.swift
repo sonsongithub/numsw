@@ -1,5 +1,6 @@
 
 infix operator .*
+infix operator .*=
 
 func apply<T, R>(_ arg: Matrix<T>, _ handler: (T)->R) -> Matrix<R> {
     var inPointer = UnsafePointer(arg.elements)

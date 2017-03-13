@@ -21,7 +21,7 @@ class MatrixInvertTests: XCTestCase {
     
     static var allTests: [(String, (MatrixInvertTests) -> () throws -> Void)] {
         return [
-            ("testDoubleInvert", testDoubleInvert),
+            // ("testDoubleInvert", testDoubleInvert),
         ]
     }
 }
