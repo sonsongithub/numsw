@@ -8,6 +8,8 @@
 
 import UIKit
 
+import numsw
+
 class RendererDebugViewController: UIViewController {
     
     required init() {

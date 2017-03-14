@@ -8,6 +8,10 @@
 
 import UIKit
 
+#if SANDBOX_APP
+    import numsw
+#endif
+
 public class NumswPlayground {
     internal init() {
         viewController = RenderTableViewController()
@@ -17,6 +21,11 @@ public class NumswPlayground {
     
     public func append(renderer: ChartRenderer) {
         renderers.append(renderer)
+    }
+    
+    public func print(_ matrix: Matrix<Double>) {
+        let matrixTextRenderer = MatrixTextRenderer()
+        renderers.append(matrixTextRenderer)
     }
     
     public func plot(_ x: [Double], _ y: [Double]) {
@@ -67,7 +76,7 @@ public class NumswPlayground {
         }
     }
     
-    private var renderers: [ChartRenderer] = [] {
+    private var renderers: [Renderer] = [] {
         didSet {
             viewController.renderers = renderers.map { $0 as Renderer }
         }
@@ -107,4 +116,8 @@ public func scatter(
 
 public func hold(f: () throws -> Void) rethrows {
     try NumswPlayground.shared.hold(f)
+}
+
+public func print(_ matrix: Matrix<Double>) {
+    NumswPlayground.shared.print(matrix)
 }

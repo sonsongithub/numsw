@@ -12,6 +12,7 @@
 		1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBB81E6A5CD300633F32 /* Main.storyboard */; };
 		1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBBB1E6A5CD300633F32 /* Assets.xcassets */; };
 		1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBBD1E6A5CD300633F32 /* LaunchScreen.storyboard */; };
+		14B5846A1E7827C30073B173 /* MatrixTextRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B584691E7827C30073B173 /* MatrixTextRenderer.swift */; };
 		D6A0B5CE1E6FE801004AE3B4 /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */; };
 		D6A0B5CF1E6FE801004AE3B4 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */; };
 		D6A0B5D01E6FE801004AE3B4 /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */; };
@@ -67,6 +68,7 @@
 		1453FBBB1E6A5CD300633F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1453FBBE1E6A5CD300633F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1453FBC01E6A5CD300633F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14B584691E7827C30073B173 /* MatrixTextRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTextRenderer.swift; path = ../../../2tch.swift/Core2ch/MatrixTextRenderer.swift; sourceTree = "<group>"; };
 		52E1EE3E1E6A8A2E008D19BB /* sandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E1EE421E6A8A2E008D19BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AxisRenderer.swift; path = ../AxisRenderer.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				D6A0B6041E6FF025004AE3B4 /* frameworks */,
 				D621CFFB1E6A631900A50C88 /* playgrounds */,
+				14B584681E78276B0073B173 /* sandbox view controllers */,
 				1453FBB31E6A5CD300633F32 /* sandbox */,
 				52E1EE3F1E6A8A2E008D19BB /* sandboxTests */,
 				1453FBB21E6A5CD300633F32 /* Products */,
@@ -144,6 +147,16 @@
 			path = sandbox;
 			sourceTree = "<group>";
 		};
+		14B584681E78276B0073B173 /* sandbox view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */,
+				D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */,
+			);
+			name = "sandbox view controllers";
+			path = ../playgrounds;
+			sourceTree = "<group>";
+		};
 		52E1EE3F1E6A8A2E008D19BB /* sandboxTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,11 +178,10 @@
 				D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */,
 				D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */,
 				D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */,
+				14B584691E7827C30073B173 /* MatrixTextRenderer.swift */,
 				D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */,
 				D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */,
 				D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */,
-				D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */,
-				D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */,
 				D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */,
 				D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */,
 				D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */,
@@ -311,6 +323,7 @@
 				D6A0B5DA1E6FE802004AE3B4 /* RendererDebugViewController.swift in Sources */,
 				D6A0B5D91E6FE802004AE3B4 /* Renderer.swift in Sources */,
 				D6A0B5D01E6FE801004AE3B4 /* ChartBuilder.swift in Sources */,
+				14B5846A1E7827C30073B173 /* MatrixTextRenderer.swift in Sources */,
 				D6A0B5DC1E6FE802004AE3B4 /* RendererUtil.swift in Sources */,
 				D6A0B5D81E6FE802004AE3B4 /* NumswPlayground.swift in Sources */,
 				D6A0B5D21E6FE801004AE3B4 /* ChartRenderer.swift in Sources */,

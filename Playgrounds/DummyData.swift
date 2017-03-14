@@ -105,5 +105,6 @@ public struct DummyData {
             plot(t1.elements, siny1.elements)
             scatter(t2.elements, siny2.elements)
         }
+        print(t1)
     }
 }
