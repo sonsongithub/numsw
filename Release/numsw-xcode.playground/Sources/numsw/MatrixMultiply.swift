@@ -23,9 +23,8 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
     let k = lhs.columns
     let lda = k
     let ldb = n
-    var c = [Double](repeating: 0, count: m*n)
-//    let cElements = UnsafeMutablePointer<Double>.allocate(capacity: m*n)
-//    defer { cElements.deallocate(capacity: m*n) }
+    let cElements = UnsafeMutablePointer<Double>.allocate(capacity: m*n)
+    defer { cElements.deallocate(capacity: m*n) }
     
     cblas_dgemm(
         CblasRowMajor,                                // Order
@@ -40,12 +39,12 @@ public func *(lhs: Matrix, rhs: Matrix) -> Matrix {
         rhs.elements,                                 // B
         Int32(ldb),                                   // ldb
         0.0,                                          // beta
-        UnsafeMutablePointer(&c), // C
+        cElements,                                    // C
         Int32(n)                                      // ldc
     )
     return Matrix(rows: m,
                   columns: n,
-                  elements: c)
+                  elements: Array(UnsafeBufferPointer(start: cElements, count: m*n)))
 }
 
 // element wise multiply
