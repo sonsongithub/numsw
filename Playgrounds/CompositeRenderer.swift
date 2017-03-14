@@ -15,6 +15,12 @@ public class CompositeRenderer: Renderer {
         
     }
     
+    public var height: CGFloat {
+        return parentViewSize.height * 0.5
+    }
+    
+    public var parentViewSize = CGSize.zero
+    
     public var renderers: [Renderer] = []
     
     public func render(context: CGContext, windowSize: CGSize) {

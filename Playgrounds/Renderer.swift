@@ -10,6 +10,8 @@ import UIKit
 
 public protocol Renderer {
     func render(context: CGContext, windowSize: CGSize)
+    var parentViewSize: CGSize { get set }
+    var height: CGFloat { get }
 }
 
 public extension Renderer {

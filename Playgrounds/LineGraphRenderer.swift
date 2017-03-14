@@ -15,6 +15,11 @@ public class LineGraphRenderer: Renderer {
         self.line = line
     }
     
+    public var parentViewSize = CGSize.zero
+    public var height: CGFloat {
+        return parentViewSize.height * 0.5
+    }
+    
     public let viewport: CGRect
     public let line: LineGraph
     

@@ -65,6 +65,9 @@ public class RenderTableViewController: UITableViewController {
     
     var renderers: [Renderer] = [] {
         didSet {
+            for i in 0..<renderers.count {
+                renderers[i].parentViewSize = self.tableView.frame.size
+            }
             tableView.reloadData()
         }
     }
@@ -115,7 +118,7 @@ public class RenderTableViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.bounds.height * 0.5
+        return renderers[indexPath.row].height
     }
 
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
