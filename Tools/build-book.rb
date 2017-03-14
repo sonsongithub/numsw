@@ -3,6 +3,7 @@
 require "pathname"
 
 require_relative "lib/PlaygroundBuilder"
+require_relative "lib/ShellUtil"
 
 class BuildBookApp
   def main
@@ -17,6 +18,14 @@ class BuildBookApp
     builder.build("xcode", 
       ".playground", 
       "Sources")
+
+    Dir.chdir(repo_dir + "Release")
+    exec([
+      "zip", "-r",
+      "numsw-playground.zip",
+      "numsw-ipad.playgroundbook",
+      "numsw-xcode.playground"
+      ])
   end
 end
 
