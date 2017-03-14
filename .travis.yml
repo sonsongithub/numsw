@@ -1,6 +1,12 @@
 language: objective-c
 osx_image: xcode8.2
 rvm:
-  - 2.2
-script:
-  - Tools/ci-travis.rb
+- 2.2
+deploy:
+  provider: releases
+  api_key:
+    secure: DldoR4YOX1iYYY4K6fuJwgXJCue9+l1vda09S4Hv3eQDcGEJgMR6HCHAlXfXkJtD8RdUApezMSwMsQhui04nvC9Sfo3k6e6MXZ7xz86uZZi4xS3muQbREc2MZPtVFbgCbxc0GPq/CPhEzse1XFrHFt9VYJbX0vfi6+IwBzozTw0egG5aiax54h2I8Wqs8wrDWSIwkvgLwNe6rpSFs5HYKs5vGg+64Ziu4CCoZieXR6QuU1AYAhXoS3liqhUUDPe445fxU5APSCIZe8xGaT+B8etZM1ZaI4b0g+3NkS9161fxxlGmxwf03ktJWSWtVQIaOpTafd7YQ0x1936X0zzbLHhmZDEGHoITVLTZEJBjSie067q6g+AGBMmY1cgmYEbYeS88t7+aeOGM0S4inUoTlJvoDQ50IROuD4SqEzY33w5+Y3XZlhRXce/EblZcJplNhu0M34qzkEtMXflEkJsAfB0Zk+vRXfWbff3yKLdltByVCvWL1YuzmFOa4ZQmOaIBKQLjkF/UF0se1aie5qnKG2k9rVwambhErKKTbrpiVhBXY4skNCa32GuEtRZSrqaU9Lo+9SaxdLVGN6kOxdUfU6kUQtb6SjwpdpHliYa0BRmoSugSXimO7e9/eRofzWTcGDd9oMT3ID2a7wIp+R9hhW61eGplL8y7NSqaKP9+wso=
+  file: 'Release/numsw-playground.zip'
+  on:
+    tags: true
+    repo: sonsongithub/numsw
