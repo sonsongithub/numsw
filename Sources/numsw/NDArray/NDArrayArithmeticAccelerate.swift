@@ -69,7 +69,7 @@
     }
     
     public func /(lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
-        return multiplyAccelerate(rhs, lhs)
+        return divideAccelerate(lhs, rhs)
     }
     
     public func /(lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
@@ -77,7 +77,7 @@
     }
     
     public func /(lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
-        return multiplyAccelerate(rhs, lhs)
+        return divideAccelerate(lhs, rhs)
     }
     
     // NDArray and NDArray
