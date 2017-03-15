@@ -1,4 +1,3 @@
-
 import Foundation
 
 func _uniform<T: FloatingPoint>(low: T = 0, high: T = 1) -> T {

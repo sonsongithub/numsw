@@ -1,5 +1,3 @@
-
-
 import XCTest
 @testable import numsw
 

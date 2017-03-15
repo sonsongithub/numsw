@@ -1,4 +1,3 @@
-
 extension NDArray {
     public subscript(index: Int...) -> T {
         get {
@@ -37,7 +36,6 @@ extension NDArray {
     }
 }
 
-
 func getElement<T>(_ array: NDArray<T>, _ index: [Int]) -> T {
     let elementIndex = calculateIndex(array.shape, index)
     return array.elements[elementIndex]
@@ -47,7 +45,6 @@ func setElement<T>(_ array: inout NDArray<T>, _ index: [Int], newValue: T) {
     let elementIndex = calculateIndex(array.shape, index)
     array.elements[elementIndex] = newValue
 }
-
 
 func getSubarray<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> NDArray<T> {
     

@@ -1,5 +1,3 @@
-
-
 #if os(iOS) || os(OSX)
 
     import Accelerate
