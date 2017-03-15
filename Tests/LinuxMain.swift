@@ -25,4 +25,3 @@ XCTMain([
      testCase(NDArrayTests.allTests),
      testCase(NDArrayTransformationTests.allTests),
 ])
-

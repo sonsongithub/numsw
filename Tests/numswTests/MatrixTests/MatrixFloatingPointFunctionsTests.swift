@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -97,7 +96,6 @@ class MatrixFloatingPointFunctionsTests: XCTestCase {
     }
     
     #endif
-
     
     static var allTests: [(String, (MatrixFloatingPointFunctionsTests) -> () throws -> Void)] {
         return [
@@ -108,6 +106,5 @@ class MatrixFloatingPointFunctionsTests: XCTestCase {
             ("testTan", testTan),
         ]
     }
-    
     
 }

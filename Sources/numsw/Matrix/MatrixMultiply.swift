@@ -1,4 +1,3 @@
-
 #if os(iOS) || os(OSX)
     
     import Accelerate
@@ -47,7 +46,6 @@
                       elements: Array(UnsafeBufferPointer(start: cElements, count: count)))
     }
     
-    
 #endif
 
 public func *<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
@@ -77,8 +75,6 @@ func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     }
     
     // iterate
-    
-    
     for i in 0..<m {
         lp = UnsafePointer(lhs.elements) + i*p + 1
         for k in 1..<p {
@@ -97,4 +93,3 @@ func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
                   columns: n,
                   elements: Array(UnsafeBufferPointer(start: cElements, count: count)))
 }
-

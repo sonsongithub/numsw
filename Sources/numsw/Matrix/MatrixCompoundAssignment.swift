@@ -1,4 +1,3 @@
-
 // Scalar
 public func +=<T: Arithmetic>(lhs: inout Matrix<T>, rhs: T) {
     lhs = lhs + rhs
