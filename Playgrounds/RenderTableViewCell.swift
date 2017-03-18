@@ -11,6 +11,8 @@ import UIKit
 
 internal class RenderTableViewCell: UITableViewCell {
     
+    private static let renderQueue = DispatchQueue(label: "Renderer-Queue")
+    
     var renderer: Renderer? {
         willSet {
             self.renderImageView.image = nil
@@ -41,9 +43,13 @@ internal class RenderTableViewCell: UITableViewCell {
     
     private var renderedImageSize = CGSize.zero
     
+    private var isImageViewDirty: Bool {
+        return renderedImageSize != self.contentView.bounds.size
+    }
+    
     func updateImageViewIfNeeded() {
         print("rendering bounds: \(self.contentView.bounds)")
-        if renderedImageSize == self.contentView.bounds.size &&
+        if isImageViewDirty == false &&
             self.renderImageView.image != nil {
             // already rendered
             return
@@ -53,9 +59,23 @@ internal class RenderTableViewCell: UITableViewCell {
     
     private func updateImageView() {
         guard let renderer = self.renderer else { return }
-        let image = renderer.renderToImage(size: self.contentView.bounds.size)
-        self.renderImageView.image = image
+        let withFadeAnimation = isImageViewDirty && self.renderImageView.image != nil
+        
         renderedImageSize = self.contentView.bounds.size
+        type(of: self).renderQueue.async {
+            let image = renderer.renderToImage(size: self.contentView.bounds.size)
+            DispatchQueue.main.async {
+                self.renderImageView.image = image
+                
+                if withFadeAnimation {
+                    let transition = CATransition()
+                    transition.duration = 0.25
+                    transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+                    transition.type = kCATransitionFade
+                    self.renderImageView.layer.add(transition, forKey: nil)
+                }
+            }
+        }
     }
 }
 #endif

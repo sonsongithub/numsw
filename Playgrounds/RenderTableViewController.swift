@@ -10,7 +10,8 @@
 
 #if os(iOS)
 import UIKit
-
+import QuartzCore
+    
 public class RenderTableViewController: UITableViewController, UZTextViewDelegate {
     
     private var renderers: [Renderer] = [] {
@@ -54,15 +55,24 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
 
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        updateVisibleCellImagesIfNeeded() // some times not invoked??
+    }
+    
+    public override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateVisibleCellImagesIfNeeded() // some times not invoked??
+    }
+    
+    private func updateVisibleCellImagesIfNeeded() {
         // on orientation changed
         for view in tableView.visibleCells {
             (view as! RenderTableViewCell).updateImageViewIfNeeded()
         }
     }
     
-    public override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    public override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        super.willAnimateRotation(to: toInterfaceOrientation, duration: duration)
+        updateVisibleCellImagesIfNeeded()
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
