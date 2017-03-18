@@ -13,7 +13,7 @@ import UIKit
 
 public class RenderTableViewController: UITableViewController, UZTextViewDelegate {
     
-    var renderers: [Renderer] = [] {
+    private var renderers: [Renderer] = [] {
         didSet {
             for i in 0..<renderers.count {
                 renderers[i].parentViewSize = self.tableView.frame.size
@@ -41,20 +41,28 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "TextTableViewCell")
     }
     
-    public func append(renderer: Renderer) {
-        self.renderers.append(renderer)
+    public func replace(renderers: [Renderer]) {
+        self.renderers = renderers
         self.tableView.reloadData()
+    }
+    
+    public func append(renderer: Renderer) {
+        // partial update
+        self.renderers.append(renderer)
+        self.tableView.insertRows(at: [IndexPath(row: renderers.count, section: 0)], with: .automatic)
     }
 
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        // will ??
-        //self.tableView.reloadData()
+        
+        // on orientation changed
+        for view in tableView.visibleCells {
+            (view as! RenderTableViewCell).updateImageViewIfNeeded()
+        }
     }
     
     public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        tableView.visibleCells.flatMap({ $0 as? RenderTableViewCell}).forEach({ $0.updateImageViewIfNeeded() })
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

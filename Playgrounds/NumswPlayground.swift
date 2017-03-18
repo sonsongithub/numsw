@@ -88,7 +88,7 @@ public class NumswPlayground {
     private var renderers: [Renderer] = [] {
         didSet {
             #if os(iOS)
-            viewController.renderers = renderers.map { $0 as Renderer }
+            viewController.replace(renderers: renderers.map { $0 as Renderer })
             #endif
         }
     }
