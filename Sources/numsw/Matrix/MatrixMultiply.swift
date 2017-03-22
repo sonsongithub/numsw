@@ -55,7 +55,7 @@ public func *<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
 }
 
 /// Multiply (m x p) matrix lhs and, (p x n) matrix rhs
-/// Returns: Matrix multipliation of lhs and rhs
+/// - Returns: Result of matrix multipliation of lhs and rhs
 func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     precondition(lhs.columns == rhs.rows, "Matrices can't multiply.")
     

@@ -25,9 +25,9 @@ extension Matrix where T: ZeroOne {
 }
 
 extension Matrix where T: Strideable {
-    /// - Returns: row matrix
-    /// its first element is `from`
-    /// following elements are evenly spaced with `stride`, while it's smaller than `to`
+    /// Returns the matrix that its first element is `from`,
+    /// and following elements are evenly spaced with `stride`, while it's smaller than `to`
+    /// - Returns: Row matrix
     public static func range(from: T, to: T, stride: T.Stride) -> Matrix<T> {
         let elements = Array(Swift.stride(from: from, to: to, by: stride))
         return Matrix(rows: 1, columns: elements.count, elements: elements)
@@ -35,9 +35,9 @@ extension Matrix where T: Strideable {
 }
 
 extension Matrix where T: FloatingPoint {
-    /// - Returns: row matrix
-    /// first element is `low`, last element is `high`
+    /// Returns the matrix that its first element is `low`, last element is `high`
     /// and intermediate elements are evenly spaced
+    /// - Returns: Row matrix
     public static func linspace(low: T, high: T, count: Int) -> Matrix<T> {
         let d = high - low
         let steps = T(count-1)
