@@ -2,6 +2,7 @@
 infix operator .*
 infix operator .*=
 
+// apply unary function `handler` for all elements in `arg`
 func apply<T, R>(_ arg: Matrix<T>, _ handler: (T)->R) -> Matrix<R> {
     var inPointer = UnsafePointer(arg.elements)
     let outPointer = UnsafeMutablePointer<R>.allocate(capacity: arg.elements.count)
@@ -19,6 +20,7 @@ func apply<T, R>(_ arg: Matrix<T>, _ handler: (T)->R) -> Matrix<R> {
                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
+// apply binary functon `handler` for `lhs` and `rhs` elementwise
 func combine<T, U, R>(_ lhs: Matrix<T>, _ rhs: Matrix<U>, _ handler: (T, U) -> R) -> Matrix<R> {
     precondition(lhs.rows==rhs.rows && lhs.columns == rhs.columns, "Two matrices have incompatible shape.")
     

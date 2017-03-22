@@ -17,12 +17,16 @@ enum InvertError: Error {
             var pivots: [__CLPK_integer] = [__CLPK_integer](repeating: 0, count: Int(N))
             var workspace: [Double]      = [Double](repeating: 0.0, count: Int(N))
             var error: __CLPK_integer   = 0
+            
+            // LU decomposition
             dgetrf_(&N, &N, &inMatrix, &N, &pivots, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))
             } else if error > 0 {
                 throw InvertError.SingularMatrix
             }
+            
+            // solve
             dgetri_(&N, &inMatrix, &N, &pivots, &workspace, &N, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))
@@ -46,12 +50,16 @@ enum InvertError: Error {
             var pivots: [__CLPK_integer] = [__CLPK_integer](repeating: 0, count: Int(N))
             var workspace: [Float]      = [Float](repeating: 0.0, count: Int(N))
             var error: __CLPK_integer   = 0
+            
+            // LU decomposition
             sgetrf_(&N, &N, &inMatrix, &N, &pivots, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))
             } else if error > 0 {
                 throw InvertError.SingularMatrix
             }
+            
+            // solve
             sgetri_(&N, &inMatrix, &N, &pivots, &workspace, &N, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))

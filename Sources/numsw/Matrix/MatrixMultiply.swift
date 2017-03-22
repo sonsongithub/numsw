@@ -57,6 +57,8 @@ public func *<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
 func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     precondition(lhs.columns == rhs.rows, "Matrices can't multiply.")
     
+    /* multiply m*p matrix A and p*n matrix B, return m*n matrix C */
+    
     let m = lhs.rows
     let n = rhs.columns
     let p = lhs.columns
@@ -65,7 +67,7 @@ func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     let cElements = UnsafeMutablePointer<T>.allocate(capacity: count)
     defer { cElements.deallocate(capacity: count) }
     
-    // init
+    // init C[i,j] with A[i,0] * B[0,j]
     var ptr = cElements
     var lp = UnsafePointer(lhs.elements)
     var rp = UnsafePointer(rhs.elements)
@@ -76,9 +78,7 @@ func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
         }
     }
     
-    // iterate
-    
-    
+    // add A[i,k] * B[k,j] for C[i,j]
     for i in 0..<m {
         lp = UnsafePointer(lhs.elements) + i*p + 1
         for k in 1..<p {

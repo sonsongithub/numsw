@@ -1,6 +1,7 @@
 
 import Foundation
 
+
 #if os(iOS) || os(OSX)
     
     import Accelerate
