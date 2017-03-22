@@ -15,7 +15,7 @@ class numswTests: XCTestCase {
         let xx = x * x.transposed()
         x.transposed().show()
 
-        let a = xx.inverted()
+        let a = try! xx.inverted()
         print("------------a")
         a.show()
         print("------------")
