@@ -3,7 +3,7 @@
     
     import Accelerate
     
-    // unary
+    // MARK: - Unary
     public prefix func -(arg: Matrix<Float>) -> Matrix<Float> {
         return unaryMinusAccelerate(arg)
     }
@@ -12,7 +12,7 @@
         return unaryMinusAccelerate(arg)
     }
     
-    // Matrix and scalar
+    // MARK: - Matrix and scalar
     public func +(lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
         return addAccelerate(lhs, rhs)
     }
@@ -80,7 +80,7 @@
         return divideAccelerate(lhs, rhs)
     }
     
-    // Matrix and Matrix
+    // MARK: - Matrix and Matrix
     public func +(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
         return addAccelerate(lhs, rhs)
     }
@@ -114,7 +114,7 @@
     }
     
     
-    // unary
+    // MARK: - Unary
     private func applyVDspFunc<T>(_ arg: Matrix<T>,
                                _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> Matrix<T> {
         
@@ -137,7 +137,7 @@
         return applyVDspFunc(arg, vDSP_vnegD)
     }
     
-    // Matrix and scalar
+    // MARK: - Matrix and scalar
     private func applyVDspFunc<T>(_ lhs: Matrix<T>,
                                _ rhs: T,
                                _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> Matrix<T> {
@@ -203,7 +203,7 @@
         return applyVDspFunc(lhs, rhs, vDSP_svdivD)
     }
     
-    // Matrix and Matrix
+    // MARK: - Matrix and Matrix
     private func applyVDspFunc<T>(_ lhs: Matrix<T>,
                                _ rhs: Matrix<T>,
                                _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> Matrix<T> {

@@ -54,10 +54,12 @@ public func *<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     return multiply(lhs, rhs)
 }
 
+/// Multiply (m x p) matrix lhs and, (p x n) matrix rhs
+/// Returns: Matrix multipliation of lhs and rhs
 func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     precondition(lhs.columns == rhs.rows, "Matrices can't multiply.")
     
-    /* multiply m*p matrix A and p*n matrix B, return m*n matrix C */
+    // multiply m*p matrix A and p*n matrix B, return m*n matrix C
     
     let m = lhs.rows
     let n = rhs.columns

@@ -1,6 +1,6 @@
 extension Matrix {
     public subscript(row: Int, column: Int) -> T {
-        // - Returns: single element
+        /// - Returns: single element
         get {
             return elements[row * columns + column]
         }
@@ -10,7 +10,7 @@ extension Matrix {
     }
     
     public subscript(row: Int) -> Matrix<T> {
-        // - Returns: elements in the row as a row matrix
+        /// - Returns: elements in the row as a row matrix
         get {
             return Matrix(rows: 1, columns: columns, elements: Array(elements[row * columns..<row * columns + columns]))
         }
@@ -25,10 +25,10 @@ extension Matrix {
     }
     
     public subscript(rs: [Int]?, cs: [Int]?) -> Matrix<T> {
-        // - Parameters:
-        //   - rs: indices of rows, nil means all rows
-        //   - cs: indices of columns, nil means all columns
-        // - Returns: submatrix
+        /// - Parameters:
+        ///   - rs: indices of rows, nil means all rows
+        ///   - cs: indices of columns, nil means all columns
+        /// - Returns: submatrix
         get {
             let rs = rs ?? Array(0..<rows)
             let cs = cs ?? Array(0..<columns)
