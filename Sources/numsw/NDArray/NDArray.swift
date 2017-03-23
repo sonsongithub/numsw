@@ -1,5 +1,3 @@
-
-
 public struct NDArray<T> {
     private var _shape: [Int]
     public var shape: [Int] {

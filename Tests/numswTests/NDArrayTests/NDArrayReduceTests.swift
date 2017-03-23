@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -10,17 +9,17 @@ class NDArrayReduceTests: XCTestCase {
         XCTAssertEqual(_min(a, along: 0),
                        NDArray(shape: [3, 4],
                                elements: [11, 10, 9, 8,
-                                          7,  6,  5, 4,
-                                          3,  2,  1, 0]))
+                                          7, 6, 5, 4,
+                                          3, 2, 1, 0]))
         XCTAssertEqual(_min(a, along: 1),
                        NDArray(shape: [2, 4],
                                elements: [15, 14, 13, 12,
-                                          3,  2,  1,  0]))
+                                          3, 2, 1, 0]))
         
         XCTAssertEqual(_min(a, along: 2),
                        NDArray(shape: [2, 3],
                                elements: [20, 16, 12,
-                                          8,  4,  0]))
+                                          8, 4, 0]))
     }
     
     func testMax() {
@@ -33,12 +32,12 @@ class NDArrayReduceTests: XCTestCase {
                                           20, 21, 22, 23]))
         XCTAssertEqual(_max(a, along: 1),
                        NDArray(shape: [2, 4],
-                               elements: [8,  9, 10, 11,
+                               elements: [8, 9, 10, 11,
                                           20, 21, 22, 23]))
         
         XCTAssertEqual(_max(a, along: 2),
                        NDArray(shape: [2, 3],
-                               elements: [3,  7, 11,
+                               elements: [3, 7, 11,
                                           15, 19, 23]))
     }
     
@@ -68,7 +67,7 @@ class NDArrayReduceTests: XCTestCase {
                                    NDArray(shape: [3, 4],
                                            elements: [6, 7, 8, 9,
                                                       10, 11, 12, 13,
-                                                      14, 15,  16, 17]))
+                                                      14, 15, 16, 17]))
         XCTAssertEqualWithAccuracy(_mean(a, along: 1),
                                    NDArray(shape: [2, 4],
                                            elements: [4, 5, 6, 7,
@@ -88,38 +87,38 @@ class NDArrayReduceTests: XCTestCase {
             XCTAssertEqual(_minAccelerate(a), 0)
             XCTAssertEqual(_minAccelerate(a, along: 0),
                            NDArray(shape: [3, 4],
-                                   elements: [11, 10,  9,
-                                              8,  7,  6,
-                                              5,  4,  3,
-                                              2,  1,  0]))
+                                   elements: [11, 10, 9,
+                                              8, 7, 6,
+                                              5, 4, 3,
+                                              2, 1, 0]))
             XCTAssertEqual(_minAccelerate(a, along: 1),
                            NDArray(shape: [2, 4],
                                    elements: [15, 14, 13, 12,
-                                              3,  2,  1,  0]))
+                                              3, 2, 1, 0]))
             
             XCTAssertEqual(_minAccelerate(a, along: 2),
                            NDArray(shape: [2, 3],
                                    elements: [20, 16, 12,
-                                              8,  4,  0]))
+                                              8, 4, 0]))
         }
         do {
             let a = NDArray(shape: [2, 3, 4], elements: (0..<2*3*4).reversed().map(Double.init))
             XCTAssertEqual(_minAccelerate(a), 0)
             XCTAssertEqual(_minAccelerate(a, along: 0),
                            NDArray(shape: [3, 4],
-                                   elements: [11, 10,  9,
-                                              8,  7,  6,
-                                              5,  4,  3,
-                                              2,  1,  0]))
+                                   elements: [11, 10, 9,
+                                              8, 7, 6,
+                                              5, 4, 3,
+                                              2, 1, 0]))
             XCTAssertEqual(_minAccelerate(a, along: 1),
                            NDArray(shape: [2, 4],
                                    elements: [15, 14, 13, 12,
-                                              3,  2,  1,  0]))
+                                              3, 2, 1, 0]))
             
             XCTAssertEqual(_minAccelerate(a, along: 2),
                            NDArray(shape: [2, 3],
                                    elements: [20, 16, 12,
-                                              8,  4,  0]))
+                                              8, 4, 0]))
         }
     }
     
@@ -134,12 +133,12 @@ class NDArrayReduceTests: XCTestCase {
                                               20, 21, 22, 23]))
             XCTAssertEqual(_maxAccelerate(a, along: 1),
                            NDArray(shape: [2, 4],
-                                   elements: [8,  9, 10, 11,
+                                   elements: [8, 9, 10, 11,
                                               20, 21, 22, 23]))
             
             XCTAssertEqual(_maxAccelerate(a, along: 2),
                            NDArray(shape: [2, 3],
-                                   elements: [3,  7, 11,
+                                   elements: [3, 7, 11,
                                               15, 19, 23]))
         }
         do {
@@ -152,12 +151,12 @@ class NDArrayReduceTests: XCTestCase {
                                               20, 21, 22, 23]))
             XCTAssertEqual(_maxAccelerate(a, along: 1),
                            NDArray(shape: [2, 4],
-                                   elements: [8,  9, 10, 11,
+                                   elements: [8, 9, 10, 11,
                                               20, 21, 22, 23]))
             
             XCTAssertEqual(_maxAccelerate(a, along: 2),
                            NDArray(shape: [2, 3],
-                                   elements: [3,  7, 11,
+                                   elements: [3, 7, 11,
                                               15, 19, 23]))
         }
     }
@@ -208,7 +207,7 @@ class NDArrayReduceTests: XCTestCase {
                                    NDArray(shape: [3, 4],
                                            elements: [6, 7, 8, 9,
                                                       10, 11, 12, 13,
-                                                      14, 15,  16, 17]))
+                                                      14, 15, 16, 17]))
         XCTAssertEqualWithAccuracy(_meanAccelerate(a, along: 1),
                                    NDArray(shape: [2, 4],
                                            elements: [4, 5, 6, 7,
@@ -219,7 +218,6 @@ class NDArrayReduceTests: XCTestCase {
                                            elements: [1.5, 5.5, 9.5,
                                                       13.5, 17.5, 21.5]))
     }
-    
     
     #endif
     

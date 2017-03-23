@@ -1,4 +1,3 @@
-
 // operators
 public prefix func !(arg: NDArray<Bool>) -> NDArray<Bool> {
     return not(arg)
@@ -57,7 +56,6 @@ public func >=<T: Comparable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<Bool>
     return notLessThan(lhs, rhs)
 }
 
-
 // unary
 func not(_ arg: NDArray<Bool>) -> NDArray<Bool> {
     return apply(arg, !)
@@ -73,7 +71,6 @@ func or(_ lhs: NDArray<Bool>, _ rhs: NDArray<Bool>) -> NDArray<Bool> {
     // FIXME: Setting third argument `||` causes error
     return combine(lhs, rhs) { $0 || $1 }
 }
-
 
 // NDArray and scalar
 func equal<T: Equatable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
@@ -95,7 +92,6 @@ func notGreaterThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool>
 func notLessThan<T: Comparable>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<Bool> {
      return apply(lhs) { $0 >= rhs}
 }
-
 
 // NDArray and NDArray
 func equal<T: Equatable>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<Bool> {

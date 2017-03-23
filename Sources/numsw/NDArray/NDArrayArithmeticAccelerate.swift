@@ -1,4 +1,3 @@
-
 #if os(iOS) || os(OSX)
     
     import Accelerate
@@ -29,7 +28,6 @@
         return addAccelerate(rhs, lhs)
     }
     
-    
     public func -(lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return addAccelerate(lhs, -rhs)
     }
@@ -46,7 +44,6 @@
         return addAccelerate(-rhs, lhs)
     }
     
-    
     public func *(lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return multiplyAccelerate(lhs, rhs)
     }
@@ -62,7 +59,6 @@
     public func *(lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
         return multiplyAccelerate(rhs, lhs)
     }
-    
     
     public func /(lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return divideAccelerate(lhs, rhs)
@@ -113,10 +109,9 @@
         return divideAccelerate(lhs, rhs)
     }
     
-    
     // unary
     private func applyVDspFunc<T>(_ arg: NDArray<T>,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
         defer { out.deallocate(capacity: arg.elements.count) }
@@ -139,7 +134,7 @@
     // NDArray and scalar
     private func applyVDspFunc<T>(_ lhs: NDArray<T>,
                                _ rhs: T,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
         defer { out.deallocate(capacity: lhs.elements.count) }
@@ -154,7 +149,7 @@
     }
     private func applyVDspFunc<T>(_ lhs: T,
                                _ rhs: NDArray<T>,
-                               _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+                               _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: rhs.elements.count)
         defer { out.deallocate(capacity: rhs.elements.count) }
@@ -203,7 +198,7 @@
     // NDArray and NDArray
     private func applyVDspFunc<T>(_ lhs: NDArray<T>,
                                _ rhs: NDArray<T>,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         precondition(lhs.shape == rhs.shape, "Two NDArrays have incompatible shape.")
         

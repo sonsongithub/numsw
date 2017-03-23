@@ -1,4 +1,3 @@
-
 #if os(iOS) || os(OSX)
     
     import Accelerate
@@ -46,7 +45,6 @@
                       columns: rhs.columns,
                       elements: Array(UnsafeBufferPointer(start: cElements, count: count)))
     }
-    
     
 #endif
 
@@ -99,4 +97,3 @@ func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
                   columns: n,
                   elements: Array(UnsafeBufferPointer(start: cElements, count: count)))
 }
-

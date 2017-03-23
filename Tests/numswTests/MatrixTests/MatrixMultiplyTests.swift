@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -19,8 +18,8 @@ class MatrixMultiplyTests: XCTestCase {
             
             let c = multiply(a, b)
             
-            XCTAssertEqual(c, Matrix([[ 49,  24,  20],
-                                      [165,  92, 100],
+            XCTAssertEqual(c, Matrix([[ 49, 24, 20],
+                                      [165, 92, 100],
                                       [281, 160, 180]]))
         }
     }
