@@ -60,7 +60,7 @@ public struct DummyData {
             
             // linear regression
             let xx = x * x.transposed()
-            let a = xx.inverted()
+            let a = try! xx.inverted()
             let b = x.transposed() * a
             let A = yn * b
             
@@ -79,7 +79,7 @@ public struct DummyData {
             let xx = x * x.transposed()
             x.transposed().show()
             
-            let a = xx.inverted()
+            let a = try! xx.inverted()
             let logy = log(y)
             
             let b = x.transposed() * a

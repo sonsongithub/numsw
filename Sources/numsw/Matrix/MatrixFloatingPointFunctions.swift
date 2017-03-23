@@ -1,6 +1,8 @@
 
 import Foundation
 
+
+// MARK: - Accelerate
 #if os(iOS) || os(OSX)
     
     import Accelerate
@@ -116,6 +118,7 @@ import Foundation
     
 #endif
 
+// MARK: - Normal
 public func sqrt<T: FloatingPointFunctions>(_ arg: Matrix<T>) -> Matrix<T> {
     return _sqrt(arg)
 }
@@ -139,7 +142,6 @@ public func cos<T: FloatingPointFunctions>(_ arg: Matrix<T>) -> Matrix<T> {
 public func tan<T: FloatingPointFunctions>(_ arg: Matrix<T>) -> Matrix<T> {
     return _tan(arg)
 }
-
 
 
 func _sqrt<T: FloatingPointFunctions>(_ arg: Matrix<T>) -> Matrix<T> {

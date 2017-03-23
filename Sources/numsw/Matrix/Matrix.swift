@@ -6,9 +6,10 @@ public struct Matrix<T> {
         return columns * rows
     }
     
-    public var elements: [T]
+    public internal(set) var elements: [T]
     
     public init(rows: Int, columns: Int, elements: [T]) {
+        precondition(rows*columns == elements.count, "`elements.count` must correspond to `rows*columns`")
         self.rows = rows
         self.columns = columns
         self.elements = elements

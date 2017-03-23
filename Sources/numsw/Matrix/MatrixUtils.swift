@@ -2,6 +2,8 @@
 infix operator .*
 infix operator .*=
 
+/// Apply `handler` for each elements
+/// - Returns: Matrix
 func apply<T, R>(_ arg: Matrix<T>, _ handler: (T)->R) -> Matrix<R> {
     var inPointer = UnsafePointer(arg.elements)
     let outPointer = UnsafeMutablePointer<R>.allocate(capacity: arg.elements.count)
@@ -19,6 +21,9 @@ func apply<T, R>(_ arg: Matrix<T>, _ handler: (T)->R) -> Matrix<R> {
                   elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
 }
 
+/// Apply `handler` for each pair of `lhs.elements` and `rhs.elements`
+/// `zip(lhs.elements, rhs.elements).map { handler($0, $1) }`
+/// - Returns: Matrix
 func combine<T, U, R>(_ lhs: Matrix<T>, _ rhs: Matrix<U>, _ handler: (T, U) -> R) -> Matrix<R> {
     precondition(lhs.rows==rhs.rows && lhs.columns == rhs.columns, "Two matrices have incompatible shape.")
     
