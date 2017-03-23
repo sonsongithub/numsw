@@ -8,6 +8,8 @@ class numswTests: XCTestCase {
         y.show()
     }
     
+    #if os(iOS) || os(OSX)
+    
     func testMaskedRider() {
         let x = Matrix<Double>(rows: 2, columns: 6, elements: [1, 2, 5, 9, 13, 15, 1, 1, 1, 1, 1, 1])
         let y = Matrix<Double>(rows: 1, columns: 6, elements: [1, 2, 3, 5, 10, 50])
@@ -39,6 +41,8 @@ class numswTests: XCTestCase {
 
         y_p.show()
     }
+    
+    #endif
 
     static var allTests: [(String, (numswTests) -> () throws -> Void)] {
         return [
