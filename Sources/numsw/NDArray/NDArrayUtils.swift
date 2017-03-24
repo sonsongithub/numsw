@@ -1,5 +1,4 @@
-
-func apply<T, R>(_ arg: NDArray<T>, _ handler: (T)->R) -> NDArray<R> {
+func apply<T, R>(_ arg: NDArray<T>, _ handler: (T) -> R) -> NDArray<R> {
     var inPointer = UnsafePointer(arg.elements)
     let outPointer = UnsafeMutablePointer<R>.allocate(capacity: arg.elements.count)
     defer { outPointer.deallocate(capacity: arg.elements.count) }
@@ -110,7 +109,6 @@ func formatIndicesInAxes(_ shape: [Int], _ indicesInAxes: [[Int]?]) -> [[Int]] {
     }
     return indices
 }
-
 
 extension Array {
     func removed(at index: Int) -> Array {

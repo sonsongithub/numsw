@@ -1,122 +1,116 @@
-
 #if os(iOS) || os(OSX)
     
     import Accelerate
     
     // unary
-    public prefix func -(arg: NDArray<Float>) -> NDArray<Float> {
+    public prefix func - (arg: NDArray<Float>) -> NDArray<Float> {
         return unaryMinusAccelerate(arg)
     }
     
-    public prefix func -(arg: NDArray<Double>) -> NDArray<Double> {
+    public prefix func - (arg: NDArray<Double>) -> NDArray<Double> {
         return unaryMinusAccelerate(arg)
     }
     
     // NDArray and scalar
-    public func +(lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
+    public func + (lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func +(lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func + (lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
         return addAccelerate(rhs, lhs)
     }
     
-    public func +(lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
+    public func + (lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func +(lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func + (lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
         return addAccelerate(rhs, lhs)
     }
     
-    
-    public func -(lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
+    public func - (lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return addAccelerate(lhs, -rhs)
     }
     
-    public func -(lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func - (lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
         return addAccelerate(-rhs, lhs)
     }
     
-    public func -(lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
+    public func - (lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
         return addAccelerate(lhs, -rhs)
     }
     
-    public func -(lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func - (lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
         return addAccelerate(-rhs, lhs)
     }
     
-    
-    public func *(lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
+    public func * (lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return multiplyAccelerate(lhs, rhs)
     }
     
-    public func *(lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func * (lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
         return multiplyAccelerate(rhs, lhs)
     }
     
-    public func *(lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
+    public func * (lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
         return multiplyAccelerate(lhs, rhs)
     }
     
-    public func *(lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func * (lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
         return multiplyAccelerate(rhs, lhs)
     }
     
-    
-    public func /(lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
+    public func / (lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func / (lhs: Float, rhs: NDArray<Float>) -> NDArray<Float> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
+    public func / (lhs: NDArray<Double>, rhs: Double) -> NDArray<Double> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func / (lhs: Double, rhs: NDArray<Double>) -> NDArray<Double> {
         return divideAccelerate(lhs, rhs)
     }
     
     // NDArray and NDArray
-    public func +(lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func + (lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func +(lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func + (lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func -(lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func - (lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
         return subtractAccelerate(lhs, rhs)
     }
     
-    public func -(lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func - (lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
         return subtractAccelerate(lhs, rhs)
     }
     
-    public func *(lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func * (lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
         return multiplyAccelerate(lhs, rhs)
     }
     
-    public func *(lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func * (lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
         return multiplyAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
+    public func / (lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
+    public func / (lhs: NDArray<Double>, rhs: NDArray<Double>) -> NDArray<Double> {
         return divideAccelerate(lhs, rhs)
     }
-    
     
     // unary
-    private func applyVDspFunc<T>(_ arg: NDArray<T>,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+    private func applyVDspFunc<T>(_ arg: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
         defer { out.deallocate(capacity: arg.elements.count) }
@@ -137,9 +131,7 @@
     }
     
     // NDArray and scalar
-    private func applyVDspFunc<T>(_ lhs: NDArray<T>,
-                               _ rhs: T,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+    private func applyVDspFunc<T>(_ lhs: NDArray<T>, _ rhs: T, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
         defer { out.deallocate(capacity: lhs.elements.count) }
@@ -152,9 +144,7 @@
         return NDArray(shape: lhs.shape,
                        elements: Array(UnsafeBufferPointer(start: out, count: lhs.elements.count)))
     }
-    private func applyVDspFunc<T>(_ lhs: T,
-                               _ rhs: NDArray<T>,
-                               _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+    private func applyVDspFunc<T>(_ lhs: T, _ rhs: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: rhs.elements.count)
         defer { out.deallocate(capacity: rhs.elements.count) }
@@ -201,9 +191,7 @@
     }
     
     // NDArray and NDArray
-    private func applyVDspFunc<T>(_ lhs: NDArray<T>,
-                               _ rhs: NDArray<T>,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length)->Void) -> NDArray<T> {
+    private func applyVDspFunc<T>(_ lhs: NDArray<T>, _ rhs: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         precondition(lhs.shape == rhs.shape, "Two NDArrays have incompatible shape.")
         

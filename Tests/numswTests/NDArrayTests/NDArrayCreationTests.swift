@@ -1,5 +1,3 @@
-
-
 import XCTest
 @testable import numsw
 
@@ -62,7 +60,7 @@ class NDArrayCreationTests: XCTestCase {
             ("testOnes", testOnes),
             ("testEye", testEye),
             ("testRange", testRange),
-            ("testLinspace", testLinspace),
+            ("testLinspace", testLinspace)
         ]
     }
 }

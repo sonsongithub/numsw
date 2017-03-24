@@ -136,7 +136,6 @@
 		OBJ_63 /* NDArrayXCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDArrayXCTest.swift; sourceTree = "<group>"; };
 		OBJ_65 /* PlaygroundBook */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PlaygroundBook; sourceTree = SOURCE_ROOT; };
 		OBJ_66 /* Playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playgrounds; sourceTree = SOURCE_ROOT; };
-		OBJ_67 /* Release */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Release; sourceTree = SOURCE_ROOT; };
 		OBJ_69 /* Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tools; sourceTree = SOURCE_ROOT; };
 		OBJ_71 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_72 /* numswTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = numswTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,7 +236,6 @@
 				OBJ_36 /* Tests */,
 				OBJ_65 /* PlaygroundBook */,
 				OBJ_66 /* Playgrounds */,
-				OBJ_67 /* Release */,
 				OBJ_69 /* Tools */,
 				OBJ_70 /* Products */,
 			);
@@ -336,6 +334,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_74 /* Build configuration list for PBXNativeTarget "numsw" */;
 			buildPhases = (
+				147BA1DB1E8484E000295562 /* swiftlint */,
 				OBJ_77 /* Sources */,
 				OBJ_103 /* Frameworks */,
 			);
@@ -373,6 +372,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		147BA1DB1E8484E000295562 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\necho \"SwiftLint\"\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_108 /* Sources */ = {

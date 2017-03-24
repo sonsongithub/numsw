@@ -1,5 +1,4 @@
-
-// Scalar
+// MARK: - Scalar
 public func +=<T: Arithmetic>(lhs: inout Matrix<T>, rhs: T) {
     lhs = lhs + rhs
 }
@@ -20,7 +19,7 @@ public func %=<T: Moduloable>(lhs: inout Matrix<T>, rhs: T) {
     lhs = lhs % rhs
 }
 
-// Matrix
+// MARK: - Matrix
 public func +=<T: Arithmetic>(lhs: inout Matrix<T>, rhs: Matrix<T>) {
     lhs = lhs + rhs
 }

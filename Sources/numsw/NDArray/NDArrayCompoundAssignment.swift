@@ -1,4 +1,3 @@
-
 // Scalar
 public func +=<T: Arithmetic>(lhs: inout NDArray<T>, rhs: T) {
     lhs = lhs + rhs

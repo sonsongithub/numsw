@@ -3,6 +3,7 @@ disabled_rules:
 - valid_docs
 - type_name
 - variable_name
+- shorthand_operator
 
 excluded:
 - reddift/vendor

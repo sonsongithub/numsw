@@ -1,4 +1,3 @@
-
 import Foundation
 
 extension NDArray {
@@ -17,7 +16,7 @@ extension NDArray {
         var newShape = shape
         newShape.insert(1, at: axis)
         
-        return _concatenate(arrays.map{ $0.reshaped(newShape) }, along: axis)
+        return _concatenate(arrays.map { $0.reshaped(newShape) }, along: axis)
     }
     
     public static func concatenate(_ arrays: [NDArray<T>], along axis: Int = 0) -> NDArray<T> {
@@ -62,4 +61,3 @@ func _concatenate<T>(_ arrays: [NDArray<T>], along axis: Int) -> NDArray<T> {
     return NDArray(shape: shapeBeforeConcatAxis + [concatAxisSize] + shapeAfterConcatAxis,
                    elements: elements)
 }
-

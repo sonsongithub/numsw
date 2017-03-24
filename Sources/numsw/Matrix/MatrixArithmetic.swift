@@ -1,5 +1,4 @@
-
-// unary
+// MARK: - Unary
 public prefix func +<T: SignedNumber>(arg: Matrix<T>) -> Matrix<T> {
     return unaryPlus(arg)
 }
@@ -16,7 +15,7 @@ public func -<T: Arithmetic>(lhs: Matrix<T>, rhs: T) -> Matrix<T> {
     return subtract(lhs, rhs)
 }
 
-// Matrix and scalar
+// MARK: - Matrix and scalar
 public func *<T: Arithmetic>(lhs: Matrix<T>, rhs: T) -> Matrix<T> {
     return multiply(lhs, rhs)
 }
@@ -49,7 +48,7 @@ public func %<T: Moduloable>(lhs: T, rhs: Matrix<T>) -> Matrix<T> {
     return modulo(lhs, rhs)
 }
 
-// Matrix and Matrix
+// MARK: - Matrix and Matrix
 public func +<T: Arithmetic>(lhs: Matrix<T>, rhs: Matrix<T>) -> Matrix<T> {
     return add(lhs, rhs)
 }
@@ -70,8 +69,7 @@ public func %<T: Moduloable>(lhs: Matrix<T>, rhs: Matrix<T>) -> Matrix<T> {
     return modulo(lhs, rhs)
 }
 
-
-// unary
+// MARK: - Unary
 func unaryPlus<T: SignedNumber>(_ arg: Matrix<T>) -> Matrix<T> {
     return apply(arg, +)
 }
@@ -80,8 +78,7 @@ func unaryMinus<T: SignedNumber>(_ arg: Matrix<T>) -> Matrix<T> {
     return apply(arg, -)
 }
 
-
-// Matrix and scalar
+// MARK: - Matrix and scalar
 func add<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: T) -> Matrix<T> {
     return apply(lhs) { $0 + rhs }
 }
@@ -121,8 +118,7 @@ func modulo<T: Moduloable>(_ lhs: T, _ rhs: Matrix<T>) -> Matrix<T> {
     return apply(rhs) { lhs % $0 }
 }
 
-
-// Matrix and Matrix
+// MARK: - Matrix and Matrix
 func add<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
     return combine(lhs, rhs, +)
 }

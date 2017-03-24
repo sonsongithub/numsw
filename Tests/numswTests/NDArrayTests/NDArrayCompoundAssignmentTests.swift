@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -89,7 +88,7 @@ class NDArrayCompoundAssignmentTests: XCTestCase {
         return [
             ("testAddAssign", testAddAssign),
             ("testSubtractAssign", testSubtractAssign),
-            ("testMultiplyAssign", testMultiplyAssign),
+            ("testMultiplyAssign", testMultiplyAssign)
         ]
     }
     

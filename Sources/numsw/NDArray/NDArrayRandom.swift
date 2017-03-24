@@ -1,4 +1,3 @@
-
 extension NDArray where T: FloatingPointFunctions & FloatingPoint {
     
     public static func uniform(low: T = 0, high: T = 1, shape: [Int]) -> NDArray<T> {

@@ -1,4 +1,3 @@
-
 extension NDArray {
     public func reshaped(_ newShape: [Int]) -> NDArray<T> {
         

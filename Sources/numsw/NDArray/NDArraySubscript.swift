@@ -1,4 +1,3 @@
-
 extension NDArray {
     public subscript(index: Int...) -> T {
         get {
@@ -21,7 +20,7 @@ extension NDArray {
     public subscript(ranges: CountableRange<Int>?...) -> NDArray<T> {
         let indices = ranges.map { range in
             range.map { r in
-                Array<Int>(r)
+                [Int](r)
             }
         }
         return getSubarray(self, indices)
@@ -30,13 +29,12 @@ extension NDArray {
     public subscript(ranges: CountableClosedRange<Int>?...) -> NDArray<T> {
         let indices = ranges.map { range in
             range.map { r in
-                Array<Int>(r)
+                [Int](r)
             }
         }
         return getSubarray(self, indices)
     }
 }
-
 
 func getElement<T>(_ array: NDArray<T>, _ index: [Int]) -> T {
     let elementIndex = calculateIndex(array.shape, index)
@@ -47,7 +45,6 @@ func setElement<T>(_ array: inout NDArray<T>, _ index: [Int], newValue: T) {
     let elementIndex = calculateIndex(array.shape, index)
     array.elements[elementIndex] = newValue
 }
-
 
 func getSubarray<T>(_ array: NDArray<T>, _ indices: [[Int]?]) -> NDArray<T> {
     

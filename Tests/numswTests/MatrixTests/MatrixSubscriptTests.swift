@@ -56,7 +56,7 @@ class MatrixSubscriptTests: XCTestCase {
             ("testRowSubscript", testRowSubscript),
             ("testSubmatrixSubscript", testSubmatrixSubscript),
             ("testAddAssign", testAddAssign),
-            ("testMultAssign", testMultAssign),
+            ("testMultAssign", testMultAssign)
         ]
     }
 }

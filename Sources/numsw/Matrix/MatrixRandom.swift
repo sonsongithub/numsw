@@ -1,4 +1,3 @@
-
 import Foundation
 
 extension Matrix where T: FloatingPointFunctions & FloatingPoint {
@@ -16,6 +15,7 @@ extension Matrix where T: FloatingPointFunctions & FloatingPoint {
 extension Matrix where T: FloatingPoint & FloatingPointFunctions & Arithmetic {
     
     public static func normal(mu: T = 0, sigma: T = 0, rows: Int, columns: Int) -> Matrix<T> {
+        // Box-Muller's method
         let u1 = uniform(low: T(0), high: T(1), rows: rows, columns: columns)
         let u2 = uniform(low: T(0), high: T(1), rows: rows, columns: columns)
         
