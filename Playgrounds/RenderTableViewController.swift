@@ -102,7 +102,7 @@ public class RenderTableViewController: UITableViewController {
     
     public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        tableView.visibleCells.flatMap({ $0 as? RenderTableViewCell}).forEach({ $0..updateImageViewIfNeeded() })
+        tableView.visibleCells.flatMap({ $0 as? RenderTableViewCell}).forEach({ $0.updateImageViewIfNeeded() })
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
