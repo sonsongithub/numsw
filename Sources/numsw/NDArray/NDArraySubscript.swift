@@ -20,7 +20,7 @@ extension NDArray {
     public subscript(ranges: CountableRange<Int>?...) -> NDArray<T> {
         let indices = ranges.map { range in
             range.map { r in
-                Array<Int>(r)
+                [Int](r)
             }
         }
         return getSubarray(self, indices)
@@ -29,7 +29,7 @@ extension NDArray {
     public subscript(ranges: CountableClosedRange<Int>?...) -> NDArray<T> {
         let indices = ranges.map { range in
             range.map { r in
-                Array<Int>(r)
+                [Int](r)
             }
         }
         return getSubarray(self, indices)

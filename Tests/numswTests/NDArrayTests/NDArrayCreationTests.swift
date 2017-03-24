@@ -60,7 +60,7 @@ class NDArrayCreationTests: XCTestCase {
             ("testOnes", testOnes),
             ("testEye", testEye),
             ("testRange", testRange),
-            ("testLinspace", testLinspace),
+            ("testLinspace", testLinspace)
         ]
     }
 }

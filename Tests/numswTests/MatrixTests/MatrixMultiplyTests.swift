@@ -49,7 +49,7 @@ class MatrixMultiplyTests: XCTestCase {
     static var allTests: [(String, (MatrixMultiplyTests) -> () throws -> Void)] {
         return [
             ("testMultiply", testMultiply),
-            ("testMultiplyOperator", testMultiplyOperator),
+            ("testMultiplyOperator", testMultiplyOperator)
         ]
     }
 }

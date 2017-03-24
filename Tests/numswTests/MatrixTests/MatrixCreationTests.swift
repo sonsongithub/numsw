@@ -28,7 +28,7 @@ class MatrixCreationTests: XCTestCase {
             ("testInit", testInit),
             ("testZeros", testZeros),
             ("testOnes", testOnes),
-            ("testEye", testEye),
+            ("testEye", testEye)
         ]
     }
 }

@@ -8,13 +8,17 @@ class MatrixInvertTests: XCTestCase {
     func testInvert() {
         do {
             let mat = Matrix<Float>(rows: 2, columns: 2, elements: [0.0, 1.0, 2.0, 3.0])
-            let inv = try! mat.inverted()
+            let inv = try mat.inverted()
             XCTAssertEqual(inv.elements, [-1.5, 0.5, 1, 0])
+        } catch {
+            XCTFail("\(error)")
         }
         do {
             let mat = Matrix(rows: 2, columns: 2, elements: [0.0, 1.0, 2.0, 3.0])
-            let inv = try! mat.inverted()
+            let inv = try mat.inverted()
             XCTAssertEqual(inv.elements, [-1.5, 0.5, 1, 0])
+        } catch {
+            XCTFail("\(error)")
         }
     }
     

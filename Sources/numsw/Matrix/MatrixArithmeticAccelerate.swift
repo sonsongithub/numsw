@@ -3,115 +3,114 @@
     import Accelerate
     
     // MARK: - Unary
-    public prefix func -(arg: Matrix<Float>) -> Matrix<Float> {
+    public prefix func - (arg: Matrix<Float>) -> Matrix<Float> {
         return unaryMinusAccelerate(arg)
     }
     
-    public prefix func -(arg: Matrix<Double>) -> Matrix<Double> {
+    public prefix func - (arg: Matrix<Double>) -> Matrix<Double> {
         return unaryMinusAccelerate(arg)
     }
     
     // MARK: - Matrix and scalar
-    public func +(lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
+    public func + (lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func +(lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func + (lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
         return addAccelerate(rhs, lhs)
     }
     
-    public func +(lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
+    public func + (lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func +(lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func + (lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
         return addAccelerate(rhs, lhs)
     }
     
-    public func -(lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
+    public func - (lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
         return addAccelerate(lhs, -rhs)
     }
     
-    public func -(lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func - (lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
         return addAccelerate(-rhs, lhs)
     }
     
-    public func -(lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
+    public func - (lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
         return addAccelerate(lhs, -rhs)
     }
     
-    public func -(lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func - (lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
         return addAccelerate(-rhs, lhs)
     }
     
-    public func *(lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
+    public func * (lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
         return multiplyAccelerate(lhs, rhs)
     }
     
-    public func *(lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func * (lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
         return multiplyAccelerate(rhs, lhs)
     }
     
-    public func *(lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
+    public func * (lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
         return multiplyAccelerate(lhs, rhs)
     }
     
-    public func *(lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func * (lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
         return multiplyAccelerate(rhs, lhs)
     }
     
-    public func /(lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
+    public func / (lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func / (lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
+    public func / (lhs: Matrix<Double>, rhs: Double) -> Matrix<Double> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func / (lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
         return divideAccelerate(lhs, rhs)
     }
     
     // MARK: - Matrix and Matrix
-    public func +(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func + (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func +(lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func + (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
         return addAccelerate(lhs, rhs)
     }
     
-    public func -(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func - (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
         return subtractAccelerate(lhs, rhs)
     }
     
-    public func -(lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func - (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
         return subtractAccelerate(lhs, rhs)
     }
     
-    public func .*(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func .* (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
         return elementWiseProductAccelerate(lhs, rhs)
     }
     
-    public func .*(lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func .* (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
         return elementWiseProductAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func / (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
         return divideAccelerate(lhs, rhs)
     }
     
-    public func /(lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func / (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
         return divideAccelerate(lhs, rhs)
     }
     
     // MARK: - Unary
-    private func applyVDspFunc<T>(_ arg: Matrix<T>,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
+    private func applyVDspFunc<T>(_ arg: Matrix<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
         defer { out.deallocate(capacity: arg.elements.count) }
@@ -133,9 +132,7 @@
     }
     
     // MARK: - Matrix and scalar
-    private func applyVDspFunc<T>(_ lhs: Matrix<T>,
-                               _ rhs: T,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
+    private func applyVDspFunc<T>(_ lhs: Matrix<T>, _ rhs: T, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
         defer { out.deallocate(capacity: lhs.elements.count) }
@@ -149,9 +146,7 @@
                       columns: lhs.columns,
                       elements: Array(UnsafeBufferPointer(start: out, count: lhs.elements.count)))
     }
-    private func applyVDspFunc<T>(_ lhs: T,
-                               _ rhs: Matrix<T>,
-                               _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
+    private func applyVDspFunc<T>(_ lhs: T, _ rhs: Matrix<T>, _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
         
         let out = UnsafeMutablePointer<T>.allocate(capacity: rhs.elements.count)
         defer { out.deallocate(capacity: rhs.elements.count) }
@@ -199,9 +194,7 @@
     }
     
     // MARK: - Matrix and Matrix
-    private func applyVDspFunc<T>(_ lhs: Matrix<T>,
-                               _ rhs: Matrix<T>,
-                               _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
+    private func applyVDspFunc<T>(_ lhs: Matrix<T>, _ rhs: Matrix<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> Matrix<T> {
         
         precondition(lhs.rows == rhs.rows && lhs.columns == rhs.columns, "Two NDArrays have incompatible shape.")
         

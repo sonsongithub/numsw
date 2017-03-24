@@ -88,7 +88,7 @@ class NDArrayCompoundAssignmentTests: XCTestCase {
         return [
             ("testAddAssign", testAddAssign),
             ("testSubtractAssign", testSubtractAssign),
-            ("testMultiplyAssign", testMultiplyAssign),
+            ("testMultiplyAssign", testMultiplyAssign)
         ]
     }
     

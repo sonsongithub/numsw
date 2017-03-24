@@ -68,7 +68,7 @@ class NDArrayTransformationTests: XCTestCase {
     static var allTests: [(String, (NDArrayTransformationTests) -> () throws -> Void)] {
         return [
             ("testReshape", testReshape),
-            ("testTranspose", testTranspose),
+            ("testTranspose", testTranspose)
         ]
     }
 }

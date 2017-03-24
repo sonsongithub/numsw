@@ -65,7 +65,7 @@ public class AxisRenderer: Renderer {
         for x in tickXs {
             drawLine(context: ctx, points: [
                 CGPoint(x: x, y: (tickHeight / 2.0)),
-                CGPoint(x: x, y: -(tickHeight / 2.0)),
+                CGPoint(x: x, y: -(tickHeight / 2.0))
                 ])
         }
     }
@@ -86,13 +86,12 @@ public class AxisRenderer: Renderer {
         for y in tickYs {
             drawLine(context: ctx, points: [
                 CGPoint(x: -(tickWidth / 2.0), y: y),
-                CGPoint(x: (tickWidth / 2.0), y: y),
+                CGPoint(x: (tickWidth / 2.0), y: y)
                 ])
         }
     }
     
-    private func drawLine(context: CGContext,
-                         points: [CGPoint]) {
+    private func drawLine(context: CGContext, points: [CGPoint]) {
         let t = viewportTransform!
         
         let points = points.map { $0.applying(t) }

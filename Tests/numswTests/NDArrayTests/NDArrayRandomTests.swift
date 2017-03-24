@@ -12,7 +12,7 @@ class NDArrayRandomTests: XCTestCase {
     
     static var allTests: [(String, (NDArrayRandomTests) -> () throws -> Void)] {
         return [
-            ("testUniform", testUniform),
+            ("testUniform", testUniform)
         ]
     }
 }

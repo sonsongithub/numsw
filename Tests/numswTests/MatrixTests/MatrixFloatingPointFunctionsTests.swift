@@ -103,7 +103,7 @@ class MatrixFloatingPointFunctionsTests: XCTestCase {
             ("testLog", testLog),
             ("testSin", testSin),
             ("testCos", testCos),
-            ("testTan", testTan),
+            ("testTan", testTan)
         ]
     }
     

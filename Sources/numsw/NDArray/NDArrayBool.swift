@@ -1,11 +1,11 @@
 // operators
-public prefix func !(arg: NDArray<Bool>) -> NDArray<Bool> {
+public prefix func ! (arg: NDArray<Bool>) -> NDArray<Bool> {
     return not(arg)
 }
-public func &&(lhs: NDArray<Bool>, rhs: NDArray<Bool>) -> NDArray<Bool> {
+public func && (lhs: NDArray<Bool>, rhs: NDArray<Bool>) -> NDArray<Bool> {
     return and(lhs, rhs)
 }
-public func ||(lhs: NDArray<Bool>, rhs: NDArray<Bool>) -> NDArray<Bool> {
+public func || (lhs: NDArray<Bool>, rhs: NDArray<Bool>) -> NDArray<Bool> {
     return or(lhs, rhs)
 }
 

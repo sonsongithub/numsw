@@ -7,9 +7,7 @@ func XCTAssertEqual<T: Equatable>(_ expression1: Matrix<T>, _ expression2: Matri
     XCTAssertEqual(expression1.elements, expression2.elements)
 }
 
-func XCTAssertEqualWithAccuracy<T: BinaryFloatingPoint>(_ expression1: Matrix<T>,
-                                _ expression2: Matrix<T>,
-                                accuracy: T = 1e-5) {
+func XCTAssertEqualWithAccuracy<T: BinaryFloatingPoint>(_ expression1: Matrix<T>, _ expression2: Matrix<T>, accuracy: T = 1e-5) {
     
     XCTAssertEqual(expression1.rows, expression2.rows)
     XCTAssertEqual(expression1.columns, expression2.columns)

@@ -226,7 +226,7 @@ class NDArrayReduceTests: XCTestCase {
             ("testMin", testMin),
             ("testMax", testMax),
             ("testSum", testSum),
-            ("testMean", testMean),
+            ("testMean", testMean)
         ]
     }
 }

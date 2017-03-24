@@ -112,7 +112,7 @@ class NDArrayPerformanceTests: XCTestCase {
             ("testSqrtPerformance", testSqrtPerformance),
             ("testSumPerformance0", testSumPerformance0),
             ("testSumPerformance1", testSumPerformance1),
-            ("testNormalPerformance", testNormalPerformance),
+            ("testNormalPerformance", testNormalPerformance)
         ]
     }
 }

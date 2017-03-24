@@ -57,9 +57,7 @@
         return out
     }
     
-    private func reduce<T>(_ arg: NDArray<T>,
-                        along axis: Int,
-                        handler: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Length) -> Void) -> NDArray<T> {
+    private func reduce<T>(_ arg: NDArray<T>, along axis: Int, handler: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Length) -> Void) -> NDArray<T> {
         var axis = axis
         if axis < 0 {
             axis += arg.shape.count

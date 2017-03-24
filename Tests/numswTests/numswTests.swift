@@ -11,42 +11,30 @@ class numswTests: XCTestCase {
     #if os(iOS) || os(OSX)
     
     func testMaskedRider() {
-        let x = Matrix<Double>(rows: 2, columns: 6, elements: [1, 2, 5, 9, 13, 15, 1, 1, 1, 1, 1, 1])
-        let y = Matrix<Double>(rows: 1, columns: 6, elements: [1, 2, 3, 5, 10, 50])
+        do {
+            let x = Matrix<Double>(rows: 2, columns: 6, elements: [1, 2, 5, 9, 13, 15, 1, 1, 1, 1, 1, 1])
+            let y = Matrix<Double>(rows: 1, columns: 6, elements: [1, 2, 3, 5, 10, 50])
 
-        let xx = x * x.transposed()
-        x.transposed().show()
+            let xx = x * x.transposed()
+            x.transposed().show()
 
-        let a = try! xx.inverted()
-        print("------------a")
-        a.show()
-        print("------------")
-        
-//        logY = np.log(Y)
-//        A = np.dot(logY, np.dot(np.transpose(X), a))
-//        print(A)
-        let logy = log(y)
-//        logy.show()
-        
-        print("------------b")
-        let b = x.transposed() * a
-        b.show()
-        print("-------------")
-        
-        let A = logy * b
-        A.show()
-        
-        let x_p = Matrix.range(from: 0, to: 10, stride: 0.1)
-        let y_p = exp(A.elements[0] * x_p + A.elements[1])
-
-        y_p.show()
+            let a = try xx.inverted()
+            let logy = log(y)
+            let b = x.transposed() * a
+            let A = logy * b
+            let x_p = Matrix.range(from: 0, to: 10, stride: 0.1)
+            let y_p = exp(A.elements[0] * x_p + A.elements[1])
+            y_p.show()
+        } catch {
+            XCTFail("\(error)")
+        }
     }
     
     #endif
 
     static var allTests: [(String, (numswTests) -> () throws -> Void)] {
         return [
-            ("testExample", testExample),
+            ("testExample", testExample)
         ]
     }
 }

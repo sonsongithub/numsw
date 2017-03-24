@@ -10,7 +10,7 @@ class MatrixTransformationTests: XCTestCase {
     
     static var allTests: [(String, (MatrixTransformationTests) -> () throws -> Void)] {
         return [
-            ("testReshape", testReshape),
+            ("testReshape", testReshape)
         ]
     }
     

@@ -99,9 +99,7 @@ public class RenderTableViewController: UITableViewController {
     
     public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        for view in tableView.visibleCells {
-            (view as! RenderTableViewCell).updateImageViewIfNeeded()
-        }
+        tableView.visibleCells.flatMap({ $0 as? RenderTableViewCell}).forEach({ $0..updateImageViewIfNeeded() })
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -109,8 +107,10 @@ public class RenderTableViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! RenderTableViewCell
-        cell.renderer = renderers[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
+        if let cell = cell as? RenderTableViewCell {
+            cell.renderer = renderers[indexPath.row]
+        }
         return cell
     }
     
@@ -119,7 +119,8 @@ public class RenderTableViewController: UITableViewController {
     }
 
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = cell as! RenderTableViewCell
-        cell.updateImageViewIfNeeded()
+        if let cell = cell as? RenderTableViewCell {
+            cell.updateImageViewIfNeeded()
+        }
     }
 }

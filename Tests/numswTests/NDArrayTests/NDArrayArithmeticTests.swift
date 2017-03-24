@@ -415,7 +415,7 @@ class NDArrayArithmeticTests: XCTestCase {
             ("testDivide", testDivide),
             ("testDivideOperator", testDivideOperator),
             ("testModulo", testModulo),
-            ("testModuloOperator", testModuloOperator),
+            ("testModuloOperator", testModuloOperator)
         ]
     }
 }

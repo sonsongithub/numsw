@@ -32,7 +32,7 @@ class NDArrayBoolTests: XCTestCase {
     static var allTests: [(String, (NDArrayBoolTests) -> () throws -> Void)] {
         return [
             ("testBool", testBool),
-            ("testCompare", testCompare),
+            ("testCompare", testCompare)
         ]
     }
 }
