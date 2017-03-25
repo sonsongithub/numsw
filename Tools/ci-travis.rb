@@ -27,7 +27,8 @@ class CiTravisApp
         "-workspace", "numsw.xcworkspace",
         "-scheme", scheme,
         "-destination", destination_str,
-        "-sdk", sdk
+        "-sdk", sdk,
+        "-verbose"
         ])
     }
   end
