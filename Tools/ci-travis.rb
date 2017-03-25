@@ -18,37 +18,40 @@ class CiTravisApp
     run_books
   end
 
-  def run_xcodebuild(action, scheme, sdk, destination)
-    Dir.chdir(repo_dir) {
-      destination_str = destination
-        .to_a.map {|x| "#{x[0]}=#{x[1]}" }.join(",")
-      exec([
-        "xcodebuild", action,
-        "-workspace", "numsw.xcworkspace",
-        "-scheme", scheme,
-        "-destination", destination_str,
-        "-sdk", sdk,
-        "-verbose"
-        ])
-    }
-  end
-
   def run_xcode_tasks
+    mac_sdk = "macosx"
     mac_dest = {
       "platform" => "macOS"
     }
 
+    ios_sdk = "iphonesimulator"
     ios_dest = {
       "platform" => "iOS Simulator",
       "OS" => "10.2",
       "name" => "iPad Air 2"
     }
 
-    run_xcodebuild("test" , "numsw"               , "macosx"          , mac_dest)
-    run_xcodebuild("build", "numsw"               , "iphonesimulator" , ios_dest)
-    run_xcodebuild("build", "NumswRenderer-iOS"   , "iphonesimulator" , ios_dest)
-    run_xcodebuild("build", "NumswRenderer-macOS" , "macosx"          , mac_dest)
-    run_xcodebuild("test" , "sandbox"             , "iphonesimulator" , ios_dest)
+    run_xcodebuild("numsw"              , "test" , mac_sdk, mac_dest)
+    run_xcodebuild("numsw"              , "build", ios_sdk, ios_dest)
+    run_xcodebuild("NumswRenderer-iOS"  , "build", ios_sdk, ios_dest)
+    run_xcodebuild("NumswRenderer-macOS", "build", mac_sdk, mac_dest)
+    run_xcodebuild("sandbox"            , "test" , ios_sdk, ios_dest)
+  end
+
+  def run_xcodebuild(scheme, action, sdk, destination)
+    Dir.chdir(repo_dir) {
+      destination_str = destination
+        .to_a.map {|x| "#{x[0]}=#{x[1]}" }.join(",")
+      exec([
+        "xcodebuild",
+        "-workspace", "numsw.xcworkspace",
+        "-scheme", scheme,
+        "-sdk", sdk,
+        "-destination", destination_str,
+        "-verbose",
+        action
+        ])
+    }
   end
 
   def build_books
