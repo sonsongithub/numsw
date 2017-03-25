@@ -12,30 +12,39 @@ class CiTravisApp
     puts "repo_dir: #{repo_dir}"
 
     test_on_mac
-    test_on_ipad
+
+    test_sandbox_on_ipad
+
     build_book
   end
 
   def test_on_mac
-    Dir.chdir(repo_dir)
-    exec([
-      "xcodebuild", "test",
-      "-project", "numsw.xcodeproj",
-      "-scheme", "numsw",
-      ])
+    run_test(
+      "numsw", 
+      "macOS")
   end
 
-  def test_on_ipad
-    Dir.chdir(repo_dir + "Playgrounds/sandbox")
-    platform = "iOS Simulator"
-    os = "10.2"
-    name = "iPad Air 2"
-    exec([
-      "xcodebuild", "test",
-      "-workspace", "sandbox.xcworkspace",
-      "-scheme", "sandbox",
-      "-destination", "platform=#{platform},OS=#{os},name=#{name}"
-      ])
+  def test_sandbox_on_ipad
+    run_test(
+      "sandbox", 
+      "iOS Simulator", { 
+        "OS" => "10.2",
+        "name" => "iPad Air 2"
+      })
+  end
+
+  def run_test(scheme, platform, destination_params={})
+    Dir.chdir(repo_dir) {
+      destination_params["platform"] = platform
+      destination = destination_params
+        .to_a.map {|x| "#{x[0]}=#{x[1]}" }.join(",")
+      exec([
+        "xcodebuild", "test",
+        "-workspace", "numsw.xcworkspace",
+        "-scheme", scheme,
+        "-destination", destination
+        ])
+    }
   end
 
   def build_book
