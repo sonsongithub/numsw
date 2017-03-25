@@ -8,7 +8,7 @@
 
 //  xAxis, yAxis, ticks
 
-import UIKit
+import CoreGraphics
 
 public class AxisRenderer: Renderer {
     public init(chart: Chart) {
@@ -52,8 +52,9 @@ public class AxisRenderer: Renderer {
     private func drawAxisX(context ctx: CGContext) {
         let p0 = CGPoint(x: chart.viewport.minX, y: 0)
         let p1 = CGPoint(x: chart.viewport.maxX, y: 0)
-        
-        ctx.setStrokeColor(UIColor.gray.cgColor)
+
+        ctx.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                   components: [0.5, 0.5, 0.5, 1.0])!)
         drawLine(context: ctx, points: [p0, p1])
         
         //  ticks
@@ -74,7 +75,8 @@ public class AxisRenderer: Renderer {
         let p0 = CGPoint(x: 0, y: chart.viewport.minY)
         let p1 = CGPoint(x: 0, y: chart.viewport.maxY)
         
-        ctx.setStrokeColor(UIColor.gray.cgColor)
+        ctx.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                   components: [0.5, 0.5, 0.5, 1.0])!)
         drawLine(context: ctx, points: [p0, p1])
         
         //  ticks

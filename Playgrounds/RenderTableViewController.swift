@@ -8,6 +8,7 @@
 
 //  Second Implementation with UITableView
 
+#if os(iOS)
 import UIKit
 
 private class RenderTableViewCell: UITableViewCell {
@@ -123,3 +124,4 @@ public class RenderTableViewController: UITableViewController {
         cell.updateImageViewIfNeeded()
     }
 }
+#endif
