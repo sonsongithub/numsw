@@ -1,4 +1,3 @@
-
 public protocol ZeroOne {
     static var zero: Self { get }
     static var one: Self { get }

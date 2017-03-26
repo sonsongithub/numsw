@@ -1,4 +1,3 @@
-
 import Foundation
 import XCTest
 @testable import numsw
@@ -196,7 +195,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             ("testLog", testLog),
             ("testSin", testSin),
             ("testCos", testCos),
-            ("testTan", testTan),
+            ("testTan", testTan)
         ]
     }
     

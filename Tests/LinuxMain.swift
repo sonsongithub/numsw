@@ -22,6 +22,5 @@ XCTMain([
      testCase(NDArrayReduceTests.allTests),
      testCase(NDArrayStackTests.allTests),
      testCase(NDArraySubscriptTests.allTests),
-     testCase(NDArrayTransformationTests.allTests),
+     testCase(NDArrayTransformationTests.allTests)
 ])
-

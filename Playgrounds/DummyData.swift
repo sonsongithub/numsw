@@ -60,7 +60,7 @@ public struct DummyData {
             
             // linear regression
             let xx = x * x.transposed()
-            let a = try! xx.inverted()
+            let a = try xx.inverted()
             let b = x.transposed() * a
             let A = yn * b
             
@@ -70,6 +70,8 @@ public struct DummyData {
             
             // rendering
             addLine2(x: x_p.elements, y: y_p.elements, x2: x.elements, y2: yn.elements)
+        } catch {
+            fatalError("\(error)")
         }
         
         do {
@@ -79,7 +81,7 @@ public struct DummyData {
             let xx = x * x.transposed()
             x.transposed().show()
             
-            let a = try! xx.inverted()
+            let a = try xx.inverted()
             let logy = log(y)
             
             let b = x.transposed() * a
@@ -89,6 +91,8 @@ public struct DummyData {
             let y_p = exp(A[0, 0] * x_p + A[0, 1])
             
             addLine2(x: x_p.elements, y: y_p.elements, x2: x.elements, y2: y.elements)
+        } catch {
+            fatalError("\(error)")
         }
 
     }

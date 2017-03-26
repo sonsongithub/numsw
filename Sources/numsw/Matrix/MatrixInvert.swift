@@ -1,4 +1,3 @@
-
 enum InvertError: Error {
     case IrregalValue(argument: Int)
     case SingularMatrix

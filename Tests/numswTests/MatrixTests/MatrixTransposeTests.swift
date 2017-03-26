@@ -11,7 +11,7 @@ class MatrixTransposeTests: XCTestCase {
     
     static var allTests: [(String, (MatrixTransposeTests) -> () throws -> Void)] {
         return [
-            ("testTranspose", testTranspose),
+            ("testTranspose", testTranspose)
         ]
     }
 }

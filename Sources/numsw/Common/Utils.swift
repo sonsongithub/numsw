@@ -1,4 +1,3 @@
-
 #if os(Linux)
     import Glibc
     import SwiftShims
@@ -6,7 +5,7 @@
     import Darwin
 #endif
 
-func cs_arc4random_uniform(_ upperBound : UInt32 = UINT32_MAX) -> UInt32 {
+func cs_arc4random_uniform(_ upperBound: UInt32 = UINT32_MAX) -> UInt32 {
     #if os(Linux)
         return _swift_stdlib_cxx11_mt19937_uniform(upperBound)
     #else

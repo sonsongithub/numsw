@@ -1,4 +1,3 @@
-
 public protocol FloatProtocol {
     var value: Float { get }
 }

@@ -1,4 +1,3 @@
-
 import Foundation
 
 public func frobeniusNorm<T: FloatingPoint>(_ hs: Matrix<T>) -> T {

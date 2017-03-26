@@ -1,13 +1,12 @@
-
 #if os(iOS) || os(OSX)
     
     import Accelerate
     
-    public func *(lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
+    public func * (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
         return multiplyAccelerate(lhs, rhs)
     }
     
-    public func *(lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+    public func * (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
         return multiplyAccelerate(lhs, rhs)
     }
     
@@ -46,7 +45,6 @@
                       columns: rhs.columns,
                       elements: Array(UnsafeBufferPointer(start: cElements, count: count)))
     }
-    
     
 #endif
 
@@ -99,4 +97,3 @@ func multiply<T: Arithmetic>(_ lhs: Matrix<T>, _ rhs: Matrix<T>) -> Matrix<T> {
                   columns: n,
                   elements: Array(UnsafeBufferPointer(start: cElements, count: count)))
 }
-
