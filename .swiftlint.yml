@@ -1,16 +1,16 @@
+included:
+- Sources
+- Playgrounds
+
+excluded:
+- Playgrounds/sandbox
+
 disabled_rules:
 - trailing_whitespace
 - valid_docs
 - type_name
 - variable_name
 - shorthand_operator
-
-excluded:
-- reddift/vendor
-- playground
-- reddiftTests
-- reddiftSample
-- reddiftSampleTV
 
 file_length:
   warning: 2000
