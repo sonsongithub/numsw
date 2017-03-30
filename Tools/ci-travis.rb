@@ -27,7 +27,7 @@ class CiTravisApp
     ios_sdk = "iphonesimulator"
     ios_dest = {
       "platform" => "iOS Simulator",
-      "OS" => "10.2",
+      "OS" => "10.3",
       "name" => "iPad Air 2"
     }
 
