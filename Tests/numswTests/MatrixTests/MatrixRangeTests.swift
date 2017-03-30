@@ -16,7 +16,7 @@ class MatrixRangeTests: XCTestCase {
     static var allTests: [(String, (MatrixRangeTests) -> () throws -> Void)] {
         return [
             ("testRange", testRange),
-            ("testLinspace", testLinspace),
+            ("testLinspace", testLinspace)
         ]
     }
 }

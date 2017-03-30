@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -64,7 +63,7 @@ class NDArraySubscriptTests: XCTestCase {
             ("testSubscriptGetElement", testSubscriptGetElement),
             ("testSubscriptSetElement", testSubscriptSetElement),
             ("testSubscriptGetSubarray", testSubscriptGetSubarray),
-            ("testSubscriptSetSubarray", testSubscriptSetSubarray),
+            ("testSubscriptSetSubarray", testSubscriptSetSubarray)
         ]
     }
 }

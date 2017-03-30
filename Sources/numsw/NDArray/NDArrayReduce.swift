@@ -1,4 +1,3 @@
-
 #if os(iOS) || os(OSX)
     
     import Accelerate
@@ -58,9 +57,7 @@
         return out
     }
     
-    private func reduce<T>(_ arg: NDArray<T>,
-                        along axis: Int,
-                        handler: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Length)->Void) -> NDArray<T> {
+    private func reduce<T>(_ arg: NDArray<T>, along axis: Int, handler: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Length) -> Void) -> NDArray<T> {
         var axis = axis
         if axis < 0 {
             axis += arg.shape.count
@@ -135,7 +132,6 @@ extension NDArray where T: Comparable {
         return _max(self)
     }
     
-    
     public func min(along axis: Int) -> NDArray<T> {
         return _min(self, along: axis)
     }
@@ -143,7 +139,6 @@ extension NDArray where T: Comparable {
     public func max(along axis: Int) -> NDArray<T> {
         return _max(self, along: axis)
     }
-    
     
 }
 
@@ -186,7 +181,7 @@ func _mean<T: Arithmetic & FloatingPoint>(_ arg: NDArray<T>) -> T {
     return _sum(arg) / T(arg.elements.count)
 }
 
-private func reduce<T>(_ arg: NDArray<T>, along axis: Int, handler: (T, T)->T) -> NDArray<T> {
+private func reduce<T>(_ arg: NDArray<T>, along axis: Int, handler: (T, T) -> T) -> NDArray<T> {
     var axis = axis
     if axis < 0 {
         axis += arg.shape.count

@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -416,7 +415,7 @@ class NDArrayArithmeticTests: XCTestCase {
             ("testDivide", testDivide),
             ("testDivideOperator", testDivideOperator),
             ("testModulo", testModulo),
-            ("testModuloOperator", testModuloOperator),
+            ("testModuloOperator", testModuloOperator)
         ]
     }
 }

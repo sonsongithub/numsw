@@ -1,5 +1,3 @@
-
-
 extension NDArray {
     public static func filled(with value: T, shape: [Int]) -> NDArray<T> {
         let elements = [T](repeating: value, count: shape.reduce(1, *))

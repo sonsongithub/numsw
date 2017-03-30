@@ -100,8 +100,7 @@ public struct RendererUtil {
         return ret
     }
 
-    public static func drawLine(context: CGContext,
-                         points: [CGPoint]) {
+    public static func drawLine(context: CGContext, points: [CGPoint]) {
         context.setLineWidth(2.0)
         
         if points.count < 2 {

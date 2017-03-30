@@ -1,4 +1,3 @@
-
 extension NDArray {
     public func reshaped(_ newShape: [Int]) -> NDArray<T> {
         
@@ -33,7 +32,7 @@ extension NDArray {
         let outShape = axes.map { self.shape[$0] }
         
         let outPointer = UnsafeMutablePointer<T>.allocate(capacity: self.elements.count)
-        defer { outPointer.deallocate(capacity: elements.count) }
+        defer { outPointer.deallocate(capacity: self.elements.count) }
         
         let inIndices = calculateIndices(formatIndicesInAxes(shape, []))
         

@@ -53,11 +53,10 @@ public class LineGraphRenderer: Renderer {
         }
     }
     
-    public func drawDebugX(context ctx: CGContext,
-                    point0: CGPoint,
-                    point1: CGPoint) {
+    public func drawDebugX(context ctx: CGContext, point0: CGPoint, point1: CGPoint) {
         ctx.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
                                    components: [1.0, 0.0, 0.0, 1.0])!)
+        
         drawLine(context: ctx, points: [
             CGPoint(x: point0.x, y: point0.y),
             CGPoint(x: point1.x, y: point1.y)

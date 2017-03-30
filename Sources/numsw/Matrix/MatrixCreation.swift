@@ -1,5 +1,3 @@
-
-
 extension Matrix {
     public static func filled(with value: T, rows: Int, columns: Int) -> Matrix<T> {
         let elements = [T](repeating: value, count: rows*columns)

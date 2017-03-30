@@ -1,4 +1,3 @@
-
 import Foundation
 
 #if os(iOS) || os(OSX)
@@ -138,8 +137,6 @@ public func cos<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
 public func tan<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     return _tan(arg)
 }
-
-
 
 func _sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, T.sqrt)

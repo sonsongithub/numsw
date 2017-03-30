@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import numsw
 
@@ -31,26 +30,26 @@ class NDArrayStackTests: XCTestCase {
             
             XCTAssertEqual(NDArray.concatenate([a, a, a], along: 0),
                            NDArray(shape: [6, 3, 4],
-                                   elements: [0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,
+                                   elements: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
                                               13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
-                                              0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,
+                                              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
                                               13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
-                                              0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,
+                                              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
                                               13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]))
             XCTAssertEqual(NDArray.concatenate([a, a, a], along: 1),
                            NDArray(shape: [2, 9, 4],
-                                   elements: [0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,
-                                              0,  1,  2,  3,  4, 5,  6,  7,  8,  9, 10, 11,
-                                              0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,
+                                   elements: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                                              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                                              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
                                               12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
                                               12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
                                               12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]))
             
             XCTAssertEqual(NDArray.concatenate([a, a, a], along: 2),
                            NDArray(shape: [2, 3, 12],
-                                   elements: [0,  1,  2,  3,  0,  1,  2,  3,  0,  1,  2,  3,
-                                              4,  5,  6,  7,  4, 5,  6,  7,  4,  5,  6,  7,
-                                              8,  9, 10, 11,  8,  9, 10, 11,  8,  9, 10, 11,
+                                   elements: [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,
+                                              4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7,
+                                              8, 9, 10, 11, 8, 9, 10, 11, 8, 9, 10, 11,
                                               12, 13, 14, 15, 12, 13, 14, 15, 12, 13, 14, 15,
                                               16, 17, 18, 19, 16, 17, 18, 19, 16, 17, 18, 19,
                                               20, 21, 22, 23, 20, 21, 22, 23, 20, 21, 22, 23]))
@@ -72,23 +71,23 @@ class NDArrayStackTests: XCTestCase {
             
             XCTAssertEqual(NDArray.stack([a, a], axis: 1),
                            NDArray(shape: [3, 2, 4],
-                                   elements: [0,  1,  2,  3,  0,  1,  2,  3,
-                                              4,  5,  6,  7,  4,  5,  6,  7,
-                                              8, 9, 10, 11,  8,  9, 10, 11]))
+                                   elements: [0, 1, 2, 3, 0, 1, 2, 3,
+                                              4, 5, 6, 7, 4, 5, 6, 7,
+                                              8, 9, 10, 11, 8, 9, 10, 11]))
             XCTAssertEqual(NDArray.stack([a, a], axis: -2),
                            NDArray(shape: [3, 2, 4],
-                                   elements: [0,  1,  2,  3,  0,  1,  2,  3,
-                                              4,  5,  6,  7,  4,  5,  6,  7,
-                                              8, 9, 10, 11,  8,  9, 10, 11]))
+                                   elements: [0, 1, 2, 3, 0, 1, 2, 3,
+                                              4, 5, 6, 7, 4, 5, 6, 7,
+                                              8, 9, 10, 11, 8, 9, 10, 11]))
             
             XCTAssertEqual(NDArray.stack([a, a], axis: 2),
                            NDArray(shape: [3, 4, 2],
-                                   elements: [0,  0,  1,  1,  2,  2,  3,  3,  4,  4,  5,  5,
-                                              6,  6, 7,  7,  8, 8,  9,  9, 10, 10, 11, 11]))
+                                   elements: [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5,
+                                              6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11]))
             XCTAssertEqual(NDArray.stack([a, a], axis: -1),
                            NDArray(shape: [3, 4, 2],
-                                   elements: [0,  0,  1,  1,  2,  2,  3,  3,  4,  4,  5,  5,
-                                              6,  6, 7,  7,  8, 8,  9,  9, 10, 10, 11, 11]))
+                                   elements: [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5,
+                                              6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11]))
             
         }
     }
@@ -96,7 +95,7 @@ class NDArrayStackTests: XCTestCase {
     static var allTests: [(String, (NDArrayStackTests) -> () throws -> Void)] {
         return [
             ("testConcatenate", testConcatenate),
-            ("testStack", testStack),
+            ("testStack", testStack)
         ]
     }
 }

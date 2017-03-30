@@ -63,12 +63,10 @@ public class NumswPlayground {
     }
     
     public static var shared: NumswPlayground {
-        get {
-            if _shared == nil {
-                _shared = NumswPlayground()
-            }
-            return _shared!
+        if _shared == nil {
+            _shared = NumswPlayground()
         }
+        return _shared!
     }
     
     private var renderers: [ChartRenderer] = [] {
