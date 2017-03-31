@@ -7,11 +7,11 @@ enum InvertError: Error {
 
     import Accelerate
     
-    extension Matrix where T: DoubleProtocol {
+    extension Matrix where T == Double {
         public func inverted() throws -> Matrix<Double> {
             precondition(rows == columns, "Matrix is not square.")
             
-            var inMatrix: [Double] = self.elements.map { $0.value }
+            var inMatrix: [Double] = self.elements
             var N: __CLPK_integer        = __CLPK_integer( sqrt( Double( self.rows*self.columns ) ) )
             var pivots: [__CLPK_integer] = [__CLPK_integer](repeating: 0, count: Int(N))
             var workspace: [Double]      = [Double](repeating: 0.0, count: Int(N))
@@ -40,11 +40,11 @@ enum InvertError: Error {
         }
     }
     
-    extension Matrix where T: FloatProtocol {
+    extension Matrix where T == Float {
         public func inverted() throws -> Matrix<Float> {
             precondition(rows == columns, "Matrix is not square.")
             
-            var inMatrix: [Float] = self.elements.map { $0.value }
+            var inMatrix: [Float] = self.elements
             var N: __CLPK_integer        = __CLPK_integer( sqrt( Double( self.rows*self.columns ) ) )
             var pivots: [__CLPK_integer] = [__CLPK_integer](repeating: 0, count: Int(N))
             var workspace: [Float]      = [Float](repeating: 0.0, count: Int(N))
