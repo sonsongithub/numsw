@@ -54,16 +54,10 @@ import Foundation
     }
     
     private func applyVVFunc<T>(_ arg: Matrix<T>, _ vvFunc: (UnsafeMutablePointer<T>, UnsafePointer<T>, UnsafePointer<Int32>) -> Void) -> Matrix<T> {
-        let inPointer = UnsafePointer(arg.elements)
-        let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-        defer { outPointer.deallocate(capacity: arg.elements.count) }
-        
-        var count = Int32(arg.elements.count)
-        vvFunc(outPointer, inPointer, &count)
         
         return Matrix(rows: arg.rows,
                       columns: arg.columns,
-                      elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+                      elements: applyVVFunc(arg.elements, vvFunc))
     }
     
     func _sqrtAccelerate(_ arg: Matrix<Float>) -> Matrix<Float> {

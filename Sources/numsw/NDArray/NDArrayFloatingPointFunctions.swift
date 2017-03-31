@@ -53,15 +53,9 @@ import Foundation
     }
     
     private func applyVVFunc<T>(_ arg: NDArray<T>, _ vvFunc: (UnsafeMutablePointer<T>, UnsafePointer<T>, UnsafePointer<Int32>) -> Void) -> NDArray<T> {
-        let inPointer = UnsafePointer(arg.elements)
-        let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-        defer { outPointer.deallocate(capacity: arg.elements.count) }
-        
-        var count = Int32(arg.elements.count)
-        vvFunc(outPointer, inPointer, &count)
         
         return NDArray(shape: arg.shape,
-                       elements: Array(UnsafeBufferPointer(start: outPointer, count: arg.elements.count)))
+                       elements: applyVVFunc(arg.elements, vvFunc))
     }
     
     func _sqrtAccelerate(_ arg: NDArray<Float>) -> NDArray<Float> {

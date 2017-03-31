@@ -110,4 +110,15 @@ func combine<T, U, R>(_ lhs: [T], _ rhs: [U], _ handler: (T, U) -> R) -> [R] {
         return [T](UnsafeBufferPointer(start: out, count: lhs.count))
     }
     
+    func applyVVFunc<T>(_ arg: [T], _ vvFunc: (UnsafeMutablePointer<T>, UnsafePointer<T>, UnsafePointer<Int32>) -> Void) -> [T] {
+        let inPointer = UnsafePointer(arg)
+        let outPointer = UnsafeMutablePointer<T>.allocate(capacity: arg.count)
+        defer { outPointer.deallocate(capacity: arg.count) }
+        
+        var count = Int32(arg.count)
+        vvFunc(outPointer, inPointer, &count)
+        
+        return [T](UnsafeBufferPointer(start: outPointer, count: arg.count))
+    }
+    
 #endif
