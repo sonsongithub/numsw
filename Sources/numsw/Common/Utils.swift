@@ -53,3 +53,61 @@ func combine<T, U, R>(_ lhs: [T], _ rhs: [U], _ handler: (T, U) -> R) -> [R] {
     
     return [R](UnsafeBufferPointer(start: outPointer, count: lhs.count))
 }
+
+#if os(iOS) || os(OSX)
+    
+    import Accelerate
+    
+    func applyVDspFunc<T>(_ arg: [T], _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> [T] {
+        
+        let out = UnsafeMutablePointer<T>.allocate(capacity: arg.count)
+        defer { out.deallocate(capacity: arg.count) }
+        
+        vDspFunc(arg, 1,
+                 out, 1, vDSP_Length(arg.count))
+        
+        return [T](UnsafeBufferPointer(start: out, count: arg.count))
+    }
+    
+    func applyVDspFunc<T>(_ lhs: [T], _ rhs: T, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> [T] {
+        
+        let out = UnsafeMutablePointer<T>.allocate(capacity: lhs.count)
+        defer { out.deallocate(capacity: lhs.count) }
+        
+        var rhs = rhs
+        vDspFunc(lhs, 1,
+                 &rhs,
+                 out, 1, vDSP_Length(lhs.count))
+        
+        return [T](UnsafeBufferPointer(start: out, count: lhs.count))
+    }
+    
+    func applyVDspFunc<T>(_ lhs: T, _ rhs: [T], _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> [T] {
+        
+        let out = UnsafeMutablePointer<T>.allocate(capacity: rhs.count)
+        defer { out.deallocate(capacity: rhs.count) }
+        
+        var lhs = lhs
+        vDspFunc(&lhs,
+                 rhs, 1,
+                 out, 1, vDSP_Length(rhs.count))
+        
+        return [T](UnsafeBufferPointer(start: out, count: rhs.count))
+    }
+    
+    func applyVDspFunc<T>(_ lhs: [T], _ rhs: [T], _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> [T] {
+        
+        precondition(lhs.count == rhs.count, "Two NDArrays have incompatible shape.")
+        
+        let out = UnsafeMutablePointer<T>.allocate(capacity: lhs.count)
+        defer { out.deallocate(capacity: lhs.count) }
+        
+        vDspFunc(lhs, 1,
+                 rhs, 1,
+                 out, 1,
+                 vDSP_Length(lhs.count))
+        
+        return [T](UnsafeBufferPointer(start: out, count: lhs.count))
+    }
+    
+#endif
