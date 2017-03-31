@@ -1,13 +1,78 @@
 #if os(iOS) || os(OSX)
     
+    // MARK: - Accelerate
     import Accelerate
     
-    // TODO: need extension
-//    extension NDArray where T == Float {
-//        func min() -> Float {
-//            return _minAccelerate(self)
-//        }
-//    }
+    // MARK: Extensions
+    
+    extension NDArray where T == Float {
+        public func min() -> Float {
+            return _minAccelerate(self)
+        }
+        
+        public func min(along axis: Int) -> NDArray<Float> {
+            return _minAccelerate(self, along: axis)
+        }
+        
+        public func max() -> Float {
+            return _maxAccelerate(self)
+        }
+        
+        public func max(along axis: Int) -> NDArray<Float> {
+            return _maxAccelerate(self, along: axis)
+        }
+        
+        public func sum() -> Float {
+            return _sumAccelerate(self)
+        }
+        
+        public func sum(along axis: Int) -> NDArray<Float> {
+            return _sumAccelerate(self, along: axis)
+        }
+        
+        public func mean() -> Float {
+            return _meanAccelerate(self)
+        }
+        
+        public func mean(along axis: Int) -> NDArray<Float> {
+            return _meanAccelerate(self, along: axis)
+        }
+    }
+    
+    extension NDArray where T == Double {
+        public func min() -> Double {
+            return _minAccelerate(self)
+        }
+        
+        public func min(along axis: Int) -> NDArray<Double> {
+            return _minAccelerate(self, along: axis)
+        }
+        
+        public func max() -> Double {
+            return _maxAccelerate(self)
+        }
+        public func max(along axis: Int) -> NDArray<Double> {
+            return _maxAccelerate(self, along: axis)
+        }
+        
+        public func sum() -> Double {
+            return _sumAccelerate(self)
+        }
+        
+        public func sum(along axis: Int) -> NDArray<Double> {
+            return _sumAccelerate(self, along: axis)
+        }
+        
+        public func mean() -> Double {
+            return _meanAccelerate(self)
+        }
+        
+        public func mean(along axis: Int) -> NDArray<Double> {
+            return _meanAccelerate(self, along: axis)
+        }
+    }
+    
+    // MARK: Whole elements
     
     func _minAccelerate(_ arg: NDArray<Float>) -> Float {
         var out: Float = 0
@@ -56,6 +121,8 @@
         vDSP_meanvD(arg.elements, 1, &out, vDSP_Length(arg.elements.count))
         return out
     }
+    
+    // MARK: Along axis
     
     private func reduce<T>(_ arg: NDArray<T>, along axis: Int, handler: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Length) -> Void) -> NDArray<T> {
         var axis = axis
@@ -122,6 +189,9 @@
     
 #endif
 
+// MARK: - Normal
+
+// MARK: Extensions
 extension NDArray where T: Comparable {
     
     public func min() -> T {
@@ -164,6 +234,8 @@ extension NDArray where T: Arithmetic & FloatingPoint {
     }
 }
 
+// MARK: Whole elements
+
 func _min<T: Comparable>(_ arg: NDArray<T>) -> T {
     return arg.elements.min()!
 }
@@ -180,6 +252,8 @@ func _sum<T: Arithmetic>(_ arg: NDArray<T>) -> T {
 func _mean<T: Arithmetic & FloatingPoint>(_ arg: NDArray<T>) -> T {
     return _sum(arg) / T(arg.elements.count)
 }
+
+// MARK: Along axis
 
 private func reduce<T>(_ arg: NDArray<T>, along axis: Int, handler: (T, T) -> T) -> NDArray<T> {
     var axis = axis
