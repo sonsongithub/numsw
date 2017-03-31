@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - Accelerate
 #if os(iOS) || os(OSX)
     
     import Accelerate
@@ -108,6 +109,7 @@ import Foundation
     
 #endif
 
+// MARK: - Normal
 public func sqrt<T: FloatingPointFunctions>(_ arg: NDArray<T>) -> NDArray<T> {
     return _sqrt(arg)
 }

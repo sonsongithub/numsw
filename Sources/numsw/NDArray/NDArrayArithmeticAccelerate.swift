@@ -2,7 +2,7 @@
     
     import Accelerate
     
-    // unary
+    // MARK: - Unary
     public prefix func - (arg: NDArray<Float>) -> NDArray<Float> {
         return unaryMinusAccelerate(arg)
     }
@@ -11,7 +11,7 @@
         return unaryMinusAccelerate(arg)
     }
     
-    // NDArray and scalar
+    // MARK: - NDArray and scalar
     public func + (lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return addAccelerate(lhs, rhs)
     }
@@ -76,7 +76,7 @@
         return divideAccelerate(lhs, rhs)
     }
     
-    // NDArray and NDArray
+    // MARK: - NDArray and NDArray
     public func + (lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
         return addAccelerate(lhs, rhs)
     }
@@ -109,7 +109,7 @@
         return divideAccelerate(lhs, rhs)
     }
     
-    // unary
+    // MARK: - Unary
     private func applyVDspFunc<T>(_ arg: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         return NDArray(shape: arg.shape,
@@ -124,7 +124,7 @@
         return applyVDspFunc(arg, vDSP_vnegD)
     }
     
-    // NDArray and scalar
+    // MARK: - NDArray and scalar
     private func applyVDspFunc<T>(_ lhs: NDArray<T>, _ rhs: T, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
 
         return NDArray(shape: lhs.shape,
@@ -168,7 +168,7 @@
         return applyVDspFunc(lhs, rhs, vDSP_svdivD)
     }
     
-    // NDArray and NDArray
+    // MARK: - NDArray and NDArray
     private func applyVDspFunc<T>(_ lhs: NDArray<T>, _ rhs: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         precondition(lhs.shape == rhs.shape, "Two NDArrays have incompatible shape.")
