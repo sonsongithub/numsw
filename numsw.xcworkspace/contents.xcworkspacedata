@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../numsw.xcodeproj">
+      location = "group:numsw.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:sandbox.xcodeproj">
+      location = "group:Playgrounds/sandbox/sandbox.xcodeproj">
    </FileRef>
 </Workspace>

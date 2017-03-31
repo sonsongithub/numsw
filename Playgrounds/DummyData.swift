@@ -6,7 +6,7 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 #if SANDBOX_APP
     import numsw

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_73"
-               BuildableName = "numsw.framework"
-               BlueprintName = "numsw"
-               ReferencedContainer = "container:numsw.xcodeproj">
+               BlueprintIdentifier = "D68EF7741E86DA4C00927991"
+               BuildableName = "NumswRenderer.framework"
+               BlueprintName = "NumswRenderer-macOS"
+               ReferencedContainer = "container:sandbox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_104"
-               BuildableName = "numswTests.xctest"
-               BlueprintName = "numswTests"
-               ReferencedContainer = "container:numsw.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_73"
-            BuildableName = "numsw.framework"
-            BlueprintName = "numsw"
-            ReferencedContainer = "container:numsw.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_73"
-            BuildableName = "numsw.framework"
-            BlueprintName = "numsw"
-            ReferencedContainer = "container:numsw.xcodeproj">
+            BlueprintIdentifier = "D68EF7741E86DA4C00927991"
+            BuildableName = "NumswRenderer.framework"
+            BlueprintName = "NumswRenderer-macOS"
+            ReferencedContainer = "container:sandbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_73"
-            BuildableName = "numsw.framework"
-            BlueprintName = "numsw"
-            ReferencedContainer = "container:numsw.xcodeproj">
+            BlueprintIdentifier = "D68EF7741E86DA4C00927991"
+            BuildableName = "NumswRenderer.framework"
+            BlueprintName = "NumswRenderer-macOS"
+            ReferencedContainer = "container:sandbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

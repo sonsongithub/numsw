@@ -6,14 +6,18 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 public class NumswPlayground {
     internal init() {
-        viewController = RenderTableViewController()
+        #if os(iOS)
+            viewController = RenderTableViewController()
+        #endif
     }
     
-    public let viewController: RenderTableViewController
+    #if os(iOS)
+        public let viewController: RenderTableViewController
+    #endif
     
     public func append(renderer: ChartRenderer) {
         renderers.append(renderer)
@@ -67,7 +71,9 @@ public class NumswPlayground {
     
     private var renderers: [ChartRenderer] = [] {
         didSet {
+            #if os(iOS)
             viewController.renderers = renderers.map { $0 as Renderer }
+            #endif
         }
     }
     

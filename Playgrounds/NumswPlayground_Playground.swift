@@ -8,11 +8,31 @@
 
 //  This file is not included for iOS app build target
 
-import PlaygroundSupport
+#if os(iOS)
+    #if SANDBOX_APP
+        //  sandbox app
+    #else
+        //  playground
+        import PlaygroundSupport
+    #endif
+#endif
 
 public extension NumswPlayground {
     public static func initialize() {
-        let s = NumswPlayground.shared
-        PlaygroundPage.current.liveView = s.viewController
+
+        
+        #if os(iOS)
+            #if SANDBOX_APP
+                //  sandbox app
+                print("[NumswPlaygrounds.initialize] not in playground")
+            #else
+                //  playground
+                let s = NumswPlayground.shared
+                PlaygroundPage.current.liveView = s.viewController
+            #endif
+        #else
+            print("[NumswPlaygrounds.initialize] not in iOS")
+        #endif
     }
 }
+
