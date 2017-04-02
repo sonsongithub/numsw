@@ -68,7 +68,7 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
     private func updateVisibleCellImagesIfNeeded() {
         // on orientation changed
         for view in tableView.visibleCells {
-            (view as! RenderTableViewCell).updateImageViewIfNeeded()
+            (view as? RenderTableViewCell)?.updateImageViewIfNeeded()
         }
     }
     
@@ -79,7 +79,7 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         super.viewWillTransition(to: size, with: coordinator)
     }*/
     
-    // TODO: 
+    // TODO:
     // `view*LayoutSubviews` seems to be not invoked on iPad playground
     // temporary, we use this deprecated method until the solution is found
     public override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
