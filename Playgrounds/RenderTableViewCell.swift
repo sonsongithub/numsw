@@ -11,6 +11,7 @@ import UIKit
 
 internal class RenderTableViewCell: UITableViewCell {
     
+    
     private static let renderQueue = DispatchQueue(label: "Renderer-Queue")
     
     var renderer: Renderer? {
@@ -24,7 +25,7 @@ internal class RenderTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        print("RenderTableViewCell init")
+        //print("RenderTableViewCell init")
         self.separatorInset = .zero
         self.selectionStyle = .none
         renderImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -38,7 +39,7 @@ internal class RenderTableViewCell: UITableViewCell {
     }
     
     deinit {
-        print("RenderTableViewCell deinit")
+        //print("RenderTableViewCell deinit")
     }
     
     private var renderedImageSize = CGSize.zero
