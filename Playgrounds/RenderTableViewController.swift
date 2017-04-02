@@ -53,14 +53,16 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         self.tableView.insertRows(at: [IndexPath(row: renderers.count, section: 0)], with: .automatic)
     }
 
+    // some times not invoked?? on iPad playground
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        updateVisibleCellImagesIfNeeded() // some times not invoked??
+        updateVisibleCellImagesIfNeeded()
     }
     
+    // some times not invoked?? on iPad playground
     public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        updateVisibleCellImagesIfNeeded() // some times not invoked??
+        updateVisibleCellImagesIfNeeded()
     }
     
     private func updateVisibleCellImagesIfNeeded() {
@@ -70,6 +72,16 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         }
     }
     
+    // some times not invoked?? on iPad playground
+    /*public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        updateVisibleCellImagesIfNeeded()
+        
+        super.viewWillTransition(to: size, with: coordinator)
+    }*/
+    
+    // TODO: 
+    // `view*LayoutSubviews` seems to be not invoked on iPad playground
+    // temporary, we use this deprecated method until the solution is found
     public override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         super.willAnimateRotation(to: toInterfaceOrientation, duration: duration)
         updateVisibleCellImagesIfNeeded()
