@@ -8,7 +8,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
         do {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
-            XCTAssertEqualWithAccuracy(_sqrt(a),
+            XCTAssertEqualWithAccuracy(sqrt(a),
                                        NDArray(shape: [2, 2], elements: elements.map(sqrt)))
         }
         do {
@@ -23,6 +23,96 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
         do {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(exp(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(exp)))
+        }
+        do {
+            let elements: [Double] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(exp(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(exp)))
+        }
+    }
+    
+    func testLog() {
+        do {
+            let elements: [Float] = [0.1, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(log(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(log)))
+        }
+        do {
+            let elements: [Double] = [0.1, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(log(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(log)))
+        }
+    }
+    
+    func testSin() {
+        do {
+            let elements: [Float] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(sin(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(sin)))
+        }
+        do {
+            let elements: [Double] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(sin(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(sin)))
+        }
+    }
+    
+    func testCos() {
+        do {
+            let elements: [Float] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(cos(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(cos)))
+        }
+        do {
+            let elements: [Double] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(cos(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(cos)))
+        }
+    }
+    
+    func testTan() {
+        do {
+            let elements: [Float] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(tan(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(tan)))
+        }
+        do {
+            let elements: [Double] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(tan(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(tan)))
+        }
+    }
+    
+    func testSqrtNormal() {
+        do {
+            let elements: [Float] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(_sqrt(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)))
+        }
+        do {
+            let elements: [Double] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
+            XCTAssertEqualWithAccuracy(_sqrt(a),
+                                       NDArray(shape: [2, 2], elements: elements.map(sqrt)))
+        }
+    }
+    
+    func testExpNormal() {
+        do {
+            let elements: [Float] = [0, 0.5, 1, 1.5]
+            let a = NDArray(shape: [2, 2], elements: elements)
             XCTAssertEqualWithAccuracy(_exp(a),
                                        NDArray(shape: [2, 2], elements: elements.map(exp)))
         }
@@ -34,7 +124,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
         }
     }
     
-    func testLog() {
+    func testLogNormal() {
         do {
             let elements: [Float] = [0.1, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
@@ -49,7 +139,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
         }
     }
     
-    func testSin() {
+    func testSinNormal() {
         do {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
@@ -64,7 +154,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
         }
     }
     
-    func testCos() {
+    func testCosNormal() {
         do {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
@@ -79,7 +169,7 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
         }
     }
     
-    func testTan() {
+    func testTanNormal() {
         do {
             let elements: [Float] = [0, 0.5, 1, 1.5]
             let a = NDArray(shape: [2, 2], elements: elements)
@@ -195,7 +285,13 @@ class NDArrayFloatingPointFunctionsTests: XCTestCase {
             ("testLog", testLog),
             ("testSin", testSin),
             ("testCos", testCos),
-            ("testTan", testTan)
+            ("testTan", testTan),
+            ("testSqrtNormal", testSqrtNormal),
+            ("testExpNormal", testExpNormal),
+            ("testLogNormal", testLogNormal),
+            ("testSinNormal", testSinNormal),
+            ("testCosNormal", testCosNormal),
+            ("testTanNormal", testTanNormal)
         ]
     }
     
