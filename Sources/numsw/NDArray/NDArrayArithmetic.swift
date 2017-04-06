@@ -1,4 +1,4 @@
-// unary
+// MARK: - Unary
 public prefix func +<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
     return unaryPlus(arg)
 }
@@ -7,6 +7,7 @@ public prefix func -<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
     return unaryMinus(arg)
 }
 
+// MARK: - NDArray and scalar
 public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
     return add(lhs, rhs)
 }
@@ -15,7 +16,6 @@ public func -<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
     return subtract(lhs, rhs)
 }
 
-// NDArray and scalar
 public func *<T: Arithmetic>(lhs: NDArray<T>, rhs: T) -> NDArray<T> {
     return multiply(lhs, rhs)
 }
@@ -48,7 +48,7 @@ public func %<T: Moduloable>(lhs: T, rhs: NDArray<T>) -> NDArray<T> {
     return modulo(lhs, rhs)
 }
 
-// NDArray and NDArray
+// MARK: - NDArray and NDArray
 public func +<T: Arithmetic>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
     return add(lhs, rhs)
 }
@@ -69,7 +69,7 @@ public func %<T: Moduloable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
     return modulo(lhs, rhs)
 }
 
-// unary
+// MARK: - Unary
 func unaryPlus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, +)
 }
@@ -78,7 +78,7 @@ func unaryMinus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, -)
 }
 
-// NDArray and scalar
+// MARK: - NDArray and scalar
 func add<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: T) -> NDArray<T> {
     return apply(lhs) { $0 + rhs }
 }
@@ -118,7 +118,7 @@ func modulo<T: Moduloable>(_ lhs: T, _ rhs: NDArray<T>) -> NDArray<T> {
     return apply(rhs) { lhs % $0 }
 }
 
-// NDArray and NDArray
+// MARK: - NDArray and NDArray
 func add<T: Arithmetic>(_ lhs: NDArray<T>, _ rhs: NDArray<T>) -> NDArray<T> {
     return combine(lhs, rhs, +)
 }
