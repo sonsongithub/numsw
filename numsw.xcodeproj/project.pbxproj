@@ -17,7 +17,6 @@
 		A79636C31E767BC200E1022B /* MatrixArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C21E767BC200E1022B /* MatrixArithmetic.swift */; };
 		A79636C51E767CFD00E1022B /* MatrixArithmeticAccelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */; };
 		A79636C71E76843500E1022B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C61E76843500E1022B /* Utils.swift */; };
-		A79636C91E768AE900E1022B /* FloatDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636C81E768AE900E1022B /* FloatDouble.swift */; };
 		A79636CB1E768E6000E1022B /* MatrixCompoundAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636CA1E768E6000E1022B /* MatrixCompoundAssignment.swift */; };
 		A79636CF1E768F6A00E1022B /* MatrixXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */; };
 		A79636D31E7694BC00E1022B /* MatrixCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */; };
@@ -87,7 +86,6 @@
 		A79636C21E767BC200E1022B /* MatrixArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmetic.swift; sourceTree = "<group>"; };
 		A79636C41E767CFD00E1022B /* MatrixArithmeticAccelerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmeticAccelerate.swift; sourceTree = "<group>"; };
 		A79636C61E76843500E1022B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		A79636C81E768AE900E1022B /* FloatDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatDouble.swift; sourceTree = "<group>"; };
 		A79636CA1E768E6000E1022B /* MatrixCompoundAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCompoundAssignment.swift; sourceTree = "<group>"; };
 		A79636CE1E768F6A00E1022B /* MatrixXCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixXCTest.swift; sourceTree = "<group>"; };
 		A79636D21E7694BC00E1022B /* MatrixCreationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCreationTests.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				A79636B61E7665F700E1022B /* FloatingPointFunctions.swift */,
 				A79636BC1E766BC400E1022B /* Arithmetic.swift */,
 				A79636C61E76843500E1022B /* Utils.swift */,
-				A79636C81E768AE900E1022B /* FloatDouble.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -428,7 +425,6 @@
 			files = (
 				OBJ_78 /* Matrix.swift in Sources */,
 				A79636B51E763CEF00E1022B /* ZeroOne.swift in Sources */,
-				A79636C91E768AE900E1022B /* FloatDouble.swift in Sources */,
 				A79636B01E763A5B00E1022B /* MatrixCreation.swift in Sources */,
 				OBJ_81 /* MatrixInvert.swift in Sources */,
 				OBJ_83 /* MatrixMultiply.swift in Sources */,
