@@ -431,7 +431,7 @@ public class UZTextView: UIView {
      - parameter rightCursorRect:
      - returns:
      */
-    private func adjustCursorTappingAreas(leftCursorRect: CGRect , rightCursorRect: CGRect) -> (CGRect, CGRect) {
+    private func adjustCursorTappingAreas(leftCursorRect: CGRect, rightCursorRect: CGRect) -> (CGRect, CGRect) {
         var tempLeftCursorRect = leftCursorRect.insetBy(dx: -UZTextView.tapMargin, dy: -UZTextView.tapMargin)
         var tempRightCursorRect = rightCursorRect.insetBy(dx: -UZTextView.tapMargin, dy: -UZTextView.tapMargin)
         
@@ -639,7 +639,7 @@ public class UZTextView: UIView {
     }
     
     private func drawBackgroundColor(_ context: CGContext) {
-        attributedString.enumerateAttribute(NSBackgroundColorAttributeName, in: attributedString.fullNSRange, options: []) { (value, range, stop) in
+        attributedString.enumerateAttribute(NSBackgroundColorAttributeName, in: attributedString.fullNSRange, options: []) { (value, range, _) in
             guard let color = value as? UIColor else { return }
             color.setFill()
             rectangles(with: range).forEach({
@@ -675,7 +675,7 @@ public class UZTextView: UIView {
      - parameter context: The current graphics context.
      */
     private func drawStrikeThroughLine(_ context: CGContext) {
-        attributedString.enumerateAttribute(NSStrikethroughStyleAttributeName, in: attributedString.fullNSRange, options: []) { (value, range, stop) in
+        attributedString.enumerateAttribute(NSStrikethroughStyleAttributeName, in: attributedString.fullNSRange, options: []) { (value, range, _) in
             guard let width = value as? CGFloat else { return }
             rectangles(with: range).forEach({
                 context.setLineWidth(width)
@@ -1042,16 +1042,17 @@ public class UZTextView: UIView {
         }
         return rect
     }
-  
+    
+    enum CharacterIndex: Error {
+        case find(index: Int)
+    }
+
     /**
      Returns index of the character user tapped in the view.
      - parameter point: A CGPoint structure which contains a location at which user tapped.
      - returns: Index of the character user tapped, or if the function fails for any reason, NSNotFound.
      */
     private func characterIndex(at point: CGPoint) -> Int {
-        enum CharacterIndex: Error {
-            case find(index: Int)
-        }
         do {
             try CTFrameGetLineInfo(ctframe).forEach({ (lineInfo) in
                 let lineRange = lineInfo.range

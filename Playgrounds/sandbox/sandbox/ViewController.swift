@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         vc.append(renderer: makeRenderer())
         vc.append(renderer: makeRenderer())
         vc.append(renderer: makeRenderer())
+        vc.append(renderer: TextRenderer("hoge"))
         
         present(vc, animated: true)
     }

@@ -87,7 +87,7 @@ internal class UZLoupe: UIView, CAAnimationDelegate {
         let animationProperties: [(String, [Any], [NSNumber])] = [
             ("opacity", [0, 0.97, 1], [0, 0.7, 1]),
             ("transform.scale", [0, 1], [0, 1]),
-            ("transform.translation.y", [(self.frame.size.height * CGFloat(0.5)) as NSNumber, 0], [0, 1]),
+            ("transform.translation.y", [(self.frame.size.height * CGFloat(0.5)) as NSNumber, 0], [0, 1])
         ]
         
         let animations: [CAAnimation] = animationProperties.map({
@@ -113,7 +113,7 @@ internal class UZLoupe: UIView, CAAnimationDelegate {
         let animationProperties: [(String, [Any], [NSNumber])] = [
             ("opacity", [1, 0.97, 0], [0, 0.7, 1]),
             ("transform.scale", [1, 0], [0, 1]),
-            ("transform.translation.y", [0, (self.frame.size.height * CGFloat(0.5)) as NSNumber], [0, 1]),
+            ("transform.translation.y", [0, (self.frame.size.height * CGFloat(0.5)) as NSNumber], [0, 1])
         ]
         
         let animations: [CAAnimation] = animationProperties.map({
