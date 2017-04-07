@@ -28,8 +28,13 @@ public class NumswPlayground {
     }
     
     public func print(_ matrix: Matrix<Double>) {
-        let matrixTextRenderer = MatrixTextRenderer()
+        let matrixTextRenderer = MatrixTextRenderer(matrix)
         renderers.append(matrixTextRenderer)
+    }
+    
+    public func print(_ string: String) {
+        let textRenderer = TextRenderer(string)
+        renderers.append(textRenderer)
     }
     
     public func plot(_ x: [Double], _ y: [Double]) {
@@ -122,6 +127,10 @@ public func hold(f: () throws -> Void) rethrows {
     try NumswPlayground.shared.hold(f)
 }
 
-public func print(_ matrix: Matrix<Double>) {
+public func nwprint(_ matrix: Matrix<Double>) {
     NumswPlayground.shared.print(matrix)
+}
+
+public func nwprint(_ string: String) {
+    NumswPlayground.shared.print(string)
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144A150C1E971A1400B42288 /* MatrixTextRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144A150B1E971A1400B42288 /* MatrixTextRenderer.swift */; };
+		144A15101E971B9D00B42288 /* UZCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144A150D1E971B9D00B42288 /* UZCursor.swift */; };
+		144A15121E971B9D00B42288 /* UZTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144A150F1E971B9D00B42288 /* UZTextView.swift */; };
+		144A15131E971C0400B42288 /* UZLoupe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144A150E1E971B9D00B42288 /* UZLoupe.swift */; };
+		144A15161E9729C900B42288 /* TextRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144A15151E9729C900B42288 /* TextRenderer.swift */; };
 		1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBB41E6A5CD300633F32 /* AppDelegate.swift */; };
 		1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453FBB61E6A5CD300633F32 /* ViewController.swift */; };
 		1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBB81E6A5CD300633F32 /* Main.storyboard */; };
@@ -108,6 +113,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		144A150B1E971A1400B42288 /* MatrixTextRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTextRenderer.swift; path = ../MatrixTextRenderer.swift; sourceTree = "<group>"; };
+		144A150D1E971B9D00B42288 /* UZCursor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UZCursor.swift; path = ../UZCursor.swift; sourceTree = "<group>"; };
+		144A150E1E971B9D00B42288 /* UZLoupe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UZLoupe.swift; path = ../UZLoupe.swift; sourceTree = "<group>"; };
+		144A150F1E971B9D00B42288 /* UZTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UZTextView.swift; path = ../UZTextView.swift; sourceTree = "<group>"; };
+		144A15151E9729C900B42288 /* TextRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextRenderer.swift; path = ../TextRenderer.swift; sourceTree = "<group>"; };
 		1453FBB11E6A5CD300633F32 /* sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1453FBB41E6A5CD300633F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1453FBB61E6A5CD300633F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +274,8 @@
 				D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */,
 				D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */,
 				D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */,
+				144A15151E9729C900B42288 /* TextRenderer.swift */,
+				144A150B1E971A1400B42288 /* MatrixTextRenderer.swift */,
 				D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */,
 				D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */,
 				D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */,
@@ -272,6 +284,9 @@
 				D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */,
 				D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */,
 				D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */,
+				144A150D1E971B9D00B42288 /* UZCursor.swift */,
+				144A150E1E971B9D00B42288 /* UZLoupe.swift */,
+				144A150F1E971B9D00B42288 /* UZTextView.swift */,
 			);
 			name = playgrounds;
 			path = ../playgrounds;
@@ -575,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D68EF7171E86C8C600927991 /* RenderTableViewController.swift in Sources */,
+				144A15161E9729C900B42288 /* TextRenderer.swift in Sources */,
 				D68EF70E1E86C8C600927991 /* CompositeRenderer.swift in Sources */,
 				D68EF70B1E86C8C600927991 /* ChartBuilder.swift in Sources */,
 				D68EF7131E86C8C600927991 /* NumswPlayground.swift in Sources */,
@@ -584,8 +600,12 @@
 				D68EF7141E86C8C600927991 /* Renderer.swift in Sources */,
 				D68EF70F1E86C8C600927991 /* DummyData.swift in Sources */,
 				D68EF7161E86C8C600927991 /* RenderScrollViewController.swift in Sources */,
+				144A150C1E971A1400B42288 /* MatrixTextRenderer.swift in Sources */,
 				D68EF7101E86C8C600927991 /* LineGraph.swift in Sources */,
+				144A15101E971B9D00B42288 /* UZCursor.swift in Sources */,
 				D68EF7151E86C8C600927991 /* RendererUtil.swift in Sources */,
+				144A15131E971C0400B42288 /* UZLoupe.swift in Sources */,
+				144A15121E971B9D00B42288 /* UZTextView.swift in Sources */,
 				D68EF7111E86C8C600927991 /* LineGraphRenderer.swift in Sources */,
 				D68EF7121E86C8C600927991 /* NumswPlayground_Playground.swift in Sources */,
 				D68EF70C1E86C8C600927991 /* ChartElement.swift in Sources */,

@@ -13,39 +13,12 @@ import CoreGraphics
     import numsw
 #endif
 
-public class MatrixTextRenderer: Renderer {
+public class MatrixTextRenderer: TextRenderer {
+    let matrix: Matrix<Double>
     
-    public init() {
-        
-        update()
-    }
-    
-    public var parentViewSize = CGSize.zero
-    public var height: CGFloat {
-        return parentViewSize.height * 2.5
-    }
-    
-    public func render(context: CGContext, windowSize: CGSize) {
-        compositer?.render(context: context, windowSize: windowSize)
-    }
-    
-    private func update() {
-//        var renderers: [Renderer] = []
-//        
-//        renderers.append(AxisRenderer(chart: chart))
-//        
-//        for element in chart.elements {
-//            switch element {
-//            case .line(let line):
-//                renderers.append(LineGraphRenderer(viewport: chart.viewport, line: line))
-//            case .scatter(let scatter):
-//                renderers.append(ScatterGraphRenderer(viewport: chart.viewport, scatter: scatter))
-//            }
-//        }
-//        
-//        let r = CompositeRenderer()
-//        self.compositer = r
-//        r.renderers = renderers
+    public init(_ aMatrix: Matrix<Double>) {
+        matrix = aMatrix
+        super.init("")
     }
     
     private var compositer: CompositeRenderer?
