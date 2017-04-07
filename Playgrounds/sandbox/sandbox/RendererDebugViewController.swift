@@ -6,9 +6,10 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
-import numsw
+import NumswRenderer
 
 class RendererDebugViewController: UIViewController {
     
@@ -53,3 +54,4 @@ class RendererDebugViewController: UIViewController {
     }
     
 }
+#endif

@@ -12,26 +12,72 @@
 		1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBB81E6A5CD300633F32 /* Main.storyboard */; };
 		1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBBB1E6A5CD300633F32 /* Assets.xcassets */; };
 		1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453FBBD1E6A5CD300633F32 /* LaunchScreen.storyboard */; };
-		14B5846C1E7830BF0073B173 /* MatrixTextRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5846B1E7830BF0073B173 /* MatrixTextRenderer.swift */; };
-		D6A0B5CE1E6FE801004AE3B4 /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */; };
-		D6A0B5CF1E6FE801004AE3B4 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */; };
-		D6A0B5D01E6FE801004AE3B4 /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */; };
-		D6A0B5D11E6FE801004AE3B4 /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BE1E6FE801004AE3B4 /* ChartElement.swift */; };
-		D6A0B5D21E6FE801004AE3B4 /* ChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BF1E6FE801004AE3B4 /* ChartRenderer.swift */; };
-		D6A0B5D31E6FE801004AE3B4 /* CompositeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C01E6FE801004AE3B4 /* CompositeRenderer.swift */; };
-		D6A0B5D41E6FE801004AE3B4 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */; };
-		D6A0B5D51E6FE801004AE3B4 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */; };
-		D6A0B5D61E6FE801004AE3B4 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */; };
-		D6A0B5D81E6FE802004AE3B4 /* NumswPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */; };
-		D6A0B5D91E6FE802004AE3B4 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */; };
-		D6A0B5DA1E6FE802004AE3B4 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */; };
-		D6A0B5DB1E6FE802004AE3B4 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */; };
-		D6A0B5DC1E6FE802004AE3B4 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */; };
-		D6A0B5DD1E6FE802004AE3B4 /* RenderScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */; };
-		D6A0B5DE1E6FE802004AE3B4 /* RenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */; };
-		D6A0B5DF1E6FE802004AE3B4 /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */; };
-		D6A0B5E01E6FE802004AE3B4 /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */; };
-		D6A0B5F71E6FE866004AE3B4 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */; };
+		D68EF7091E86C8C600927991 /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */; };
+		D68EF70A1E86C8C600927991 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */; };
+		D68EF70B1E86C8C600927991 /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */; };
+		D68EF70C1E86C8C600927991 /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BE1E6FE801004AE3B4 /* ChartElement.swift */; };
+		D68EF70D1E86C8C600927991 /* ChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BF1E6FE801004AE3B4 /* ChartRenderer.swift */; };
+		D68EF70E1E86C8C600927991 /* CompositeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C01E6FE801004AE3B4 /* CompositeRenderer.swift */; };
+		D68EF70F1E86C8C600927991 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */; };
+		D68EF7101E86C8C600927991 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */; };
+		D68EF7111E86C8C600927991 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */; };
+		D68EF7121E86C8C600927991 /* NumswPlayground_Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */; };
+		D68EF7131E86C8C600927991 /* NumswPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */; };
+		D68EF7141E86C8C600927991 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */; };
+		D68EF7151E86C8C600927991 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */; };
+		D68EF7161E86C8C600927991 /* RenderScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */; };
+		D68EF7171E86C8C600927991 /* RenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */; };
+		D68EF7181E86C8C600927991 /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */; };
+		D68EF7191E86C8C600927991 /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */; };
+		D68EF71C1E86C8FD00927991 /* RendererDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF71A1E86C8FD00927991 /* RendererDebugViewController.swift */; };
+		D68EF71D1E86C8FD00927991 /* RendererDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68EF71B1E86C8FD00927991 /* RendererDebugViewController.xib */; };
+		D68EF7571E86CDD900927991 /* MatrixArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF73E1E86CDD900927991 /* MatrixArithmeticTests.swift */; };
+		D68EF7581E86CDD900927991 /* MatrixCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF73F1E86CDD900927991 /* MatrixCreationTests.swift */; };
+		D68EF7591E86CDD900927991 /* MatrixFloatingPointFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7401E86CDD900927991 /* MatrixFloatingPointFunctionsTests.swift */; };
+		D68EF75A1E86CDD900927991 /* MatrixInvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7411E86CDD900927991 /* MatrixInvertTests.swift */; };
+		D68EF75B1E86CDD900927991 /* MatrixMultiplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7421E86CDD900927991 /* MatrixMultiplyTests.swift */; };
+		D68EF75C1E86CDD900927991 /* MatrixRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7431E86CDD900927991 /* MatrixRangeTests.swift */; };
+		D68EF75D1E86CDD900927991 /* MatrixSubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7441E86CDD900927991 /* MatrixSubscriptTests.swift */; };
+		D68EF75E1E86CDD900927991 /* MatrixTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7451E86CDD900927991 /* MatrixTransformationTests.swift */; };
+		D68EF75F1E86CDD900927991 /* MatrixTransposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7461E86CDD900927991 /* MatrixTransposeTests.swift */; };
+		D68EF7601E86CDD900927991 /* MatrixXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7471E86CDD900927991 /* MatrixXCTest.swift */; };
+		D68EF7611E86CDD900927991 /* NDArrayArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7491E86CDD900927991 /* NDArrayArithmeticTests.swift */; };
+		D68EF7621E86CDD900927991 /* NDArrayBoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF74A1E86CDD900927991 /* NDArrayBoolTests.swift */; };
+		D68EF7631E86CDD900927991 /* NDArrayCompoundAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF74B1E86CDD900927991 /* NDArrayCompoundAssignmentTests.swift */; };
+		D68EF7641E86CDD900927991 /* NDArrayCreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF74C1E86CDD900927991 /* NDArrayCreationTests.swift */; };
+		D68EF7651E86CDD900927991 /* NDArrayFloatingPointFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF74D1E86CDD900927991 /* NDArrayFloatingPointFunctionsTests.swift */; };
+		D68EF7661E86CDD900927991 /* NDArrayPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF74E1E86CDD900927991 /* NDArrayPerformanceTests.swift */; };
+		D68EF7671E86CDD900927991 /* NDArrayRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF74F1E86CDD900927991 /* NDArrayRandomTests.swift */; };
+		D68EF7681E86CDD900927991 /* NDArrayReduceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7501E86CDD900927991 /* NDArrayReduceTests.swift */; };
+		D68EF7691E86CDD900927991 /* NDArrayStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7511E86CDD900927991 /* NDArrayStackTests.swift */; };
+		D68EF76A1E86CDD900927991 /* NDArraySubscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7521E86CDD900927991 /* NDArraySubscriptTests.swift */; };
+		D68EF76B1E86CDD900927991 /* NDArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7531E86CDD900927991 /* NDArrayTests.swift */; };
+		D68EF76C1E86CDD900927991 /* NDArrayTransformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7541E86CDD900927991 /* NDArrayTransformationTests.swift */; };
+		D68EF76D1E86CDD900927991 /* NDArrayXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7551E86CDD900927991 /* NDArrayXCTest.swift */; };
+		D68EF76E1E86CDD900927991 /* numswTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EF7561E86CDD900927991 /* numswTests.swift */; };
+		D68EF7761E86DA4C00927991 /* RenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */; };
+		D68EF7771E86DA4C00927991 /* CompositeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C01E6FE801004AE3B4 /* CompositeRenderer.swift */; };
+		D68EF7781E86DA4C00927991 /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */; };
+		D68EF7791E86DA4C00927991 /* NumswPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */; };
+		D68EF77A1E86DA4C00927991 /* ChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BF1E6FE801004AE3B4 /* ChartRenderer.swift */; };
+		D68EF77B1E86DA4C00927991 /* ScatterGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */; };
+		D68EF77C1E86DA4C00927991 /* ScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */; };
+		D68EF77D1E86DA4C00927991 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */; };
+		D68EF77E1E86DA4C00927991 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C11E6FE801004AE3B4 /* DummyData.swift */; };
+		D68EF77F1E86DA4C00927991 /* RenderScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */; };
+		D68EF7801E86DA4C00927991 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */; };
+		D68EF7811E86DA4C00927991 /* RendererUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */; };
+		D68EF7821E86DA4C00927991 /* LineGraphRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */; };
+		D68EF7831E86DA4C00927991 /* NumswPlayground_Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */; };
+		D68EF7841E86DA4C00927991 /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BE1E6FE801004AE3B4 /* ChartElement.swift */; };
+		D68EF7851E86DA4C00927991 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */; };
+		D68EF7861E86DA4C00927991 /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */; };
+		D68EF7951E86DB4800927991 /* NumswRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = D68EF7941E86DB4800927991 /* NumswRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D68EF7961E86DC2D00927991 /* NumswRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = D68EF7941E86DB4800927991 /* NumswRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D68EF7991E86DD0700927991 /* NumswRenderer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68EF6FD1E86C89600927991 /* NumswRenderer.framework */; };
+		D68EF79A1E86DD0700927991 /* NumswRenderer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D68EF6FD1E86C89600927991 /* NumswRenderer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D68EF79D1E86DD9E00927991 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68EF79C1E86DD9E00927991 /* numsw.framework */; };
+		D68EF79E1E86DDA200927991 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68EF79C1E86DD9E00927991 /* numsw.framework */; };
 		D6A0B6021E6FF00F004AE3B4 /* numsw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A0B6011E6FF00F004AE3B4 /* numsw.framework */; };
 		D6A0B6031E6FF00F004AE3B4 /* numsw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6A0B6011E6FF00F004AE3B4 /* numsw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -53,6 +99,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D68EF79A1E86DD0700927991 /* NumswRenderer.framework in Embed Frameworks */,
 				D6A0B6031E6FF00F004AE3B4 /* numsw.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -68,9 +115,39 @@
 		1453FBBB1E6A5CD300633F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1453FBBE1E6A5CD300633F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1453FBC01E6A5CD300633F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14B5846B1E7830BF0073B173 /* MatrixTextRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixTextRenderer.swift; path = ../MatrixTextRenderer.swift; sourceTree = "<group>"; };
 		52E1EE3E1E6A8A2E008D19BB /* sandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E1EE421E6A8A2E008D19BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68EF6FD1E86C89600927991 /* NumswRenderer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumswRenderer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68EF71A1E86C8FD00927991 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererDebugViewController.swift; sourceTree = "<group>"; };
+		D68EF71B1E86C8FD00927991 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RendererDebugViewController.xib; sourceTree = "<group>"; };
+		D68EF73E1E86CDD900927991 /* MatrixArithmeticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixArithmeticTests.swift; sourceTree = "<group>"; };
+		D68EF73F1E86CDD900927991 /* MatrixCreationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixCreationTests.swift; sourceTree = "<group>"; };
+		D68EF7401E86CDD900927991 /* MatrixFloatingPointFunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixFloatingPointFunctionsTests.swift; sourceTree = "<group>"; };
+		D68EF7411E86CDD900927991 /* MatrixInvertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixInvertTests.swift; sourceTree = "<group>"; };
+		D68EF7421E86CDD900927991 /* MatrixMultiplyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMultiplyTests.swift; sourceTree = "<group>"; };
+		D68EF7431E86CDD900927991 /* MatrixRangeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixRangeTests.swift; sourceTree = "<group>"; };
+		D68EF7441E86CDD900927991 /* MatrixSubscriptTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSubscriptTests.swift; sourceTree = "<group>"; };
+		D68EF7451E86CDD900927991 /* MatrixTransformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransformationTests.swift; sourceTree = "<group>"; };
+		D68EF7461E86CDD900927991 /* MatrixTransposeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTransposeTests.swift; sourceTree = "<group>"; };
+		D68EF7471E86CDD900927991 /* MatrixXCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixXCTest.swift; sourceTree = "<group>"; };
+		D68EF7491E86CDD900927991 /* NDArrayArithmeticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayArithmeticTests.swift; sourceTree = "<group>"; };
+		D68EF74A1E86CDD900927991 /* NDArrayBoolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayBoolTests.swift; sourceTree = "<group>"; };
+		D68EF74B1E86CDD900927991 /* NDArrayCompoundAssignmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayCompoundAssignmentTests.swift; sourceTree = "<group>"; };
+		D68EF74C1E86CDD900927991 /* NDArrayCreationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayCreationTests.swift; sourceTree = "<group>"; };
+		D68EF74D1E86CDD900927991 /* NDArrayFloatingPointFunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayFloatingPointFunctionsTests.swift; sourceTree = "<group>"; };
+		D68EF74E1E86CDD900927991 /* NDArrayPerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayPerformanceTests.swift; sourceTree = "<group>"; };
+		D68EF74F1E86CDD900927991 /* NDArrayRandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayRandomTests.swift; sourceTree = "<group>"; };
+		D68EF7501E86CDD900927991 /* NDArrayReduceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayReduceTests.swift; sourceTree = "<group>"; };
+		D68EF7511E86CDD900927991 /* NDArrayStackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayStackTests.swift; sourceTree = "<group>"; };
+		D68EF7521E86CDD900927991 /* NDArraySubscriptTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArraySubscriptTests.swift; sourceTree = "<group>"; };
+		D68EF7531E86CDD900927991 /* NDArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayTests.swift; sourceTree = "<group>"; };
+		D68EF7541E86CDD900927991 /* NDArrayTransformationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayTransformationTests.swift; sourceTree = "<group>"; };
+		D68EF7551E86CDD900927991 /* NDArrayXCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDArrayXCTest.swift; sourceTree = "<group>"; };
+		D68EF7561E86CDD900927991 /* numswTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = numswTests.swift; sourceTree = "<group>"; };
+		D68EF78F1E86DA4C00927991 /* NumswRenderer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumswRenderer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68EF7911E86DB1300927991 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68EF7941E86DB4800927991 /* NumswRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumswRenderer.h; sourceTree = "<group>"; };
+		D68EF79C1E86DD9E00927991 /* numsw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = numsw.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/numsw-bvygtnwpeovfhybmexfmfwkrqjnu/Build/Products/Debug/numsw.framework"; sourceTree = "<group>"; };
 		D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AxisRenderer.swift; path = ../AxisRenderer.swift; sourceTree = "<group>"; };
 		D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chart.swift; path = ../Chart.swift; sourceTree = "<group>"; };
 		D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartBuilder.swift; path = ../ChartBuilder.swift; sourceTree = "<group>"; };
@@ -83,14 +160,11 @@
 		D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumswPlayground_Playground.swift; path = ../NumswPlayground_Playground.swift; sourceTree = "<group>"; };
 		D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumswPlayground.swift; path = ../NumswPlayground.swift; sourceTree = "<group>"; };
 		D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = ../Renderer.swift; sourceTree = "<group>"; };
-		D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RendererDebugViewController.swift; path = ../RendererDebugViewController.swift; sourceTree = "<group>"; };
-		D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RendererDebugViewController.xib; path = ../RendererDebugViewController.xib; sourceTree = "<group>"; };
 		D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RendererUtil.swift; path = ../RendererUtil.swift; sourceTree = "<group>"; };
 		D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderScrollViewController.swift; path = ../RenderScrollViewController.swift; sourceTree = "<group>"; };
 		D6A0B5CB1E6FE801004AE3B4 /* RenderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderTableViewController.swift; path = ../RenderTableViewController.swift; sourceTree = "<group>"; };
 		D6A0B5CC1E6FE801004AE3B4 /* ScatterGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScatterGraph.swift; path = ../ScatterGraph.swift; sourceTree = "<group>"; };
 		D6A0B5CD1E6FE801004AE3B4 /* ScatterGraphRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScatterGraphRenderer.swift; path = ../ScatterGraphRenderer.swift; sourceTree = "<group>"; };
-		D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = numswTests.swift; path = ../../../Tests/numswTests/numswTests.swift; sourceTree = "<group>"; };
 		D6A0B6011E6FF00F004AE3B4 /* numsw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = numsw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68EF7991E86DD0700927991 /* NumswRenderer.framework in Frameworks */,
 				D6A0B6021E6FF00F004AE3B4 /* numsw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,18 +185,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D68EF6F91E86C89600927991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68EF79E1E86DDA200927991 /* numsw.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68EF7871E86DA4C00927991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68EF79D1E86DD9E00927991 /* numsw.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1453FBA81E6A5CD300633F32 = {
 			isa = PBXGroup;
 			children = (
+				D68EF76F1E86DA1000927991 /* NumswRenderer */,
 				D6A0B6041E6FF025004AE3B4 /* frameworks */,
 				D621CFFB1E6A631900A50C88 /* playgrounds */,
-				14B584681E78276B0073B173 /* sandbox view controllers */,
 				1453FBB31E6A5CD300633F32 /* sandbox */,
 				52E1EE3F1E6A8A2E008D19BB /* sandboxTests */,
 				1453FBB21E6A5CD300633F32 /* Products */,
+				D68EF79B1E86DD9E00927991 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +222,8 @@
 			children = (
 				1453FBB11E6A5CD300633F32 /* sandbox.app */,
 				52E1EE3E1E6A8A2E008D19BB /* sandboxTests.xctest */,
+				D68EF6FD1E86C89600927991 /* NumswRenderer.framework */,
+				D68EF78F1E86DA4C00927991 /* NumswRenderer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +231,8 @@
 		1453FBB31E6A5CD300633F32 /* sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				D68EF71A1E86C8FD00927991 /* RendererDebugViewController.swift */,
+				D68EF71B1E86C8FD00927991 /* RendererDebugViewController.xib */,
 				1453FBB41E6A5CD300633F32 /* AppDelegate.swift */,
 				1453FBB61E6A5CD300633F32 /* ViewController.swift */,
 				1453FBB81E6A5CD300633F32 /* Main.storyboard */,
@@ -147,20 +243,10 @@
 			path = sandbox;
 			sourceTree = "<group>";
 		};
-		14B584681E78276B0073B173 /* sandbox view controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D6A0B5C71E6FE801004AE3B4 /* RendererDebugViewController.swift */,
-				D6A0B5C81E6FE801004AE3B4 /* RendererDebugViewController.xib */,
-			);
-			name = "sandbox view controllers";
-			path = ../playgrounds;
-			sourceTree = "<group>";
-		};
 		52E1EE3F1E6A8A2E008D19BB /* sandboxTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6A0B5EC1E6FE866004AE3B4 /* numswTests.swift */,
+				D68EF73C1E86CDD900927991 /* numswTests */,
 				52E1EE421E6A8A2E008D19BB /* Info.plist */,
 			);
 			path = sandboxTests;
@@ -179,7 +265,6 @@
 				D6A0B5C21E6FE801004AE3B4 /* LineGraph.swift */,
 				D6A0B5C31E6FE801004AE3B4 /* LineGraphRenderer.swift */,
 				D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */,
-				14B5846B1E7830BF0073B173 /* MatrixTextRenderer.swift */,
 				D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */,
 				D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */,
 				D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */,
@@ -192,6 +277,71 @@
 			path = ../playgrounds;
 			sourceTree = "<group>";
 		};
+		D68EF73C1E86CDD900927991 /* numswTests */ = {
+			isa = PBXGroup;
+			children = (
+				D68EF73D1E86CDD900927991 /* MatrixTests */,
+				D68EF7481E86CDD900927991 /* NDArrayTests */,
+				D68EF7561E86CDD900927991 /* numswTests.swift */,
+			);
+			name = numswTests;
+			path = ../../../Tests/numswTests;
+			sourceTree = "<group>";
+		};
+		D68EF73D1E86CDD900927991 /* MatrixTests */ = {
+			isa = PBXGroup;
+			children = (
+				D68EF73E1E86CDD900927991 /* MatrixArithmeticTests.swift */,
+				D68EF73F1E86CDD900927991 /* MatrixCreationTests.swift */,
+				D68EF7401E86CDD900927991 /* MatrixFloatingPointFunctionsTests.swift */,
+				D68EF7411E86CDD900927991 /* MatrixInvertTests.swift */,
+				D68EF7421E86CDD900927991 /* MatrixMultiplyTests.swift */,
+				D68EF7431E86CDD900927991 /* MatrixRangeTests.swift */,
+				D68EF7441E86CDD900927991 /* MatrixSubscriptTests.swift */,
+				D68EF7451E86CDD900927991 /* MatrixTransformationTests.swift */,
+				D68EF7461E86CDD900927991 /* MatrixTransposeTests.swift */,
+				D68EF7471E86CDD900927991 /* MatrixXCTest.swift */,
+			);
+			path = MatrixTests;
+			sourceTree = "<group>";
+		};
+		D68EF7481E86CDD900927991 /* NDArrayTests */ = {
+			isa = PBXGroup;
+			children = (
+				D68EF7491E86CDD900927991 /* NDArrayArithmeticTests.swift */,
+				D68EF74A1E86CDD900927991 /* NDArrayBoolTests.swift */,
+				D68EF74B1E86CDD900927991 /* NDArrayCompoundAssignmentTests.swift */,
+				D68EF74C1E86CDD900927991 /* NDArrayCreationTests.swift */,
+				D68EF74D1E86CDD900927991 /* NDArrayFloatingPointFunctionsTests.swift */,
+				D68EF74E1E86CDD900927991 /* NDArrayPerformanceTests.swift */,
+				D68EF74F1E86CDD900927991 /* NDArrayRandomTests.swift */,
+				D68EF7501E86CDD900927991 /* NDArrayReduceTests.swift */,
+				D68EF7511E86CDD900927991 /* NDArrayStackTests.swift */,
+				D68EF7521E86CDD900927991 /* NDArraySubscriptTests.swift */,
+				D68EF7531E86CDD900927991 /* NDArrayTests.swift */,
+				D68EF7541E86CDD900927991 /* NDArrayTransformationTests.swift */,
+				D68EF7551E86CDD900927991 /* NDArrayXCTest.swift */,
+			);
+			path = NDArrayTests;
+			sourceTree = "<group>";
+		};
+		D68EF76F1E86DA1000927991 /* NumswRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				D68EF7941E86DB4800927991 /* NumswRenderer.h */,
+				D68EF7911E86DB1300927991 /* Info.plist */,
+			);
+			path = NumswRenderer;
+			sourceTree = "<group>";
+		};
+		D68EF79B1E86DD9E00927991 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D68EF79C1E86DD9E00927991 /* numsw.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D6A0B6041E6FF025004AE3B4 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +351,25 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D68EF6FA1E86C89600927991 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68EF7951E86DB4800927991 /* NumswRenderer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68EF7881E86DA4C00927991 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68EF7961E86DC2D00927991 /* NumswRenderer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1453FBB01E6A5CD300633F32 /* sandbox */ = {
@@ -239,6 +408,42 @@
 			productReference = 52E1EE3E1E6A8A2E008D19BB /* sandboxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D68EF6FC1E86C89600927991 /* NumswRenderer-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68EF7061E86C89700927991 /* Build configuration list for PBXNativeTarget "NumswRenderer-iOS" */;
+			buildPhases = (
+				D68EF6F81E86C89600927991 /* Sources */,
+				D68EF6F91E86C89600927991 /* Frameworks */,
+				D68EF6FA1E86C89600927991 /* Headers */,
+				D68EF6FB1E86C89600927991 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NumswRenderer-iOS";
+			productName = "numsw-renderer";
+			productReference = D68EF6FD1E86C89600927991 /* NumswRenderer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D68EF7741E86DA4C00927991 /* NumswRenderer-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68EF78C1E86DA4C00927991 /* Build configuration list for PBXNativeTarget "NumswRenderer-macOS" */;
+			buildPhases = (
+				D68EF7751E86DA4C00927991 /* Sources */,
+				D68EF7871E86DA4C00927991 /* Frameworks */,
+				D68EF7881E86DA4C00927991 /* Headers */,
+				D68EF78A1E86DA4C00927991 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NumswRenderer-macOS";
+			productName = "numsw-renderer";
+			productReference = D68EF78F1E86DA4C00927991 /* NumswRenderer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,6 +465,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1453FBB01E6A5CD300633F32;
 					};
+					D68EF6FC1E86C89600927991 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3B8C483UAP;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 1453FBAC1E6A5CD300633F32 /* Build configuration list for PBXProject "sandbox" */;
@@ -275,6 +485,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D68EF6FC1E86C89600927991 /* NumswRenderer-iOS */,
+				D68EF7741E86DA4C00927991 /* NumswRenderer-macOS */,
 				1453FBB01E6A5CD300633F32 /* sandbox */,
 				52E1EE3D1E6A8A2E008D19BB /* sandboxTests */,
 			);
@@ -287,13 +499,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				1453FBBF1E6A5CD300633F32 /* LaunchScreen.storyboard in Resources */,
-				D6A0B5DB1E6FE802004AE3B4 /* RendererDebugViewController.xib in Resources */,
+				D68EF71D1E86C8FD00927991 /* RendererDebugViewController.xib in Resources */,
 				1453FBBC1E6A5CD300633F32 /* Assets.xcassets in Resources */,
 				1453FBBA1E6A5CD300633F32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		52E1EE3C1E6A8A2E008D19BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68EF6FB1E86C89600927991 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68EF78A1E86DA4C00927991 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,26 +533,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68EF71C1E86C8FD00927991 /* RendererDebugViewController.swift in Sources */,
 				1453FBB71E6A5CD300633F32 /* ViewController.swift in Sources */,
-				D6A0B5DD1E6FE802004AE3B4 /* RenderScrollViewController.swift in Sources */,
-				D6A0B5D41E6FE801004AE3B4 /* DummyData.swift in Sources */,
-				D6A0B5D31E6FE801004AE3B4 /* CompositeRenderer.swift in Sources */,
-				D6A0B5DF1E6FE802004AE3B4 /* ScatterGraph.swift in Sources */,
-				D6A0B5D11E6FE801004AE3B4 /* ChartElement.swift in Sources */,
-				D6A0B5CE1E6FE801004AE3B4 /* AxisRenderer.swift in Sources */,
-				D6A0B5CF1E6FE801004AE3B4 /* Chart.swift in Sources */,
-				D6A0B5DE1E6FE802004AE3B4 /* RenderTableViewController.swift in Sources */,
-				D6A0B5D51E6FE801004AE3B4 /* LineGraph.swift in Sources */,
 				1453FBB51E6A5CD300633F32 /* AppDelegate.swift in Sources */,
-				D6A0B5E01E6FE802004AE3B4 /* ScatterGraphRenderer.swift in Sources */,
-				D6A0B5D61E6FE801004AE3B4 /* LineGraphRenderer.swift in Sources */,
-				D6A0B5DA1E6FE802004AE3B4 /* RendererDebugViewController.swift in Sources */,
-				D6A0B5D91E6FE802004AE3B4 /* Renderer.swift in Sources */,
-				D6A0B5D01E6FE801004AE3B4 /* ChartBuilder.swift in Sources */,
-				14B5846C1E7830BF0073B173 /* MatrixTextRenderer.swift in Sources */,
-				D6A0B5DC1E6FE802004AE3B4 /* RendererUtil.swift in Sources */,
-				D6A0B5D81E6FE802004AE3B4 /* NumswPlayground.swift in Sources */,
-				D6A0B5D21E6FE801004AE3B4 /* ChartRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +543,78 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A0B5F71E6FE866004AE3B4 /* numswTests.swift in Sources */,
+				D68EF76C1E86CDD900927991 /* NDArrayTransformationTests.swift in Sources */,
+				D68EF75E1E86CDD900927991 /* MatrixTransformationTests.swift in Sources */,
+				D68EF76D1E86CDD900927991 /* NDArrayXCTest.swift in Sources */,
+				D68EF7631E86CDD900927991 /* NDArrayCompoundAssignmentTests.swift in Sources */,
+				D68EF76A1E86CDD900927991 /* NDArraySubscriptTests.swift in Sources */,
+				D68EF7661E86CDD900927991 /* NDArrayPerformanceTests.swift in Sources */,
+				D68EF7571E86CDD900927991 /* MatrixArithmeticTests.swift in Sources */,
+				D68EF7671E86CDD900927991 /* NDArrayRandomTests.swift in Sources */,
+				D68EF7681E86CDD900927991 /* NDArrayReduceTests.swift in Sources */,
+				D68EF76B1E86CDD900927991 /* NDArrayTests.swift in Sources */,
+				D68EF75C1E86CDD900927991 /* MatrixRangeTests.swift in Sources */,
+				D68EF7601E86CDD900927991 /* MatrixXCTest.swift in Sources */,
+				D68EF7691E86CDD900927991 /* NDArrayStackTests.swift in Sources */,
+				D68EF7591E86CDD900927991 /* MatrixFloatingPointFunctionsTests.swift in Sources */,
+				D68EF75B1E86CDD900927991 /* MatrixMultiplyTests.swift in Sources */,
+				D68EF76E1E86CDD900927991 /* numswTests.swift in Sources */,
+				D68EF75D1E86CDD900927991 /* MatrixSubscriptTests.swift in Sources */,
+				D68EF7641E86CDD900927991 /* NDArrayCreationTests.swift in Sources */,
+				D68EF75F1E86CDD900927991 /* MatrixTransposeTests.swift in Sources */,
+				D68EF7611E86CDD900927991 /* NDArrayArithmeticTests.swift in Sources */,
+				D68EF7581E86CDD900927991 /* MatrixCreationTests.swift in Sources */,
+				D68EF7621E86CDD900927991 /* NDArrayBoolTests.swift in Sources */,
+				D68EF7651E86CDD900927991 /* NDArrayFloatingPointFunctionsTests.swift in Sources */,
+				D68EF75A1E86CDD900927991 /* MatrixInvertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68EF6F81E86C89600927991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68EF7171E86C8C600927991 /* RenderTableViewController.swift in Sources */,
+				D68EF70E1E86C8C600927991 /* CompositeRenderer.swift in Sources */,
+				D68EF70B1E86C8C600927991 /* ChartBuilder.swift in Sources */,
+				D68EF7131E86C8C600927991 /* NumswPlayground.swift in Sources */,
+				D68EF70D1E86C8C600927991 /* ChartRenderer.swift in Sources */,
+				D68EF7191E86C8C600927991 /* ScatterGraphRenderer.swift in Sources */,
+				D68EF7181E86C8C600927991 /* ScatterGraph.swift in Sources */,
+				D68EF7141E86C8C600927991 /* Renderer.swift in Sources */,
+				D68EF70F1E86C8C600927991 /* DummyData.swift in Sources */,
+				D68EF7161E86C8C600927991 /* RenderScrollViewController.swift in Sources */,
+				D68EF7101E86C8C600927991 /* LineGraph.swift in Sources */,
+				D68EF7151E86C8C600927991 /* RendererUtil.swift in Sources */,
+				D68EF7111E86C8C600927991 /* LineGraphRenderer.swift in Sources */,
+				D68EF7121E86C8C600927991 /* NumswPlayground_Playground.swift in Sources */,
+				D68EF70C1E86C8C600927991 /* ChartElement.swift in Sources */,
+				D68EF70A1E86C8C600927991 /* Chart.swift in Sources */,
+				D68EF7091E86C8C600927991 /* AxisRenderer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68EF7751E86DA4C00927991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68EF7761E86DA4C00927991 /* RenderTableViewController.swift in Sources */,
+				D68EF7771E86DA4C00927991 /* CompositeRenderer.swift in Sources */,
+				D68EF7781E86DA4C00927991 /* ChartBuilder.swift in Sources */,
+				D68EF7791E86DA4C00927991 /* NumswPlayground.swift in Sources */,
+				D68EF77A1E86DA4C00927991 /* ChartRenderer.swift in Sources */,
+				D68EF77B1E86DA4C00927991 /* ScatterGraphRenderer.swift in Sources */,
+				D68EF77C1E86DA4C00927991 /* ScatterGraph.swift in Sources */,
+				D68EF77D1E86DA4C00927991 /* Renderer.swift in Sources */,
+				D68EF77E1E86DA4C00927991 /* DummyData.swift in Sources */,
+				D68EF77F1E86DA4C00927991 /* RenderScrollViewController.swift in Sources */,
+				D68EF7801E86DA4C00927991 /* LineGraph.swift in Sources */,
+				D68EF7811E86DA4C00927991 /* RendererUtil.swift in Sources */,
+				D68EF7821E86DA4C00927991 /* LineGraphRenderer.swift in Sources */,
+				D68EF7831E86DA4C00927991 /* NumswPlayground_Playground.swift in Sources */,
+				D68EF7841E86DA4C00927991 /* ChartElement.swift in Sources */,
+				D68EF7851E86DA4C00927991 /* Chart.swift in Sources */,
+				D68EF7861E86DA4C00927991 /* AxisRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +688,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -452,7 +731,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -470,9 +748,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -486,9 +764,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = sandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.sandbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -522,6 +800,98 @@
 			};
 			name = Release;
 		};
+		D68EF7071E86C89700927991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NumswRenderer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.NumswRenderer;
+				PRODUCT_NAME = NumswRenderer;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D68EF7081E86C89700927991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3B8C483UAP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NumswRenderer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.NumswRenderer;
+				PRODUCT_NAME = NumswRenderer;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D68EF78D1E86DA4C00927991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NumswRenderer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.NumswRenderer;
+				PRODUCT_NAME = NumswRenderer;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D68EF78E1E86DA4C00927991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NumswRenderer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D SANDBOX_APP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.NumswRenderer;
+				PRODUCT_NAME = NumswRenderer;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,6 +918,24 @@
 			buildConfigurations = (
 				52E1EE451E6A8A2E008D19BB /* Debug */,
 				52E1EE461E6A8A2E008D19BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68EF7061E86C89700927991 /* Build configuration list for PBXNativeTarget "NumswRenderer-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68EF7071E86C89700927991 /* Debug */,
+				D68EF7081E86C89700927991 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68EF78C1E86DA4C00927991 /* Build configuration list for PBXNativeTarget "NumswRenderer-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68EF78D1E86DA4C00927991 /* Debug */,
+				D68EF78E1E86DA4C00927991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

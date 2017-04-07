@@ -6,7 +6,10 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
+#if os(iOS)
+    import UIKit
+#endif
 
 public protocol Renderer {
     func render(context: CGContext, windowSize: CGSize)
@@ -14,6 +17,7 @@ public protocol Renderer {
     var height: CGFloat { get }
 }
 
+#if os(iOS)
 public extension Renderer {
     func renderToImage(size: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)
@@ -27,3 +31,4 @@ public extension Renderer {
         return UIImage(cgImage: cgImage)
     }
 }
+#endif

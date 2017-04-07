@@ -7,6 +7,7 @@ public prefix func -<T: SignedNumber>(arg: Matrix<T>) -> Matrix<T> {
     return unaryMinus(arg)
 }
 
+// MARK: - Matrix and scalar
 public func +<T: Arithmetic>(lhs: Matrix<T>, rhs: T) -> Matrix<T> {
     return add(lhs, rhs)
 }
@@ -14,8 +15,6 @@ public func +<T: Arithmetic>(lhs: Matrix<T>, rhs: T) -> Matrix<T> {
 public func -<T: Arithmetic>(lhs: Matrix<T>, rhs: T) -> Matrix<T> {
     return subtract(lhs, rhs)
 }
-
-// MARK: - Matrix and scalar
 public func *<T: Arithmetic>(lhs: Matrix<T>, rhs: T) -> Matrix<T> {
     return multiply(lhs, rhs)
 }

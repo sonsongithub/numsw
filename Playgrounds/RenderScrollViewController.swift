@@ -1,5 +1,6 @@
 //  Final customized first implementation with UIScrollView
 
+#if os(iOS)
 import UIKit
 
 public class RenderScrollViewController: UIViewController {
@@ -75,3 +76,4 @@ public class RenderScrollViewController: UIViewController {
     }
     
 }
+#endif

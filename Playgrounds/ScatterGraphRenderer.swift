@@ -6,7 +6,6 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-import UIKit
 import CoreGraphics
 
 public class ScatterGraphRenderer: Renderer {
@@ -29,7 +28,8 @@ public class ScatterGraphRenderer: Renderer {
     }
 
     public func drawScatter(context ctx: CGContext, scatter: ScatterGraph) {
-        ctx.setStrokeColor(UIColor.green.cgColor)
+        ctx.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                   components: [0.0, 1.0, 0.0, 1.0])!)
         
         let t = viewportTransform!
         

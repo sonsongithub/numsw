@@ -6,7 +6,6 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-import UIKit
 import CoreGraphics
 
 public class LineGraphRenderer: Renderer {
@@ -40,7 +39,8 @@ public class LineGraphRenderer: Renderer {
 //    }
     
     public func drawSanpuzu(context ctx: CGContext, line: LineGraph) {
-        ctx.setStrokeColor(UIColor.green.cgColor)
+        ctx.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                   components: [0.0, 1.0, 0.0, 1.0])!)
         
         let t = viewportTransform!
         
@@ -59,13 +59,16 @@ public class LineGraphRenderer: Renderer {
     }
     
     public func drawDebugX(context ctx: CGContext, point0: CGPoint, point1: CGPoint) {
-        ctx.setStrokeColor(UIColor.red.cgColor)
+        ctx.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                   components: [1.0, 0.0, 0.0, 1.0])!)
+        
         drawLine(context: ctx, points: [
             CGPoint(x: point0.x, y: point0.y),
             CGPoint(x: point1.x, y: point1.y)
             ])
         
-        ctx.setStrokeColor(UIColor.green.cgColor)
+        ctx.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                   components: [0.0, 1.0, 0.0, 1.0])!)
         drawLine(context: ctx, points: [
             CGPoint(x: point1.x, y: point0.y),
             CGPoint(x: point0.x, y: point1.y)
@@ -74,7 +77,8 @@ public class LineGraphRenderer: Renderer {
     
     public func drawLine(context: CGContext,
                          points: [CGPoint]) {
-        context.setStrokeColor(UIColor.white.cgColor)
+        context.setStrokeColor(CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                       components: [1.0, 1.0, 1.0, 1.0])!)
         
         let t = viewportTransform!
         

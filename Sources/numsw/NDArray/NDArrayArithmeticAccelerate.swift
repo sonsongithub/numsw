@@ -2,7 +2,7 @@
     
     import Accelerate
     
-    // unary
+    // MARK: - Unary
     public prefix func - (arg: NDArray<Float>) -> NDArray<Float> {
         return unaryMinusAccelerate(arg)
     }
@@ -11,7 +11,7 @@
         return unaryMinusAccelerate(arg)
     }
     
-    // NDArray and scalar
+    // MARK: - NDArray and scalar
     public func + (lhs: NDArray<Float>, rhs: Float) -> NDArray<Float> {
         return addAccelerate(lhs, rhs)
     }
@@ -76,7 +76,7 @@
         return divideAccelerate(lhs, rhs)
     }
     
-    // NDArray and NDArray
+    // MARK: - NDArray and NDArray
     public func + (lhs: NDArray<Float>, rhs: NDArray<Float>) -> NDArray<Float> {
         return addAccelerate(lhs, rhs)
     }
@@ -109,17 +109,11 @@
         return divideAccelerate(lhs, rhs)
     }
     
-    // unary
+    // MARK: - Unary
     private func applyVDspFunc<T>(_ arg: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
-        let out = UnsafeMutablePointer<T>.allocate(capacity: arg.elements.count)
-        defer { out.deallocate(capacity: arg.elements.count) }
-        
-        vDspFunc(arg.elements, 1,
-                 out, 1, vDSP_Length(arg.elements.count))
-        
         return NDArray(shape: arg.shape,
-                       elements: Array(UnsafeBufferPointer(start: out, count: arg.elements.count)))
+                       elements: applyVDspFunc(arg.elements, vDspFunc))
     }
     
     func unaryMinusAccelerate(_ arg: NDArray<Float>) -> NDArray<Float> {
@@ -130,32 +124,16 @@
         return applyVDspFunc(arg, vDSP_vnegD)
     }
     
-    // NDArray and scalar
+    // MARK: - NDArray and scalar
     private func applyVDspFunc<T>(_ lhs: NDArray<T>, _ rhs: T, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
-        
-        let out = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
-        defer { out.deallocate(capacity: lhs.elements.count) }
-        
-        var rhs = rhs
-        vDspFunc(lhs.elements, 1,
-                 &rhs,
-                 out, 1, vDSP_Length(lhs.elements.count))
-        
+
         return NDArray(shape: lhs.shape,
-                       elements: Array(UnsafeBufferPointer(start: out, count: lhs.elements.count)))
+                       elements: applyVDspFunc(lhs.elements, rhs, vDspFunc))
     }
     private func applyVDspFunc<T>(_ lhs: T, _ rhs: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
-        let out = UnsafeMutablePointer<T>.allocate(capacity: rhs.elements.count)
-        defer { out.deallocate(capacity: rhs.elements.count) }
-        
-        var lhs = lhs
-        vDspFunc(&lhs,
-                 rhs.elements, 1,
-                 out, 1, vDSP_Length(rhs.elements.count))
-        
         return NDArray(shape: rhs.shape,
-                       elements: Array(UnsafeBufferPointer(start: out, count: rhs.elements.count)))
+                       elements: applyVDspFunc(lhs, rhs.elements, vDspFunc))
     }
     
     func addAccelerate(_ lhs: NDArray<Float>, _ rhs: Float) -> NDArray<Float> {
@@ -190,21 +168,13 @@
         return applyVDspFunc(lhs, rhs, vDSP_svdivD)
     }
     
-    // NDArray and NDArray
+    // MARK: - NDArray and NDArray
     private func applyVDspFunc<T>(_ lhs: NDArray<T>, _ rhs: NDArray<T>, _ vDspFunc: (UnsafePointer<T>, vDSP_Stride, UnsafePointer<T>, vDSP_Stride, UnsafeMutablePointer<T>, vDSP_Stride, vDSP_Length) -> Void) -> NDArray<T> {
         
         precondition(lhs.shape == rhs.shape, "Two NDArrays have incompatible shape.")
         
-        let out = UnsafeMutablePointer<T>.allocate(capacity: lhs.elements.count)
-        defer { out.deallocate(capacity: lhs.elements.count) }
-        
-        vDspFunc(lhs.elements, 1,
-                 rhs.elements, 1,
-                 out, 1,
-                 vDSP_Length(lhs.elements.count))
-        
         return NDArray(shape: lhs.shape,
-                       elements: Array(UnsafeBufferPointer(start: out, count: lhs.elements.count)))
+                       elements: applyVDspFunc(lhs.elements, rhs.elements, vDspFunc))
     }
     
     func addAccelerate(_ lhs: NDArray<Float>, _ rhs: NDArray<Float>) -> NDArray<Float> {
