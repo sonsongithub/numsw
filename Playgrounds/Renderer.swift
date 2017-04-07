@@ -15,6 +15,7 @@ public protocol Renderer {
     func render(context: CGContext, windowSize: CGSize)
     var parentViewSize: CGSize { get set }
     var height: CGFloat { get }
+    var cellIdentifier: String { get }
 }
 
 #if os(iOS)
@@ -29,6 +30,10 @@ public extension Renderer {
         let cgImage = context.makeImage()!
         
         return UIImage(cgImage: cgImage)
+    }
+    
+    var cellIdentifier: String {
+        return "RenderTableViewCell"
     }
 }
 #endif

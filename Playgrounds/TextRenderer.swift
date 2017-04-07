@@ -26,12 +26,19 @@ public class TextRenderer: Renderer {
     
     public var parentViewSize = CGSize.zero {
         didSet {
+            if parentViewSize.width > 0 {
+                let newSize = UZTextView.size(of: attributedString, restrictedWithin: parentViewSize.width, inset: .zero)
+                height = newSize.height
+                print(height)
+            }
         }
     }
     
-    public var height: CGFloat {
-        return parentViewSize.height * 2.5
+    public var cellIdentifier: String {
+        return "TextTableViewCell"
     }
+    
+    public var height: CGFloat = 0
     
     public func update() {
     }
