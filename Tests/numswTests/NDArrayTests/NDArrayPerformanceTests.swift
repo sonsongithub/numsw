@@ -51,7 +51,7 @@ class NDArrayPerformanceTests: XCTestCase {
     #endif
     
     func testSqrtPerformance() {
-        let a = NDArray<Double>.linspace(low: -10*M_PI, high: 10*M_PI, count: 1000000)
+        let a = NDArray<Double>.linspace(low: -10 * .pi, high: 10 * .pi, count: 1000000)
         measure {
             _ = _sqrt(a)
         }
@@ -59,7 +59,7 @@ class NDArrayPerformanceTests: XCTestCase {
     
     #if os(iOS) || os(OSX)
     func testSqrtAcceleratePerformance() {
-        let a = NDArray<Double>.linspace(low: -10*M_PI, high: 10*M_PI, count: 1000000)
+        let a = NDArray<Double>.linspace(low: -10 * .pi, high: 10 * .pi, count: 1000000)
         measure {
             _ = _sqrtAccelerate(a)
         }

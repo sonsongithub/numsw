@@ -20,7 +20,6 @@
 public extension NumswPlayground {
     public static func initialize() {
 
-        
         #if os(iOS)
             #if SANDBOX_APP
                 //  sandbox app
@@ -35,4 +34,3 @@ public extension NumswPlayground {
         #endif
     }
 }
-
