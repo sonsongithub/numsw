@@ -350,7 +350,7 @@
 		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 9999;
+				LastUpgradeCheck = 0830;
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "numsw" */;
 			compatibilityVersion = "Xcode 3.2";
