@@ -11,7 +11,7 @@
 #if os(iOS)
 import UIKit
 
-public class RenderTableViewController: UITableViewController {
+public class RenderTableViewController: UITableViewController, UZTextViewDelegate {
     
     var renderers: [Renderer] = [] {
         didSet {
@@ -32,8 +32,9 @@ public class RenderTableViewController: UITableViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-                
-        tableView.contentInset = .zero
+        
+        self.view.backgroundColor = .black
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 84, right: 0)
         tableView.separatorStyle = .none
         
         tableView.register(RenderTableViewCell.self, forCellReuseIdentifier: "RenderTableViewCell")
@@ -67,6 +68,7 @@ public class RenderTableViewController: UITableViewController {
             cell.renderer = renderers[indexPath.row]
         case (let cell as TextTableViewCell, let renderer as TextRenderer):
             cell.textView.attributedString = renderer.attributedString
+            cell.textView.delegate = self
         default:
             do {}
         }
@@ -81,6 +83,20 @@ public class RenderTableViewController: UITableViewController {
         if let cell = cell as? RenderTableViewCell {
             cell.updateImageViewIfNeeded()
         }
+    }
+    
+    public func textView(_ textView: UZTextView, didClickLinkAttribute attribute: Any) {
+    }
+    
+    public func textView(_ textView: UZTextView, didLongTapLinkAttribute attribute: Any) {
+    }
+    
+    public func selectingStringBegun(_ textView: UZTextView) {
+        self.tableView.isScrollEnabled = false
+    }
+    
+    public func selectingStringEnded(_ textView: UZTextView) {
+        self.tableView.isScrollEnabled = true
     }
 }
 #endif

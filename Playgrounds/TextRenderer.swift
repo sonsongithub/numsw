@@ -20,14 +20,14 @@ public class TextRenderer: Renderer {
     
     public init(_ aString: String) {
         string = aString
-        let font = UIFont.systemFont(ofSize: 14)
-        attributedString = NSAttributedString(string: string, attributes: [NSFontAttributeName: font])
+        let font = UIFont.systemFont(ofSize: 18)
+        attributedString = NSAttributedString(string: string, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
     }
     
     public var parentViewSize = CGSize.zero {
         didSet {
             if parentViewSize.width > 0 {
-                let newSize = UZTextView.size(of: attributedString, restrictedWithin: parentViewSize.width, inset: .zero)
+                let newSize = UZTextView.size(of: attributedString, restrictedWithin: parentViewSize.width, inset: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
                 height = newSize.height
                 print(height)
             }

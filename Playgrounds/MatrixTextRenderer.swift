@@ -18,7 +18,14 @@ public class MatrixTextRenderer: TextRenderer {
     
     public init(_ aMatrix: Matrix<Double>) {
         matrix = aMatrix
-        super.init("")
+        var string = "\(aMatrix.rows)x\(aMatrix.columns)\n"
+        
+        for i in 0..<aMatrix.rows {
+            let s: [String] = (0..<aMatrix.columns).map({ aMatrix.elements[i * aMatrix.columns + $0] }).flatMap({ String($0) })
+            let r = s.joined(separator: ", ")
+            string += "[ \(r) ]\n"
+        }
+        super.init(string)
     }
     
     private var compositer: CompositeRenderer?

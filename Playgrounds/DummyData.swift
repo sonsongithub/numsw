@@ -34,7 +34,7 @@ public struct DummyData {
     public static func runTestScenario() {
         do {
             let t = Matrix<Double>.range(from: 0, to: 10, stride: 0.01)
-            let siny = sin(t*64)
+            let siny = sin(t*4)
             
             addLine(x: t.elements, y: siny.elements)
         }
@@ -94,6 +94,12 @@ public struct DummyData {
         } catch {
             fatalError("\(error)")
         }
+        
+        do {
+            let x = Matrix<Double>([[10, 10], [1, 1]])
+            nwprint(x)
+            nwprint("This is a test.")
+        }
 
     }
     
@@ -111,5 +117,6 @@ public struct DummyData {
         }
         nwprint(t1)
         nwprint("aaaa\naaaa\naaaa\naaaa\naaaa\naaaa\naaaa\n")
+        nwprint("bbbb\naaaa\naaaa\naaaa\naaaa\naaaa\naaaa\n")
     }
 }
