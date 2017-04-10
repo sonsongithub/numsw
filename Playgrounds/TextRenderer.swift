@@ -8,12 +8,16 @@
 
 import Foundation
 import CoreGraphics
-import UIKit
+
+#if os(iOS)
+    import UIKit
+#endif
 
 #if SANDBOX_APP
     import numsw
 #endif
 
+#if os(iOS)
 public class TextRenderer: Renderer {
     let string: String
     let attributedString: NSAttributedString
@@ -48,3 +52,4 @@ public class TextRenderer: Renderer {
     
     private var compositer: CompositeRenderer?
 }
+#endif
