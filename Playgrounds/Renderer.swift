@@ -15,7 +15,9 @@ public protocol Renderer {
     func render(context: CGContext, windowSize: CGSize)
     var parentViewSize: CGSize { get set }
     var height: CGFloat { get }
+#if os(iOS)
     var cellIdentifier: String { get }
+#endif
 }
 
 #if os(iOS)

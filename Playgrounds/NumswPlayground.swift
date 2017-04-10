@@ -27,6 +27,7 @@ public class NumswPlayground {
         renderers.append(renderer)
     }
     
+#if os(iOS)
     public func print(_ matrix: Matrix<Double>) {
         let matrixTextRenderer = MatrixTextRenderer(matrix)
         renderers.append(matrixTextRenderer)
@@ -36,6 +37,7 @@ public class NumswPlayground {
         let textRenderer = TextRenderer(string)
         renderers.append(textRenderer)
     }
+#endif
     
     public func plot(_ x: [Double], _ y: [Double]) {
         guard let b = chartBuilder else {
@@ -128,9 +130,13 @@ public func hold(f: () throws -> Void) rethrows {
 }
 
 public func nwprint(_ matrix: Matrix<Double>) {
+#if os(iOS)
     NumswPlayground.shared.print(matrix)
+#endif
 }
 
 public func nwprint(_ string: String) {
+#if os(iOS)
     NumswPlayground.shared.print(string)
+#endif
 }
