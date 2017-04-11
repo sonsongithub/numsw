@@ -6,6 +6,7 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 /**
@@ -118,3 +119,4 @@ internal class UZCursor: UIView {
         }
     }
 }
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 internal class RenderTableViewCell: UITableViewCell {
@@ -57,3 +58,4 @@ internal class RenderTableViewCell: UITableViewCell {
         renderedImageSize = self.contentView.bounds.size
     }
 }
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 import NumswRenderer
 
@@ -64,3 +65,4 @@ class SelectTableViewController: UITableViewController {
         }
     }
 }
+#endif

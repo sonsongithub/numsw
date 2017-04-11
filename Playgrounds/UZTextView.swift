@@ -6,6 +6,7 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 import CoreText
 
@@ -1076,3 +1077,4 @@ public class UZTextView: UIView {
         return NSNotFound
     }
 }
+#endif
