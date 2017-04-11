@@ -13,6 +13,7 @@ import CoreGraphics
     import numsw
 #endif
 
+#if os(iOS)
 public class MatrixTextRenderer: TextRenderer {
     let matrix: Matrix<Double>
     
@@ -30,3 +31,4 @@ public class MatrixTextRenderer: TextRenderer {
     
     private var compositer: CompositeRenderer?
 }
+#endif
