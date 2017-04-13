@@ -14,6 +14,11 @@ public class ScatterGraphRenderer: Renderer {
         self.scatter = scatter
     }
     
+    public var parentViewSize = CGSize.zero
+    public var height: CGFloat {
+        return parentViewSize.height * 0.5
+    }
+    
     public let viewport: CGRect
     public let scatter: ScatterGraph
     

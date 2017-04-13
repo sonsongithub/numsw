@@ -14,6 +14,11 @@ public class AxisRenderer: Renderer {
     public init(chart: Chart) {
         self.chart = chart
     }
+    
+    public var parentViewSize = CGSize.zero
+    public var height: CGFloat {
+        return parentViewSize.height * 0.5
+    }
 
     public let chart: Chart
 

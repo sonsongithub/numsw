@@ -11,61 +11,13 @@
 #if os(iOS)
 import UIKit
 
-private class RenderTableViewCell: UITableViewCell {
-    
-    var renderer: Renderer? {
-        willSet {
-            self.renderImageView.image = nil
-            self.renderedImageSize = .zero
-        }
-    }
-    
-    private let renderImageView = UIImageView(frame: .zero)
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        print("RenderTableViewCell init")
-        self.separatorInset = .zero
-        self.selectionStyle = .none
-        renderImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        renderImageView.contentMode = .scaleAspectFit
-        self.contentView.addSubview(renderImageView)
-        renderImageView.frame = self.contentView.bounds
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    deinit {
-        print("RenderTableViewCell deinit")
-    }
-    
-    private var renderedImageSize = CGSize.zero
-    
-    func updateImageViewIfNeeded() {
-        print("rendering bounds: \(self.contentView.bounds)")
-        if renderedImageSize == self.contentView.bounds.size &&
-            self.renderImageView.image != nil {
-            // already rendered
-            return
-        }
-        updateImageView()
-    }
-    
-    private func updateImageView() {
-        guard let renderer = self.renderer else { return }
-        let image = renderer.renderToImage(size: self.contentView.bounds.size)
-        self.renderImageView.image = image
-        renderedImageSize = self.contentView.bounds.size
-    }
-}
-
-public class RenderTableViewController: UITableViewController {
-    private let CellIdentifier = "Cell"
+public class RenderTableViewController: UITableViewController, UZTextViewDelegate {
     
     var renderers: [Renderer] = [] {
         didSet {
+            for i in 0..<renderers.count {
+                renderers[i].parentViewSize = self.tableView.frame.size
+            }
             tableView.reloadData()
         }
     }
@@ -80,11 +32,13 @@ public class RenderTableViewController: UITableViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-                
-        tableView.contentInset = .zero
+        
+        self.view.backgroundColor = .black
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 84, right: 0)
         tableView.separatorStyle = .none
         
-        tableView.register(RenderTableViewCell.self, forCellReuseIdentifier: CellIdentifier)
+        tableView.register(RenderTableViewCell.self, forCellReuseIdentifier: "RenderTableViewCell")
+        tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "TextTableViewCell")
     }
     
     public func append(renderer: Renderer) {
@@ -108,21 +62,41 @@ public class RenderTableViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
-        if let cell = cell as? RenderTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: renderers[indexPath.row].cellIdentifier, for: indexPath)
+        switch (cell, renderers[indexPath.row]) {
+        case (let cell as RenderTableViewCell, _):
             cell.renderer = renderers[indexPath.row]
+        case (let cell as TextTableViewCell, let renderer as TextRenderer):
+            cell.textView.attributedString = renderer.attributedString
+            cell.textView.delegate = self
+        default:
+            do {}
         }
         return cell
     }
     
     public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.bounds.height * 0.5
+        return renderers[indexPath.row].height
     }
 
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? RenderTableViewCell {
             cell.updateImageViewIfNeeded()
         }
+    }
+    
+    public func textView(_ textView: UZTextView, didClickLinkAttribute attribute: Any) {
+    }
+    
+    public func textView(_ textView: UZTextView, didLongTapLinkAttribute attribute: Any) {
+    }
+    
+    public func selectingStringBegun(_ textView: UZTextView) {
+        self.tableView.isScrollEnabled = false
+    }
+    
+    public func selectingStringEnded(_ textView: UZTextView) {
+        self.tableView.isScrollEnabled = true
     }
 }
 #endif

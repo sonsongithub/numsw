@@ -8,6 +8,10 @@
 
 import CoreGraphics
 
+#if SANDBOX_APP
+    import numsw
+#endif
+
 public class NumswPlayground {
     internal init() {
         #if os(iOS)
@@ -22,6 +26,18 @@ public class NumswPlayground {
     public func append(renderer: ChartRenderer) {
         renderers.append(renderer)
     }
+    
+#if os(iOS)
+    public func print(_ matrix: Matrix<Double>) {
+        let matrixTextRenderer = MatrixTextRenderer(matrix)
+        renderers.append(matrixTextRenderer)
+    }
+    
+    public func print(_ string: String) {
+        let textRenderer = TextRenderer(string)
+        renderers.append(textRenderer)
+    }
+#endif
     
     public func plot(_ x: [Double], _ y: [Double]) {
         guard let b = chartBuilder else {
@@ -69,7 +85,7 @@ public class NumswPlayground {
         return _shared!
     }
     
-    private var renderers: [ChartRenderer] = [] {
+    private var renderers: [Renderer] = [] {
         didSet {
             #if os(iOS)
             viewController.renderers = renderers.map { $0 as Renderer }
@@ -111,4 +127,22 @@ public func scatter(
 
 public func hold(f: () throws -> Void) rethrows {
     try NumswPlayground.shared.hold(f)
+}
+
+public func nwprint(_ value: CustomStringConvertible) {
+#if os(iOS)
+    NumswPlayground.shared.print(value.description)
+#endif
+}
+
+public func nwprint(_ matrix: Matrix<Double>) {
+#if os(iOS)
+    NumswPlayground.shared.print(matrix)
+#endif
+}
+
+public func nwprint(_ string: String) {
+#if os(iOS)
+    NumswPlayground.shared.print(string)
+#endif
 }

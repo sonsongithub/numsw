@@ -16,6 +16,11 @@ public class ChartRenderer: Renderer {
         update()
     }
     
+    public var parentViewSize = CGSize.zero
+    public var height: CGFloat {
+        return parentViewSize.height * 0.5
+    }
+    
     public let chart: Chart
     
     public func render(context: CGContext, windowSize: CGSize) {

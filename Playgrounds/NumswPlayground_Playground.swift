@@ -19,11 +19,10 @@
 
 public extension NumswPlayground {
     public static func initialize() {
-
         #if os(iOS)
             #if SANDBOX_APP
                 //  sandbox app
-                print("[NumswPlaygrounds.initialize] not in playground")
+//                print("[NumswPlaygrounds.initialize] not in playground")
             #else
                 //  playground
                 let s = NumswPlayground.shared
