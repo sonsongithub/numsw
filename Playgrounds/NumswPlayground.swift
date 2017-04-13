@@ -129,6 +129,12 @@ public func hold(f: () throws -> Void) rethrows {
     try NumswPlayground.shared.hold(f)
 }
 
+public func nwprint(_ value: CustomStringConvertible) {
+#if os(iOS)
+    NumswPlayground.shared.print(value.description)
+#endif
+}
+
 public func nwprint(_ matrix: Matrix<Double>) {
 #if os(iOS)
     NumswPlayground.shared.print(matrix)

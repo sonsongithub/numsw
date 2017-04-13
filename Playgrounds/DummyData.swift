@@ -99,6 +99,8 @@ public struct DummyData {
             let x = Matrix<Double>([[10, 10], [1, 1]])
             nwprint(x)
             nwprint("This is a test.")
+            nwprint(1)
+            nwprint(0.12)
         }
 
     }
@@ -115,8 +117,13 @@ public struct DummyData {
             plot(t1.elements, siny1.elements)
             scatter(t2.elements, siny2.elements)
         }
-        nwprint(t1)
-        nwprint("aaaa\naaaa\naaaa\naaaa\naaaa\naaaa\naaaa\n")
-        nwprint("bbbb\naaaa\naaaa\naaaa\naaaa\naaaa\naaaa\n")
+        
+        do {
+            let x = Matrix<Double>([[10, 10], [1, 1]])
+            nwprint(x)
+            nwprint("This is a test.")
+            nwprint(1)
+            nwprint(0.12)
+        }
     }
 }
