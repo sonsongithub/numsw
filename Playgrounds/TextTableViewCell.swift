@@ -25,13 +25,13 @@ internal class TextTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.separatorInset = .zero
         self.selectionStyle = .none
-        textView.backgroundColor = .black
+        textView.backgroundColor = .red
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         textView.contentMode = .scaleAspectFit
         self.contentView.addSubview(textView)
         textView.frame = self.contentView.bounds
         textView.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-        self.contentView.backgroundColor = .black
+        self.contentView.backgroundColor = .red
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
