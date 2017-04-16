@@ -13,6 +13,7 @@ import CoreGraphics
 #endif
 
 public class NumswPlayground {
+    
     internal init() {
         #if os(iOS)
             viewController = RenderTableViewController(state: viewState)
@@ -25,7 +26,9 @@ public class NumswPlayground {
     #endif
     
     public func append(renderer: Renderer) {
+        #if os(iOS)
         viewController.append(renderer: renderer)
+        #endif
     }
     
 #if os(iOS)
