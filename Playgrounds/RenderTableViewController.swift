@@ -103,7 +103,8 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         // scroll to previous content position
         let lastRowOffset = tableView.rectForRow(at: IndexPath(row: renderers.count-1, section: 0))
         
-        let maxYOffset = max(lastRowOffset.origin.y + lastRowOffset.size.height - view.bounds.size.height, 0) // 0 ~
+        let viewBounds = UIEdgeInsetsInsetRect(view.bounds, tableView.contentInset)
+        let maxYOffset = max(lastRowOffset.origin.y + lastRowOffset.size.height - viewBounds.size.height, 0) // 0 ~
         let offset = CGPoint(x: state.tableViewScrollOffset.x, y: min(maxYOffset, state.tableViewScrollOffset.y))
         tableView.setContentOffset(offset, animated: false)
     }
