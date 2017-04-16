@@ -15,27 +15,28 @@ import CoreGraphics
 public class NumswPlayground {
     internal init() {
         #if os(iOS)
-            viewController = RenderTableViewController()
+            viewController = RenderTableViewController(state: viewState)
         #endif
     }
     
     #if os(iOS)
         public let viewController: RenderTableViewController
+        internal let viewState = RenderTableViewController.State()
     #endif
     
-    public func append(renderer: ChartRenderer) {
-        renderers.append(renderer)
+    public func append(renderer: Renderer) {
+        viewController.append(renderer: renderer)
     }
     
 #if os(iOS)
     public func print(_ matrix: Matrix<Double>) {
         let matrixTextRenderer = MatrixTextRenderer(matrix)
-        renderers.append(matrixTextRenderer)
+        append(renderer: matrixTextRenderer)
     }
     
     public func print(_ string: String) {
         let textRenderer = TextRenderer(string)
-        renderers.append(textRenderer)
+        append(renderer: textRenderer)
     }
 #endif
     
@@ -85,13 +86,14 @@ public class NumswPlayground {
         return _shared!
     }
     
-    private var renderers: [Renderer] = [] {
+    //private var renderers: [Renderer] = []
+    /*private var renderers: [ChartRenderer] = [] {
         didSet {
             #if os(iOS)
             viewController.replace(renderers: renderers.map { $0 as Renderer })
             #endif
         }
-    }
+    }*/
     
     private var chartBuilder: ChartBuilder?
     

@@ -11,6 +11,60 @@
 #if os(iOS)
 import UIKit
 import QuartzCore
+
+    
+#if SANDBOX_APP
+    //  sandbox app
+    internal enum PlaygroundValue {
+        case array([PlaygroundValue])
+        case boolean(Bool)
+        case data(Data)
+        case date(Date)
+        case dictionary([String: PlaygroundValue])
+        case floatingPoint(Double)
+        case integer(Int)
+        case string(String)
+    }
+    internal class PlaygroundKeyValueStore {
+        static let current = PlaygroundKeyValueStore()
+        private init() {
+            
+        }
+        subscript(key: String) -> PlaygroundValue? {
+            set {
+                print("KeyValueStore setting \(newValue as Any) for \(key)")
+                if let value = newValue {
+                    switch value {
+                    case .floatingPoint(let double):
+                        UserDefaults.standard.set(double, forKey: key)
+                    case .integer(let integer):
+                        UserDefaults.standard.set(integer, forKey: key)
+                    default:
+                        fatalError("Not implemented")
+                    }
+                } else {
+                    UserDefaults.standard.removeObject(forKey: key)
+                }
+            }
+            get {
+                print("KeyValueStore getting for \(key)")
+                guard let object = UserDefaults.standard.object(forKey: key) else {
+                    return nil
+                }
+                if let integer = object as? Int {
+                    return .integer(integer)
+                } else if let double = object as? Double {
+                    return .floatingPoint(double)
+                } else {
+                    fatalError("Not implemented")
+                }
+            }
+        }
+    }
+    #else
+    //  playground
+    import PlaygroundSupport
+#endif
     
 public class RenderTableViewController: UITableViewController, UZTextViewDelegate {
     
@@ -23,7 +77,41 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         }
     }
     
-    public init() {
+    internal class State {
+        private enum Key: String {
+            case tableViewScrollOffsetX = "table_view_scrolloffset_x"
+            case tableViewScrollOffsetY = "table_view_scrolloffset_y"
+            case rendererCount = "renderer_count"
+        }
+        
+        var tableViewScrollOffset: CGPoint = .zero
+        init() {
+            let kvs = PlaygroundKeyValueStore.current
+            if let xValue = kvs[Key.tableViewScrollOffsetX.rawValue],
+                case .floatingPoint(let x) = xValue,
+                let yValue = kvs[Key.tableViewScrollOffsetY.rawValue],
+                case .floatingPoint(let y) = yValue {
+                tableViewScrollOffset = CGPoint(x: x, y: y)
+            } else {
+                tableViewScrollOffset = .zero
+            }
+        }
+        
+        func reset() {
+            tableViewScrollOffset = .zero
+        }
+        
+        func sync() {
+            let kvs = PlaygroundKeyValueStore.current
+            kvs[Key.tableViewScrollOffsetX.rawValue] = .floatingPoint(Double(tableViewScrollOffset.x))
+            kvs[Key.tableViewScrollOffsetY.rawValue] = .floatingPoint(Double(tableViewScrollOffset.y))
+        }
+    }
+    
+    private var state: State
+    
+    internal init(state: State) {
+        self.state = state
         super.init(style: .plain)
     }
     
@@ -42,15 +130,29 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "TextTableViewCell")
     }
     
-    public func replace(renderers: [Renderer]) {
+    // not in use?
+    /*public func replace(renderers: [Renderer]) {
         self.renderers = renderers
+        self.tableView.reloadData()
+    }*/
+    
+    public func removeAllRenderers() {
+        self.renderers = []
         self.tableView.reloadData()
     }
     
     public func append(renderer: Renderer) {
         // partial update
         self.renderers.append(renderer)
-        self.tableView.insertRows(at: [IndexPath(row: renderers.count, section: 0)], with: .automatic)
+        //self.tableView.insertRows(at: [IndexPath(row: renderers.count-1, section: 0)], with: .none)
+        tableView.reloadData()
+        
+        // scroll to previous content position
+        let lastRowOffset = tableView.rectForRow(at: IndexPath(row: renderers.count-1, section: 0))
+        
+        let maxYOffset = max(lastRowOffset.origin.y + lastRowOffset.size.height - view.bounds.size.height, 0) // 0 ~
+        let offset = CGPoint(x: state.tableViewScrollOffset.x, y: min(maxYOffset, state.tableViewScrollOffset.y))
+        tableView.setContentOffset(offset, animated: false)
     }
 
     // some times not invoked?? on iPad playground
@@ -84,6 +186,7 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
     // temporary, we use this deprecated method until the solution is found
     public override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         super.willAnimateRotation(to: toInterfaceOrientation, duration: duration)
+        state.reset()
         updateVisibleCellImagesIfNeeded()
     }
 
@@ -127,6 +230,31 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
     
     public func selectingStringEnded(_ textView: UZTextView) {
         self.tableView.isScrollEnabled = true
+    }
+    
+    #if SANDBOX_APP
+    // Tap to dismiss any table view cell
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    #endif
+    
+    public override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        storeTableViewScrollOffset()
+    }
+    
+    public override func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        storeTableViewScrollOffset()
+    }
+    
+    public override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        storeTableViewScrollOffset()
+    }
+    
+    private func storeTableViewScrollOffset() {
+        // store tableview scroll offset
+        state.tableViewScrollOffset = tableView.contentOffset
+        state.sync()
     }
 }
 #endif

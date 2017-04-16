@@ -10,8 +10,7 @@
 import UIKit
 
 internal class RenderTableViewCell: UITableViewCell {
-    
-    
+        
     private static let renderQueue = DispatchQueue(label: "Renderer-Queue")
     
     var renderer: Renderer? {

@@ -35,7 +35,8 @@ class ViewController: UIViewController {
             return ChartRenderer(chart: chart)
         }
         
-        let vc = RenderTableViewController()
+        let vc = NumswPlayground.shared.viewController
+        vc.removeAllRenderers()
         
         for _ in 0...10 {
             vc.append(renderer: makeRenderer())
