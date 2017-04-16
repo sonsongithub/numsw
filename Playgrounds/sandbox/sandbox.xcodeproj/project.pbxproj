@@ -19,6 +19,8 @@
 		148967C11E9786D900F19D91 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148967C01E9786D900F19D91 /* TextTableViewCell.swift */; };
 		148967C31E9786F400F19D91 /* RenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148967C21E9786F400F19D91 /* RenderTableViewCell.swift */; };
 		148967C71E97921800F19D91 /* SelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148967C61E97921800F19D91 /* SelectTableViewController.swift */; };
+		52CCAD0E1EA38B7400D6D6EB /* PlaygroundKeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCAD0D1EA38B7400D6D6EB /* PlaygroundKeyValueStore.swift */; };
+		52CCAD0F1EA38BE100D6D6EB /* PlaygroundKeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CCAD0D1EA38B7400D6D6EB /* PlaygroundKeyValueStore.swift */; };
 		D68EF7091E86C8C600927991 /* AxisRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BB1E6FE801004AE3B4 /* AxisRenderer.swift */; };
 		D68EF70A1E86C8C600927991 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BC1E6FE801004AE3B4 /* Chart.swift */; };
 		D68EF70B1E86C8C600927991 /* ChartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0B5BD1E6FE801004AE3B4 /* ChartBuilder.swift */; };
@@ -128,6 +130,7 @@
 		148967C01E9786D900F19D91 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextTableViewCell.swift; path = ../TextTableViewCell.swift; sourceTree = "<group>"; };
 		148967C21E9786F400F19D91 /* RenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderTableViewCell.swift; path = ../RenderTableViewCell.swift; sourceTree = "<group>"; };
 		148967C61E97921800F19D91 /* SelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTableViewController.swift; sourceTree = "<group>"; };
+		52CCAD0D1EA38B7400D6D6EB /* PlaygroundKeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundKeyValueStore.swift; path = ../../../../tmp/PlaygroundKeyValueStore.swift; sourceTree = "<group>"; };
 		52E1EE3E1E6A8A2E008D19BB /* sandboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sandboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E1EE421E6A8A2E008D19BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D68EF6FD1E86C89600927991 /* NumswRenderer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumswRenderer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +282,7 @@
 				144A150B1E971A1400B42288 /* MatrixTextRenderer.swift */,
 				D6A0B5C41E6FE801004AE3B4 /* NumswPlayground_Playground.swift */,
 				D6A0B5C51E6FE801004AE3B4 /* NumswPlayground.swift */,
+				52CCAD0D1EA38B7400D6D6EB /* PlaygroundKeyValueStore.swift */,
 				D6A0B5C61E6FE801004AE3B4 /* Renderer.swift */,
 				D6A0B5C91E6FE801004AE3B4 /* RendererUtil.swift */,
 				D6A0B5CA1E6FE801004AE3B4 /* RenderScrollViewController.swift */,
@@ -606,6 +610,7 @@
 				144A150C1E971A1400B42288 /* MatrixTextRenderer.swift in Sources */,
 				D68EF7101E86C8C600927991 /* LineGraph.swift in Sources */,
 				144A15101E971B9D00B42288 /* UZCursor.swift in Sources */,
+				52CCAD0E1EA38B7400D6D6EB /* PlaygroundKeyValueStore.swift in Sources */,
 				D68EF7151E86C8C600927991 /* RendererUtil.swift in Sources */,
 				144A15131E971C0400B42288 /* UZLoupe.swift in Sources */,
 				144A15121E971B9D00B42288 /* UZTextView.swift in Sources */,
@@ -630,6 +635,7 @@
 				D68EF77B1E86DA4C00927991 /* ScatterGraphRenderer.swift in Sources */,
 				D68EF77C1E86DA4C00927991 /* ScatterGraph.swift in Sources */,
 				D68EF77D1E86DA4C00927991 /* Renderer.swift in Sources */,
+				52CCAD0F1EA38BE100D6D6EB /* PlaygroundKeyValueStore.swift in Sources */,
 				D68EF77E1E86DA4C00927991 /* DummyData.swift in Sources */,
 				D68EF77F1E86DA4C00927991 /* RenderScrollViewController.swift in Sources */,
 				D68EF7801E86DA4C00927991 /* LineGraph.swift in Sources */,
