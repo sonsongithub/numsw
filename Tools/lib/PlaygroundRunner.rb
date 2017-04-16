@@ -32,6 +32,7 @@ class PlaygroundRunner
 
       Dir.chdir(temp_dir) do
         exec([
+          "xcrun",
           "swiftc", "-v",
           "main.swift",
           "lib_bundle.swift",
