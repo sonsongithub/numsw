@@ -10,10 +10,18 @@
 
 #if os(iOS)
 import UIKit
+import QuartzCore
 
+#if SANDBOX_APP
+    //  sandbox app
+#else
+    //  playground
+    import PlaygroundSupport
+#endif
+    
 public class RenderTableViewController: UITableViewController, UZTextViewDelegate {
     
-    var renderers: [Renderer] = [] {
+    private var renderers: [Renderer] = [] {
         didSet {
             for i in 0..<renderers.count {
                 renderers[i].parentViewSize = self.tableView.frame.size
@@ -22,7 +30,41 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         }
     }
     
-    public init() {
+    internal class State {
+        private enum Key: String {
+            case tableViewScrollOffsetX = "table_view_scrolloffset_x"
+            case tableViewScrollOffsetY = "table_view_scrolloffset_y"
+            case rendererCount = "renderer_count"
+        }
+        
+        var tableViewScrollOffset: CGPoint = .zero
+        init() {
+            let kvs = PlaygroundKeyValueStore.current
+            if let xValue = kvs[Key.tableViewScrollOffsetX.rawValue],
+                case .floatingPoint(let x) = xValue,
+                let yValue = kvs[Key.tableViewScrollOffsetY.rawValue],
+                case .floatingPoint(let y) = yValue {
+                tableViewScrollOffset = CGPoint(x: x, y: y)
+            } else {
+                tableViewScrollOffset = .zero
+            }
+        }
+        
+        func reset() {
+            tableViewScrollOffset = .zero
+        }
+        
+        func sync() {
+            let kvs = PlaygroundKeyValueStore.current
+            kvs[Key.tableViewScrollOffsetX.rawValue] = .floatingPoint(Double(tableViewScrollOffset.x))
+            kvs[Key.tableViewScrollOffsetY.rawValue] = .floatingPoint(Double(tableViewScrollOffset.y))
+        }
+    }
+    
+    private var state: State
+    
+    internal init(state: State) {
+        self.state = state
         super.init(style: .plain)
     }
     
@@ -41,20 +83,65 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "TextTableViewCell")
     }
     
-    public func append(renderer: Renderer) {
-        self.renderers.append(renderer)
+    // not in use?
+    /*public func replace(renderers: [Renderer]) {
+        self.renderers = renderers
+        self.tableView.reloadData()
+    }*/
+    
+    public func removeAllRenderers() {
+        self.renderers = []
         self.tableView.reloadData()
     }
+    
+    public func append(renderer: Renderer) {
+        // partial update
+        self.renderers.append(renderer)
+        //self.tableView.insertRows(at: [IndexPath(row: renderers.count-1, section: 0)], with: .none)
+        tableView.reloadData()
+        
+        // scroll to previous content position
+        let lastRowOffset = tableView.rectForRow(at: IndexPath(row: renderers.count-1, section: 0))
+        
+        let viewBounds = UIEdgeInsetsInsetRect(view.bounds, tableView.contentInset)
+        let maxYOffset = max(lastRowOffset.origin.y + lastRowOffset.size.height - viewBounds.size.height, 0) // 0 ~
+        let offset = CGPoint(x: state.tableViewScrollOffset.x, y: min(maxYOffset, state.tableViewScrollOffset.y))
+        tableView.setContentOffset(offset, animated: false)
+    }
 
+    // some times not invoked?? on iPad playground
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        // will ??
-        //self.tableView.reloadData()
+        updateVisibleCellImagesIfNeeded()
     }
     
+    // some times not invoked?? on iPad playground
     public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        tableView.visibleCells.flatMap({ $0 as? RenderTableViewCell}).forEach({ $0.updateImageViewIfNeeded() })
+        updateVisibleCellImagesIfNeeded()
+    }
+    
+    private func updateVisibleCellImagesIfNeeded() {
+        // on orientation changed
+        for view in tableView.visibleCells {
+            (view as? RenderTableViewCell)?.updateImageViewIfNeeded()
+        }
+    }
+    
+    // some times not invoked?? on iPad playground
+    /*public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        updateVisibleCellImagesIfNeeded()
+        
+        super.viewWillTransition(to: size, with: coordinator)
+    }*/
+    
+    // TODO:
+    // `view*LayoutSubviews` seems to be not invoked on iPad playground
+    // temporary, we use this deprecated method until the solution is found
+    public override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        super.willAnimateRotation(to: toInterfaceOrientation, duration: duration)
+        state.reset()
+        updateVisibleCellImagesIfNeeded()
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,6 +184,31 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
     
     public func selectingStringEnded(_ textView: UZTextView) {
         self.tableView.isScrollEnabled = true
+    }
+    
+    #if SANDBOX_APP
+    // Tap any table view cell to dismiss
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    #endif
+    
+    public override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        storeTableViewScrollOffset()
+    }
+    
+    public override func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        storeTableViewScrollOffset()
+    }
+    
+    public override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        storeTableViewScrollOffset()
+    }
+    
+    private func storeTableViewScrollOffset() {
+        // store tableview scroll offset
+        state.tableViewScrollOffset = tableView.contentOffset
+        state.sync()
     }
 }
 #endif
