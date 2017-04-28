@@ -10,6 +10,11 @@ class NDArrayRandomTests: XCTestCase {
         }
     }
     
+    func testNormal() {
+        let a = NDArray<Double>.normal(mu: 0, sigma: 1, shape: [1000])
+        print(a.elements)
+    }
+    
     static var allTests: [(String, (NDArrayRandomTests) -> () throws -> Void)] {
         return [
             ("testUniform", testUniform)
