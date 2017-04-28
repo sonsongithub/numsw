@@ -14,10 +14,10 @@ class NDArrayRandomTests: XCTestCase {
         let a = NDArray<Double>.normal(mu: 0, sigma: 1, shape: [1000000])
 
         let mean = a.mean()
-        XCTAssertEqualWithAccuracy(mean, 0, accuracy: 1e-3)
+        XCTAssertEqualWithAccuracy(mean, 0, accuracy: 1e-2)
         
         let std = (a*a).mean() - mean*mean
-        XCTAssertEqualWithAccuracy(std, 1, accuracy: 1e-3)
+        XCTAssertEqualWithAccuracy(std, 1, accuracy: 1e-2)
     }
     
     static var allTests: [(String, (NDArrayRandomTests) -> () throws -> Void)] {
