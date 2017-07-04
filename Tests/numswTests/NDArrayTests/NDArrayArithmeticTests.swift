@@ -53,14 +53,14 @@ class NDArrayArithmeticTests: XCTestCase {
         // NDArray and scalar
         do {
             let a = NDArray<Int>(shape: [2, 2], elements: [1, 2, 3, 4])
-            XCTAssertEqual(add(a, 1), NDArray(shape: [2, 2], elements: [2, 3, 4, 5]))
-            XCTAssertEqual(add(1, a), NDArray(shape: [2, 2], elements: [2, 3, 4, 5]))
+            XCTAssertEqual(numsw.add(a, 1), NDArray(shape: [2, 2], elements: [2, 3, 4, 5]))
+            XCTAssertEqual(numsw.add(1, a), NDArray(shape: [2, 2], elements: [2, 3, 4, 5]))
         }
         do {
             let a = NDArray<Double>(shape: [2, 2], elements: [1, 2, 3, 4])
-            XCTAssertEqualWithAccuracy(add(a, 1),
+            XCTAssertEqualWithAccuracy(numsw.add(a, 1),
                                        NDArray(shape: [2, 2], elements: [2, 3, 4, 5]))
-            XCTAssertEqualWithAccuracy(add(1, a),
+            XCTAssertEqualWithAccuracy(numsw.add(1, a),
                                        NDArray(shape: [2, 2], elements: [2, 3, 4, 5]))
         }
         
@@ -68,12 +68,12 @@ class NDArrayArithmeticTests: XCTestCase {
         do {
             let a = NDArray<Int>(shape: [2, 2], elements: [1, 2, 3, 4])
             let b = NDArray<Int>(shape: [2, 2], elements: [-1, 0, 1, 0])
-            XCTAssertEqual(add(a, b), NDArray(shape: [2, 2], elements: [0, 2, 4, 4]))
+            XCTAssertEqual(numsw.add(a, b), NDArray(shape: [2, 2], elements: [0, 2, 4, 4]))
         }
         do {
             let a = NDArray<Double>(shape: [2, 2], elements: [1, 2, 3, 4])
             let b = NDArray<Double>(shape: [2, 2], elements: [-1, 0, 1, 0])
-            XCTAssertEqualWithAccuracy(add(a, b), NDArray(shape: [2, 2], elements: [0, 2, 4, 4]))
+            XCTAssertEqualWithAccuracy(numsw.add(a, b), NDArray(shape: [2, 2], elements: [0, 2, 4, 4]))
         }
     }
     

@@ -1,9 +1,9 @@
 // MARK: - Unary
-public prefix func +<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
+public prefix func +<T: SignedNumeric>(arg: NDArray<T>) -> NDArray<T> {
     return unaryPlus(arg)
 }
 
-public prefix func -<T: SignedNumber>(arg: NDArray<T>) -> NDArray<T> {
+public prefix func -<T: SignedNumeric>(arg: NDArray<T>) -> NDArray<T> {
     return unaryMinus(arg)
 }
 
@@ -70,11 +70,11 @@ public func %<T: Moduloable>(lhs: NDArray<T>, rhs: NDArray<T>) -> NDArray<T> {
 }
 
 // MARK: - Unary
-func unaryPlus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
+func unaryPlus<T: SignedNumeric>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, +)
 }
 
-func unaryMinus<T: SignedNumber>(_ arg: NDArray<T>) -> NDArray<T> {
+func unaryMinus<T: SignedNumeric>(_ arg: NDArray<T>) -> NDArray<T> {
     return apply(arg, -)
 }
 

@@ -77,8 +77,10 @@ func formatIndicesInAxes(_ shape: [Int], _ indicesInAxes: [[Int]?]) -> [[Int]] {
         padIndices = indicesInAxes + [[Int]?](repeating: nil, count: shape.count - padIndices.count)
     }
     
-    let indices = padIndices.enumerated().map { i, indexArray in
-        indexArray ?? Array(0..<shape[i])
+    let indices = padIndices.enumerated().map { (arg) -> [Int] in
+        
+        let (i, indexArray) = arg
+        return indexArray ?? Array(0..<shape[i])
     }
     return indices
 }

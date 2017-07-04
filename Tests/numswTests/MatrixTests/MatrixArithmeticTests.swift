@@ -27,11 +27,11 @@ class MatrixArithmeticTests: XCTestCase {
         
         let a = Matrix([[1, 2, 3], [6, 5, 4]])
         
-        XCTAssertEqual(add(a, 1), Matrix([[2, 3, 4], [7, 6, 5]]))
-        XCTAssertEqual(add(1, a), Matrix([[2, 3, 4], [7, 6, 5]]))
+        XCTAssertEqual(numsw.add(a, 1), Matrix([[2, 3, 4], [7, 6, 5]]))
+        XCTAssertEqual(numsw.add(1, a), Matrix([[2, 3, 4], [7, 6, 5]]))
         
         let b = Matrix([[0, 1, 2], [3, 4, 5]])
-        XCTAssertEqual(add(a, b), Matrix([[1, 3, 5], [9, 9, 9]]))
+        XCTAssertEqual(numsw.add(a, b), Matrix([[1, 3, 5], [9, 9, 9]]))
     }
     
     func testAddOperator() {

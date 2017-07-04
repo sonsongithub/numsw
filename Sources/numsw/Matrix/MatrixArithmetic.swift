@@ -1,9 +1,9 @@
 // MARK: - Unary
-public prefix func +<T: SignedNumber>(arg: Matrix<T>) -> Matrix<T> {
+public prefix func +<T: SignedNumeric>(arg: Matrix<T>) -> Matrix<T> {
     return unaryPlus(arg)
 }
 
-public prefix func -<T: SignedNumber>(arg: Matrix<T>) -> Matrix<T> {
+public prefix func -<T: SignedNumeric>(arg: Matrix<T>) -> Matrix<T> {
     return unaryMinus(arg)
 }
 
@@ -69,11 +69,11 @@ public func %<T: Moduloable>(lhs: Matrix<T>, rhs: Matrix<T>) -> Matrix<T> {
 }
 
 // MARK: - Unary
-func unaryPlus<T: SignedNumber>(_ arg: Matrix<T>) -> Matrix<T> {
+func unaryPlus<T: SignedNumeric>(_ arg: Matrix<T>) -> Matrix<T> {
     return apply(arg, +)
 }
 
-func unaryMinus<T: SignedNumber>(_ arg: Matrix<T>) -> Matrix<T> {
+func unaryMinus<T: SignedNumeric>(_ arg: Matrix<T>) -> Matrix<T> {
     return apply(arg, -)
 }
 

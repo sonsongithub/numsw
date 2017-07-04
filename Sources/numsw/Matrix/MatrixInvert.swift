@@ -17,16 +17,22 @@ enum InvertError: Error {
             var workspace: [Double]      = [Double](repeating: 0.0, count: Int(N))
             var error: __CLPK_integer   = 0
             
+            var N1 = N
+            var N2 = N
+            
             // LU decomposition
-            dgetrf_(&N, &N, &inMatrix, &N, &pivots, &error)
+            dgetrf_(&N, &N1, &inMatrix, &N2, &pivots, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))
             } else if error > 0 {
                 throw InvertError.SingularMatrix
             }
             
+            N1 = N
+            N2 = N
+            
             // solve
-            dgetri_(&N, &inMatrix, &N, &pivots, &workspace, &N, &error)
+            dgetri_(&N, &inMatrix, &N1, &pivots, &workspace, &N2, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))
             } else if error > 0 {
@@ -50,16 +56,22 @@ enum InvertError: Error {
             var workspace: [Float]      = [Float](repeating: 0.0, count: Int(N))
             var error: __CLPK_integer   = 0
             
+            var N1 = N
+            var N2 = N
+            
             // LU decomposition
-            sgetrf_(&N, &N, &inMatrix, &N, &pivots, &error)
+            sgetrf_(&N, &N1, &inMatrix, &N2, &pivots, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))
             } else if error > 0 {
                 throw InvertError.SingularMatrix
             }
             
+            N1 = N
+            N2 = N
+            
             // solve
-            sgetri_(&N, &inMatrix, &N, &pivots, &workspace, &N, &error)
+            sgetri_(&N, &inMatrix, &N1, &pivots, &workspace, &N2, &error)
             if error < 0 {
                 throw InvertError.IrregalValue(argument: -Int(error))
             } else if error > 0 {
