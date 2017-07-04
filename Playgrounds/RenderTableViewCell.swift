@@ -63,8 +63,8 @@ internal class RenderTableViewCell: UITableViewCell {
         
         renderedImageSize = self.contentView.bounds.size
         type(of: self).renderQueue.async {
-            let image = renderer.renderToImage(size: self.contentView.bounds.size)
             DispatchQueue.main.async {
+                let image = renderer.renderToImage(size: self.contentView.bounds.size)
                 self.renderImageView.image = image
                 
                 if withFadeAnimation {
