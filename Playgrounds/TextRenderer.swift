@@ -25,7 +25,7 @@ public class TextRenderer: Renderer {
     public init(_ aString: String) {
         string = aString
         let font = UIFont.systemFont(ofSize: 18)
-        attributedString = NSAttributedString(string: string, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white])
+        attributedString = NSAttributedString(string: string, attributes: [.font: font, .foregroundColor: UIColor.white])
     }
     
     public var parentViewSize = CGSize.zero {

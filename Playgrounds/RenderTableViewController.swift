@@ -172,10 +172,10 @@ public class RenderTableViewController: UITableViewController, UZTextViewDelegat
         }
     }
     
-    public func textView(_ textView: UZTextView, didClickLinkAttribute attribute: Any) {
+    public func textView(_ textView: UZTextView, didClickLinkInfo info: UZTextViewAttributeInfo) {
     }
     
-    public func textView(_ textView: UZTextView, didLongTapLinkAttribute attribute: Any) {
+    public func textView(_ textView: UZTextView, didLongTapLinkInfo info: UZTextViewAttributeInfo) {
     }
     
     public func selectingStringBegun(_ textView: UZTextView) {

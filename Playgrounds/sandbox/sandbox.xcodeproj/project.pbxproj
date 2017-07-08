@@ -847,7 +847,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.NumswRenderer;
 				PRODUCT_NAME = NumswRenderer;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -870,7 +870,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonson.NumswRenderer;
 				PRODUCT_NAME = NumswRenderer;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

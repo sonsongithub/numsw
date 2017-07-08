@@ -22,7 +22,8 @@ public class MatrixTextRenderer: TextRenderer {
         var string = "\(aMatrix.rows)x\(aMatrix.columns)\n"
         
         for i in 0..<aMatrix.rows {
-            let s: [String] = (0..<aMatrix.columns).map({ aMatrix.elements[i * aMatrix.columns + $0] }).flatMap({ String($0) })
+            let s1: [Double] = (0..<aMatrix.columns).map({ aMatrix.elements[i * aMatrix.columns + $0] })
+            let s: [String] = s1.flatMap({ String($0) })
             let r = s.joined(separator: ", ")
             string += "[ \(r) ]\n"
         }

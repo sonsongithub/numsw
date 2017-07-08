@@ -6,7 +6,6 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-#if os(iOS)
 import UIKit
 
 /**
@@ -21,6 +20,12 @@ internal class UZCursor: UIView {
     
     /// Cursor's direction.
     private let direction: UZCursorDirection
+    
+    deinit {
+        if UZTextView.checkMemoryLeak {
+            print("UZCursor has been released.")
+        }
+    }
     
     private init(with aDirection: UZCursorDirection) {
         direction = aDirection
@@ -112,11 +117,10 @@ internal class UZCursor: UIView {
             self.frame = rect
         case .down:
             var rect = charcaterRect
-            rect.origin.x = rect.origin.x + rect.size.width - UZCursor.width * 0.5
+            rect.origin.x += (rect.size.width - UZCursor.width * 0.5)
             rect.size.width = UZCursor.width
             rect.size.height += UZCursor.extendHeight
             self.frame = rect
         }
     }
 }
-#endif

@@ -6,9 +6,32 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-#if os(iOS)
 import UIKit
 import CoreText
+
+/**
+ Data type to contain a dictionary of NSAttributedString object and location information of it.
+ */
+public enum UZTextViewAttributeInfo {
+    /// data has only a dictionary of NSAttributedString object.
+    case attribute(attribute: [NSAttributedStringKey: Any])
+    /// data has a dictionary of NSAttributedString object and rectagle to which it's attached.
+    case rect(attribute: [NSAttributedStringKey: Any], rect: CGRect)
+    /// data has a dictionary of NSAttributedString object and index to which it's attached.
+    case range(attribute: [NSAttributedStringKey: Any], range: NSRange)
+    
+    /// Accessor for a dictionary of NSAttributedString object
+    public var attribute: [NSAttributedStringKey: Any] {
+        switch self {
+        case .attribute(let attr):
+            return attr
+        case .rect(let attr, _):
+            return attr
+        case .range(let attr, _):
+            return attr
+        }
+    }
+}
 
 extension Sequence where Iterator.Element == CGRect {
     fileprivate var union: CGRect {
@@ -257,16 +280,16 @@ public protocol UZTextViewDelegate: class {
      Tells the delegate that the link which contains ```attribute``` was tapped.
      Returns menu items to display in an element's contextual menu.
      - parameter textView: The text view in which the link is tapped.
-     - parameter attribute: The attributes for the linke at which user tapped.
+     - parameter info: The attributes for the linke at which user tapped.
      */
-    func textView(_ textView: UZTextView, didClickLinkAttribute attribute: Any)
+    func textView(_ textView: UZTextView, didClickLinkInfo info: UZTextViewAttributeInfo)
     
     /**
      Tells the delegate that the link which contains ```attribute``` was tapped longly.
      - parameter textView: The text view in which the link is longly tapped.
-     - parameter attribute: The attributes for the linke at which user tapped.
+     - parameter info: The attributes for the linke at which user tapped.
      */
-    func textView(_ textView: UZTextView, didLongTapLinkAttribute attribute: Any)
+    func textView(_ textView: UZTextView, didLongTapLinkInfo info: UZTextViewAttributeInfo)
     
     /**
      Tells the delegate that selecting of the specified text view has begun.
@@ -285,6 +308,9 @@ public protocol UZTextViewDelegate: class {
  Clickable and selectable text view for iOS/macOS/watchOS/tvOS
  */
 public class UZTextView: UIView {
+    /// debug flag
+    public static var checkMemoryLeak = false
+    
     /// margin for tapping the characters.
     static let tapMargin = CGFloat(8)
     
@@ -325,6 +351,13 @@ public class UZTextView: UIView {
     private let rightCursor = UZCursor.createRightCursor()
     /// The loupe for selecting text in the view.
     private let loupe = UZLoupe()
+    
+    deinit {
+        if UZTextView.checkMemoryLeak {
+            print("UZTextView has been released.")
+        }
+        loupe.removeFromSuperview()
+    }
     
     /// debug flag
     public var isDebugMode = false {
@@ -640,7 +673,7 @@ public class UZTextView: UIView {
     }
     
     private func drawBackgroundColor(_ context: CGContext) {
-        attributedString.enumerateAttribute(NSBackgroundColorAttributeName, in: attributedString.fullNSRange, options: []) { (value, range, _) in
+        attributedString.enumerateAttribute(NSAttributedStringKey.backgroundColor, in: attributedString.fullNSRange, options: []) { (value, range, _) in
             guard let color = value as? UIColor else { return }
             color.setFill()
             rectangles(with: range).forEach({
@@ -676,7 +709,7 @@ public class UZTextView: UIView {
      - parameter context: The current graphics context.
      */
     private func drawStrikeThroughLine(_ context: CGContext) {
-        attributedString.enumerateAttribute(NSStrikethroughStyleAttributeName, in: attributedString.fullNSRange, options: []) { (value, range, _) in
+        attributedString.enumerateAttribute(NSAttributedStringKey.strikethroughStyle, in: attributedString.fullNSRange, options: []) { (value, range, _) in
             guard let width = value as? CGFloat else { return }
             rectangles(with: range).forEach({
                 context.setLineWidth(width)
@@ -798,9 +831,10 @@ public class UZTextView: UIView {
             for i in tappedLinkRange.arange {
                 var effectiveRange = NSRange.notFound
                 let attribute = attributedString.attributes(at: i, effectiveRange: &effectiveRange)
-                guard let _ = attribute[NSLinkAttributeName] else { continue }
+                guard attribute[.link] != nil else { continue }
                 if let delegate = delegate {
-                    delegate.textView(self, didClickLinkAttribute: attribute)
+                    let attr = UZTextViewAttributeInfo.attribute(attribute: attribute)
+                    delegate.textView(self, didClickLinkInfo: attr)
                 }
                 break
             }
@@ -817,7 +851,7 @@ public class UZTextView: UIView {
         if selectedRange.arange ~= index { return }
         var effectiveRange = NSRange.notFound
         let attribute = self.attributedString.attributes(at: index, effectiveRange: &effectiveRange)
-        guard let _ = attribute[NSLinkAttributeName] else { tappedLinkRange = .notFound; return }
+        guard attribute[.link] != nil else { tappedLinkRange = .notFound; return }
         tappedLinkRange = effectiveRange
     }
     
@@ -872,7 +906,7 @@ public class UZTextView: UIView {
      Dispatch a long press gesture event.
      - parameter gestureRecognizer: An UIGestureRecognizer object.
      */
-    func didChangeLongPressGesture(_ gestureRecognizer: UILongPressGestureRecognizer) {
+    @objc func didChangeLongPressGesture(_ gestureRecognizer: UILongPressGestureRecognizer) {
         let point = gestureRecognizer.location(in: self, inset: contentInset, scale: scale)
         switch gestureRecognizer.state {
         case .began:
@@ -880,10 +914,10 @@ public class UZTextView: UIView {
             var effectiveRange = NSRange.notFound
             if index != NSNotFound {
                 var attribute = self.attributedString.attributes(at: index, effectiveRange: &effectiveRange)
-                if let _ = attribute[NSLinkAttributeName] {
+                if attribute[.link] != nil {
                     if let delegate = delegate {
-                        attribute[UZTextViewLinkRange] = effectiveRange
-                        delegate.textView(self, didLongTapLinkAttribute: attribute)
+                        let info = UZTextViewAttributeInfo.range(attribute: attribute, range: effectiveRange)
+                        delegate.textView(self, didLongTapLinkInfo: info)
                     }
                 } else {
                     selectedRange = rangeOfWord(at: point)
@@ -967,15 +1001,16 @@ public class UZTextView: UIView {
      - parameter point: CGPoint structure which contains location which user tapped.
      - returns: The attributes for the character at where user tapped.
      */
-    public func attributes(at point: CGPoint) -> [String: Any]? {
+    public func attributes(at point: CGPoint) -> UZTextViewAttributeInfo? {
         let pointForText = point.toTextCoordiante(scale: scale, contentInset: contentInset)
         let index = characterIndex(at: pointForText)
         guard index != NSNotFound else { return nil }
         var effectiveRange = NSRange.notFound
-        var attributes = attributedString.attributes(at: index, effectiveRange: &effectiveRange)
+        let attributes = attributedString.attributes(at: index, effectiveRange: &effectiveRange)
         let rect = rectangles(with: effectiveRange).union
-        attributes[UZTextViewLinkRect] = rect.toViewCoordiante(scale: scale, contentInset: contentInset)
-        return attributes
+        let rectConverted = rect.toViewCoordiante(scale: scale, contentInset: contentInset)
+        let attr = UZTextViewAttributeInfo.rect(attribute: attributes, rect: rectConverted)
+        return attr
     }
     
     /**
@@ -1028,7 +1063,7 @@ public class UZTextView: UIView {
             rect.size.width = 1
             rect = rect.insetBy(dx: -UZTextView.tapMargin, dy: 0)
         case .right:
-            rect.origin.x = rect.origin.x + rect.size.width - 1
+            rect.origin.x += (rect.size.width - 1)
             rect.size.width = 1
             rect = rect.insetBy(dx: -UZTextView.tapMargin, dy: 0)
         }
@@ -1043,11 +1078,12 @@ public class UZTextView: UIView {
         }
         return rect
     }
-    
+  
+    /// Error object to leave forEach loop.
     enum CharacterIndex: Error {
         case find(index: Int)
     }
-
+    
     /**
      Returns index of the character user tapped in the view.
      - parameter point: A CGPoint structure which contains a location at which user tapped.
@@ -1077,4 +1113,3 @@ public class UZTextView: UIView {
         return NSNotFound
     }
 }
-#endif

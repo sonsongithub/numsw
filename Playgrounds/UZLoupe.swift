@@ -6,7 +6,6 @@
 //  Copyright © 2017年 sonson. All rights reserved.
 //
 
-#if os(iOS)
 import UIKit
 
 /**
@@ -24,13 +23,19 @@ fileprivate func rootViewOfHierarchy(including view: UIView) -> UIView {
 /**
  Loupe to magnify the text while user is tapping/selecting any words in the UZTextView.
  */
-internal class UZLoupe: UIView, CAAnimationDelegate {
+internal class UZLoupe: UIView {
     /// Radius of the loupe.
     private static let radius = CGFloat(60)
     /// The image contains the screen shot of the UZTextView object.
     private var image = UIImage()
     /// UZTextView to which the loupe is attached.
-    internal var textView: UZTextView?
+    internal weak var textView: UZTextView?
+    
+    deinit {
+        if UZTextView.checkMemoryLeak {
+            print("UZLoupe has been released.")
+        }
+    }
     
     internal init() {
         super.init(frame: CGRect(x: 0, y: 0, width: UZLoupe.radius * 2, height: UZLoupe.radius * 2))
@@ -103,7 +108,6 @@ internal class UZLoupe: UIView, CAAnimationDelegate {
         group.duration = 0.2
         group.isRemovedOnCompletion = false
         group.fillMode = kCAFillModeForwards
-        group.delegate = self
         
         group.setValue("show", forKey: "name")
         self.layer.add(group, forKey: "show")
@@ -129,19 +133,15 @@ internal class UZLoupe: UIView, CAAnimationDelegate {
         group.duration = 0.2
         group.isRemovedOnCompletion = false
         group.fillMode = kCAFillModeForwards
-        group.delegate = self
         
         group.setValue("hide", forKey: "name")
-        self.layer.add(group, forKey: "hide")
-    }
-    
-    /// CAAnimationDelegate callback method
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        guard let name = anim.value(forKey: "name") as? String else { return }
-        if name == "show" {
-        } else if name == "hide" {
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock {
             super.isHidden = true
         }
+        self.layer.add(group, forKey: "hide")
+        CATransaction.commit()
     }
     
     /// Does not use `isHidden` property inside UZLoupe in order to switch hide/shown.
@@ -205,4 +205,3 @@ internal class UZLoupe: UIView, CAAnimationDelegate {
     }
     
 }
-#endif
