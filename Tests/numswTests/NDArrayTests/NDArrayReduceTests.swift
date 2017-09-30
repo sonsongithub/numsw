@@ -62,7 +62,7 @@ class NDArrayReduceTests: XCTestCase {
     
     func testMean() {
         let a = NDArray(shape: [2, 3, 4], elements: (0..<2*3*4).map(Double.init))
-        XCTAssertEqualWithAccuracy(a.mean(), 11.5, accuracy: 1e-5)
+        XCTAssertEqual(a.mean(), 11.5, accuracy: 1e-5)
         XCTAssertEqualWithAccuracy(a.mean(along: 0),
                                    NDArray(shape: [3, 4],
                                            elements: [6, 7, 8, 9,
@@ -138,7 +138,7 @@ class NDArrayReduceTests: XCTestCase {
     
     func testMeanNormal() {
         let a = NDArray(shape: [2, 3, 4], elements: (0..<2*3*4).map(Double.init))
-        XCTAssertEqualWithAccuracy(_mean(a), 11.5, accuracy: 1e-5)
+        XCTAssertEqual(_mean(a), 11.5, accuracy: 1e-5)
         XCTAssertEqualWithAccuracy(_mean(a, along: 0),
                                    NDArray(shape: [3, 4],
                                            elements: [6, 7, 8, 9,
@@ -278,7 +278,7 @@ class NDArrayReduceTests: XCTestCase {
     
     func testMeanAccelerate() {
         let a = NDArray(shape: [2, 3, 4], elements: (0..<2*3*4).map(Double.init))
-        XCTAssertEqualWithAccuracy(_meanAccelerate(a), 11.5, accuracy: 1e-5)
+        XCTAssertEqual(_meanAccelerate(a), 11.5, accuracy: 1e-5)
         XCTAssertEqualWithAccuracy(_meanAccelerate(a, along: 0),
                                    NDArray(shape: [3, 4],
                                            elements: [6, 7, 8, 9,

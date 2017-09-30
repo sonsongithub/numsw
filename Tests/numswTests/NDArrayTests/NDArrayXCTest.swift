@@ -11,6 +11,6 @@ func XCTAssertEqualWithAccuracy<T: BinaryFloatingPoint>(_ expression1: NDArray<T
     XCTAssertEqual(expression1.shape, expression2.shape)
     
     for (a, b) in zip(expression1.elements, expression2.elements) {
-        XCTAssertEqualWithAccuracy(a, b, accuracy: accuracy)
+        XCTAssertEqual(a, b, accuracy: accuracy)
     }
 }

@@ -6,12 +6,10 @@
 //  Copyright © 2017 sonson. All rights reserved.
 //
 
-
 // PlaygroundKeyValueStore as UserDefautls for sandbox app
 
 #if os(iOS)
 import Foundation
-
 
 #if SANDBOX_APP
     //  sandbox app

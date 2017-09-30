@@ -13,6 +13,6 @@ func XCTAssertEqualWithAccuracy<T: BinaryFloatingPoint>(_ expression1: Matrix<T>
     XCTAssertEqual(expression1.columns, expression2.columns)
     
     for (a, b) in zip(expression1.elements, expression2.elements) {
-        XCTAssertEqualWithAccuracy(a, b, accuracy: accuracy)
+        XCTAssertEqual(a, b, accuracy: accuracy)
     }
 }
